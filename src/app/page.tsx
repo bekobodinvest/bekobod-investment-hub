@@ -139,9 +139,6 @@ export default function HomePage() {
         >
           <source src="/hero_video.mp4" type="video/mp4" />
         </video>
-        {/* Subtle dark overlay */}
-        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }} />
-
         {/* Clickable zone overlays — positioned over map labels */}
         {/* BEKOBOD MAXSUS SANOAT ZONASI — bottom-left */}
         <Link
