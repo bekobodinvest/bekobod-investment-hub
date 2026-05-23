@@ -162,7 +162,7 @@ export default function HomePage() {
           href="/oybek-ftz"
           aria-label="Oybek Erkin Savdo Markazi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#22c55e] hover:shadow-[0_0_16px_rgba(34,197,94,0.25),inset_0_0_12px_rgba(34,197,94,0.05)]"
-          style={{ left: '43%', top: '35%', width: '19%', height: '14%' }}
+          style={{ left: '48%', top: '35%', width: '19%', height: '14%' }}
         />
       </section>
 
