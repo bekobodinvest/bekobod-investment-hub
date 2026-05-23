@@ -148,21 +148,21 @@ export default function HomePage() {
           href="/sez"
           aria-label="Bekobod Maxsus Sanoat Zonasi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
-          style={{ left: '7%', bottom: '14%', width: '26%', height: '20%' }}
+          style={{ left: '2%', bottom: '14%', width: '26%', height: '20%' }}
         />
         {/* YANGI O'ZBEKISTON MASSIVI — center-right */}
         <Link
           href="/yangi-uzbekistan"
           aria-label="Yangi O'zbekiston Massivi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
-          style={{ left: '65%', top: '43%', width: '30%', height: '22%' }}
+          style={{ left: '55%', top: '48%', width: '30%', height: '22%' }}
         />
         {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
         <Link
           href="/oybek-ftz"
           aria-label="Oybek Erkin Savdo Markazi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#22c55e] hover:shadow-[0_0_16px_rgba(34,197,94,0.25),inset_0_0_12px_rgba(34,197,94,0.05)]"
-          style={{ left: '33%', top: '20%', width: '22%', height: '16%' }}
+          style={{ left: '33%', top: '25%', width: '19%', height: '14%' }}
         />
       </section>
 
