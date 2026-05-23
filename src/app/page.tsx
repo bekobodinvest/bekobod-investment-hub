@@ -148,7 +148,7 @@ export default function HomePage() {
           href="/sez"
           aria-label="Bekobod Maxsus Sanoat Zonasi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
-          style={{ left: '21%', bottom: '11%', width: '32%', height: '24%' }}
+          style={{ left: '17%', bottom: '11%', width: '32%', height: '24%' }}
         />
         {/* YANGI O'ZBEKISTON MASSIVI — center-right */}
         <Link
@@ -162,7 +162,7 @@ export default function HomePage() {
           href="/oybek-ftz"
           aria-label="Oybek Erkin Savdo Markazi"
           className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#22c55e] hover:shadow-[0_0_16px_rgba(34,197,94,0.25),inset_0_0_12px_rgba(34,197,94,0.05)]"
-          style={{ left: '41%', top: '32%', width: '17%', height: '13%' }}
+          style={{ left: '37%', top: '32%', width: '17%', height: '13%' }}
         />
       </section>
 
