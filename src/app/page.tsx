@@ -147,21 +147,21 @@ export default function HomePage() {
         <Link
           href="/sez"
           aria-label="Bekobod Maxsus Sanoat Zonasi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
           style={{ left: '12%', bottom: '14%', width: '26%', height: '20%' }}
         />
         {/* YANGI O'ZBEKISTON MASSIVI — center-right */}
         <Link
           href="/yangi-uzbekistan"
           aria-label="Yangi O'zbekiston Massivi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
           style={{ left: '60%', top: '38%', width: '30%', height: '22%' }}
         />
         {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
         <Link
           href="/oybek-ftz"
           aria-label="Oybek Erkin Savdo Markazi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
           style={{ left: '33%', top: '20%', width: '28%', height: '20%' }}
         />
       </section>
