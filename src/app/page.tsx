@@ -128,64 +128,19 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Background map image with dark overlay */}
-        <div className="absolute inset-0">
-          <Image
-            src="/map_hero.jpg"
-            alt="Bekobod Map"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} />
-        </div>
-
-        <div className="container-custom relative z-10 pt-24 pb-16">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-[#4a9c4e]/20 border border-[#4a9c4e]/30 text-[#4a9c4e] text-sm font-semibold px-4 py-2 rounded-full mb-6">
-              <span className="w-2 h-2 rounded-full bg-[#4a9c4e] animate-pulse" />
-              {t.home.hero.badge}
-            </div>
-
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
-              {t.home.hero.tagline}
-            </h1>
-            <p className="text-xl md:text-2xl text-[#4a9c4e] font-medium mb-6">
-              {t.home.hero.subtitle}
-            </p>
-            <p className="text-gray-300 text-lg leading-relaxed mb-10 max-w-2xl">
-              {t.home.hero.description}
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://e-auksion.uz/lots?group=6&index=1&page=1&address=&lt=0&at=0&order=0&q=&hashtag=&region=2&area=19"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-base"
-              >
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                </svg>
-                {t.home.hero.ctaButton}
-              </a>
-              <Link href="/sez" className="btn-secondary text-base">
-                {t.home.hero.learnMore}
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-gray-400">
-            <svg className="w-5 h-5 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </div>
-        </div>
+      <section className="relative min-h-screen overflow-hidden">
+        {/* Fullscreen video background */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero_video.mp4" type="video/mp4" />
+        </video>
+        {/* Subtle dark overlay */}
+        <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }} />
       </section>
 
       {/* KEY STATS */}
