@@ -141,6 +141,29 @@ export default function HomePage() {
         </video>
         {/* Subtle dark overlay */}
         <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.3)' }} />
+
+        {/* Clickable zone overlays — positioned over map labels */}
+        {/* BEKOBOD MAXSUS SANOAT ZONASI — bottom-left */}
+        <Link
+          href="/sez"
+          aria-label="Bekobod Maxsus Sanoat Zonasi"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          style={{ left: '4%', bottom: '14%', width: '26%', height: '20%' }}
+        />
+        {/* YANGI O'ZBEKISTON MASSIVI — center-right */}
+        <Link
+          href="/yangi-uzbekistan"
+          aria-label="Yangi O'zbekiston Massivi"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          style={{ left: '52%', top: '38%', width: '30%', height: '22%' }}
+        />
+        {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
+        <Link
+          href="/oybek-ftz"
+          aria-label="Oybek Erkin Savdo Markazi"
+          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_24px_rgba(0,212,255,0.55),inset_0_0_24px_rgba(0,212,255,0.08)]"
+          style={{ left: '33%', top: '12%', width: '28%', height: '20%' }}
+        />
       </section>
 
       {/* KEY STATS */}
