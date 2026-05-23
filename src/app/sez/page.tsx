@@ -1,0 +1,207 @@
+'use client';
+
+import { useEffect } from 'react';
+import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
+import MapSection from '@/components/MapSection';
+
+function useScrollAnimation() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('visible')),
+      { threshold: 0.1 }
+    );
+    document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+}
+
+const sectorIcons = [
+  '⚙️', '💊', '🔧', '🏗️', '📦', '🌾', '⚡', '🧵',
+];
+
+export default function SEZPage() {
+  const { t } = useLanguage();
+  useScrollAnimation();
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="pt-32 pb-0 bg-gradient-to-br from-[#1a2744] to-[#243660] relative overflow-hidden">
+        <div className="absolute inset-0 hero-pattern" />
+        <div className="container-custom relative z-10 pb-0">
+          <div className="grid lg:grid-cols-2 gap-12 items-end">
+            <div className="pb-16">
+              <span className="green-badge mb-5">{t.sez.badge}</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+                {t.sez.title}
+              </h1>
+              <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.sez.subtitle}</p>
+              <p className="text-gray-300 leading-relaxed text-lg">{t.sez.overview.description}</p>
+            </div>
+            <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden">
+              <Image
+                src="/Bekobod_SEZ.png"
+                alt="Bekobod SEZ"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a2744]/50 to-transparent" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Grid */}
+      <section className="py-12 bg-[#1a2744]">
+        <div className="container-custom">
+          <div className="grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-4">
+            {t.sez.stats.map((stat, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll text-center p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                style={{ transitionDelay: `${i * 50}ms` }}
+              >
+                <div className="text-[#4a9c4e] font-black text-lg lg:text-xl">{stat.value}</div>
+                <div className="text-gray-400 text-xs mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Overview */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-on-scroll">
+              <div className="accent-line mb-6" />
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2744] mb-6">
+                {t.sez.overview.title}
+              </h2>
+              <p className="text-gray-600 leading-relaxed text-lg">{t.sez.overview.description}</p>
+
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                {(['📍', '🏭', '💰', '👥'] as const).map((icon, i) => (
+                  <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+                    <span className="text-2xl">{icon}</span>
+                    <div>
+                      <div className="text-xs text-gray-400">{t.sez.overviewStats[i].label}</div>
+                      <div className="font-bold text-[#1a2744]">{t.sez.overviewStats[i].value}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="animate-on-scroll">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/Bekobod_SEZ.png"
+                  alt="Bekobod SEZ Overview"
+                  width={600}
+                  height={450}
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2744]/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <div className="flex gap-3">
+                    <div className="bg-[#4a9c4e] text-white text-xs font-bold px-3 py-1.5 rounded-lg">397 ha</div>
+                    <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">95 {t.sez.imageTags.lots}</div>
+                    <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">8 {t.sez.imageTags.sectors}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 8 Sectors */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-14 animate-on-scroll">
+            <h2 className="section-heading">{t.sez.sectors.title}</h2>
+            <p className="section-subheading mx-auto">{t.sez.sectors.subtitle}</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {t.sez.sectors.items.map((sector, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card p-6 border border-gray-100 group hover:border-[#4a9c4e]/30"
+                style={{ transitionDelay: `${i * 60}ms` }}
+              >
+                <div className="text-4xl mb-4">{sectorIcons[i]}</div>
+                <h3 className="font-bold text-[#1a2744] text-lg mb-2 group-hover:text-[#4a9c4e] transition-colors">
+                  {sector.name}
+                </h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{sector.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Technopark */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="bg-gradient-to-br from-[#1a2744] via-[#243660] to-[#1a3a2a] rounded-3xl overflow-hidden">
+            <div className="grid lg:grid-cols-2 gap-0">
+              <div className="p-10 md:p-14 flex flex-col justify-center">
+                <span className="inline-flex items-center gap-2 bg-[#4a9c4e]/20 border border-[#4a9c4e]/30 text-[#4a9c4e] text-sm font-semibold px-4 py-2 rounded-full mb-6 self-start">
+                  ⭐ {t.sez.technopark.badge}
+                </span>
+                <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
+                  {t.sez.technopark.title}
+                </h2>
+                <p className="text-gray-300 leading-relaxed text-lg mb-8">
+                  {t.sez.technopark.description}
+                </p>
+
+                <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+                  {t.sez.technopark.stats.map((stat, i) => (
+                    <div key={i} className="text-center">
+                      <div className="text-[#4a9c4e] font-black text-xl">{stat.value}</div>
+                      <div className="text-gray-400 text-xs mt-1">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="relative lg:h-auto h-64 bg-[#111b30]">
+                <Image
+                  src="/Bekobod_SEZ.png"
+                  alt="Bekobod Technopark"
+                  fill
+                  className="object-cover opacity-40"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-7xl font-black text-white/10">100</div>
+                    <div className="text-[#4a9c4e] font-bold text-xl">{t.sez.technopark.hectaresLabel}</div>
+                    <div className="text-gray-400 text-sm mt-1">{t.sez.technopark.areaCaption}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom animate-on-scroll">
+          <MapSection
+            title={t.sez.map.title}
+            description={t.sez.map.description}
+            buttonLabel={t.sez.map.button}
+            mapUrl="https://maps.app.goo.gl/djKD81wt3TnbBFmz6"
+            coordinates="40.2167° N, 69.2333° E — Bekobod, Uzbekistan"
+          />
+        </div>
+      </section>
+    </>
+  );
+}
