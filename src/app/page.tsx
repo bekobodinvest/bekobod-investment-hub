@@ -71,8 +71,9 @@ function ProjectCard({
   delay?: number;
 }) {
   return (
-    <div
-      className="animate-on-scroll card group"
+    <Link
+      href={href}
+      className="animate-on-scroll card group block hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 ease-in-out"
       style={{ transitionDelay: `${delay}ms` }}
     >
       {/* Image */}
@@ -107,17 +108,14 @@ function ProjectCard({
           ))}
         </div>
 
-        <Link
-          href={href}
-          className="inline-flex items-center gap-2 text-[#4a9c4e] font-semibold text-sm hover:gap-3 transition-all duration-200"
-        >
+        <span className="inline-flex items-center gap-2 text-[#4a9c4e] font-semibold text-sm group-hover:gap-3 transition-all duration-200">
           {learnMore}
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </Link>
+        </span>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -130,22 +128,18 @@ export default function HomePage() {
   return (
     <>
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center bg-[#1a2744] hero-pattern overflow-hidden">
-        {/* Background image overlay */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Background map image with dark overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/Bekobod_SEZ.png"
-            alt="Bekobod SEZ"
+            src="/map_hero.jpg"
+            alt="Bekobod Map"
             fill
-            className="object-cover opacity-15"
+            className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1a2744] via-[#1a2744]/90 to-[#1a2744]/60" />
+          <div className="absolute inset-0" style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} />
         </div>
-
-        {/* Decorative circles */}
-        <div className="absolute top-20 right-10 w-96 h-96 rounded-full bg-[#4a9c4e]/10 blur-3xl" />
-        <div className="absolute bottom-20 left-10 w-72 h-72 rounded-full bg-blue-500/10 blur-3xl" />
 
         <div className="container-custom relative z-10 pt-24 pb-16">
           <div className="max-w-3xl">

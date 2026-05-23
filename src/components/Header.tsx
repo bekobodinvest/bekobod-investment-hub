@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { Language } from '@/i18n/translations';
@@ -55,15 +56,16 @@ export default function Header() {
       }`}
     >
       <div className="container-custom flex items-center justify-between gap-4">
-        {/* Logo — prominent "B" badge */}
-        <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#4a9c4e] to-[#2d7a31] flex items-center justify-center shadow-lg shadow-[#4a9c4e]/40 group-hover:shadow-[#4a9c4e]/70 group-hover:scale-105 transition-all duration-300 flex-shrink-0">
-            <span className="text-white font-black text-2xl leading-none select-none">B</span>
-          </div>
-          <div className="hidden sm:block">
-            <div className="text-white font-bold text-sm leading-tight">BEKOBOD</div>
-            <div className="text-[#4a9c4e] font-semibold text-xs leading-tight">INVESTMENT HUB</div>
-          </div>
+        {/* Logo */}
+        <Link href="/" className="flex items-center flex-shrink-0 group">
+          <Image
+            src="/Logo_Bekobod.png"
+            alt="Bekobod Investment Hub"
+            height={55}
+            width={200}
+            className="h-[55px] w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
