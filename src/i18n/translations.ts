@@ -941,8 +941,8 @@ export const translations = {
           "Bekobod MIQZ investor daromadlarini maksimallashtirish va biznes o'sishini tezlashtirish uchun mo'ljallangan O'zbekistonning eng raqobatbardosh soliq imtiyozlari paketlaridan birini taklif etadi.",
       },
       corporate: {
-        title: "Korporativ soliq imtiyozi",
-        subtitle: "Korporativ daromad solig'idan to'liq ozod etish",
+        title: "Foyda solig'i imtiyozi",
+        subtitle: "Foyda solig'idan to'liq ozod etish",
         headers: ["Investitsiya miqdori", "Imtiyoz muddati"],
         table: [
           { investment: "$3 000 000 – $5 000 000", period: "3 yil" },
@@ -1039,7 +1039,7 @@ export const translations = {
       },
       keyNumbers: [
         { value: '10 yil', label: 'Maksimal soliq imtiyozi' },
-        { value: '3 tur', label: 'Soliq imtiyozlari (Korporativ + Yer + Mol-mulk)' },
+        { value: '3 tur', label: 'Soliq imtiyozlari (Foyda + Yer + Mol-mulk)' },
         { value: '2 qonun', label: "Huquqiy asoslar" },
       ],
       taxSchedulesTitle: 'Soliq imtiyozi jadvallari',
