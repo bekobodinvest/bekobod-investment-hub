@@ -533,8 +533,8 @@ export const translations = {
       ],
       director: {
         title: 'Investment Director',
-        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: 'Bekobod District Governor',
+        name: 'Umarov Umid Ahmadjanovich',
+        role: 'Director, Bekobod Investment Hub',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and comprehensive support packages, we ensure every investor receives the strongest possible foundation for success."',
       },
@@ -1063,8 +1063,8 @@ export const translations = {
       ],
       director: {
         title: "Investitsiya direktori",
-        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: "Bekobod tumani hokimi",
+        name: 'Umarov Umid Ahmadjanovich',
+        role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"Biz dunyo bo\'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo\'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta\'minlaymiz."',
       },
@@ -2110,7 +2110,7 @@ export const translations = {
       director: {
         title: '投资总监',
         name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
-        role: '别科博德区长',
+        role: '别科博德投资中心主任',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"我们邀请全球投资者参与别科博德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。"',
       },
