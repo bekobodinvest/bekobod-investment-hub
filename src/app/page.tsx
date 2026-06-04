@@ -267,7 +267,7 @@ export default function HomePage() {
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
             </svg>
             <blockquote className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-8 italic">
-              {t.contact.director.message}
+              {t.about.director.message}
             </blockquote>
             <div className="flex items-center justify-center gap-4">
               <div className="w-16 h-16 rounded-full bg-[#4a9c4e]/20 flex items-center justify-center">
@@ -276,8 +276,8 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-white font-bold">{t.contact.director.name}</div>
-                <div className="text-[#4a9c4e] text-sm">{t.contact.director.role}</div>
+                <div className="text-white font-bold">{t.about.director.name}</div>
+                <div className="text-[#4a9c4e] text-sm">{t.about.director.role}</div>
               </div>
             </div>
           </div>
