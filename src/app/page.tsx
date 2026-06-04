@@ -276,8 +276,8 @@ export default function HomePage() {
                 </svg>
               </div>
               <div className="text-left">
-                <div className="text-white font-bold">{t.contact.director.name}</div>
-                <div className="text-[#4a9c4e] text-sm">{t.contact.director.role}</div>
+                <div className="text-white font-bold">Nizomiddinov Zaynilobiddin Shahobiddinovich</div>
+                <div className="text-[#4a9c4e] text-sm">Bekobod tumani hokimi</div>
               </div>
             </div>
           </div>

@@ -1071,7 +1071,7 @@ export const translations = {
       sez: 'СЭЗ Бекобод',
       oybek: 'СТЗ Ойбек',
       yangi: 'Янги Узбекистон',
-      incentives: 'Налоговые льготы',
+      incentives: 'Льготы',
       contact: 'Контакты',
       eAuction: 'Электронный аукцион',
     },
