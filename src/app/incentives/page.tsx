@@ -152,6 +152,50 @@ export default function IncentivesPage() {
               </div>
             </div>
           </div>
+
+          {/* Water resources tax */}
+          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-2xl p-8 text-white">
+            <div className="flex items-start gap-5">
+              <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e]/20 flex items-center justify-center flex-shrink-0">
+                <svg className="w-7 h-7 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
+                </svg>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold mb-1">{t.incentives.water.title}</h3>
+                <p className="text-[#4a9c4e] text-sm font-medium mb-2">{t.incentives.water.subtitle}</p>
+                <p className="text-gray-300 leading-relaxed">{t.incentives.water.note}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Customs Benefits */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-14 animate-on-scroll">
+            <h2 className="section-heading">{t.incentives.customs.title}</h2>
+            <p className="section-subheading mx-auto">{t.incentives.customs.subtitle}</p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {t.incentives.customs.items.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card p-7 border border-gray-100 hover:border-[#4a9c4e]/30"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-[#e8f5e9] flex items-center justify-center mb-4 text-[#4a9c4e]">
+                  <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h3 className="font-bold text-[#1a2744] text-lg mb-2">{item.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

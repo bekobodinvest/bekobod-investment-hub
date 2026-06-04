@@ -431,6 +431,29 @@ export const translations = {
         subtitle: 'Same schedule as Land Tax — full property tax exemption',
         note: 'Property tax exemption follows the exact same investment-based schedule as land tax exemption above.',
       },
+      water: {
+        title: 'Water Resources Tax Exemption',
+        subtitle: 'Full exemption from water resources tax',
+        note: 'Water resources tax exemption is provided for sustainable resource management in SEZ operations.',
+      },
+      customs: {
+        title: 'Customs Benefits',
+        subtitle: 'Comprehensive customs advantages for SEZ residents',
+        items: [
+          {
+            title: 'Duty-Free Imports',
+            description: 'Import of technological equipment and construction materials without customs duties under SEZ regime',
+          },
+          {
+            title: 'Tariff Exemptions',
+            description: 'Extended exemption periods for import and export of goods produced within the SEZ',
+          },
+          {
+            title: 'Simplified Customs Procedures',
+            description: 'Expedited customs clearance for SEZ enterprises with reduced documentation requirements',
+          },
+        ],
+      },
       legal: {
         title: 'Legal Framework',
         subtitle: 'Solid legal basis protecting your investment',
@@ -943,6 +966,29 @@ export const translations = {
         subtitle: "Yer solig'i bilan bir xil jadval — mol-mulk solig'idan to'liq ozod etish",
         note: "Mol-mulk solig'i imtiyozi yuqoridagi yer solig'i imtiyozi bilan bir xil jadval bo'yicha taqdim etiladi.",
       },
+      water: {
+        title: "Suv resurslari solig'i imtiyozi",
+        subtitle: "Suv resurslari solig'idan to'liq ozod etish",
+        note: "Suv resurslari solig'i imtiyozi MIQZ operatsiyasida barqaror resurslardan foydalanish uchun taqdim etiladi.",
+      },
+      customs: {
+        title: "Bojxona imtiyozlari",
+        subtitle: "MIQZ rezidentlari uchun keng qamrovli bojxona afzalliklari",
+        items: [
+          {
+            title: "Bekorsimon import",
+            description: "Texnologik uskunalar va qurilish materiallarini MIQZ rejimi asosida bojxona to'lovlari bilan import qilish",
+          },
+          {
+            title: "Tariff imtiyozlari",
+            description: "MIQZ ichida ishlab chiqarilgan tovarlarning import va eksportiga kengaytirilgan imtiyoz davrlari",
+          },
+          {
+            title: "Soddalashtirilgan bojxona operatsiyalari",
+            description: "MIQZ korxonalari uchun hujjat talablarini kamaytirgan vositali bojxona rahbarligi",
+          },
+        ],
+      },
       legal: {
         title: "Huquqiy asos",
         subtitle: "Investitsiyangizni himoya qiluvchi mustahkam huquqiy asos",
@@ -1449,6 +1495,29 @@ export const translations = {
         subtitle: 'Тот же график, что и земельный налог — полное освобождение',
         note: 'Льгота по налогу на имущество предоставляется по той же шкале в зависимости от объёма инвестиций, что и льгота по земельному налогу.',
       },
+      water: {
+        title: 'Льгота по налогу на водные ресурсы',
+        subtitle: 'Полное освобождение от налога на водные ресурсы',
+        note: 'Льгота по налогу на водные ресурсы предоставляется для обеспечения устойчивого использования ресурсов в операциях СЭЗ.',
+      },
+      customs: {
+        title: 'Таможенные льготы',
+        subtitle: 'Комплексные таможенные преимущества для резидентов СЭЗ',
+        items: [
+          {
+            title: 'Беспошлинный импорт',
+            description: 'Ввоз технологического оборудования и строительных материалов без уплаты таможенных пошлин в соответствии с режимом СЭЗ',
+          },
+          {
+            title: 'Тарифные льготы',
+            description: 'Расширенные периоды льгот на импорт и экспорт товаров, производимых внутри СЭЗ',
+          },
+          {
+            title: 'Упрощённые таможенные процедуры',
+            description: 'Ускоренное таможенное оформление для предприятий СЭЗ с сокращёнными требованиями к документации',
+          },
+        ],
+      },
       legal: {
         title: 'Правовая база',
         subtitle: 'Прочная правовая основа для защиты ваших инвестиций',
@@ -1942,6 +2011,29 @@ export const translations = {
         title: '财产税减免',
         subtitle: '与土地税相同的减免方案——全额免征财产税',
         note: '财产税减免依照与上述土地税减免完全相同的投资金额梯度执行。',
+      },
+      water: {
+        title: '水资源税减免',
+        subtitle: '全额免征水资源税',
+        note: '水资源税减免为特区运营中的可持续资源利用提供税收优惠。',
+      },
+      customs: {
+        title: '关税优惠',
+        subtitle: '为特区居民提供全面关税优势',
+        items: [
+          {
+            title: '免关税进口',
+            description: '按特区制度进口技术设备和建筑材料，无需支付关税',
+          },
+          {
+            title: '关税豁免',
+            description: '特区内生产商品的进出口享受延长的豁免期',
+          },
+          {
+            title: '简化海关程序',
+            description: '特区企业加快海关报关，减少单证要求',
+          },
+        ],
       },
       legal: {
         title: '法律框架',
