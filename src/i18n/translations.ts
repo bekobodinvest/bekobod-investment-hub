@@ -690,7 +690,7 @@ export const translations = {
       },
       director: {
         title: 'Rahbariyat',
-        name: 'Umarov Umid Ahmadjanovich',
+        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
         role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
         message:
           "Biz dunyo bo'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta'minlaymiz.",
@@ -1017,7 +1017,7 @@ export const translations = {
       ],
       director: {
         title: "Investitsiya direktori",
-        name: 'Umarov Umid Ahmadjanovich',
+        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
         role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"Biz dunyo bo\'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo\'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta\'minlaymiz."',
