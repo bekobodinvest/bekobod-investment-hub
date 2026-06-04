@@ -406,8 +406,8 @@ export const translations = {
           "Bekobod SEZ offers one of Uzbekistan's most competitive tax incentive packages, designed to maximize investor returns and accelerate business growth. Combined with presidential decree protections and full administrative support, these benefits make Bekobod the optimal choice for serious investors.",
       },
       corporate: {
-        title: 'Corporate Tax Exemption',
-        subtitle: 'Full exemption from corporate income tax',
+        title: 'Profit Tax Exemption',
+        subtitle: 'Full exemption from profit tax',
         headers: ['Investment Amount', 'Exemption Period'],
         table: [
           { investment: '$3,000,000 – $5,000,000', period: '3 Years' },
@@ -509,7 +509,7 @@ export const translations = {
       },
       keyNumbers: [
         { value: '10 Years', label: 'Maximum Tax Exemption' },
-        { value: '3 Types', label: 'Tax Exemptions (Corporate + Land + Property)' },
+        { value: '3 Types', label: 'Tax Exemptions (Profit + Land + Property)' },
         { value: '2 Laws', label: 'Legal Frameworks' },
       ],
       taxSchedulesTitle: 'Tax Exemption Schedules',
@@ -1470,8 +1470,8 @@ export const translations = {
           'СЭЗ Бекобод предлагает один из самых конкурентоспособных пакетов налоговых льгот Узбекистана, призванных максимизировать доходность инвесторов и ускорить рост бизнеса.',
       },
       corporate: {
-        title: 'Освобождение от корпоративного налога',
-        subtitle: 'Полное освобождение от корпоративного налога на прибыль',
+        title: 'Освобождение от налога на прибыль',
+        subtitle: 'Полное освобождение от налога на прибыль',
         headers: ['Сумма инвестиций', 'Период льготы'],
         table: [
           { investment: '$3 000 000 – $5 000 000', period: '3 года' },
@@ -1568,7 +1568,7 @@ export const translations = {
       },
       keyNumbers: [
         { value: '10 лет', label: 'Максимальная налоговая льгота' },
-        { value: '3 вида', label: 'Налоговые льготы (Корпоративный + Земельный + Имущественный)' },
+        { value: '3 вида', label: 'Налоговые льготы (На прибыль + Земельный + Имущественный)' },
         { value: '2 закона', label: 'Правовые основы' },
       ],
       taxSchedulesTitle: 'Графики налоговых льгот',
@@ -1987,8 +1987,8 @@ export const translations = {
           '别科博德经济特区提供乌兹别克斯坦最具竞争力的税收优惠方案之一，旨在最大化投资者回报、加速企业增长。',
       },
       corporate: {
-        title: '企业所得税减免',
-        subtitle: '全额免征企业所得税',
+        title: '利润税减免',
+        subtitle: '全额免征利润税',
         headers: ['投资金额', '减免期限'],
         table: [
           { investment: '300万美元 – 500万美元', period: '3年' },
@@ -2085,7 +2085,7 @@ export const translations = {
       },
       keyNumbers: [
         { value: '10年', label: '最长免税期' },
-        { value: '3类', label: '税收减免（企业所得税+土地税+财产税）' },
+        { value: '3类', label: '税收减免（利润税+土地税+财产税）' },
         { value: '2项法规', label: '法律依据' },
       ],
       taxSchedulesTitle: '税收减免时间表',
