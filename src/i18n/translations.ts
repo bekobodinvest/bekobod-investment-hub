@@ -134,8 +134,8 @@ export const translations = {
       },
       director: {
         title: 'Leadership',
-        name: 'Umarov Umid Ahmadjanovich',
-        role: 'Director, Bekobod Investment Hub',
+        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
+        role: 'Bekobod District Governor',
         message:
           'We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and comprehensive support packages, we ensure every investor receives the strongest possible foundation for success. Bekobod is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
       },
@@ -510,8 +510,8 @@ export const translations = {
       ],
       director: {
         title: 'Investment Director',
-        name: 'Umarov Umid Ahmadjanovich',
-        role: 'Director, Bekobod Investment Hub',
+        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
+        role: 'Bekobod District Governor',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and comprehensive support packages, we ensure every investor receives the strongest possible foundation for success."',
       },

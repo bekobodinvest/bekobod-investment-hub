@@ -113,8 +113,8 @@ export default function AboutPage() {
                     </svg>
                   </div>
                   <div className="text-center">
-                    <div className="text-white font-bold text-lg">Nizomiddinov Zaynilobiddin Shahobiddinovich</div>
-                    <div className="text-[#4a9c4e] text-sm mt-1">Bekobod tumani hokimi</div>
+                    <div className="text-white font-bold text-lg">{t.about.director.name}</div>
+                    <div className="text-[#4a9c4e] text-sm mt-1">{t.about.director.role}</div>
                   </div>
                 </div>
 
