@@ -691,7 +691,7 @@ export const translations = {
       director: {
         title: 'Rahbariyat',
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
+        role: "Bekobod tumani hokimi",
         message:
           "Biz dunyo bo'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta'minlaymiz.",
       },
@@ -1018,7 +1018,7 @@ export const translations = {
       director: {
         title: "Investitsiya direktori",
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
+        role: "Bekobod tumani hokimi",
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"Biz dunyo bo\'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo\'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta\'minlaymiz."',
       },
@@ -1197,7 +1197,7 @@ export const translations = {
       director: {
         title: 'Руководство',
         name: 'Умаров Умид Ахмаджанович',
-        role: 'Директор, Инвестиционный хаб Бекобод',
+        role: 'Хоким района Бекобод',
         message:
           'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и комплексным пакетам поддержки, мы обеспечиваем каждому инвестору максимально прочную основу для успеха.',
       },
@@ -1524,7 +1524,7 @@ export const translations = {
       director: {
         title: 'Инвестиционный директор',
         name: 'Умаров Умид Ахмаджанович',
-        role: 'Директор, Инвестиционный хаб Бекобод',
+        role: 'Хоким района Бекобод',
         company: 'Бекобод Инвестиция Бошкарув Компания',
         message: '"Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и комплексным пакетам поддержки, мы обеспечиваем каждому инвестору максимально прочную основу для успеха."',
       },
@@ -1703,7 +1703,7 @@ export const translations = {
       director: {
         title: '领导层',
         name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
-        role: '别科博德投资中心主任',
+        role: '别科博德区长',
         message:
           '我们邀请全球投资者参与别科博德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。',
       },
@@ -2018,7 +2018,7 @@ export const translations = {
       director: {
         title: '投资总监',
         name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
-        role: '别科博德投资中心主任',
+        role: '别科博德区长',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
         message: '"我们邀请全球投资者参与别科博德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。"',
       },
