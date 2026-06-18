@@ -403,8 +403,8 @@ export const translations = {
         areaLabel: 'Area',
         priceLabel: 'Starting price',
         auctionButton: 'Bid on auction',
-        hint: 'Hover (or tap) a highlighted plot to view details.',
-        status: { available: 'Available', reserved: 'Reserved', sold: 'Sold' },
+        hint: 'Hover a plot for details · click it to open the auction window.',
+        status: { pending: 'Pending', available: 'On auction', sold: 'Sold' },
       },
     },
     incentives: {
@@ -949,8 +949,8 @@ export const translations = {
         areaLabel: 'Maydoni',
         priceLabel: "Boshlang'ich narx",
         auctionButton: 'Auksionga',
-        hint: "Batafsil ma'lumot uchun belgilangan uchastka ustiga bosing yoki kursorni olib boring.",
-        status: { available: "Bo'sh", reserved: 'Band qilingan', sold: 'Sotilgan' },
+        hint: "Kursorni olib boring — lot tafsilotlari, bosing — auksion oynasi ochiladi.",
+        status: { pending: 'Kutilmoqda', available: 'Auksionda', sold: 'Sotilgan' },
       },
     },
     incentives: {
@@ -1489,8 +1489,8 @@ export const translations = {
         areaLabel: 'Площадь',
         priceLabel: 'Стартовая цена',
         auctionButton: 'На аукцион',
-        hint: 'Наведите курсор (или нажмите) на выделенный участок, чтобы увидеть детали.',
-        status: { available: 'Свободен', reserved: 'В резерве', sold: 'Продан' },
+        hint: 'Наведите на участок — детали лота, нажмите — откроется окно с переходом на аукцион.',
+        status: { pending: 'В ожидании', available: 'На аукционе', sold: 'Продан' },
       },
     },
     incentives: {
@@ -2017,8 +2017,8 @@ export const translations = {
         areaLabel: '面积',
         priceLabel: '起拍价',
         auctionButton: '参与拍卖',
-        hint: '悬停（或点击）高亮地块以查看详情。',
-        status: { available: '可售', reserved: '已预留', sold: '已售' },
+        hint: '悬停查看地块详情 · 点击打开拍卖窗口。',
+        status: { pending: '待定', available: '拍卖中', sold: '已售' },
       },
     },
     incentives: {

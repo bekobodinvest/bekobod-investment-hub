@@ -50,6 +50,26 @@ export default function YangiUzbekistanPage() {
         </div>
       </section>
 
+      {/* Interactive Lot Map */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 animate-on-scroll">
+          <LotMap
+            labels={{
+              title: t.yangi.lots.title,
+              description: t.yangi.lots.description,
+              image: '/yangi_aerial.png',
+              imageAlt: "Yangi O'zbekiston masterplan — investment lots",
+              lotLabel: t.yangi.lots.lotLabel,
+              areaLabel: t.yangi.lots.areaLabel,
+              priceLabel: t.yangi.lots.priceLabel,
+              auctionButton: t.yangi.lots.auctionButton,
+              hint: t.yangi.lots.hint,
+              statusLabels: t.yangi.lots.status,
+            }}
+          />
+        </div>
+      </section>
+
       {/* Stats Strip */}
       <section className="py-12 bg-[#1a2744]">
         <div className="container-custom">
@@ -174,26 +194,6 @@ export default function YangiUzbekistanPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Interactive Lot Map */}
-      <section className="section-padding bg-white">
-        <div className="container-custom animate-on-scroll">
-          <LotMap
-            labels={{
-              title: t.yangi.lots.title,
-              description: t.yangi.lots.description,
-              image: '/yangi_aerial.png',
-              imageAlt: "Yangi O'zbekiston masterplan — investment lots",
-              lotLabel: t.yangi.lots.lotLabel,
-              areaLabel: t.yangi.lots.areaLabel,
-              priceLabel: t.yangi.lots.priceLabel,
-              auctionButton: t.yangi.lots.auctionButton,
-              hint: t.yangi.lots.hint,
-              statusLabels: t.yangi.lots.status,
-            }}
-          />
         </div>
       </section>
 
