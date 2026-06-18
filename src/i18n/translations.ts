@@ -395,6 +395,17 @@ export const translations = {
         description: 'Located in the heart of Bekobod district.',
         button: 'View on Google Maps',
       },
+      lots: {
+        title: 'Available Investment Lots',
+        description:
+          'Hover over a plot on the masterplan to see its area, price and availability — then bid directly on the e-auction portal.',
+        lotLabel: 'Lot',
+        areaLabel: 'Area',
+        priceLabel: 'Starting price',
+        auctionButton: 'Bid on auction',
+        hint: 'Hover (or tap) a highlighted plot to view details.',
+        status: { available: 'Available', reserved: 'Reserved', sold: 'Sold' },
+      },
     },
     incentives: {
       title: 'Tax Incentives & Investment Benefits',
@@ -930,6 +941,17 @@ export const translations = {
         description: "Bekobod tuman markazida joylashgan.",
         button: "Google Xaritada ko'rish",
       },
+      lots: {
+        title: 'Sotuvdagi investitsiya lotlari',
+        description:
+          "Bosh rejadagi uchastka ustiga kursorni olib boring — maydoni, narxi va holatini ko'rasiz, so'ng elektron auksionda to'g'ridan-to'g'ri ishtirok eting.",
+        lotLabel: 'Lot',
+        areaLabel: 'Maydoni',
+        priceLabel: "Boshlang'ich narx",
+        auctionButton: 'Auksionga',
+        hint: "Batafsil ma'lumot uchun belgilangan uchastka ustiga bosing yoki kursorni olib boring.",
+        status: { available: "Bo'sh", reserved: 'Band qilingan', sold: 'Sotilgan' },
+      },
     },
     incentives: {
       title: "Soliq imtiyozlari va investitsiya afzalliklari",
@@ -1459,6 +1481,17 @@ export const translations = {
         description: 'В центре Бекободского района.',
         button: 'Открыть в Google Maps',
       },
+      lots: {
+        title: 'Инвестиционные лоты в продаже',
+        description:
+          'Наведите курсор на участок генплана — увидите площадь, цену и статус, и сразу подайте заявку на электронном аукционе.',
+        lotLabel: 'Лот',
+        areaLabel: 'Площадь',
+        priceLabel: 'Стартовая цена',
+        auctionButton: 'На аукцион',
+        hint: 'Наведите курсор (или нажмите) на выделенный участок, чтобы увидеть детали.',
+        status: { available: 'Свободен', reserved: 'В резерве', sold: 'Продан' },
+      },
     },
     incentives: {
       title: 'Льготы и инвестиционные преимущества',
@@ -1975,6 +2008,17 @@ export const translations = {
         title: '街区位置',
         description: '位于别科博德区中心地带。',
         button: '在谷歌地图中查看',
+      },
+      lots: {
+        title: '在售投资地块',
+        description:
+          '将鼠标悬停在总体规划图上的地块上，即可查看面积、价格和状态，并可直接在电子拍卖平台竞拍。',
+        lotLabel: '地块',
+        areaLabel: '面积',
+        priceLabel: '起拍价',
+        auctionButton: '参与拍卖',
+        hint: '悬停（或点击）高亮地块以查看详情。',
+        status: { available: '可售', reserved: '已预留', sold: '已售' },
       },
     },
     incentives: {

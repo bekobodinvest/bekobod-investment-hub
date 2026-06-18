@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
+import LotMap from '@/components/LotMap';
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -173,6 +174,26 @@ export default function YangiUzbekistanPage() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Interactive Lot Map */}
+      <section className="section-padding bg-white">
+        <div className="container-custom animate-on-scroll">
+          <LotMap
+            labels={{
+              title: t.yangi.lots.title,
+              description: t.yangi.lots.description,
+              image: '/yangi_aerial.png',
+              imageAlt: "Yangi O'zbekiston masterplan — investment lots",
+              lotLabel: t.yangi.lots.lotLabel,
+              areaLabel: t.yangi.lots.areaLabel,
+              priceLabel: t.yangi.lots.priceLabel,
+              auctionButton: t.yangi.lots.auctionButton,
+              hint: t.yangi.lots.hint,
+              statusLabels: t.yangi.lots.status,
+            }}
+          />
         </div>
       </section>
 
