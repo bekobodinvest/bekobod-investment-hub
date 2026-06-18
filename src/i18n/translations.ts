@@ -240,6 +240,12 @@ export const translations = {
         badge: 'Anchor Investor — Bashkir Company',
         description:
           'The crown jewel within the SEZ, Bekobod Technopark is anchored by a major Bashkir company and represents the zone\'s flagship investment. This 100-hectare technology park will drive innovation and create premium employment opportunities.',
+        descriptionSecond: {
+          before:
+            'Technopark residents enjoy 3–10 year tax and customs exemptions, ready-to-use engineering infrastructure, and direct access to international transit corridors via the Oybek border post on the Uzbekistan–Tajikistan border. Learn more about the technopark and available plots at ',
+          linkText: 'tp-bekobod.uz',
+          after: '.',
+        },
         stats: [
           { label: 'Area', value: '100 ha' },
           { label: 'Lots', value: '23' },
@@ -806,6 +812,12 @@ export const translations = {
         badge: "Asosiy investor — Boshqirdiston kompaniyasi",
         description:
           "MIQZ doirasidagi toj gavhar, Bekobod Texnoparki yirik Boshqirdiston kompaniyasining asosiy investitsiyasi bo'lib, zonaning flagman loyihasini ifodalaydi. Bu 100 gektarlik texnopark innovatsiyalarni rivojlantiradi va sifatli ish o'rinlari yaratadi.",
+        descriptionSecond: {
+          before:
+            "Texnopark rezidentlari 3 yildan 10 yilgacha soliq va bojxona imtiyozlari, tayyor muhandislik infratuzilmasi va O'zbekiston–Tojikiston chegarasidagi «Oybek» bojxona posti orqali xalqaro transport koridorlariga to'g'ridan-to'g'ri chiqish imkoniyatiga ega. Texnopark va mavjud yer maydonlari haqida batafsil ma'lumot — ",
+          linkText: 'tp-bekobod.uz',
+          after: ' saytida.',
+        },
         stats: [
           { label: "Maydon", value: '100 ga' },
           { label: "Parsel", value: '23' },
@@ -1346,6 +1358,12 @@ export const translations = {
         badge: 'Якорный инвестор — Башкирская компания',
         description:
           'Жемчужина в короне СЭЗ, Технопарк Бекобод является якорной инвестицией крупной башкирской компании и представляет флагманскую инвестицию зоны. Этот технопарк площадью 100 га будет стимулировать инновации и создавать качественные рабочие места.',
+        descriptionSecond: {
+          before:
+            'Резиденты технопарка получают налоговые и таможенные льготы сроком от 3 до 10 лет, готовую инженерную инфраструктуру и прямой выход на международные транспортные коридоры через пограничный пост «Ойбек» на границе Узбекистана и Таджикистана. Подробнее о технопарке и доступных площадках — на сайте ',
+          linkText: 'tp-bekobod.uz',
+          after: '.',
+        },
         stats: [
           { label: 'Площадь', value: '100 га' },
           { label: 'Лотов', value: '23' },
@@ -1874,6 +1892,12 @@ export const translations = {
         badge: '主力投资方——巴什科尔托斯坦企业',
         description:
           '经济特区的明珠——别科博德技术园由一家重要的巴什科尔托斯坦企业作为主力投资方，代表着园区的旗舰投资项目。这个100公顷的技术园将推动创新并创造优质就业机会。',
+        descriptionSecond: {
+          before:
+            '技术园入驻企业可享受3至10年的税收和海关优惠、即用型工程基础设施，并通过乌兹别克斯坦与塔吉克斯坦边境的"Oybek"口岸直接连接国际运输走廊。如需了解技术园及可用地块的更多信息，请访问 ',
+          linkText: 'tp-bekobod.uz',
+          after: '。',
+        },
         stats: [
           { label: '面积', value: '100公顷' },
           { label: '地块数', value: '23个' },

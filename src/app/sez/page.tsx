@@ -1,9 +1,20 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
+
+const technoparkGallery = [
+  '/technopark-gallery/01.webp',
+  '/technopark-gallery/02.webp',
+  '/technopark-gallery/03.webp',
+  '/technopark-gallery/04.webp',
+  '/technopark-gallery/05.webp',
+  '/technopark-gallery/06.webp',
+  '/technopark-gallery/07.webp',
+  '/technopark-gallery/08.webp',
+];
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -23,6 +34,15 @@ const sectorIcons = [
 export default function SEZPage() {
   const { t } = useLanguage();
   useScrollAnimation();
+
+  const [galleryIndex, setGalleryIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(
+      () => setGalleryIndex((i) => (i + 1) % technoparkGallery.length),
+      3500
+    );
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <>
@@ -156,8 +176,20 @@ export default function SEZPage() {
                 <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
                   {t.sez.technopark.title}
                 </h2>
-                <p className="text-gray-300 leading-relaxed text-lg mb-8">
+                <p className="text-gray-300 leading-relaxed text-lg mb-4">
                   {t.sez.technopark.description}
+                </p>
+                <p className="text-gray-300 leading-relaxed text-lg mb-8">
+                  {t.sez.technopark.descriptionSecond.before}
+                  <a
+                    href="https://tp-bekobod.uz"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[#4a9c4e] hover:underline font-semibold"
+                  >
+                    {t.sez.technopark.descriptionSecond.linkText}
+                  </a>
+                  {t.sez.technopark.descriptionSecond.after}
                 </p>
 
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
@@ -170,18 +202,39 @@ export default function SEZPage() {
                 </div>
               </div>
 
-              <div className="relative lg:h-auto h-64 bg-[#111b30]">
-                <Image
-                  src="/Bekobod_SEZ.png"
-                  alt="Bekobod Technopark"
-                  fill
-                  className="object-cover opacity-40"
-                />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-7xl font-black text-white/10">100</div>
-                    <div className="text-[#4a9c4e] font-bold text-xl">{t.sez.technopark.hectaresLabel}</div>
-                    <div className="text-gray-400 text-sm mt-1">{t.sez.technopark.areaCaption}</div>
+              <div className="relative lg:h-auto h-64 bg-[#111b30] overflow-hidden">
+                {technoparkGallery.map((src, i) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`Bekobod Technopark ${i + 1}`}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority={i === 0}
+                    className={`object-cover transition-opacity duration-1000 ${
+                      i === galleryIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111b30]/70 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
+                  <div>
+                    <div className="text-5xl font-black text-white drop-shadow-lg leading-none">100</div>
+                    <div className="text-[#4a9c4e] font-bold text-lg mt-1">{t.sez.technopark.hectaresLabel}</div>
+                    <div className="text-gray-200 text-xs mt-0.5">{t.sez.technopark.areaCaption}</div>
+                  </div>
+                  <div className="flex gap-1.5">
+                    {technoparkGallery.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        aria-label={`Slide ${i + 1}`}
+                        onClick={() => setGalleryIndex(i)}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === galleryIndex ? 'w-6 bg-[#4a9c4e]' : 'w-1.5 bg-white/40 hover:bg-white/70'
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
