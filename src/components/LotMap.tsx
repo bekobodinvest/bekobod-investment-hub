@@ -84,17 +84,19 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
       <div
         ref={containerRef}
         className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none"
+        style={{ aspectRatio: '1672 / 941' }}
         onMouseMove={handleMove}
         onMouseLeave={() => setHovered(null)}
         onClick={() => setSelected(null)}
       >
-        {/* The image defines the box; the SVG overlay fills exactly the same box,
-            so zones stay aligned on every screen size. */}
+        {/* Lock the container to the source image's exact aspect ratio.
+            Both the image and the SVG overlay then fill the same absolute
+            box (inset-0), so zones stay pixel-aligned on every screen. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={labels.image}
           alt={labels.imageAlt}
-          className="block w-full h-auto"
+          className="absolute inset-0 w-full h-full object-cover"
           draggable={false}
         />
 
