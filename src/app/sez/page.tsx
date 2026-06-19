@@ -115,9 +115,9 @@ export default function SEZPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a2744] mb-6">
                 {t.sez.overview.title}
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg">{t.sez.overview.description}</p>
+              <p className="text-gray-600 leading-relaxed text-lg text-justify">{t.sez.overview.description}</p>
 
-              <p className="text-gray-600 leading-relaxed text-lg mt-5">
+              <p className="text-gray-600 leading-relaxed text-lg text-justify mt-5">
                 <span className="font-semibold text-[#1a2744]">{t.sez.overview.railwayTitle}. </span>
                 {t.sez.overview.railway}
               </p>
