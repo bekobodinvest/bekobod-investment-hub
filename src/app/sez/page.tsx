@@ -31,6 +31,12 @@ const sectorIcons = [
   '⚙️', '💊', '🔧', '🏗️', '📦', '🌾', '⚡', '🧵',
 ];
 
+// Overview image carousel: SEZ aerial render ↔ freight railway locomotive.
+const overviewSlides = [
+  { src: '/Bekobod_SEZ.png', alt: 'Bekobod SEZ Overview' },
+  { src: '/railway-locomotive.jpg', alt: "O'zbekiston temir yo'llari freight locomotive" },
+];
+
 export default function SEZPage() {
   const { t } = useLanguage();
   useScrollAnimation();
@@ -40,6 +46,15 @@ export default function SEZPage() {
     const id = setInterval(
       () => setGalleryIndex((i) => (i + 1) % technoparkGallery.length),
       3500
+    );
+    return () => clearInterval(id);
+  }, []);
+
+  const [overviewIndex, setOverviewIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(
+      () => setOverviewIndex((i) => (i + 1) % overviewSlides.length),
+      4500
     );
     return () => clearInterval(id);
   }, []);
@@ -121,20 +136,39 @@ export default function SEZPage() {
             </div>
 
             <div className="animate-on-scroll">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <Image
-                  src="/Bekobod_SEZ.png"
-                  alt="Bekobod SEZ Overview"
-                  width={600}
-                  height={450}
-                  className="w-full h-96 object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2744]/60 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="flex gap-3">
+              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-[#111b30]">
+                {overviewSlides.map((slide, i) => (
+                  <Image
+                    key={slide.src}
+                    src={slide.src}
+                    alt={slide.alt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    priority={i === 0}
+                    className={`object-cover transition-opacity duration-1000 ${
+                      i === overviewIndex ? 'opacity-100' : 'opacity-0'
+                    }`}
+                  />
+                ))}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a2744]/60 to-transparent pointer-events-none" />
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
+                  <div className="flex flex-wrap gap-3">
                     <div className="bg-[#4a9c4e] text-white text-xs font-bold px-3 py-1.5 rounded-lg">397 ha</div>
                     <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">95 {t.sez.imageTags.lots}</div>
                     <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">8 {t.sez.imageTags.sectors}</div>
+                  </div>
+                  <div className="flex gap-1.5 shrink-0">
+                    {overviewSlides.map((_, i) => (
+                      <button
+                        key={i}
+                        type="button"
+                        aria-label={`Slide ${i + 1}`}
+                        onClick={() => setOverviewIndex(i)}
+                        className={`h-1.5 rounded-full transition-all ${
+                          i === overviewIndex ? 'w-6 bg-[#4a9c4e]' : 'w-1.5 bg-white/50 hover:bg-white/80'
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </div>
