@@ -102,6 +102,11 @@ export default function SEZPage() {
               </h2>
               <p className="text-gray-600 leading-relaxed text-lg">{t.sez.overview.description}</p>
 
+              <p className="text-gray-600 leading-relaxed text-lg mt-5">
+                <span className="font-semibold text-[#1a2744]">{t.sez.overview.railwayTitle}. </span>
+                {t.sez.overview.railway}
+              </p>
+
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {(['📍', '🏭', '💰', '👥'] as const).map((icon, i) => (
                   <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
