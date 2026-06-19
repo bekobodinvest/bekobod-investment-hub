@@ -7,7 +7,7 @@ export const translations = {
       about: 'About',
       sez: 'Bekobod SEZ',
       oybek: 'Oybek FTZ',
-      yangi: "Yangi O'zbekiston",
+      yangi: "Yangi Uzbekistan",
       incentives: 'Incentives',
       contact: 'Contact',
       eAuction: 'E-Auction Portal',
@@ -62,7 +62,7 @@ export const translations = {
           ],
         },
         yangi: {
-          title: "Yangi O'zbekiston",
+          title: "Yangi Uzbekistan",
           subtitle: 'Residential District',
           description:
             'A complete city within a city — 104 hectares featuring 7,800 apartments, schools, clinics, business centers, and world-class amenities.',
@@ -328,13 +328,13 @@ export const translations = {
       },
     },
     yangi: {
-      title: "Yangi O'zbekiston Residential District",
+      title: "Yangi Uzbekistan Residential District",
       subtitle: 'A Complete City Within a City',
       badge: 'Launch: 2030',
       overview: {
         title: 'District Overview',
         description:
-          "Yangi O'zbekiston (New Uzbekistan) is an ambitious urban masterplan creating a fully self-contained modern city within Bekobod. Spanning 104 hectares, this transformational project features 7,800 apartments alongside comprehensive commercial, educational, healthcare, and recreational infrastructure.",
+          "Yangi Uzbekistan (New Uzbekistan) is an ambitious urban masterplan creating a fully self-contained modern city within Bekobod. Spanning 104 hectares, this transformational project features 7,800 apartments alongside comprehensive commercial, educational, healthcare, and recreational infrastructure.",
       },
       stats: [
         { label: 'Total Area', value: '104 ha' },
@@ -372,7 +372,7 @@ export const translations = {
       concept: {
         title: 'All-in-One City Concept',
         description:
-          "Yangi O'zbekiston is designed on the 15-minute city principle — all essential services, education, healthcare, and recreation are within easy walking distance. This modern urban planning approach ensures residents enjoy the highest quality of life while fostering a vibrant community.",
+          "Yangi Uzbekistan is designed on the 15-minute city principle — all essential services, education, healthcare, and recreation are within easy walking distance. This modern urban planning approach ensures residents enjoy the highest quality of life while fostering a vibrant community.",
       },
       minuteCityLabel: '15-Minute City',
       imageTagApartments: '7,800 Apts',
@@ -575,7 +575,7 @@ export const translations = {
         phone: 'Phone Number',
         country: 'Country of Origin',
         interest: 'Investment Interest',
-        interestOptions: ['Bekobod SEZ', 'Oybek FTZ', "Yangi O'zbekiston", 'General Inquiry'],
+        interestOptions: ['Bekobod SEZ', 'Oybek FTZ', "Yangi Uzbekistan", 'General Inquiry'],
         message: 'Your Message',
         submit: 'Send Message',
         success: 'Thank you! Your message has been sent. We will contact you within 24 hours.',
@@ -1150,7 +1150,7 @@ export const translations = {
       about: 'О нас',
       sez: 'СЭЗ Бекобод',
       oybek: 'СТЗ Ойбек',
-      yangi: 'Янги Узбекистон',
+      yangi: 'Янги Узбекистан',
       incentives: 'Льготы',
       contact: 'Контакты',
       eAuction: 'Электронный аукцион',
@@ -1205,7 +1205,7 @@ export const translations = {
           ],
         },
         yangi: {
-          title: 'Янги Узбекистон',
+          title: 'Янги Узбекистан',
           subtitle: 'Жилой район',
           description:
             'Полноценный город в городе — 104 га с 7 800 квартирами, школами, клиниками, бизнес-центрами и инфраструктурой мирового класса.',
@@ -1426,13 +1426,13 @@ export const translations = {
       },
     },
     yangi: {
-      title: 'Жилой район Янги Узбекистон',
+      title: 'Жилой район Янги Узбекистан',
       subtitle: 'Полноценный город в городе',
       badge: 'Запуск: 2030',
       overview: {
         title: 'Обзор района',
         description:
-          'Янги Узбекистон (Новый Узбекистан) — амбициозный градостроительный проект, создающий полностью самодостаточный современный город в Бекободе. На площади 104 га этот трансформационный проект предусматривает 7 800 квартир наряду с комплексной коммерческой, образовательной, медицинской и рекреационной инфраструктурой.',
+          'Янги Узбекистан (Новый Узбекистан) — амбициозный градостроительный проект, создающий полностью самодостаточный современный город в Бекободе. На площади 104 га этот трансформационный проект предусматривает 7 800 квартир наряду с комплексной коммерческой, образовательной, медицинской и рекреационной инфраструктурой.',
       },
       stats: [
         { label: 'Общая площадь', value: '104 га' },
@@ -1470,7 +1470,7 @@ export const translations = {
       concept: {
         title: 'Концепция «Всё в одном месте»',
         description:
-          'Янги Узбекистон спроектирован по принципу 15-минутного города — все необходимые услуги, образование, здравоохранение и отдых находятся в пешей доступности. Этот современный подход к городскому планированию обеспечивает жителям высочайшее качество жизни и формирует живое сообщество.',
+          'Янги Узбекистан спроектирован по принципу 15-минутного города — все необходимые услуги, образование, здравоохранение и отдых находятся в пешей доступности. Этот современный подход к городскому планированию обеспечивает жителям высочайшее качество жизни и формирует живое сообщество.',
       },
       minuteCityLabel: '15-минутный город',
       imageTagApartments: '7 800 квартир',
@@ -1657,7 +1657,7 @@ export const translations = {
       eauction: {
         title: 'Портал электронного аукциона',
         description:
-          'Участвуйте в нашей прозрачной системе электронных аукционов для получения прав аренды земли в СЭЗ Бекобод, СТЗ Ойбек и районе Янги Узбекистон.',
+          'Участвуйте в нашей прозрачной системе электронных аукционов для получения прав аренды земли в СЭЗ Бекобод, СТЗ Ойбек и районе Янги Узбекистан.',
         button: 'Перейти на портал электронного аукциона',
         website: 'e-auksion.uz',
       },
@@ -1668,7 +1668,7 @@ export const translations = {
         phone: 'Номер телефона',
         country: 'Страна',
         interest: 'Инвестиционный интерес',
-        interestOptions: ['СЭЗ Бекобод', 'СТЗ Ойбек', 'Янги Узбекистон', 'Общий запрос'],
+        interestOptions: ['СЭЗ Бекобод', 'СТЗ Ойбек', 'Янги Узбекистан', 'Общий запрос'],
         message: 'Ваше сообщение',
         submit: 'Отправить сообщение',
         success: 'Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в течение 24 часов.',
