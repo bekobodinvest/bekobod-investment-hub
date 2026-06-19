@@ -249,9 +249,11 @@ export default function SEZPage() {
           <MapSection
             title={t.sez.map.title}
             description={t.sez.map.description}
-            buttonLabel={t.sez.map.button}
-            mapUrl="https://maps.app.goo.gl/djKD81wt3TnbBFmz6"
-            coordinates="40.2167° N, 69.2333° E — Bekobod, Uzbekistan"
+            googleLabel={t.sez.map.button}
+            yandexLabel={t.sez.map.yandexButton}
+            googleUrl="https://maps.app.goo.gl/djKD81wt3TnbBFmz6"
+            yandexUrl="https://yandex.uz/maps/-/CTAjjYze"
+            embedQuery="40.292359,69.219809"
           />
         </div>
       </section>

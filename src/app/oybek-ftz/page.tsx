@@ -166,9 +166,11 @@ export default function OybekFTZPage() {
           <MapSection
             title={t.oybek.map.title}
             description={t.oybek.map.description}
-            buttonLabel={t.oybek.map.button}
-            mapUrl="https://maps.app.goo.gl/ApWW1c4iSoGaMyam7"
-            coordinates="40.1667° N, 69.7500° E — Oybek Border Post, Uzbekistan-Tajikistan"
+            googleLabel={t.oybek.map.button}
+            yandexLabel={t.oybek.map.yandexButton}
+            googleUrl="https://maps.app.goo.gl/ApWW1c4iSoGaMyam7"
+            yandexUrl="https://yandex.uz/maps/-/CTAjjU5-"
+            embedQuery="40.546190,69.206146"
           />
         </div>
       </section>

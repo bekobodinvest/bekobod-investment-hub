@@ -203,9 +203,11 @@ export default function YangiUzbekistanPage() {
           <MapSection
             title={t.yangi.map.title}
             description={t.yangi.map.description}
-            buttonLabel={t.yangi.map.button}
-            mapUrl="https://maps.app.goo.gl/tu4cpvgh5meCWsSY7"
-            coordinates="40.2167° N, 69.2333° E — Bekobod District, Tashkent Region"
+            googleLabel={t.yangi.map.button}
+            yandexLabel={t.yangi.map.yandexButton}
+            googleUrl="https://maps.app.goo.gl/tu4cpvgh5meCWsSY7"
+            yandexUrl="https://yandex.uz/maps/-/CTAjjYze"
+            embedQuery="40.393508,69.248754"
           />
         </div>
       </section>

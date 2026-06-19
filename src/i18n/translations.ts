@@ -261,7 +261,7 @@ export const translations = {
         title: 'SEZ Location',
         description:
           'Strategically located in Bekobod district with excellent transport connectivity.',
-        button: 'View on Google Maps',
+        button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
     },
     oybek: {
@@ -324,7 +324,7 @@ export const translations = {
       map: {
         title: 'FTZ Location',
         description: 'Located at the Oybek border post, Uzbekistan-Tajikistan border.',
-        button: 'View on Google Maps',
+        button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
     },
     yangi: {
@@ -399,7 +399,7 @@ export const translations = {
       map: {
         title: 'District Location',
         description: 'Located in the heart of Bekobod district.',
-        button: 'View on Google Maps',
+        button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
       lots: {
         title: 'Available Investment Lots',
@@ -832,7 +832,7 @@ export const translations = {
       map: {
         title: "MIQZ joylashuvi",
         description: "Bekobod tumanida strategik jihatdan joylashgan, transport bilan yaxshi bog'langan.",
-        button: "Google Xaritada ko'rish",
+        button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
     },
     oybek: {
@@ -876,7 +876,7 @@ export const translations = {
       map: {
         title: "ESZ joylashuvi",
         description: "Oybek chegara postida joylashgan, O'zbekiston-Tojikiston chegarasi.",
-        button: "Google Xaritada ko'rish",
+        button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
     },
     yangi: {
@@ -951,7 +951,7 @@ export const translations = {
       map: {
         title: "Tuman joylashuvi",
         description: "Bekobod tuman markazida joylashgan.",
-        button: "Google Xaritada ko'rish",
+        button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
       lots: {
         title: 'Sotuvdagi investitsiya lotlari',
@@ -1378,7 +1378,7 @@ export const translations = {
       map: {
         title: 'Расположение СЭЗ',
         description: 'Стратегически расположена в Бекободском районе с отличной транспортной связью.',
-        button: 'Открыть в Google Maps',
+        button: 'Google Maps', yandexButton: 'Яндекс Карты',
       },
     },
     oybek: {
@@ -1422,7 +1422,7 @@ export const translations = {
       map: {
         title: 'Расположение СТЗ',
         description: 'На пограничном посту Ойбек, граница Узбекистана-Таджикистана.',
-        button: 'Открыть в Google Maps',
+        button: 'Google Maps', yandexButton: 'Яндекс Карты',
       },
     },
     yangi: {
@@ -1497,7 +1497,7 @@ export const translations = {
       map: {
         title: 'Расположение района',
         description: 'В центре Бекободского района.',
-        button: 'Открыть в Google Maps',
+        button: 'Google Maps', yandexButton: 'Яндекс Карты',
       },
       lots: {
         title: 'Инвестиционные лоты в продаже',
@@ -1912,7 +1912,7 @@ export const translations = {
       map: {
         title: '经济特区位置',
         description: '战略性地位于别科博德区，交通便利。',
-        button: '在谷歌地图中查看',
+        button: 'Google Maps', yandexButton: 'Yandex 地图',
       },
     },
     oybek: {
@@ -1956,7 +1956,7 @@ export const translations = {
       map: {
         title: '自贸区位置',
         description: '位于奥伊贝克边境口岸，乌兹别克斯坦-塔吉克斯坦边境。',
-        button: '在谷歌地图中查看',
+        button: 'Google Maps', yandexButton: 'Yandex 地图',
       },
     },
     yangi: {
@@ -2031,7 +2031,7 @@ export const translations = {
       map: {
         title: '街区位置',
         description: '位于别科博德区中心地带。',
-        button: '在谷歌地图中查看',
+        button: 'Google Maps', yandexButton: 'Yandex 地图',
       },
       lots: {
         title: '在售投资地块',
