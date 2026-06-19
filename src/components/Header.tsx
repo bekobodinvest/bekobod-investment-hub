@@ -132,20 +132,22 @@ export default function Header() {
             )}
           </div>
 
-          {/* E-Auction CTA */}
+          {/* E-Auction CTA — official E-Auksion brand logo */}
           <a
             href={E_AUCTION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 whitespace-nowrap shadow-lg btn-glow"
+            aria-label={t.nav.eAuction}
+            className="hidden lg:inline-flex items-center bg-white hover:bg-gray-50 px-4 py-2 rounded-xl transition-all duration-200 shadow-lg whitespace-nowrap"
           >
-            {/* Auction gavel — matches the E-Auksion brand mark */}
-            <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M11 1.8 L22.2 7.4 L18.6 13.8 L7.4 8.2 Z" />
-              <path d="M10.4 6.5 L3.2 12.8 L6.6 15.6 L13.8 9.3 Z" />
-              <rect x="2" y="18.4" width="20" height="3.2" rx="0.8" />
-            </svg>
-            {t.nav.eAuction}
+            <Image
+              src="/e-auksion-logo.png"
+              alt="E-Auksion"
+              width={132}
+              height={33}
+              priority
+              className="h-6 w-auto"
+            />
           </a>
 
           {/* Mobile menu button */}
