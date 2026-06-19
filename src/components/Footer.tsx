@@ -42,12 +42,21 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-sm text-gray-400 leading-relaxed mb-5">{t.footer.description}</p>
-            <div className="flex items-center gap-2 text-xs text-[#4a9c4e] font-medium bg-[#4a9c4e]/10 rounded-lg px-3 py-2">
-              <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+            <a
+              href="https://t.me/Bekobodtumanihokimligi"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs text-[#4a9c4e] hover:text-white font-medium bg-[#4a9c4e]/10 hover:bg-[#4a9c4e] rounded-lg px-3 py-2 transition-colors group"
+            >
+              {/* Telegram paper-plane mark */}
+              <svg className="w-4 h-4 flex-shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.665 3.717 2.93 10.554c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l.002.001-.314 4.692c.46 0 .663-.211.921-.46l2.211-2.15 4.599 3.397c.848.467 1.457.227 1.668-.787L23 5.422c.309-1.244-.473-1.812-1.335-1.705z" />
               </svg>
-              {t.footer.authority}
-            </div>
+              <span>{t.footer.authority}</span>
+              <svg className="w-3.5 h-3.5 ml-auto opacity-60 group-hover:opacity-100 transition-opacity" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
           </div>
 
           {/* Quick Links */}
