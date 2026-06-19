@@ -188,7 +188,7 @@ export default function YangiUzbekistanPage() {
       <section className="py-16 bg-gradient-to-br from-[#1a2744] to-[#243660]">
         <div className="container-custom">
           <div className="grid md:grid-cols-4 gap-8 text-center">
-            {(['11.25T UZS', '7,800', '800+', '2030'] as const).map((value, i) => (
+            {(['$900M', '7,800', '800+', '2030'] as const).map((value, i) => (
               <div key={i} className="animate-on-scroll" style={{ transitionDelay: `${i * 80}ms` }}>
                 <div className="text-4xl md:text-5xl font-black text-[#4a9c4e]">{value}</div>
                 <div className="text-gray-300 font-medium mt-2">{t.yangi.banner[i].label}</div>

@@ -67,7 +67,7 @@ export const translations = {
           description:
             'A complete city within a city — 104 hectares featuring 7,800 apartments, schools, clinics, business centers, and world-class amenities.',
           stats: [
-            { value: '11.25T UZS', label: 'Investment' },
+            { value: '$900M', label: 'Investment' },
             { value: '7800', label: 'Apartments' },
             { value: '2030', label: 'Launch' },
           ],
@@ -338,7 +338,7 @@ export const translations = {
       },
       stats: [
         { label: 'Total Area', value: '104 ha' },
-        { label: 'Investment', value: '11.25T UZS' },
+        { label: 'Investment', value: '$900M' },
         { label: 'Apartments', value: '7,800' },
         { label: 'Jobs Created', value: '800+' },
         { label: 'Launch Date', value: '2030' },
@@ -547,7 +547,7 @@ export const translations = {
       projectCards: [
         { subtitle: '397 ha • $500M • Oct 2026' },
         { subtitle: '34 ha • $20M • Dec 2027' },
-        { subtitle: '104 ha • 11.25T UZS • 2030' },
+        { subtitle: '104 ha • $900M • 2030' },
       ],
       director: {
         title: 'Investment Director',
@@ -664,7 +664,7 @@ export const translations = {
           description:
             "Shaharda shahar — 7 800 ta kvartira, maktablar, klinikalar, biznes markazlar va jahon darajasidagi infratuzilmaga ega 104 gektarlik kompleks.",
           stats: [
-            { value: '11.25T so\'m', label: 'Investitsiya' },
+            { value: '\M', label: 'Investitsiya' },
             { value: '7800', label: 'Kvartira' },
             { value: '2030', label: "Ishga tushish" },
           ],
@@ -891,7 +891,7 @@ export const translations = {
       },
       stats: [
         { label: "Umumiy maydon", value: '104 ga' },
-        { label: "Investitsiya", value: "11,25T so'm" },
+        { label: "Investitsiya", value: "$900M" },
         { label: "Kvartiralar", value: '7 800' },
         { label: "Ish o'rinlari", value: '800+' },
         { label: "Ishga tushishi", value: '2030' },
@@ -1095,7 +1095,7 @@ export const translations = {
       projectCards: [
         { subtitle: '397 ga • $500M • Okt 2026' },
         { subtitle: '34 ga • $20M • Dek 2027' },
-        { subtitle: "104 ga • 11,25T so'm • 2030" },
+        { subtitle: "104 ga • $900M • 2030" },
       ],
       director: {
         title: "Investitsiya direktori",
@@ -1212,7 +1212,7 @@ export const translations = {
           description:
             'Полноценный город в городе — 104 га с 7 800 квартирами, школами, клиниками, бизнес-центрами и инфраструктурой мирового класса.',
           stats: [
-            { value: '11.25T сум', label: 'Инвестиции' },
+            { value: '$900M', label: 'Инвестиции' },
             { value: '7800', label: 'Квартир' },
             { value: '2030', label: 'Запуск' },
           ],
@@ -1438,7 +1438,7 @@ export const translations = {
       },
       stats: [
         { label: 'Общая площадь', value: '104 га' },
-        { label: 'Инвестиции', value: '11,25T сум' },
+        { label: 'Инвестиции', value: '$900M' },
         { label: 'Квартир', value: '7 800' },
         { label: 'Рабочих мест', value: '800+' },
         { label: 'Дата запуска', value: '2030' },
@@ -1642,7 +1642,7 @@ export const translations = {
       projectCards: [
         { subtitle: '397 га • $500M • Окт 2026' },
         { subtitle: '34 га • $20M • Дек 2027' },
-        { subtitle: '104 га • 11,25T сум • 2030' },
+        { subtitle: '104 га • $900M • 2030' },
       ],
       director: {
         title: 'Инвестиционный директор',
@@ -1759,7 +1759,7 @@ export const translations = {
           description:
             '城中之城——104公顷土地上建有7,800套公寓、学校、诊所、商业中心及世界一流配套设施。',
           stats: [
-            { value: '11.25万亿苏姆', label: '投资额' },
+            { value: '$900M', label: '投资额' },
             { value: '7800套', label: '公寓' },
             { value: '2030年', label: '启动时间' },
           ],
@@ -1973,7 +1973,7 @@ export const translations = {
       },
       stats: [
         { label: '总面积', value: '104公顷' },
-        { label: '投资额', value: '11.25万亿苏姆' },
+        { label: '投资额', value: '$900M' },
         { label: '公寓套数', value: '7,800套' },
         { label: '创造就业', value: '800+' },
         { label: '启动日期', value: '2030年' },
@@ -2177,7 +2177,7 @@ export const translations = {
       projectCards: [
         { subtitle: '397公顷 • 5亿美元 • 2026年10月' },
         { subtitle: '34公顷 • 2000万美元 • 2027年12月' },
-        { subtitle: '104公顷 • 11.25万亿苏姆 • 2030年' },
+        { subtitle: '104公顷 • $900M • 2030年' },
       ],
       director: {
         title: '投资总监',
