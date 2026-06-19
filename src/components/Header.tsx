@@ -145,7 +145,6 @@ export default function Header() {
               <path d="M10.4 6.5 L3.2 12.8 L6.6 15.6 L13.8 9.3 Z" />
               <rect x="2" y="18.4" width="20" height="3.2" rx="0.8" />
             </svg>
-            </svg>
             {t.nav.eAuction}
           </a>
 
