@@ -252,7 +252,7 @@ export default function SEZPage() {
             googleLabel={t.sez.map.button}
             yandexLabel={t.sez.map.yandexButton}
             googleUrl="https://maps.app.goo.gl/djKD81wt3TnbBFmz6"
-            yandexUrl="https://yandex.uz/maps/-/CTAjjYze"
+            yandexUrl="https://yandex.uz/maps/-/CTAjj0ld"
             embedQuery="40.292359,69.219809"
           />
         </div>
