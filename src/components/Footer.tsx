@@ -100,12 +100,15 @@ export default function Footer() {
               href="https://e-auksion.uz/lots?group=6&index=1&page=1&address=&lt=0&at=0&order=0&q=&hashtag=&region=2&area=19"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white font-semibold text-sm px-5 py-3 rounded-xl transition-all duration-200 shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white font-semibold text-sm px-5 py-2.5 rounded-xl transition-all duration-200 shadow-lg whitespace-nowrap"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              {/* Auction gavel — same as the header CTA */}
+              <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11 1.8 L22.2 7.4 L18.6 13.8 L7.4 8.2 Z" />
+                <path d="M10.4 6.5 L3.2 12.8 L6.6 15.6 L13.8 9.3 Z" />
+                <rect x="2" y="18.4" width="20" height="3.2" rx="0.8" />
               </svg>
-              E-Auksion Portal
+              {t.nav.eAuction}
             </a>
 
             <div className="mt-6 space-y-4">
