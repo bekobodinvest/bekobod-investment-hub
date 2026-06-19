@@ -65,6 +65,7 @@ export default function YangiUzbekistanPage() {
               auctionButton: t.yangi.lots.auctionButton,
               hint: t.yangi.lots.hint,
               statusLabels: t.yangi.lots.status,
+              useLabels: t.yangi.lots.useLabels,
             }}
           />
         </div>

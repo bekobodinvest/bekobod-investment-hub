@@ -6,6 +6,7 @@ import {
   LOT_STATUS_COLOR,
   DEFAULT_AUCTION_URL,
   type Lot,
+  type LotCategory,
   type LotStatus,
 } from '@/data/yangiLots';
 
@@ -21,6 +22,8 @@ export interface LotMapLabels {
   auctionButton: string; // "Bid on auction" / "На аукцион" / "Auksionga"
   hint: string; // hover hint under the map
   statusLabels: Record<LotStatus, string>;
+  /** Localized building-use captions, keyed by lot category */
+  useLabels: Record<LotCategory, string>;
 }
 
 function pointsToSvg(points: [number, number][]): string {
@@ -152,9 +155,7 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
                 </span>
               </div>
               <div className="px-3.5 py-2.5 space-y-1.5">
-                {hovered.use && (
-                  <div className="text-xs text-gray-400">{hovered.use}</div>
-                )}
+                <div className="text-xs text-gray-400">{labels.useLabels[hovered.category]}</div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">{labels.areaLabel}</span>
                   <span className="font-semibold text-[#1a2744]">{hovered.area}</span>
@@ -196,9 +197,7 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
                 </span>
               </div>
               <div className="p-4 space-y-2">
-                {selected.use && (
-                  <div className="text-xs text-gray-400">{selected.use}</div>
-                )}
+                <div className="text-xs text-gray-400">{labels.useLabels[selected.category]}</div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">{labels.areaLabel}</span>
                   <span className="font-semibold text-[#1a2744]">{selected.area}</span>

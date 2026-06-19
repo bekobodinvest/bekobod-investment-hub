@@ -411,6 +411,7 @@ export const translations = {
         auctionButton: 'Bid on auction',
         hint: 'Hover a plot for details · click it to open the auction window.',
         status: { pending: 'Pending', available: 'On auction', sold: 'Sold' },
+        useLabels: { residential: 'Residential building', commercial: 'Non-residential building' },
       },
     },
     incentives: {
@@ -963,6 +964,7 @@ export const translations = {
         auctionButton: 'Auksionga',
         hint: "Kursorni olib boring — lot tafsilotlari, bosing — auksion oynasi ochiladi.",
         status: { pending: 'Kutilmoqda', available: 'Auksionda', sold: 'Sotilgan' },
+        useLabels: { residential: 'Turar joy binosi', commercial: 'Noturar bino' },
       },
     },
     incentives: {
@@ -1509,6 +1511,7 @@ export const translations = {
         auctionButton: 'На аукцион',
         hint: 'Наведите на участок — детали лота, нажмите — откроется окно с переходом на аукцион.',
         status: { pending: 'В ожидании', available: 'На аукционе', sold: 'Продан' },
+        useLabels: { residential: 'Жилое здание', commercial: 'Нежилое здание' },
       },
     },
     incentives: {
@@ -2043,6 +2046,7 @@ export const translations = {
         auctionButton: '参与拍卖',
         hint: '悬停查看地块详情 · 点击打开拍卖窗口。',
         status: { pending: '待定', available: '拍卖中', sold: '已售' },
+        useLabels: { residential: '住宅建筑', commercial: '非住宅建筑' },
       },
     },
     incentives: {
