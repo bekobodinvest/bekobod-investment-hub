@@ -207,16 +207,19 @@ export default function LotMapEditor() {
       <div
         ref={boxRef}
         className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
-        style={{ aspectRatio: '1672 / 941' }}
         onPointerMove={onMove}
         onPointerUp={endDrag}
         onPointerLeave={endDrag}
       >
+        {/* Image defines the box (no object-cover crop), so the capture box
+            matches the display page exactly — coords stay pixel-aligned. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGE}
           alt="Yangi O'zbekiston aerial"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          width={1672}
+          height={941}
+          className="block w-full h-auto pointer-events-none"
           draggable={false}
         />
 
