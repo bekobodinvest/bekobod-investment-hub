@@ -1,6 +1,7 @@
 'use client';
 
 import { useRef, useState, useCallback } from 'react';
+import Image from 'next/image';
 import {
   YANGI_LOTS,
   LOT_STATUS_COLOR,
@@ -213,9 +214,16 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
                     href={selected.auctionUrl ?? DEFAULT_AUCTION_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 block w-full text-center rounded-lg bg-[#4a9c4e] hover:bg-[#3d8540] text-white text-sm font-semibold py-2.5 transition-colors"
+                    aria-label={labels.auctionButton}
+                    className="mt-2 flex items-center justify-center w-full rounded-lg bg-white hover:bg-gray-50 border border-gray-200 py-2.5 transition-colors shadow-sm"
                   >
-                    {labels.auctionButton}
+                    <Image
+                      src="/e-auksion-logo.png"
+                      alt="E-Auksion"
+                      width={132}
+                      height={33}
+                      className="h-6 w-auto"
+                    />
                   </a>
                 )}
               </div>
