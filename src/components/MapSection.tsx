@@ -54,10 +54,15 @@ export default function MapSection({
               href={googleUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white font-semibold px-5 py-3 rounded-xl transition-all duration-200 shadow-lg"
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-gray-50 text-[#3c4043] font-semibold px-5 py-3 rounded-xl transition-all duration-200 shadow-lg"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              {/* Google Maps pin — official multi-color style */}
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M12 2C7.58 2 4 5.58 4 10c0 6 8 12 8 12s8-6 8-12c0-4.42-3.58-8-8-8z" fill="#34A853" />
+                <path d="M12 2C7.58 2 4 5.58 4 10c0 1.7.65 3.33 1.69 4.77L12 10V2z" fill="#4285F4" />
+                <path d="M12 2v8l6.31 4.77C19.35 13.33 20 11.7 20 10c0-4.42-3.58-8-8-8z" fill="#EA4335" />
+                <path d="M5.69 14.77C7.16 16.8 9.41 19 12 22c2.59-3 4.84-5.2 6.31-7.23L12 10l-6.31 4.77z" fill="#FBBC04" />
+                <circle cx="12" cy="10" r="2.5" fill="#fff" />
               </svg>
               {googleLabel}
             </a>
@@ -65,10 +70,15 @@ export default function MapSection({
               href={yandexUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-5 py-3 rounded-xl transition-all duration-200"
+              className="inline-flex items-center gap-2.5 bg-white hover:bg-gray-50 text-[#1a1a1a] font-semibold px-5 py-3 rounded-xl transition-all duration-200 shadow-lg"
             >
-              <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+              {/* Yandex Maps pin — red drop with white center */}
+              <svg className="w-5 h-5" viewBox="0 0 24 24">
+                <path
+                  d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                  fill="#FC3F1D"
+                />
+                <circle cx="12" cy="9" r="2.6" fill="#fff" />
               </svg>
               {yandexLabel}
             </a>
