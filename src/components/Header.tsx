@@ -139,13 +139,9 @@ export default function Header() {
             rel="noopener noreferrer"
             className="hidden lg:inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 whitespace-nowrap shadow-lg btn-glow"
           >
-            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              />
+            {/* Auction gavel — matches the E-Auksion brand mark */}
+            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M14.6 4.6l4.8 4.8-1.6 1.6-4.8-4.8 1.6-1.6zm-3.2 3.2l4.8 4.8-1.6 1.6-4.8-4.8 1.6-1.6zM2 18h12v2H2v-2zm3.4-7.4l4.8 4.8L8.6 17 3.8 12.2l1.6-1.6z" />
             </svg>
             {t.nav.eAuction}
           </a>
