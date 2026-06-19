@@ -140,8 +140,14 @@ export default function Header() {
             className="hidden lg:inline-flex items-center gap-2 bg-[#4a9c4e] hover:bg-[#3a7d3e] text-white text-sm font-semibold px-5 py-2.5 rounded-xl transition-all duration-300 whitespace-nowrap shadow-lg btn-glow"
           >
             {/* Auction gavel — matches the E-Auksion brand mark */}
-            <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M14.6 4.6l4.8 4.8-1.6 1.6-4.8-4.8 1.6-1.6zm-3.2 3.2l4.8 4.8-1.6 1.6-4.8-4.8 1.6-1.6zM2 18h12v2H2v-2zm3.4-7.4l4.8 4.8L8.6 17 3.8 12.2l1.6-1.6z" />
+            <svg className="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="currentColor">
+              {/* Hammer head — tilted bar near top-right */}
+              <path d="M12 2.2 L21.8 8 L19.3 12.3 L9.5 6.5 Z" />
+              {/* Handle — diagonal extending from head down to lower-left */}
+              <path d="M11.2 6.5 L4.5 13.2 L7.5 14.9 L14.2 8.2 Z" />
+              {/* Sound block / strike pad at the bottom */}
+              <rect x="2" y="18.5" width="20" height="3" rx="0.6" />
+            </svg>
             </svg>
             {t.nav.eAuction}
           </a>
