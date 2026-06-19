@@ -256,12 +256,7 @@ export default function SEZPage() {
                   />
                 ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111b30]/70 via-transparent to-transparent pointer-events-none" />
-                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
-                  <div>
-                    <div className="text-5xl font-black text-white drop-shadow-lg leading-none">100</div>
-                    <div className="text-[#4a9c4e] font-bold text-lg mt-1">{t.sez.technopark.hectaresLabel}</div>
-                    <div className="text-gray-200 text-xs mt-0.5">{t.sez.technopark.areaCaption}</div>
-                  </div>
+                <div className="absolute bottom-6 left-6 right-6 flex items-end justify-end gap-4">
                   <div className="flex gap-1.5">
                     {technoparkGallery.map((_, i) => (
                       <button
