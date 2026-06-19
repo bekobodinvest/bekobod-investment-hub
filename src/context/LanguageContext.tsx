@@ -17,6 +17,12 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguageState] = useState<Language>('en');
 
   useEffect(() => {
+    const urlLang = new URLSearchParams(window.location.search).get('lang') as Language | null;
+    if (urlLang && ['en', 'uz', 'ru', 'zh'].includes(urlLang)) {
+      setLanguageState(urlLang);
+      localStorage.setItem('bih-language', urlLang);
+      return;
+    }
     const saved = localStorage.getItem('bih-language') as Language;
     if (saved && ['en', 'uz', 'ru', 'zh'].includes(saved)) {
       setLanguageState(saved);
