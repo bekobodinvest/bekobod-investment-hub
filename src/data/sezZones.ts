@@ -28,7 +28,7 @@ const META: Record<SezZoneId, { name: string; color: string }> = {
   textile:    { name: 'Текстиль',               color: '#D4537E' },
 };
 
-const coords = coordsJson as Record<string, [number, number][]>;
+const coords = coordsJson as unknown as Record<string, [number, number][]>;
 
 export const SEZ_ZONES: SezZone[] = (Object.keys(META) as SezZoneId[]).map((id) => ({
   id,

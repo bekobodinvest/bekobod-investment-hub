@@ -30,7 +30,7 @@ const AREAS: number[] = [
 ];
 
 type LotEntry = { zone: SezZoneId; points: [number, number][] };
-const data = dataJson as Record<string, LotEntry>;
+const data = dataJson as unknown as Record<string, LotEntry>;
 
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
   const id = `LOT${i + 1}`;
