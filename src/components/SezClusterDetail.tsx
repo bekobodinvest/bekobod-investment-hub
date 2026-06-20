@@ -30,6 +30,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
   const { t } = useLanguage();
   const td = t.sez.clusterDetail;
   const lotsLabel = t.sez.clustersMap.lotsLabel;
+  const areaUnit = t.sez.clustersMap.areaUnit;
 
   const zone = SEZ_ZONES.find((z) => z.id === zoneId)!;
   const zoneIndex = SEZ_ZONES.findIndex((z) => z.id === zoneId);
@@ -89,7 +90,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
           </span>
           <h1 className="text-2xl md:text-3xl font-bold text-[#1a2744]">{sectorName}</h1>
           <span className="ml-auto text-sm text-gray-500">
-            {lots.length} {lotsLabel} · {totalGa.toFixed(1)} GA
+            {lots.length} {lotsLabel} · {totalGa.toFixed(1)} {areaUnit}
           </span>
         </div>
         <p className="text-gray-500 text-sm mt-2">{td.hint}</p>
@@ -152,7 +153,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
             >
               <div className="text-sm font-bold">{td.lot} {l.id.replace('LOT', '№')}</div>
               <div className="text-[11px] text-gray-300">
-                {l.area} · {usd(total)}
+                {l.areaGa} {areaUnit} · {usd(total)}
               </div>
             </div>
           );
@@ -187,7 +188,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
                 </button>
               </div>
               <div className="p-4 space-y-2 text-sm">
-                <Row label={td.area} value={`${selLot.area}`} />
+                <Row label={td.area} value={`${selLot.areaGa} ${areaUnit}`} />
                 <Row label={`${td.landCost} ($${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.land)} />
                 <div>
                   <Row label={`${td.lossFee} ($${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.loss)} />

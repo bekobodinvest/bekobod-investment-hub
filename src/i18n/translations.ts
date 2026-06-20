@@ -245,6 +245,7 @@ export const translations = {
         totalLabel: 'Total',
         lotsLabel: 'lots',
         clickHint: 'Click a cluster to open its lots',
+        areaUnit: 'ha',
       },
       clusterDetail: {
         back: 'All clusters',
@@ -842,6 +843,7 @@ export const translations = {
         totalLabel: 'Jami',
         lotsLabel: 'lot',
         clickHint: 'Lotlarini ochish uchun klasterni bosing',
+        areaUnit: 'ga',
       },
       clusterDetail: {
         back: 'Barcha klasterlar',
@@ -1413,6 +1415,7 @@ export const translations = {
         totalLabel: 'Всего',
         lotsLabel: 'лот',
         clickHint: 'Нажмите на кластер, чтобы открыть его лоты',
+        areaUnit: 'га',
       },
       clusterDetail: {
         back: 'Ко всем кластерам',
@@ -1972,6 +1975,7 @@ export const translations = {
         totalLabel: '总计',
         lotsLabel: '地块',
         clickHint: '点击集群以查看其地块',
+        areaUnit: '公顷',
       },
       clusterDetail: {
         back: '所有集群',

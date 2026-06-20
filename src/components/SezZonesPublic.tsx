@@ -15,6 +15,7 @@ export default function SezZonesPublic() {
   const sectorNames = t.sez.sectors.items.map((it) => it.name);
   const lotsLabel = t.sez.clustersMap.lotsLabel;
   const totalLabel = t.sez.clustersMap.totalLabel;
+  const areaUnit = t.sez.clustersMap.areaUnit;
   const open = (id: SezZoneId) => router.push(`/sez/cluster/${id}`);
 
   const perZone = useMemo(() => {
@@ -75,7 +76,7 @@ export default function SezZonesPublic() {
               <div className="text-xs text-gray-300">{idx + 1}</div>
               <div className="text-sm font-bold">{sectorNames[idx] ?? z.name}</div>
               <div className="text-xs text-gray-300 mt-1">
-                {m.count} {lotsLabel} · {m.ga.toFixed(1)} GA
+                {m.count} {lotsLabel} · {m.ga.toFixed(1)} {areaUnit}
               </div>
             </div>
           );
@@ -89,7 +90,7 @@ export default function SezZonesPublic() {
           <div className="flex items-baseline gap-2">
             <span className="font-bold text-lg">{SEZ_LOTS.length} {lotsLabel}</span>
             <span className="text-xs text-gray-300">·</span>
-            <span className="text-sm text-gray-200">{SEZ_LOTS_TOTAL_GA.toFixed(1)} GA</span>
+            <span className="text-sm text-gray-200">{SEZ_LOTS_TOTAL_GA.toFixed(1)} {areaUnit}</span>
           </div>
         </div>
         {SEZ_ZONES.map((z, i) => {
@@ -114,7 +115,7 @@ export default function SezZonesPublic() {
               </span>
               <span className="flex-1 min-w-0">
                 <span className="block text-sm font-semibold text-[#1a2744] truncate">{sectorNames[i] ?? z.name}</span>
-                <span className="block text-[11px] text-gray-500">{m.count} {lotsLabel} · {m.ga.toFixed(1)} GA</span>
+                <span className="block text-[11px] text-gray-500">{m.count} {lotsLabel} · {m.ga.toFixed(1)} {areaUnit}</span>
               </span>
             </button>
           );
