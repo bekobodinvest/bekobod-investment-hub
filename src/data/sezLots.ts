@@ -47,3 +47,17 @@ export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
 });
 
 export const SEZ_LOTS_TOTAL_GA = AREAS.reduce((s, v) => s + v, 0);
+
+// Pricing (USD per hectare), 10-year installment terms.
+// Land itself + agricultural-land conversion compensation ("yer nobudgarchiligi").
+export const SEZ_LAND_USD_PER_GA = 7000;
+export const SEZ_LOSS_USD_PER_GA = 76000;
+export const SEZ_INSTALLMENT_YEARS = 10;
+
+export function lotPrice(areaGa: number) {
+  const land = Math.round(areaGa * SEZ_LAND_USD_PER_GA);
+  const loss = Math.round(areaGa * SEZ_LOSS_USD_PER_GA);
+  return { land, loss, total: land + loss };
+}
+
+export const usd = (n: number) => '$' + n.toLocaleString('en-US');

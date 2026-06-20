@@ -1,6 +1,7 @@
 'use client';
 
 import { useMemo, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
 import { SEZ_LOTS, SEZ_LOTS_TOTAL_GA } from '@/data/sezLots';
 import { useLanguage } from '@/context/LanguageContext';
@@ -9,10 +10,12 @@ const IMAGE = '/sez_aerial.png';
 
 export default function SezZonesPublic() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [hovered, setHovered] = useState<SezZoneId | null>(null);
   const sectorNames = t.sez.sectors.items.map((it) => it.name);
   const lotsLabel = t.sez.clustersMap.lotsLabel;
   const totalLabel = t.sez.clustersMap.totalLabel;
+  const open = (id: SezZoneId) => router.push(`/sez/cluster/${id}`);
 
   const perZone = useMemo(() => {
     const m: Record<string, { count: number; ga: number }> = {};
@@ -56,6 +59,7 @@ export default function SezZonesPublic() {
                 style={{ cursor: 'pointer' }}
                 onPointerEnter={() => setHovered(z.id)}
                 onPointerLeave={() => setHovered(null)}
+                onClick={() => open(z.id)}
               />
             );
           })}
@@ -97,6 +101,7 @@ export default function SezZonesPublic() {
               type="button"
               onPointerEnter={() => setHovered(z.id)}
               onPointerLeave={() => setHovered(null)}
+              onClick={() => open(z.id)}
               className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg border text-left transition-colors ${
                 isHov ? 'border-gray-300 bg-gray-50' : 'border-gray-100 hover:bg-gray-50'
               }`}
