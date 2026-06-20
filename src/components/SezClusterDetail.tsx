@@ -189,9 +189,17 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
               </div>
               <div className="p-4 space-y-2 text-sm">
                 <Row label={td.area} value={`${selLot.areaGa} ${areaUnit}`} />
-                <Row label={`${td.landCost} ($${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.land)} />
+                <PriceRow
+                  label={td.landCost}
+                  rate={`$${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
+                  value={usd(price.land)}
+                />
                 <div>
-                  <Row label={`${td.lossFee} ($${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.loss)} />
+                  <PriceRow
+                    label={td.lossFee}
+                    rate={`$${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
+                    value={usd(price.loss)}
+                  />
                   <div className="text-[11px] text-gray-400 text-right mt-0.5">
                     {usd(Math.round(price.loss / SEZ_INSTALLMENT_YEARS))} {td.perYear} × {SEZ_INSTALLMENT_YEARS}
                   </div>
@@ -220,6 +228,18 @@ function Row({ label, value }: { label: string; value: string }) {
   return (
     <div className="flex items-center justify-between gap-3">
       <span className="text-gray-500">{label}</span>
+      <span className="text-[#1a2744] font-medium whitespace-nowrap">{value}</span>
+    </div>
+  );
+}
+
+function PriceRow({ label, rate, value }: { label: string; rate: string; value: string }) {
+  return (
+    <div className="flex items-start justify-between gap-3">
+      <span className="text-gray-500">
+        {label}
+        <span className="block text-[10px] text-gray-400 mt-0.5">{rate}</span>
+      </span>
       <span className="text-[#1a2744] font-medium whitespace-nowrap">{value}</span>
     </div>
   );
