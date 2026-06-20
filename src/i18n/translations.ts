@@ -626,7 +626,7 @@ export const translations = {
     nav: {
       home: 'Bosh sahifa',
       about: 'Biz haqimizda',
-      sez: 'Bekobod MIQZ',
+      sez: 'Bekobod MIZ',
       oybek: 'Oybek ESZ',
       yangi: "Yangi O'zbekiston",
       incentives: 'Imtiyozlar',
@@ -661,7 +661,7 @@ export const translations = {
         subtitle: "Bekobodning o'sib kelayotgan iqtisodiyotida o'z investitsiya yo'lingizni tanlang",
         learnMore: "Batafsil",
         sez: {
-          title: 'Bekobod MIQZ',
+          title: 'Bekobod MIZ',
           subtitle: 'Maxsus iqtisodiy zona',
           description:
             "8 ta strategik tarmoq bo'yicha 95 ta investitsiya parsellaridan iborat 397 gektarlik sanoat eri. Bekobodning iqtisodiy o'zgarishining asosi.",
@@ -706,7 +706,7 @@ export const translations = {
           {
             title: 'Soliq imtiyozlari',
             description:
-              "MIQZ rezident kompaniyalariga korporativ, yer va mol-mulk soliqlari bo'yicha 10 yilgacha imtiyozlar.",
+              "MIZ rezident kompaniyalariga korporativ, yer va mol-mulk soliqlari bo'yicha 10 yilgacha imtiyozlar.",
           },
           {
             title: "Elektron auksionda shaffoflik",
@@ -721,7 +721,7 @@ export const translations = {
           {
             title: 'Tayyor infratuzilma',
             description:
-              "MIQZ da kunning birinchi kunidan 26,5 km yo'l, kommunal xizmatlar va logistika infratuzilmasi qurilgan.",
+              "MIZ da kunning birinchi kunidan 26,5 km yo'l, kommunal xizmatlar va logistika infratuzilmasi qurilgan.",
           },
           {
             title: "Huquqiy kafolatlar",
@@ -799,10 +799,10 @@ export const translations = {
       overview: {
         title: 'Zona umumiy tavsifi',
         description:
-          "Bekobod MIQZ O'zbekistonning eng yirik sanoat rivojlantirish loyihalaridan birini ifodalaydi. 397 gektarni qamrab olgan bu jahon darajasidagi maxsus iqtisodiy zona 8 ta strategik tarmoq bo'yicha 95 ta investitsiya parsellarini taklif etadi, umumiy investitsiya salohiyati $500M va 5 000+ ish o'rni.",
+          "Bekobod MIZ O'zbekistonning eng yirik sanoat rivojlantirish loyihalaridan birini ifodalaydi. 397 gektarni qamrab olgan bu jahon darajasidagi maxsus iqtisodiy zona 8 ta strategik tarmoq bo'yicha 95 ta investitsiya parsellarini taklif etadi, umumiy investitsiya salohiyati $500M va 5 000+ ish o'rni.",
         railwayTitle: 'Temir yo\'l logistikasi',
         railway:
-          "«Bekobod» MIQZ \"O'zbekiston temir yo'llari\" AJ tarmog'iga integratsiyalashgan: Bekobod stansiyasi orqali hudud magistral yo'l bilan Toshkent transport tuguniga (Yangiyer va Xovos orqali) bog'langan hamda Farg'ona vodiysi tomon chiqishga ega. Sanoat hududiga maxsus yuk temir yo'l tarmog'i olib kelingan — rezidentlar xom ashyo va tayyor mahsulotni bevosita temir yo'l orqali, oraliq avtotashishsiz jo'natadi, bu logistika xarajatlarini kamaytiradi va eksportni tezlashtiradi. Liniya elektrlashtirilgan, yuk tashish zamonaviy elektrovozlar bilan amalga oshiriladi.",
+          "«Bekobod» MIZ \"O'zbekiston temir yo'llari\" AJ tarmog'iga integratsiyalashgan: Bekobod stansiyasi orqali hudud magistral yo'l bilan Toshkent transport tuguniga (Yangiyer va Xovos orqali) bog'langan hamda Farg'ona vodiysi tomon chiqishga ega. Sanoat hududiga maxsus yuk temir yo'l tarmog'i olib kelingan — rezidentlar xom ashyo va tayyor mahsulotni bevosita temir yo'l orqali, oraliq avtotashishsiz jo'natadi, bu logistika xarajatlarini kamaytiradi va eksportni tezlashtiradi. Liniya elektrlashtirilgan, yuk tashish zamonaviy elektrovozlar bilan amalga oshiriladi.",
       },
       stats: [
         { label: "Umumiy maydon", value: '397 ga' },
@@ -838,7 +838,7 @@ export const translations = {
       clustersMap: {
         title: '8 saнoat klasteri xaritasi',
         description:
-          'Bekobod MIQZ hududi 8 ta strategik sanoat klasteriga boʻlingan. Har bir klaster oʻz rangi va raqamiga ega — karta ustida sichqonchani klaster ustiga olib boring, oʻng tomonda lotlar soni va jami maydon koʻrsatiladi.',
+          'Bekobod MIZ hududi 8 ta strategik sanoat klasteriga boʻlingan. Har bir klaster oʻz rangi va raqamiga ega — karta ustida sichqonchani klaster ustiga olib boring, oʻng tomonda lotlar soni va jami maydon koʻrsatiladi.',
         totalLabel: 'Jami',
         lotsLabel: 'lot',
         clickHint: 'Lotlarini ochish uchun klasterni bosing',
@@ -860,7 +860,7 @@ export const translations = {
         title: 'Bekobod Texnoparki',
         badge: "Asosiy investor — Boshqirdiston kompaniyasi",
         description:
-          "MIQZ doirasidagi toj gavhar, Bekobod Texnoparki yirik Boshqirdiston kompaniyasining asosiy investitsiyasi bo'lib, zonaning flagman loyihasini ifodalaydi. Bu 100 gektarlik texnopark innovatsiyalarni rivojlantiradi va sifatli ish o'rinlari yaratadi.",
+          "MIZ doirasidagi toj gavhar, Bekobod Texnoparki yirik Boshqirdiston kompaniyasining asosiy investitsiyasi bo'lib, zonaning flagman loyihasini ifodalaydi. Bu 100 gektarlik texnopark innovatsiyalarni rivojlantiradi va sifatli ish o'rinlari yaratadi.",
         descriptionSecond: {
           before:
             "Texnopark rezidentlari 3 yildan 10 yilgacha soliq va bojxona imtiyozlari, tayyor muhandislik infratuzilmasi va O'zbekiston–Tojikiston chegarasidagi «Oybek» bojxona posti orqali xalqaro transport koridorlariga to'g'ridan-to'g'ri chiqish imkoniyatiga ega. Texnopark va mavjud yer maydonlari haqida batafsil ma'lumot — ",
@@ -879,7 +879,7 @@ export const translations = {
       },
       imageTags: { lots: 'parsel', sectors: 'tarmoq' },
       map: {
-        title: "MIQZ joylashuvi",
+        title: "MIZ joylashuvi",
         description: "Bekobod tumanida strategik jihatdan joylashgan, transport bilan yaxshi bog'langan.",
         button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
@@ -1017,12 +1017,12 @@ export const translations = {
     },
     incentives: {
       title: "Soliq imtiyozlari va investitsiya afzalliklari",
-      subtitle: "MIQZ investorlari uchun keng qamrovli moliyaviy ustunliklar",
+      subtitle: "MIZ investorlari uchun keng qamrovli moliyaviy ustunliklar",
       badge: "O'zbekiston Respublikasi Soliq kodeksi, 68-bob, 473-modda asosida",
       overview: {
         title: "Imtiyozlarimiz nima uchun muhim?",
         description:
-          "Bekobod MIQZ investor daromadlarini maksimallashtirish va biznes o'sishini tezlashtirish uchun mo'ljallangan O'zbekistonning eng raqobatbardosh soliq imtiyozlari paketlaridan birini taklif etadi.",
+          "Bekobod MIZ investor daromadlarini maksimallashtirish va biznes o'sishini tezlashtirish uchun mo'ljallangan O'zbekistonning eng raqobatbardosh soliq imtiyozlari paketlaridan birini taklif etadi.",
       },
       corporate: {
         title: "Foyda solig'i imtiyozi",
@@ -1053,23 +1053,23 @@ export const translations = {
       water: {
         title: "Suv resurslari solig'i imtiyozi",
         subtitle: "Suv resurslari solig'idan to'liq ozod etish",
-        note: "Suv resurslari solig'i imtiyozi MIQZ operatsiyasida barqaror resurslardan foydalanish uchun taqdim etiladi.",
+        note: "Suv resurslari solig'i imtiyozi MIZ operatsiyasida barqaror resurslardan foydalanish uchun taqdim etiladi.",
       },
       customs: {
         title: "Bojxona imtiyozlari",
-        subtitle: "MIQZ rezidentlari uchun keng qamrovli bojxona afzalliklari",
+        subtitle: "MIZ rezidentlari uchun keng qamrovli bojxona afzalliklari",
         items: [
           {
             title: "Bekorsimon import",
-            description: "Texnologik uskunalar va qurilish materiallarini MIQZ rejimi asosida bojxona to'lovlari bilan import qilish",
+            description: "Texnologik uskunalar va qurilish materiallarini MIZ rejimi asosida bojxona to'lovlari bilan import qilish",
           },
           {
             title: "Tariff imtiyozlari",
-            description: "MIQZ ichida ishlab chiqarilgan tovarlarning import va eksportiga kengaytirilgan imtiyoz davrlari",
+            description: "MIZ ichida ishlab chiqarilgan tovarlarning import va eksportiga kengaytirilgan imtiyoz davrlari",
           },
           {
             title: "Soddalashtirilgan bojxona operatsiyalari",
-            description: "MIQZ korxonalari uchun hujjat talablarini kamaytirgan vositali bojxona rahbarligi",
+            description: "MIZ korxonalari uchun hujjat talablarini kamaytirgan vositali bojxona rahbarligi",
           },
         ],
       },
@@ -1087,7 +1087,7 @@ export const translations = {
             title: "UP-4853-sonli Prezident Farmoni",
             detail: "2016 yil 26 oktyabr",
             description:
-              "MIQZ investorlari uchun asosiy huquqiy doira va qo'shimcha himoyani belgilaydi, eng yuqori ijroiya hokimiyati tomonidan qo'llab-quvvatlanadi.",
+              "MIZ investorlari uchun asosiy huquqiy doira va qo'shimcha himoyani belgilaydi, eng yuqori ijroiya hokimiyati tomonidan qo'llab-quvvatlanadi.",
           },
         ],
       },
@@ -1129,7 +1129,7 @@ export const translations = {
       taxSchedulesTitle: 'Soliq imtiyozi jadvallari',
       cta: {
         title: "Soliq imtiyozlaringizni olishga tayyormisiz?",
-        description: "Elektron auksionida ishtirok eting va Bekobod MIQZda soliqdan ozod bo'lgan safaringizni boshlang.",
+        description: "Elektron auksionida ishtirok eting va Bekobod MIZda soliqdan ozod bo'lgan safaringizni boshlang.",
         button: 'Elektron auksioniga ishtirok eting',
         contact: "Jamoamiz bilan bog'laning",
       },
@@ -1161,7 +1161,7 @@ export const translations = {
       eauction: {
         title: "Elektron auksion portali",
         description:
-          "Bekobod MIQZ, Oybek ESZ va Yangi O'zbekiston tumanidagi yer ijarasi huquqlarini qozonish uchun shaffof elektron auksion tizimida ishtirok eting.",
+          "Bekobod MIZ, Oybek ESZ va Yangi O'zbekiston tumanidagi yer ijarasi huquqlarini qozonish uchun shaffof elektron auksion tizimida ishtirok eting.",
         button: "Elektron auksion portaliga o'ting",
         website: 'e-auksion.uz',
       },
@@ -1172,7 +1172,7 @@ export const translations = {
         phone: "Telefon raqami",
         country: "Mamlakatinigiz",
         interest: "Investitsiya qiziqishi",
-        interestOptions: ["Bekobod MIQZ", "Oybek ESZ", "Yangi O'zbekiston", "Umumiy so'rov"],
+        interestOptions: ["Bekobod MIZ", "Oybek ESZ", "Yangi O'zbekiston", "Umumiy so'rov"],
         message: "Xabaringiz",
         submit: "Xabar yuborish",
         success: "Rahmat! Xabaringiz yuborildi. Biz 24 soat ichida siz bilan bog'lanamiz.",
