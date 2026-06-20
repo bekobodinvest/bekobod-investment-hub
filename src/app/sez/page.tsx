@@ -42,6 +42,15 @@ export default function SEZPage() {
   const { t } = useLanguage();
   useScrollAnimation();
 
+  // Land on the clusters map when arriving via /sez#clusters (e.g. "back" from a cluster page).
+  useEffect(() => {
+    if (window.location.hash !== '#clusters') return;
+    const el = document.getElementById('clusters');
+    if (!el) return;
+    const raf = requestAnimationFrame(() => el.scrollIntoView({ block: 'start' }));
+    return () => cancelAnimationFrame(raf);
+  }, []);
+
   const [galleryIndex, setGalleryIndex] = useState(0);
   useEffect(() => {
     const id = setInterval(
@@ -205,7 +214,7 @@ export default function SEZPage() {
       </section>
 
       {/* 8 Clusters — aerial zone map */}
-      <section className="section-padding bg-white">
+      <section id="clusters" className="section-padding bg-white scroll-mt-24">
         <div className="container-custom">
           <div className="max-w-3xl mb-10 animate-on-scroll">
             <div className="accent-line mb-6" />

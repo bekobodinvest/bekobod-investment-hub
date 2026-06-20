@@ -75,7 +75,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
       {/* Header */}
       <div className="mb-6">
         <Link
-          href="/sez"
+          href="/sez#clusters"
           className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-[#1a2744] mb-4"
         >
           <span aria-hidden>←</span> {td.back}
