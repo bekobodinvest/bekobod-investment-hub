@@ -28,7 +28,6 @@ export default function SezLotEditor() {
   const [zoneFilter, setZoneFilter] = useState<SezZoneId | 'all'>('all');
   const [search, setSearch] = useState('');
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'ok' | 'err'>('idle');
-  const [aspect, setAspect] = useState<string>('2000 / 1450');
   const [showZones, setShowZones] = useState(false);
 
   const drag = useRef<
@@ -321,8 +320,7 @@ export default function SezLotEditor() {
       {/* Canvas */}
       <div
         ref={boxRef}
-        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
-        style={{ aspectRatio: aspect }}
+        className="relative w-full lg:self-start overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
         onPointerMove={onMove}
         onPointerUp={endDrag}
         onPointerLeave={endDrag}
@@ -331,14 +329,8 @@ export default function SezLotEditor() {
         <img
           src={IMAGE}
           alt="Bekobod SEZ"
-          className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+          className="block w-full h-auto pointer-events-none"
           draggable={false}
-          onLoad={(e) => {
-            const img = e.currentTarget;
-            if (img.naturalWidth && img.naturalHeight) {
-              setAspect(`${img.naturalWidth} / ${img.naturalHeight}`);
-            }
-          }}
         />
 
         <svg
