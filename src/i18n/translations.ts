@@ -759,7 +759,7 @@ export const translations = {
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
         role: "Bekobod tumani hokimi",
         message:
-          "Biz dunyo bo'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta'minlaymiz.",
+          "Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini taʼminlaymiz.",
       },
       mission: {
         title: 'Bizning missiyamiz',
@@ -1152,7 +1152,7 @@ export const translations = {
         name: 'Umarov Umid Ahmadjanovich',
         role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        message: '"Biz dunyo bo\'ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auktsion tizimimiz va keng qo\'llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini ta\'minlaymiz."',
+        message: '"Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini taʼminlaymiz."',
       },
       office: {
         title: "Bizning ofisimiz",
