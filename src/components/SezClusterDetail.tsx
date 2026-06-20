@@ -9,6 +9,7 @@ import {
   usd,
   SEZ_LAND_USD_PER_GA,
   SEZ_LOSS_USD_PER_GA,
+  SEZ_INSTALLMENT_YEARS,
   type SezLot,
 } from '@/data/sezLots';
 import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
@@ -188,7 +189,12 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
               <div className="p-4 space-y-2 text-sm">
                 <Row label={td.area} value={`${selLot.area}`} />
                 <Row label={`${td.landCost} ($${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.land)} />
-                <Row label={`${td.lossFee} ($${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.loss)} />
+                <div>
+                  <Row label={`${td.lossFee} ($${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/GA)`} value={usd(price.loss)} />
+                  <div className="text-[11px] text-gray-400 text-right mt-0.5">
+                    {usd(Math.round(price.loss / SEZ_INSTALLMENT_YEARS))} {td.perYear} × {SEZ_INSTALLMENT_YEARS}
+                  </div>
+                </div>
                 <div className="border-t border-gray-100 pt-2 flex items-center justify-between">
                   <span className="font-semibold text-[#1a2744]">{td.total}</span>
                   <span className="font-bold text-[#1a2744]">{usd(price.total)}</span>
