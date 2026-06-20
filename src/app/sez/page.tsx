@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
+import SezZonesPublic from '@/components/SezZonesPublic';
 
 const technoparkGallery = [
   '/technopark-gallery/01.webp',
@@ -199,6 +200,22 @@ export default function SEZPage() {
                 <p className="text-gray-500 text-sm leading-relaxed">{sector.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 8 Clusters — aerial zone map */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl mb-10 animate-on-scroll">
+            <div className="accent-line mb-6" />
+            <h2 className="section-heading">{t.sez.clustersMap.title}</h2>
+            <p className="text-gray-600 leading-relaxed text-lg mt-4">
+              {t.sez.clustersMap.description}
+            </p>
+          </div>
+          <div className="animate-on-scroll">
+            <SezZonesPublic />
           </div>
         </div>
       </section>

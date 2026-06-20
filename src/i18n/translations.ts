@@ -238,6 +238,13 @@ export const translations = {
           },
         ],
       },
+      clustersMap: {
+        title: 'Map of 8 industrial clusters',
+        description:
+          'The Bekobod SEZ territory is divided into 8 strategic industrial clusters. Each cluster has its own color and number — hover any cluster to see the number of lots and total area.',
+        totalLabel: 'Total',
+        lotsLabel: 'lots',
+      },
       technopark: {
         title: 'Bekobod Technopark',
         badge: 'Anchor Investor — Bashkir Company',
@@ -814,6 +821,13 @@ export const translations = {
           { name: "To'qimachilik", description: "To'qimachilik ishlab chiqarish, kiyim-kechak va tolalarni qayta ishlash" },
         ],
       },
+      clustersMap: {
+        title: '8 saнoat klasteri xaritasi',
+        description:
+          'Bekobod MIQZ hududi 8 ta strategik sanoat klasteriga boʻlingan. Har bir klaster oʻz rangi va raqamiga ega — karta ustida sichqonchani klaster ustiga olib boring, oʻng tomonda lotlar soni va jami maydon koʻrsatiladi.',
+        totalLabel: 'Jami',
+        lotsLabel: 'lot',
+      },
       technopark: {
         title: 'Bekobod Texnoparki',
         badge: "Asosiy investor — Boshqirdiston kompaniyasi",
@@ -1364,6 +1378,13 @@ export const translations = {
           { name: 'Текстиль', description: 'Текстильное производство, одежда и переработка волокна' },
         ],
       },
+      clustersMap: {
+        title: 'Карта 8 промышленных кластеров',
+        description:
+          'Территория СЭЗ Бекобод разделена на 8 стратегических промышленных кластеров. У каждого кластера свой цвет и номер — наведите курсор на кластер, чтобы увидеть число лотов и общую площадь.',
+        totalLabel: 'Всего',
+        lotsLabel: 'лот',
+      },
       technopark: {
         title: 'Технопарк Бекобод',
         badge: 'Якорный инвестор — Башкирская компания',
@@ -1901,6 +1922,13 @@ export const translations = {
           { name: '能源', description: '可再生能源、发电与配电' },
           { name: '纺织', description: '纺织制造、服装与纤维加工' },
         ],
+      },
+      clustersMap: {
+        title: '8个工业集群地图',
+        description:
+          '别科博德经济特区分为8个战略工业集群。每个集群都有独特的颜色和编号——将鼠标悬停在集群上即可查看地块数量和总面积。',
+        totalLabel: '总计',
+        lotsLabel: '地块',
       },
       technopark: {
         title: '别科博德技术园',
