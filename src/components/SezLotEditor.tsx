@@ -29,6 +29,7 @@ export default function SezLotEditor() {
   const [search, setSearch] = useState('');
   const [saveState, setSaveState] = useState<'idle' | 'saving' | 'ok' | 'err'>('idle');
   const [aspect, setAspect] = useState<string>('2000 / 1450');
+  const [showZones, setShowZones] = useState(false);
 
   const drag = useRef<
     | { type: 'vertex'; key: string; idx: number }
@@ -236,6 +237,17 @@ export default function SezLotEditor() {
             : '120 лотни сақлаш'}
         </button>
 
+        {/* Toggle: big cluster overlays */}
+        <label className="flex items-center gap-2 px-3 py-2 rounded-xl border border-gray-200 bg-white text-xs text-gray-600 cursor-pointer select-none">
+          <input
+            type="checkbox"
+            checked={showZones}
+            onChange={(e) => setShowZones(e.target.checked)}
+            className="accent-[#4a9c4e]"
+          />
+          8 та катта кластерни кўрсатиш
+        </label>
+
         {/* Per-zone tallies */}
         <div className="rounded-xl border border-gray-200 bg-white p-2">
           <button
@@ -334,8 +346,8 @@ export default function SezLotEditor() {
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
-          {/* Background: parent zone outlines + numbered labels */}
-          {SEZ_ZONES.map((z, i) => {
+          {/* Background: parent zone outlines + numbered labels (toggle) */}
+          {showZones && SEZ_ZONES.map((z, i) => {
             if (!z.points.length) return null;
             let cx = 0, cy = 0;
             for (const [x, y] of z.points) { cx += x; cy += y; }
