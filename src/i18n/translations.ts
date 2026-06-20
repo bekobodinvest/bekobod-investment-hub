@@ -43,7 +43,7 @@ export const translations = {
           title: 'Bekobod SEZ',
           subtitle: 'Special Economic Zone',
           description:
-            '397 hectares of prime industrial land with 95 investment lots across 8 strategic sectors. The cornerstone of Bekobod\'s economic transformation.',
+            '397 hectares of prime industrial land with 120 investment lots across 8 strategic sectors. The cornerstone of Bekobod\'s economic transformation.',
           stats: [
             { value: '$500M', label: 'Investment' },
             { value: '5000+', label: 'Jobs' },
@@ -178,14 +178,14 @@ export const translations = {
       overview: {
         title: 'Zone Overview',
         description:
-          'The Bekobod SEZ represents one of Uzbekistan\'s most ambitious industrial development projects. Spanning 397 hectares, this world-class special economic zone offers 95 investment lots across 8 strategic sectors, with total investment potential of $500M and 5,000+ jobs.',
+          'The Bekobod SEZ represents one of Uzbekistan\'s most ambitious industrial development projects. Spanning 397 hectares, this world-class special economic zone offers 120 investment lots across 8 strategic sectors, with total investment potential of $500M and 5,000+ jobs.',
         railwayTitle: 'Railway logistics',
         railway:
           'The Bekobod SEZ is integrated into the network of JSC "O\'zbekiston temir yo\'llari": via Bekobod station the zone is linked by mainline to the Tashkent transport hub (through Yangiyer and Xovos) and has an outlet toward the Fergana Valley. A dedicated freight railway branch runs to the industrial territory, so residents ship raw materials and finished goods directly by rail — without intermediate trucking — cutting logistics costs and speeding up exports. The line is electrified and freight is hauled by modern electric locomotives.',
       },
       stats: [
         { label: 'Total Area', value: '397 ha' },
-        { label: 'Investment Lots', value: '95' },
+        { label: 'Investment Lots', value: '120' },
         { label: 'Industrial Area', value: '301 ha' },
         { label: 'Road Network', value: '26.5 km' },
         { label: 'Green Zones', value: '45 ha' },
@@ -196,7 +196,7 @@ export const translations = {
       ],
       overviewStats: [
         { label: 'Total Area', value: '397 ha' },
-        { label: 'Investment Lots', value: '95' },
+        { label: 'Investment Lots', value: '120' },
         { label: 'Investment', value: '$500M' },
         { label: 'Jobs', value: '5000+' },
       ],
@@ -665,7 +665,7 @@ export const translations = {
           title: 'Bekobod MIZ',
           subtitle: 'Maxsus iqtisodiy zona',
           description:
-            "8 ta strategik tarmoq bo'yicha 95 ta investitsiya parsellaridan iborat 397 gektarlik sanoat eri. Bekobodning iqtisodiy o'zgarishining asosi.",
+            "8 ta strategik tarmoq bo'yicha 120 ta investitsiya parsellaridan iborat 397 gektarlik sanoat eri. Bekobodning iqtisodiy o'zgarishining asosi.",
           stats: [
             { value: '$500M', label: 'Investitsiya' },
             { value: '5000+', label: "Ish o'rinlari" },
@@ -800,14 +800,14 @@ export const translations = {
       overview: {
         title: 'Zona umumiy tavsifi',
         description:
-          "Bekobod MIZ O'zbekistonning eng yirik sanoat rivojlantirish loyihalaridan birini ifodalaydi. 397 gektarni qamrab olgan bu jahon darajasidagi maxsus iqtisodiy zona 8 ta strategik tarmoq bo'yicha 95 ta investitsiya parsellarini taklif etadi, umumiy investitsiya salohiyati $500M va 5 000+ ish o'rni.",
+          "Bekobod MIZ O'zbekistonning eng yirik sanoat rivojlantirish loyihalaridan birini ifodalaydi. 397 gektarni qamrab olgan bu jahon darajasidagi maxsus iqtisodiy zona 8 ta strategik tarmoq bo'yicha 120 ta investitsiya parsellarini taklif etadi, umumiy investitsiya salohiyati $500M va 5 000+ ish o'rni.",
         railwayTitle: 'Temir yo\'l logistikasi',
         railway:
           "«Bekobod» MIZ \"O'zbekiston temir yo'llari\" AJ tarmog'iga integratsiyalashgan: Bekobod stansiyasi orqali hudud magistral yo'l bilan Toshkent transport tuguniga (Yangiyer va Xovos orqali) bog'langan hamda Farg'ona vodiysi tomon chiqishga ega. Sanoat hududiga maxsus yuk temir yo'l tarmog'i olib kelingan — rezidentlar xom ashyo va tayyor mahsulotni bevosita temir yo'l orqali, oraliq avtotashishsiz jo'natadi, bu logistika xarajatlarini kamaytiradi va eksportni tezlashtiradi. Liniya elektrlashtirilgan, yuk tashish zamonaviy elektrovozlar bilan amalga oshiriladi.",
       },
       stats: [
         { label: "Umumiy maydon", value: '397 ga' },
-        { label: "Investitsiya parsellari", value: '95' },
+        { label: "Investitsiya parsellari", value: '120' },
         { label: "Sanoat maydoni", value: '301 ga' },
         { label: "Yo'l tarmog'i", value: '26.5 km' },
         { label: "Yashil zonalar", value: '45 ga' },
@@ -818,7 +818,7 @@ export const translations = {
       ],
       overviewStats: [
         { label: "Umumiy maydon", value: '397 ga' },
-        { label: "Investitsiya parsellari", value: '95' },
+        { label: "Investitsiya parsellari", value: '120' },
         { label: "Investitsiya", value: '$500M' },
         { label: "Ish o'rinlari", value: '5000+' },
       ],
@@ -1238,7 +1238,7 @@ export const translations = {
           title: 'СЭЗ Бекобод',
           subtitle: 'Специальная экономическая зона',
           description:
-            '397 гектаров первоклассных промышленных земель с 95 инвестиционными лотами по 8 стратегическим отраслям. Краеугольный камень экономической трансформации Бекобода.',
+            '397 гектаров первоклассных промышленных земель с 120 инвестиционными лотами по 8 стратегическим отраслям. Краеугольный камень экономической трансформации Бекобода.',
           stats: [
             { value: '$500M', label: 'Инвестиции' },
             { value: '5000+', label: 'Рабочих мест' },
@@ -1372,14 +1372,14 @@ export const translations = {
       overview: {
         title: 'Обзор зоны',
         description:
-          'СЭЗ Бекобод представляет один из самых амбициозных промышленных проектов развития Узбекистана. Охватывая 397 гектаров, эта СЭЗ мирового класса предлагает 95 инвестиционных лотов по 8 стратегическим отраслям с общим инвестиционным потенциалом $500M и 5 000+ рабочих мест.',
+          'СЭЗ Бекобод представляет один из самых амбициозных промышленных проектов развития Узбекистана. Охватывая 397 гектаров, эта СЭЗ мирового класса предлагает 120 инвестиционных лотов по 8 стратегическим отраслям с общим инвестиционным потенциалом $500M и 5 000+ рабочих мест.',
         railwayTitle: 'Железнодорожная логистика',
         railway:
           'СЭЗ «Бекобод» интегрирована в сеть АО «O\'zbekiston temir yo\'llari»: через станцию Бекабад зона связана магистралью с Ташкентским транспортным узлом (через Янгиер и Хаваст) и имеет выход в сторону Ферганской долины. К промышленной территории подведена собственная грузовая железнодорожная ветка — резиденты отгружают сырьё и готовую продукцию напрямую по железной дороге, без промежуточной автоперевозки, что снижает логистические издержки и ускоряет экспорт. Линия электрифицирована, перевозки выполняются современными электровозами.',
       },
       stats: [
         { label: 'Общая площадь', value: '397 га' },
-        { label: 'Инвестиционных лотов', value: '95' },
+        { label: 'Инвестиционных лотов', value: '120' },
         { label: 'Промышленная зона', value: '301 га' },
         { label: 'Дорожная сеть', value: '26,5 км' },
         { label: 'Зелёные зоны', value: '45 га' },
@@ -1390,7 +1390,7 @@ export const translations = {
       ],
       overviewStats: [
         { label: 'Общая площадь', value: '397 га' },
-        { label: 'Инвестиционных лотов', value: '95' },
+        { label: 'Инвестиционных лотов', value: '120' },
         { label: 'Инвестиции', value: '$500M' },
         { label: 'Рабочих мест', value: '5000+' },
       ],
@@ -1810,7 +1810,7 @@ export const translations = {
           title: '别科博德经济特区',
           subtitle: '特别经济区',
           description:
-            '397公顷优质工业用地，涵盖8大战略行业的95个投资地块，是别科博德经济转型的基石。',
+            '397公顷优质工业用地，涵盖8大战略行业的120个投资地块，是别科博德经济转型的基石。',
           stats: [
             { value: '5亿美元', label: '投资额' },
             { value: '5000+', label: '工作岗位' },
@@ -1932,14 +1932,14 @@ export const translations = {
       overview: {
         title: '园区概况',
         description:
-          '别科博德经济特区代表乌兹别克斯坦最具雄心的工业发展项目之一。占地397公顷，这一世界级特别经济区在8大战略行业中提供95个投资地块，总投资潜力达5亿美元，将创造5,000+个工作岗位。',
+          '别科博德经济特区代表乌兹别克斯坦最具雄心的工业发展项目之一。占地397公顷，这一世界级特别经济区在8大战略行业中提供120个投资地块，总投资潜力达5亿美元，将创造5,000+个工作岗位。',
         railwayTitle: '铁路物流',
         railway:
           '别科博德经济特区已接入乌兹别克斯坦铁路股份公司（O\'zbekiston temir yo\'llari）路网：经别科博德站，园区通过干线与塔什干交通枢纽相连（经扬吉耶尔和哈瓦斯特），并通向费尔干纳谷地。一条专用货运铁路支线直通工业区，入驻企业可直接通过铁路运输原料和成品，无需中转公路运输，从而降低物流成本、加快出口。线路已实现电气化，货运由现代电力机车牵引。',
       },
       stats: [
         { label: '总面积', value: '397公顷' },
-        { label: '投资地块', value: '95个' },
+        { label: '投资地块', value: '120个' },
         { label: '工业用地', value: '301公顷' },
         { label: '道路网络', value: '26.5公里' },
         { label: '绿化区', value: '45公顷' },
@@ -1950,7 +1950,7 @@ export const translations = {
       ],
       overviewStats: [
         { label: '总面积', value: '397公顷' },
-        { label: '投资地块', value: '95个' },
+        { label: '投资地块', value: '120个' },
         { label: '投资额', value: '5亿美元' },
         { label: '工作岗位', value: '5000+' },
       ],

@@ -164,7 +164,7 @@ export default function SEZPage() {
                 <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-4">
                   <div className="flex flex-wrap gap-3">
                     <div className="bg-[#4a9c4e] text-white text-xs font-bold px-3 py-1.5 rounded-lg">397 ha</div>
-                    <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">95 {t.sez.imageTags.lots}</div>
+                    <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">120 {t.sez.imageTags.lots}</div>
                     <div className="bg-white/20 text-white text-xs font-semibold px-3 py-1.5 rounded-lg backdrop-blur-sm">8 {t.sez.imageTags.sectors}</div>
                   </div>
                   <div className="flex gap-1.5 shrink-0">
