@@ -55,14 +55,13 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
       }
     const cx = (minX + maxX) / 2;
     const cy = (minY + maxY) / 2;
-    let side = Math.min(100, Math.max(maxX - minX, maxY - minY) * 1.18);
-    let ox = Math.max(0, Math.min(100 - side, cx - side / 2));
-    let oy = Math.max(0, Math.min(100 - side, cy - side / 2));
-    return { ox, oy, k: 100 / side };
+    const side = Math.min(100, Math.max(maxX - minX, maxY - minY) * 1.18);
+    const ox = Math.max(0, Math.min(100 - side, cx - side / 2));
+    const oy = Math.max(0, Math.min(100 - side, cy - side / 2));
+    return { ox, oy, side, k: 100 / side };
   }, [lots]);
 
-  const { ox, oy, k } = view;
-  const transform = `scale(${k}) translate(${-ox}%, ${-oy}%)`;
+  const { ox, oy, side, k } = view;
 
   // On-screen position (% of the viewport box) of a 0..100 point under the zoom.
   const posX = (x: number) => (x - ox) * k;
@@ -101,45 +100,44 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
         style={{ aspectRatio: `${IMG_ASPECT}` }}
         onClick={() => setSelected(null)}
       >
-        {/* Transformed image + lots */}
-        <div className="absolute inset-0 origin-top-left" style={{ transform }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={IMAGE}
-            alt={sectorName}
-            className="block w-full h-auto pointer-events-none"
-            draggable={false}
-          />
-          <svg
-            className="absolute inset-0 w-full h-full"
-            viewBox="0 0 100 100"
+        {/* Image and lots share one SVG coordinate space — they can never drift apart */}
+        <svg
+          className="block w-full h-full"
+          viewBox={`${ox} ${oy} ${side} ${side}`}
+          preserveAspectRatio="none"
+        >
+          <image
+            href={IMAGE}
+            x={0}
+            y={0}
+            width={100}
+            height={100}
             preserveAspectRatio="none"
-          >
-            {lots.map((l) => {
-              const isHov = hover === l.id;
-              const isSel = selected === l.id;
-              const active = isHov || isSel;
-              return (
-                <polygon
-                  key={l.id}
-                  points={l.points.map((p) => p.join(',')).join(' ')}
-                  fill={zone.color}
-                  fillOpacity={active ? 0.75 : 0.4}
-                  stroke={isSel ? '#ffffff' : zone.color}
-                  strokeWidth={active ? 0.6 : 0.3}
-                  vectorEffect="non-scaling-stroke"
-                  style={{ cursor: 'pointer' }}
-                  onPointerEnter={() => setHover(l.id)}
-                  onPointerLeave={() => setHover((h) => (h === l.id ? null : h))}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setSelected(l.id);
-                  }}
-                />
-              );
-            })}
-          </svg>
-        </div>
+          />
+          {lots.map((l) => {
+            const isHov = hover === l.id;
+            const isSel = selected === l.id;
+            const active = isHov || isSel;
+            return (
+              <polygon
+                key={l.id}
+                points={l.points.map((p) => p.join(',')).join(' ')}
+                fill={zone.color}
+                fillOpacity={active ? 0.75 : 0.4}
+                stroke={isSel ? '#ffffff' : zone.color}
+                strokeWidth={active ? 0.6 : 0.3}
+                vectorEffect="non-scaling-stroke"
+                style={{ cursor: 'pointer' }}
+                onPointerEnter={() => setHover(l.id)}
+                onPointerLeave={() => setHover((h) => (h === l.id ? null : h))}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setSelected(l.id);
+                }}
+              />
+            );
+          })}
+        </svg>
 
         {/* Hover tooltip */}
         {hover && hover !== selected && (() => {
