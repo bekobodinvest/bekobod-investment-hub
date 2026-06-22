@@ -137,7 +137,7 @@ export const translations = {
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
         role: 'Bekobod District Governor',
         message:
-          'We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and comprehensive support packages, we ensure every investor receives the strongest possible foundation for success. Bekobod is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
+          'We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success. Bekobod is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
       },
       mission: {
         title: 'Our Mission',
@@ -209,7 +209,7 @@ export const translations = {
             description: 'Steel production, metal fabrication and processing',
           },
           {
-            name: 'Pharmaceuticals',
+            name: 'Chemicals',
             description: 'Drug manufacturing, medical devices and biotech',
           },
           {
@@ -229,7 +229,7 @@ export const translations = {
             description: 'Food processing, packaging and agricultural products',
           },
           {
-            name: 'Energy',
+            name: 'Electrical Engineering',
             description: 'Renewable energy, power generation and distribution',
           },
           {
@@ -401,6 +401,10 @@ export const translations = {
       },
       minuteCityLabel: '15-Minute City',
       imageTagApartments: '7,800 Apts',
+      gallery: {
+        title: 'District Gallery',
+        subtitle: 'A visual tour of the Yangi Uzbekistan masterplan',
+      },
       highlights: [
         {
           title: 'City Within a City',
@@ -579,7 +583,7 @@ export const translations = {
         name: 'Umarov Umid Ahmadjanovich',
         role: 'Director, Bekobod Investment Hub',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        message: '"We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and comprehensive support packages, we ensure every investor receives the strongest possible foundation for success."',
+        message: '"We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success."',
       },
       office: {
         title: 'Our Office',
@@ -759,7 +763,7 @@ export const translations = {
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
         role: "Bekobod tumani hokimi",
         message:
-          "Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini taʼminlaymiz.",
+          "Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash uchun investitsiya paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini yaratishda ko‘maklashamiz.",
       },
       mission: {
         title: 'Bizning missiyamiz',
@@ -827,17 +831,17 @@ export const translations = {
         subtitle: "Asosiy sanoat yo'nalishlari bo'yicha turli imkoniyatlar",
         items: [
           { name: 'Metallurgiya', description: "Po'lat ishlab chiqarish, metallni qayta ishlash" },
-          { name: 'Farmatsevtika', description: "Dori ishlab chiqarish, tibbiy asboblar, biotexnologiya" },
+          { name: 'Kimyo', description: "Dori ishlab chiqarish, tibbiy asboblar, biotexnologiya" },
           { name: "Mashinasozlik", description: "Mashinalar, uskunalar va aniq ishlab chiqarish" },
           { name: "Qurilish materiallari", description: "Sement, g'isht, shisha va qurilish materiallari" },
           { name: "Logistika va ombor", description: "Tarqatish markazlari, sovutish xonalari va logistika markazlari" },
           { name: "Oziq-ovqat sanoati", description: "Oziq-ovqat qayta ishlash, qadoqlash va qishloq xo'jaligi mahsulotlari" },
-          { name: "Energetika", description: "Qayta tiklanadigan energiya, elektr ishlab chiqarish va tarqatish" },
+          { name: "Elektrotexnika", description: "Qayta tiklanadigan energiya, elektr ishlab chiqarish va tarqatish" },
           { name: "To'qimachilik", description: "To'qimachilik ishlab chiqarish, kiyim-kechak va tolalarni qayta ishlash" },
         ],
       },
       clustersMap: {
-        title: '8 saнoat klasteri xaritasi',
+        title: '8 sanoat klasteri xaritasi',
         description:
           'Bekobod MIZ hududi 8 ta strategik sanoat klasteriga boʻlingan. Har bir klaster oʻz rangi va raqamiga ega — karta ustida sichqonchani klaster ustiga olib boring, oʻng tomonda lotlar soni va jami maydon koʻrsatiladi.',
         totalLabel: 'Jami',
@@ -979,6 +983,10 @@ export const translations = {
       },
       minuteCityLabel: '15 daqiqalik shahar',
       imageTagApartments: '7 800 kvartira',
+      gallery: {
+        title: 'Tuman galereyasi',
+        subtitle: "Yangi O'zbekiston bosh rejasining vizual sayohati",
+      },
       highlights: [
         {
           title: 'Shaharda shahar',
@@ -1152,7 +1160,7 @@ export const translations = {
         name: 'Umarov Umid Ahmadjanovich',
         role: "Bekobod Investitsiya Boshqaruv Kompaniyasi direktori",
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        message: '"Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini taʼminlaymiz."',
+        message: '"Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash uchun investitsiya paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini yaratishda ko‘maklashamiz."',
       },
       office: {
         title: "Bizning ofisimiz",
@@ -1331,7 +1339,7 @@ export const translations = {
         name: 'Низомиддинов Зайнилобиддин Шахобиддинович',
         role: 'Хоким района Бекобод',
         message:
-          'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и комплексным пакетам поддержки, мы обеспечиваем каждому инвестору максимально прочную основу для успеха.',
+          'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха.',
       },
       mission: {
         title: 'Наша миссия',
@@ -1399,12 +1407,12 @@ export const translations = {
         subtitle: 'Разнообразные возможности по ключевым промышленным направлениям',
         items: [
           { name: 'Металлургия', description: 'Производство стали, металлообработка и переработка' },
-          { name: 'Фармацевтика', description: 'Производство лекарств, медицинские устройства и биотех' },
+          { name: 'Химия', description: 'Производство лекарств, медицинские устройства и биотех' },
           { name: 'Машиностроение', description: 'Машины, оборудование и точное производство' },
           { name: 'Стройматериалы', description: 'Цемент, кирпич, стекло и строительные материалы' },
           { name: 'Логистика и склады', description: 'Распределительные центры, холодильные склады и логистические хабы' },
           { name: 'Пищевая промышленность', description: 'Переработка продуктов, упаковка и сельхозпродукция' },
-          { name: 'Энергетика', description: 'Возобновляемая энергия, выработка и распределение электроэнергии' },
+          { name: 'Электротехника', description: 'Возобновляемая энергия, выработка и распределение электроэнергии' },
           { name: 'Текстиль', description: 'Текстильное производство, одежда и переработка волокна' },
         ],
       },
@@ -1551,6 +1559,10 @@ export const translations = {
       },
       minuteCityLabel: '15-минутный город',
       imageTagApartments: '7 800 квартир',
+      gallery: {
+        title: 'Галерея района',
+        subtitle: 'Визуальный обзор генплана Янги Узбекистан',
+      },
       highlights: [
         {
           title: 'Город в городе',
@@ -1724,7 +1736,7 @@ export const translations = {
         name: 'Умаров Умид Ахмаджанович',
         role: 'Директор, Инвестиционный хаб Бекобод',
         company: 'Бекобод Инвестиция Бошкарув Компания',
-        message: '"Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и комплексным пакетам поддержки, мы обеспечиваем каждому инвестору максимально прочную основу для успеха."',
+        message: '"Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха."',
       },
       office: {
         title: 'Наш офис',
@@ -2111,6 +2123,10 @@ export const translations = {
       },
       minuteCityLabel: '15分钟城市',
       imageTagApartments: '7,800套公寓',
+      gallery: {
+        title: '区域图库',
+        subtitle: '亚格新乌兹别克斯坦总体规划视觉导览',
+      },
       highlights: [
         {
           title: '城中之城',

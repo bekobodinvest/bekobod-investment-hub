@@ -5,6 +5,16 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
 import LotMap from '@/components/LotMap';
+import Gallery from '@/components/Gallery';
+
+// District gallery slides — swap these paths for the real photos in /public/gallery
+const GALLERY_SLIDES = [
+  { src: '/gallery/1.jpg' },
+  { src: '/gallery/2.jpg' },
+  { src: '/gallery/3.jpg' },
+  { src: '/gallery/4.jpg' },
+  { src: '/gallery/5.jpg' },
+];
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -68,6 +78,17 @@ export default function YangiUzbekistanPage() {
               useLabels: t.yangi.lots.useLabels,
             }}
           />
+        </div>
+      </section>
+
+      {/* District Gallery */}
+      <section className="section-padding bg-gray-50">
+        <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 animate-on-scroll">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">{t.yangi.gallery.title}</h2>
+            <p className="section-subheading mx-auto">{t.yangi.gallery.subtitle}</p>
+          </div>
+          <Gallery slides={GALLERY_SLIDES} interval={5000} alt={t.yangi.gallery.title} />
         </div>
       </section>
 
