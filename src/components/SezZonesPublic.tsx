@@ -41,10 +41,65 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
   const [railPts, setRailPts] = useState<[number, number][]>(() => SEZ_RAILWAY.map((p) => [...p] as [number, number]));
   const dragId = useRef<string | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
+  const carRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   useEffect(() => {
     setEditMode(new URLSearchParams(window.location.search).get('edit') === '1');
   }, []);
+
+  // Animate a freight train (loco + wagons) running back and forth along the railway.
+  useEffect(() => {
+    if (editMode) return;
+    if (railPts.length < 2) return;
+    if (window.matchMedia?.('(prefers-reduced-motion: reduce)').matches) return;
+
+    const segs: number[] = [];
+    let total = 0;
+    for (let i = 0; i < railPts.length - 1; i++) {
+      const len = Math.hypot(railPts[i + 1][0] - railPts[i][0], railPts[i + 1][1] - railPts[i][1]);
+      segs.push(len);
+      total += len;
+    }
+
+    // Position + facing at distance s along the path.
+    const posAt = (s: number) => {
+      s = Math.max(0, Math.min(total, s));
+      let d = s;
+      let i = 0;
+      while (i < segs.length - 1 && d > segs[i]) { d -= segs[i]; i++; }
+      const f = segs[i] > 0 ? Math.min(1, d / segs[i]) : 0;
+      return {
+        x: railPts[i][0] + (railPts[i + 1][0] - railPts[i][0]) * f,
+        y: railPts[i][1] + (railPts[i + 1][1] - railPts[i][1]) * f,
+        segDx: railPts[i + 1][0] - railPts[i][0],
+      };
+    };
+
+    const CAR_SPACING = 2.4; // gap between cars, in map units
+    const DURATION = 16000; // ms for a one-way traverse
+    let raf = 0;
+    let start: number | null = null;
+    const tick = (ts: number) => {
+      if (start === null) start = ts;
+      const cycle = ((ts - start) % (DURATION * 2)) / DURATION; // 0..2
+      const forward = cycle <= 1;
+      const frac = forward ? cycle : 2 - cycle; // ping-pong 0→1→0
+      const leadDist = frac * total;
+      const dir = forward ? 1 : -1;
+      carRefs.current.forEach((el, k) => {
+        if (!el) return;
+        const { x, y, segDx } = posAt(leadDist - dir * k * CAR_SPACING);
+        const movingRight = forward ? segDx > 0 : segDx < 0;
+        el.style.left = `${x}%`;
+        el.style.top = `${y}%`;
+        el.style.transform = `translate(-50%, -50%) scaleX(${movingRight ? -1 : 1})`;
+        el.style.opacity = '1';
+      });
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [editMode, railPts]);
 
   const onMapPointerMove = (e: React.PointerEvent) => {
     if (!dragId.current || !mapRef.current) return;
@@ -161,6 +216,19 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
             onPointerLeave={() => setRailTip(null)}
           />
         </svg>
+
+        {/* Animated freight train (loco + 2 wagons) running along the railway */}
+        {!editMode && ['🚂', '🚃', '🚃'].map((emoji, idx) => (
+          <div
+            key={idx}
+            ref={(el) => { carRefs.current[idx] = el; }}
+            className="absolute pointer-events-none z-10 text-base leading-none opacity-0 drop-shadow-[0_1px_3px_rgba(0,0,0,0.6)]"
+            style={{ left: '0%', top: '0%', willChange: 'left, top, transform' }}
+            aria-hidden
+          >
+            {emoji}
+          </div>
+        ))}
 
         {/* Infrastructure objects — icon markers with hover tooltip */}
         {SEZ_OBJECTS.map((o) => {
