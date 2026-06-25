@@ -36,13 +36,12 @@ const sectorIcons = [
   '⚙️', '💊', '🔧', '🏗️', '📦', '🌾', '⚡', '🧵',
 ];
 
-// Bekobod SEZ district gallery — temporary 5 photos; will switch to real SEZ PNG once added
+// Bekobod SEZ district gallery — industrial park renders
 const GALLERY_SLIDES = [
-  { src: '/gallery/1.jpg' },
-  { src: '/gallery/2.jpg' },
-  { src: '/gallery/3.jpg' },
-  { src: '/gallery/4.jpg' },
-  { src: '/gallery/5.jpg' },
+  { src: '/gallery-sez/1.png' },
+  { src: '/gallery-sez/2.jpg' },
+  { src: '/gallery-sez/3.png' },
+  { src: '/gallery-sez/4.png' },
 ];
 
 // Overview image carousel: SEZ aerial render ↔ freight railway locomotive.
