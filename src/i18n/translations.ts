@@ -252,6 +252,10 @@ export const translations = {
         substation: { name: 'Electrical substation', capacity: '~2 MW' },
         reservoir: { name: 'Water reservoir', capacity: '~4,000 m³' },
       },
+      gallery: {
+        title: 'District Gallery',
+        subtitle: 'A visual tour of the Bekobod SEZ',
+      },
       clusterDetail: {
         back: 'All clusters',
         lot: 'Lot',
@@ -859,6 +863,10 @@ export const translations = {
         substation: { name: 'Elektr podstansiyasi', capacity: '~2 MVt' },
         reservoir: { name: 'Suv ombori', capacity: '~4 000 m³' },
       },
+      gallery: {
+        title: 'Tuman galereyasi',
+        subtitle: "Bekobod MIZ hududining vizual sayohati",
+      },
       clusterDetail: {
         back: 'Barcha klasterlar',
         lot: 'Lot',
@@ -1440,6 +1448,10 @@ export const translations = {
         substation: { name: 'Электроподстанция', capacity: '~2 МВт' },
         reservoir: { name: 'Водохранилище', capacity: '~4 000 м³' },
       },
+      gallery: {
+        title: 'Галерея района',
+        subtitle: 'Визуальный обзор СЭЗ Бекобод',
+      },
       clusterDetail: {
         back: 'Ко всем кластерам',
         lot: 'Лот',
@@ -2008,6 +2020,10 @@ export const translations = {
         title: '基础设施',
         substation: { name: '变电站', capacity: '约2兆瓦' },
         reservoir: { name: '蓄水池', capacity: '约4000立方米' },
+      },
+      gallery: {
+        title: '区域图库',
+        subtitle: '别科博德经济特区视觉导览',
       },
       clusterDetail: {
         back: '所有集群',

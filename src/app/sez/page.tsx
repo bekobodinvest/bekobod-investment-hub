@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
 import SezZonesPublic from '@/components/SezZonesPublic';
+import Gallery from '@/components/Gallery';
 import { SEZ_ZONES } from '@/data/sezZones';
 import { SEZ_LOTS } from '@/data/sezLots';
 
@@ -33,6 +34,15 @@ function useScrollAnimation() {
 
 const sectorIcons = [
   '⚙️', '💊', '🔧', '🏗️', '📦', '🌾', '⚡', '🧵',
+];
+
+// Bekobod SEZ district gallery — temporary 5 photos; will switch to real SEZ PNG once added
+const GALLERY_SLIDES = [
+  { src: '/gallery/1.jpg' },
+  { src: '/gallery/2.jpg' },
+  { src: '/gallery/3.jpg' },
+  { src: '/gallery/4.jpg' },
+  { src: '/gallery/5.jpg' },
 ];
 
 // Overview image carousel: SEZ aerial render ↔ freight railway locomotive.
@@ -307,6 +317,17 @@ export default function SEZPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* District Gallery */}
+      <section className="section-padding bg-white">
+        <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 animate-on-scroll">
+          <div className="text-center mb-12">
+            <h2 className="section-heading">{t.sez.gallery.title}</h2>
+            <p className="section-subheading mx-auto">{t.sez.gallery.subtitle}</p>
+          </div>
+          <Gallery slides={GALLERY_SLIDES} interval={5000} alt={t.sez.gallery.title} />
         </div>
       </section>
 

@@ -7,7 +7,7 @@ import MapSection from '@/components/MapSection';
 import LotMap from '@/components/LotMap';
 import Gallery from '@/components/Gallery';
 
-// District gallery slides — swap these paths for the real photos in /public/gallery
+// District gallery slides — temporary 5 photos; will switch to 9 PNG once files are added
 const GALLERY_SLIDES = [
   { src: '/gallery/1.jpg' },
   { src: '/gallery/2.jpg' },
