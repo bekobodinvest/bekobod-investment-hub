@@ -7,13 +7,17 @@ import MapSection from '@/components/MapSection';
 import LotMap from '@/components/LotMap';
 import Gallery from '@/components/Gallery';
 
-// District gallery slides — temporary 5 photos; will switch to 9 PNG once files are added
+// District gallery slides — 9 Yangi Uzbekistan masterplan renders
 const GALLERY_SLIDES = [
-  { src: '/gallery/1.jpg' },
-  { src: '/gallery/2.jpg' },
-  { src: '/gallery/3.jpg' },
-  { src: '/gallery/4.jpg' },
-  { src: '/gallery/5.jpg' },
+  { src: '/gallery/1.png' },
+  { src: '/gallery/2.png' },
+  { src: '/gallery/3.png' },
+  { src: '/gallery/4.png' },
+  { src: '/gallery/5.png' },
+  { src: '/gallery/6.png' },
+  { src: '/gallery/7.png' },
+  { src: '/gallery/8.png' },
+  { src: '/gallery/9.png' },
 ];
 
 function useScrollAnimation() {
