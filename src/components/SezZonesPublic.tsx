@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
 import { SEZ_LOTS, SEZ_LOTS_TOTAL_GA } from '@/data/sezLots';
-import { SEZ_OBJECTS } from '@/data/sezObjects';
+import { SEZ_OBJECTS, SEZ_RAILWAY } from '@/data/sezObjects';
 import { useLanguage } from '@/context/LanguageContext';
 
 const IMAGE = '/sez_aerial.png';
@@ -26,6 +26,7 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
     onHover?.(id);
   };
   const [hoveredObj, setHoveredObj] = useState<string | null>(null);
+  const [railTip, setRailTip] = useState<{ x: number; y: number } | null>(null);
   const sectorNames = t.sez.sectors.items.map((it) => it.name);
   const lotsLabel = t.sez.clustersMap.lotsLabel;
   const totalLabel = t.sez.clustersMap.totalLabel;
@@ -37,6 +38,7 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
   const [objPos, setObjPos] = useState<Record<string, [number, number]>>(
     () => Object.fromEntries(SEZ_OBJECTS.map((o) => [o.id, o.point]))
   );
+  const [railPts, setRailPts] = useState<[number, number][]>(() => SEZ_RAILWAY.map((p) => [...p] as [number, number]));
   const dragId = useRef<string | null>(null);
   const mapRef = useRef<HTMLDivElement | null>(null);
 
@@ -47,11 +49,18 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
   const onMapPointerMove = (e: React.PointerEvent) => {
     if (!dragId.current || !mapRef.current) return;
     const r = mapRef.current.getBoundingClientRect();
-    const x = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100));
-    const y = Math.max(0, Math.min(100, ((e.clientY - r.top) / r.height) * 100));
-    setObjPos((p) => ({ ...p, [dragId.current as string]: [+x.toFixed(2), +y.toFixed(2)] }));
+    const x = +Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100)).toFixed(2);
+    const y = +Math.max(0, Math.min(100, ((e.clientY - r.top) / r.height) * 100)).toFixed(2);
+    const id = dragId.current;
+    if (id.startsWith('rail-')) {
+      const idx = +id.slice(5);
+      setRailPts((pts) => pts.map((pt, i) => (i === idx ? [x, y] : pt)));
+    } else {
+      setObjPos((p) => ({ ...p, [id]: [x, y] }));
+    }
   };
   const endDrag = () => { dragId.current = null; };
+  const railPoints = railPts.map((p) => p.join(',')).join(' ');
 
   const perZone = useMemo(() => {
     const m: Record<string, { count: number; ga: number }> = {};
@@ -113,6 +122,44 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
               />
             );
           })}
+
+          {/* Railway line: dark base + white cross-ties dashes */}
+          <polyline
+            points={railPoints}
+            fill="none"
+            stroke="#1a2744"
+            strokeWidth={4}
+            strokeLinejoin="round"
+            strokeLinecap="round"
+            vectorEffect="non-scaling-stroke"
+          />
+          <polyline
+            points={railPoints}
+            fill="none"
+            stroke="#ffffff"
+            strokeWidth={4}
+            strokeDasharray="2 4"
+            strokeLinecap="butt"
+            vectorEffect="non-scaling-stroke"
+          />
+          {/* Wide transparent hit area for hover */}
+          <polyline
+            points={railPoints}
+            fill="none"
+            stroke="transparent"
+            strokeWidth={16}
+            vectorEffect="non-scaling-stroke"
+            style={{ cursor: 'pointer', pointerEvents: 'stroke' }}
+            onPointerMove={(e) => {
+              if (!mapRef.current) return;
+              const r = mapRef.current.getBoundingClientRect();
+              setRailTip({
+                x: ((e.clientX - r.left) / r.width) * 100,
+                y: ((e.clientY - r.top) / r.height) * 100,
+              });
+            }}
+            onPointerLeave={() => setRailTip(null)}
+          />
         </svg>
 
         {/* Infrastructure objects — icon markers with hover tooltip */}
@@ -134,6 +181,31 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
             </button>
           );
         })}
+
+        {/* Railway edit handles — drag in ?edit=1 */}
+        {editMode && railPts.map((p, i) => (
+          <button
+            key={`rail-${i}`}
+            type="button"
+            onPointerDown={(e) => { e.preventDefault(); dragId.current = `rail-${i}`; }}
+            className="absolute -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-white ring-2 ring-amber-500 cursor-move touch-none pointer-events-auto z-20"
+            style={{ left: `${p[0]}%`, top: `${p[1]}%` }}
+          />
+        ))}
+
+        {/* Railway hover — locomotive photo */}
+        {railTip && !editMode && (
+          <div
+            className="absolute z-20 -translate-x-1/2 -translate-y-full pointer-events-none"
+            style={{ left: `${railTip.x}%`, top: `calc(${railTip.y}% - 0.75rem)` }}
+          >
+            <div className="rounded-xl overflow-hidden shadow-2xl bg-[#1a2744] w-56 ring-1 ring-white/20">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/railway-locomotive.jpg" alt={t.sez.clustersMap.railwayLabel} className="block w-full h-32 object-cover" />
+              <div className="px-3 py-2 text-white text-xs font-semibold">{t.sez.clustersMap.railwayLabel}</div>
+            </div>
+          </div>
+        )}
 
         {/* Object hover tooltip */}
         {hoveredObj && (() => {
@@ -171,10 +243,12 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
 
       {/* Coordinate readout — only in ?edit=1 mode */}
       {editMode && (() => {
-        const coordText = SEZ_OBJECTS.map((o) => {
+        const objText = SEZ_OBJECTS.map((o) => {
           const [x, y] = objPos[o.id] ?? o.point;
           return `${o.id}: [${x}, ${y}]`;
         }).join('\n');
+        const railText = `railway: [${railPts.map((p) => `[${p[0]}, ${p[1]}]`).join(', ')}]`;
+        const coordText = `${objText}\n${railText}`;
         return (
           <div className="rounded-lg border border-red-300 bg-red-50 p-4 text-sm">
             <div className="flex items-center justify-between gap-3 mb-2">

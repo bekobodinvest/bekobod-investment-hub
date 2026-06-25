@@ -246,6 +246,7 @@ export const translations = {
         lotsLabel: 'lots',
         clickHint: 'Click a cluster to open its lots',
         areaUnit: 'ha',
+        railwayLabel: 'Railway',
       },
       objects: {
         title: 'Infrastructure',
@@ -859,6 +860,7 @@ export const translations = {
         lotsLabel: 'lot',
         clickHint: 'Lotlarini ochish uchun klasterni bosing',
         areaUnit: 'ga',
+        railwayLabel: 'Temir yoʻl',
       },
       objects: {
         title: 'Infratuzilma',
@@ -1446,6 +1448,7 @@ export const translations = {
         lotsLabel: 'лот',
         clickHint: 'Нажмите на кластер, чтобы открыть его лоты',
         areaUnit: 'га',
+        railwayLabel: 'Железная дорога',
       },
       objects: {
         title: 'Инфраструктура',
@@ -2021,6 +2024,7 @@ export const translations = {
         lotsLabel: '地块',
         clickHint: '点击集群以查看其地块',
         areaUnit: '公顷',
+        railwayLabel: '铁路',
       },
       objects: {
         title: '基础设施',
