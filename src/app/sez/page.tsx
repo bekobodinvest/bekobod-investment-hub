@@ -1,10 +1,13 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
 import SezZonesPublic from '@/components/SezZonesPublic';
+import { SEZ_ZONES } from '@/data/sezZones';
+import { SEZ_LOTS } from '@/data/sezLots';
 
 const technoparkGallery = [
   '/technopark-gallery/01.webp',
@@ -40,7 +43,16 @@ const overviewSlides = [
 
 export default function SEZPage() {
   const { t } = useLanguage();
+  const router = useRouter();
   useScrollAnimation();
+
+  // Lot count + area per sector, indexed to match t.sez.sectors.items order (= SEZ_ZONES order).
+  const sectorStats = useMemo(() => {
+    return SEZ_ZONES.map((z) => {
+      const lots = SEZ_LOTS.filter((l) => l.zone === z.id);
+      return { count: lots.length, ga: lots.reduce((s, l) => s + l.areaGa, 0) };
+    });
+  }, []);
 
   // Land on the clusters map when arriving via /sez#clusters (e.g. "back" from a cluster page).
   useEffect(() => {
@@ -187,19 +199,21 @@ export default function SEZPage() {
         </div>
       </section>
 
-      {/* 8 Sectors */}
-      <section className="section-padding bg-gray-50">
+      {/* 8 Clusters — sectors + aerial zone map (merged) */}
+      <section id="clusters" className="section-padding bg-gray-50 scroll-mt-24">
         <div className="container-custom">
-          <div className="text-center mb-14 animate-on-scroll">
-            <h2 className="section-heading">{t.sez.sectors.title}</h2>
-            <p className="section-subheading mx-auto">{t.sez.sectors.subtitle}</p>
+          <div className="text-center max-w-3xl mx-auto mb-14 animate-on-scroll">
+            <h2 className="section-heading">{t.sez.clustersMap.title}</h2>
+            <p className="section-subheading mx-auto mt-4">{t.sez.clustersMap.description}</p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {t.sez.sectors.items.map((sector, i) => (
-              <div
+              <button
                 key={i}
-                className="animate-on-scroll card p-6 border border-gray-100 group hover:border-[#4a9c4e]/30"
+                type="button"
+                onClick={() => SEZ_ZONES[i] && router.push(`/sez/cluster/${SEZ_ZONES[i].id}`)}
+                className="animate-on-scroll card p-6 border border-gray-100 group hover:border-[#4a9c4e]/30 text-left w-full cursor-pointer transition-shadow hover:shadow-lg"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <div className="text-4xl mb-4">{sectorIcons[i]}</div>
@@ -207,23 +221,16 @@ export default function SEZPage() {
                   {sector.name}
                 </h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{sector.description}</p>
-              </div>
+                {sectorStats[i] && (
+                  <p className="mt-3 text-xs font-medium text-gray-400">
+                    {sectorStats[i].count} {t.sez.clustersMap.lotsLabel} · {sectorStats[i].ga.toFixed(1)} {t.sez.clustersMap.areaUnit}
+                  </p>
+                )}
+              </button>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* 8 Clusters — aerial zone map */}
-      <section id="clusters" className="section-padding bg-white scroll-mt-24">
-        <div className="container-custom">
-          <div className="max-w-3xl mb-10 animate-on-scroll">
-            <div className="accent-line mb-6" />
-            <h2 className="section-heading">{t.sez.clustersMap.title}</h2>
-            <p className="text-gray-600 leading-relaxed text-lg mt-4">
-              {t.sez.clustersMap.description}
-            </p>
-          </div>
-          <div className="animate-on-scroll">
+          <div className="animate-on-scroll mt-12">
             <SezZonesPublic />
           </div>
         </div>

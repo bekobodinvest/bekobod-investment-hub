@@ -1,9 +1,10 @@
 'use client';
 
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
 import { SEZ_LOTS, SEZ_LOTS_TOTAL_GA } from '@/data/sezLots';
+import { SEZ_OBJECTS } from '@/data/sezObjects';
 import { useLanguage } from '@/context/LanguageContext';
 
 const IMAGE = '/sez_aerial.png';
@@ -12,11 +13,33 @@ export default function SezZonesPublic() {
   const { t } = useLanguage();
   const router = useRouter();
   const [hovered, setHovered] = useState<SezZoneId | null>(null);
+  const [hoveredObj, setHoveredObj] = useState<string | null>(null);
   const sectorNames = t.sez.sectors.items.map((it) => it.name);
   const lotsLabel = t.sez.clustersMap.lotsLabel;
   const totalLabel = t.sez.clustersMap.totalLabel;
   const areaUnit = t.sez.clustersMap.areaUnit;
   const open = (id: SezZoneId) => router.push(`/sez/cluster/${id}`);
+
+  // Drag-to-position editor for infrastructure objects, enabled via ?edit=1.
+  const [editMode, setEditMode] = useState(false);
+  const [objPos, setObjPos] = useState<Record<string, [number, number]>>(
+    () => Object.fromEntries(SEZ_OBJECTS.map((o) => [o.id, o.point]))
+  );
+  const dragId = useRef<string | null>(null);
+  const mapRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setEditMode(new URLSearchParams(window.location.search).get('edit') === '1');
+  }, []);
+
+  const onMapPointerMove = (e: React.PointerEvent) => {
+    if (!dragId.current || !mapRef.current) return;
+    const r = mapRef.current.getBoundingClientRect();
+    const x = Math.max(0, Math.min(100, ((e.clientX - r.left) / r.width) * 100));
+    const y = Math.max(0, Math.min(100, ((e.clientY - r.top) / r.height) * 100));
+    setObjPos((p) => ({ ...p, [dragId.current as string]: [+x.toFixed(2), +y.toFixed(2)] }));
+  };
+  const endDrag = () => { dragId.current = null; };
 
   const perZone = useMemo(() => {
     const m: Record<string, { count: number; ga: number }> = {};
@@ -29,9 +52,23 @@ export default function SezZonesPublic() {
   }, []);
 
   return (
-    <div className="grid lg:grid-cols-[1fr_320px] gap-6">
+    <div className="space-y-5">
+      {/* Summary total above the map */}
+      <div className="inline-flex items-baseline gap-2 px-4 py-2 rounded-lg bg-[#1a2744] text-white">
+        <span className="text-xs text-gray-300 mr-1">{totalLabel}</span>
+        <span className="font-bold text-lg">{SEZ_LOTS.length} {lotsLabel}</span>
+        <span className="text-xs text-gray-300">·</span>
+        <span className="text-sm text-gray-200">{SEZ_LOTS_TOTAL_GA.toFixed(1)} {areaUnit}</span>
+      </div>
+
       {/* Aerial + zone overlay — image defines layout, SVG sits on top of identical pixels */}
-      <div className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744]">
+      <div
+        ref={mapRef}
+        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744]"
+        onPointerMove={editMode ? onMapPointerMove : undefined}
+        onPointerUp={editMode ? endDrag : undefined}
+        onPointerLeave={editMode ? endDrag : undefined}
+      >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGE}
@@ -66,6 +103,43 @@ export default function SezZonesPublic() {
           })}
         </svg>
 
+        {/* Infrastructure objects — icon markers with hover tooltip */}
+        {SEZ_OBJECTS.map((o) => {
+          const [x, y] = objPos[o.id] ?? o.point;
+          return (
+            <button
+              key={o.id}
+              type="button"
+              onPointerDown={editMode ? (e) => { e.preventDefault(); dragId.current = o.id; } : undefined}
+              onPointerEnter={() => setHoveredObj(o.id)}
+              onPointerLeave={() => setHoveredObj(null)}
+              className={`absolute -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center w-8 h-8 rounded-full bg-white shadow-lg text-base pointer-events-auto ${
+                editMode ? 'cursor-move touch-none ring-2 ring-red-500' : 'ring-2 ring-[#1a2744]'
+              }`}
+              style={{ left: `${x}%`, top: `${y}%` }}
+            >
+              {o.icon}
+            </button>
+          );
+        })}
+
+        {/* Object hover tooltip */}
+        {hoveredObj && (() => {
+          const o = SEZ_OBJECTS.find((x) => x.id === hoveredObj);
+          if (!o) return null;
+          const label = t.sez.objects[o.type];
+          const [x, y] = objPos[o.id] ?? o.point;
+          return (
+            <div
+              className="absolute z-10 -translate-x-1/2 -translate-y-full mb-2 px-3 py-2 rounded-lg bg-[#1a2744]/95 text-white shadow-xl backdrop-blur-sm pointer-events-none whitespace-nowrap"
+              style={{ left: `${x}%`, top: `calc(${y}% - 1.5rem)` }}
+            >
+              <div className="text-sm font-bold">{label.name}</div>
+              <div className="text-xs text-gray-300 mt-0.5">{label.capacity}</div>
+            </div>
+          );
+        })()}
+
         {/* Hover tooltip */}
         {hovered && (() => {
           const idx = SEZ_ZONES.findIndex((x) => x.id === hovered);
@@ -83,44 +157,18 @@ export default function SezZonesPublic() {
         })()}
       </div>
 
-      {/* Legend */}
-      <aside className="space-y-2">
-        <div className="px-3 py-2 rounded-lg bg-[#1a2744] text-white">
-          <div className="text-xs text-gray-300">{totalLabel}</div>
-          <div className="flex items-baseline gap-2">
-            <span className="font-bold text-lg">{SEZ_LOTS.length} {lotsLabel}</span>
-            <span className="text-xs text-gray-300">·</span>
-            <span className="text-sm text-gray-200">{SEZ_LOTS_TOTAL_GA.toFixed(1)} {areaUnit}</span>
-          </div>
+      {/* Coordinate readout — only in ?edit=1 mode */}
+      {editMode && (
+        <div className="rounded-lg border border-red-300 bg-red-50 p-4 text-sm">
+          <p className="font-semibold text-red-700 mb-2">Edit mode — drag the markers, then send me these coordinates:</p>
+          <pre className="text-xs bg-white rounded p-3 overflow-x-auto">
+{SEZ_OBJECTS.map((o) => {
+  const [x, y] = objPos[o.id] ?? o.point;
+  return `${o.id}: [${x}, ${y}]`;
+}).join('\n')}
+          </pre>
         </div>
-        {SEZ_ZONES.map((z, i) => {
-          const m = perZone[z.id];
-          const isHov = hovered === z.id;
-          return (
-            <button
-              key={z.id}
-              type="button"
-              onPointerEnter={() => setHovered(z.id)}
-              onPointerLeave={() => setHovered(null)}
-              onClick={() => open(z.id)}
-              className={`w-full flex items-center gap-3 px-3 py-2 rounded-lg border text-left transition-colors ${
-                isHov ? 'border-gray-300 bg-gray-50' : 'border-gray-100 hover:bg-gray-50'
-              }`}
-            >
-              <span
-                className="inline-flex items-center justify-center w-7 h-7 rounded-md text-white text-xs font-bold shrink-0"
-                style={{ background: z.color }}
-              >
-                {i + 1}
-              </span>
-              <span className="flex-1 min-w-0">
-                <span className="block text-sm font-semibold text-[#1a2744] truncate">{sectorNames[i] ?? z.name}</span>
-                <span className="block text-[11px] text-gray-500">{m.count} {lotsLabel} · {m.ga.toFixed(1)} {areaUnit}</span>
-              </span>
-            </button>
-          );
-        })}
-      </aside>
+      )}
     </div>
   );
 }

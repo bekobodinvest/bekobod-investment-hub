@@ -239,13 +239,18 @@ export const translations = {
         ],
       },
       clustersMap: {
-        title: 'Map of 8 industrial clusters',
+        title: '8 strategic industrial clusters',
         description:
-          'The Bekobod SEZ territory is divided into 8 strategic industrial clusters. Each cluster has its own color and number — hover any cluster to see the number of lots and total area.',
+          'The Bekobod SEZ is divided into 8 strategic industrial clusters, each with its own colour and number. Select a cluster below or a zone on the map to view its lots, area and full details.',
         totalLabel: 'Total',
         lotsLabel: 'lots',
         clickHint: 'Click a cluster to open its lots',
         areaUnit: 'ha',
+      },
+      objects: {
+        title: 'Infrastructure',
+        substation: { name: 'Electrical substation', capacity: '~2 MW' },
+        reservoir: { name: 'Water reservoir', capacity: '~4,000 m³' },
       },
       clusterDetail: {
         back: 'All clusters',
@@ -841,13 +846,18 @@ export const translations = {
         ],
       },
       clustersMap: {
-        title: '8 sanoat klasteri xaritasi',
+        title: '8 ta strategik sanoat klasteri',
         description:
-          'Bekobod MIZ hududi 8 ta strategik sanoat klasteriga boʻlingan. Har bir klaster oʻz rangi va raqamiga ega — karta ustida sichqonchani klaster ustiga olib boring, oʻng tomonda lotlar soni va jami maydon koʻrsatiladi.',
+          'Bekobod MIZ hududi 8 ta strategik sanoat klasteriga boʻlingan, har biri oʻz rangi va raqamiga ega. Klaster boʻyicha lotlar soni, maydoni va batafsil maʼlumotni koʻrish uchun quyidagi klasterni yoki kartadagi zonani tanlang.',
         totalLabel: 'Jami',
         lotsLabel: 'lot',
         clickHint: 'Lotlarini ochish uchun klasterni bosing',
         areaUnit: 'ga',
+      },
+      objects: {
+        title: 'Infratuzilma',
+        substation: { name: 'Elektr podstansiyasi', capacity: '~2 MVt' },
+        reservoir: { name: 'Suv ombori', capacity: '~4 000 m³' },
       },
       clusterDetail: {
         back: 'Barcha klasterlar',
@@ -1417,13 +1427,18 @@ export const translations = {
         ],
       },
       clustersMap: {
-        title: 'Карта 8 промышленных кластеров',
+        title: '8 стратегических промышленных кластеров',
         description:
-          'Территория СЭЗ Бекобод разделена на 8 стратегических промышленных кластеров. У каждого кластера свой цвет и номер — наведите курсор на кластер, чтобы увидеть число лотов и общую площадь.',
+          'Территория СЭЗ Бекобод разделена на 8 стратегических промышленных кластеров, у каждого свой цвет и номер. Чтобы увидеть количество лотов, площадь и подробную информацию, выберите кластер ниже или зону на карте.',
         totalLabel: 'Всего',
         lotsLabel: 'лот',
         clickHint: 'Нажмите на кластер, чтобы открыть его лоты',
         areaUnit: 'га',
+      },
+      objects: {
+        title: 'Инфраструктура',
+        substation: { name: 'Электроподстанция', capacity: '~2 МВт' },
+        reservoir: { name: 'Водохранилище', capacity: '~4 000 м³' },
       },
       clusterDetail: {
         back: 'Ко всем кластерам',
@@ -1981,13 +1996,18 @@ export const translations = {
         ],
       },
       clustersMap: {
-        title: '8个工业集群地图',
+        title: '8个战略工业集群',
         description:
-          '别科博德经济特区分为8个战略工业集群。每个集群都有独特的颜色和编号——将鼠标悬停在集群上即可查看地块数量和总面积。',
+          '别科博德经济特区分为8个战略工业集群，每个集群都有独特的颜色和编号。选择下方的集群或地图上的区域，即可查看其地块数量、面积和详细信息。',
         totalLabel: '总计',
         lotsLabel: '地块',
         clickHint: '点击集群以查看其地块',
         areaUnit: '公顷',
+      },
+      objects: {
+        title: '基础设施',
+        substation: { name: '变电站', capacity: '约2兆瓦' },
+        reservoir: { name: '蓄水池', capacity: '约4000立方米' },
       },
       clusterDetail: {
         back: '所有集群',
