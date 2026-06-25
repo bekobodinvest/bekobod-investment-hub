@@ -12,7 +12,7 @@ export interface SezObject {
 }
 
 export const SEZ_OBJECTS: SezObject[] = [
-  { id: 'substation-1', type: 'substation', icon: '⚡', point: [40, 76] },
-  { id: 'reservoir-1', type: 'reservoir', icon: '💧', point: [70, 62] },
-  { id: 'reservoir-2', type: 'reservoir', icon: '💧', point: [78, 66] },
+  { id: 'substation-1', type: 'substation', icon: '⚡', point: [38.08, 52.11] },
+  { id: 'reservoir-1', type: 'reservoir', icon: '💧', point: [26.01, 17.46] },
+  { id: 'reservoir-2', type: 'reservoir', icon: '💧', point: [39.62, 46.67] },
 ];

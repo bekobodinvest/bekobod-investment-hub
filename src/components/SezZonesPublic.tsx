@@ -158,17 +158,27 @@ export default function SezZonesPublic() {
       </div>
 
       {/* Coordinate readout — only in ?edit=1 mode */}
-      {editMode && (
-        <div className="rounded-lg border border-red-300 bg-red-50 p-4 text-sm">
-          <p className="font-semibold text-red-700 mb-2">Edit mode — drag the markers, then send me these coordinates:</p>
-          <pre className="text-xs bg-white rounded p-3 overflow-x-auto">
-{SEZ_OBJECTS.map((o) => {
-  const [x, y] = objPos[o.id] ?? o.point;
-  return `${o.id}: [${x}, ${y}]`;
-}).join('\n')}
-          </pre>
-        </div>
-      )}
+      {editMode && (() => {
+        const coordText = SEZ_OBJECTS.map((o) => {
+          const [x, y] = objPos[o.id] ?? o.point;
+          return `${o.id}: [${x}, ${y}]`;
+        }).join('\n');
+        return (
+          <div className="rounded-lg border border-red-300 bg-red-50 p-4 text-sm">
+            <div className="flex items-center justify-between gap-3 mb-2">
+              <p className="font-semibold text-red-700">Перетащите маркеры, затем нажмите «Скопировать» и пришлите мне:</p>
+              <button
+                type="button"
+                onClick={() => navigator.clipboard?.writeText(coordText)}
+                className="shrink-0 px-3 py-1.5 rounded-md bg-red-600 text-white text-xs font-semibold hover:bg-red-700"
+              >
+                Скопировать координаты
+              </button>
+            </div>
+            <pre className="text-xs bg-white rounded p-3 overflow-x-auto">{coordText}</pre>
+          </div>
+        );
+      })()}
     </div>
   );
 }
