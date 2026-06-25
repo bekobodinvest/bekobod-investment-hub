@@ -9,10 +9,22 @@ import { useLanguage } from '@/context/LanguageContext';
 
 const IMAGE = '/sez_aerial.png';
 
-export default function SezZonesPublic() {
+interface SezZonesPublicProps {
+  /** Controlled hovered zone (e.g. when a sector card is hovered). */
+  hoveredZone?: SezZoneId | null;
+  /** Notify parent when the hovered zone changes from the map. */
+  onHover?: (id: SezZoneId | null) => void;
+}
+
+export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicProps = {}) {
   const { t } = useLanguage();
   const router = useRouter();
-  const [hovered, setHovered] = useState<SezZoneId | null>(null);
+  const [internalHover, setInternalHover] = useState<SezZoneId | null>(null);
+  const hovered = hoveredZone !== undefined ? hoveredZone : internalHover;
+  const setHovered = (id: SezZoneId | null) => {
+    setInternalHover(id);
+    onHover?.(id);
+  };
   const [hoveredObj, setHoveredObj] = useState<string | null>(null);
   const sectorNames = t.sez.sectors.items.map((it) => it.name);
   const lotsLabel = t.sez.clustersMap.lotsLabel;

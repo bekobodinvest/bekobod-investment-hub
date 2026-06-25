@@ -7,7 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
 import SezZonesPublic from '@/components/SezZonesPublic';
 import Gallery from '@/components/Gallery';
-import { SEZ_ZONES } from '@/data/sezZones';
+import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
 import { SEZ_LOTS } from '@/data/sezLots';
 
 const technoparkGallery = [
@@ -53,6 +53,7 @@ const overviewSlides = [
 export default function SEZPage() {
   const { t } = useLanguage();
   const router = useRouter();
+  const [hoveredZone, setHoveredZone] = useState<SezZoneId | null>(null);
   useScrollAnimation();
 
   // Lot count + area per sector, indexed to match t.sez.sectors.items order (= SEZ_ZONES order).
@@ -222,8 +223,13 @@ export default function SEZPage() {
                 key={i}
                 type="button"
                 onClick={() => SEZ_ZONES[i] && router.push(`/sez/cluster/${SEZ_ZONES[i].id}`)}
-                className="animate-on-scroll card p-6 border border-gray-100 group hover:border-[#4a9c4e]/30 text-left w-full cursor-pointer transition-shadow hover:shadow-lg"
-                style={{ transitionDelay: `${i * 60}ms` }}
+                onPointerEnter={() => SEZ_ZONES[i] && setHoveredZone(SEZ_ZONES[i].id)}
+                onPointerLeave={() => setHoveredZone(null)}
+                className="animate-on-scroll card p-6 border-2 group text-left w-full cursor-pointer transition-all hover:shadow-lg"
+                style={{
+                  transitionDelay: `${i * 60}ms`,
+                  borderColor: SEZ_ZONES[i] && hoveredZone === SEZ_ZONES[i].id ? SEZ_ZONES[i].color : 'transparent',
+                }}
               >
                 <div className="text-4xl mb-4">{sectorIcons[i]}</div>
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2 group-hover:text-[#4a9c4e] transition-colors">
@@ -240,7 +246,7 @@ export default function SEZPage() {
           </div>
 
           <div className="animate-on-scroll mt-12">
-            <SezZonesPublic />
+            <SezZonesPublic hoveredZone={hoveredZone} onHover={setHoveredZone} />
           </div>
         </div>
       </section>
