@@ -33,6 +33,37 @@ export default function LotMapEditor() {
     'idle'
   );
 
+  // Global transform — move/scale ALL lots at once to refit them onto a new background.
+  const [gScale, setGScale] = useState(1);
+  const [gDx, setGDx] = useState(0);
+  const [gDy, setGDy] = useState(0);
+  const isTransforming = gScale !== 1 || gDx !== 0 || gDy !== 0;
+
+  const pivot = useMemo<Pt>(() => {
+    let sx = 0, sy = 0, n = 0;
+    for (const pts of Object.values(coords)) for (const [x, y] of pts) { sx += x; sy += y; n++; }
+    return n ? [sx / n, sy / n] : [50, 50];
+  }, [coords]);
+
+  const tx = useCallback(
+    ([x, y]: Pt): Pt => [
+      clamp(round(pivot[0] + (x - pivot[0]) * gScale + gDx)),
+      clamp(round(pivot[1] + (y - pivot[1]) * gScale + gDy)),
+    ],
+    [pivot, gScale, gDx, gDy]
+  );
+
+  const resetTransform = useCallback(() => { setGScale(1); setGDx(0); setGDy(0); }, []);
+
+  const applyTransform = useCallback(() => {
+    setCoords((prev) => {
+      const next: Coords = {};
+      for (const [k, pts] of Object.entries(prev)) next[k] = pts.map(tx);
+      return next;
+    });
+    resetTransform();
+  }, [tx, resetTransform]);
+
   const drag = useRef<
     | { type: 'vertex'; key: string; idx: number }
     | { type: 'body'; key: string; start: Pt; startPts: Pt[] }
@@ -169,6 +200,39 @@ export default function LotMapEditor() {
           </p>
         </div>
 
+        {/* Global transform — refit all lots onto a new background */}
+        <div className="rounded-xl border border-amber-300 bg-amber-50 p-4 space-y-3">
+          <div className="text-sm font-bold text-amber-800">Двигать ВСЕ лоты</div>
+          <label className="block text-xs text-amber-900">
+            Масштаб: {gScale.toFixed(2)}×
+            <input type="range" min={0.5} max={1.8} step={0.01} value={gScale}
+              onChange={(e) => setGScale(+e.target.value)} className="w-full" />
+          </label>
+          <label className="block text-xs text-amber-900">
+            Сдвиг X: {gDx.toFixed(1)}
+            <input type="range" min={-40} max={40} step={0.5} value={gDx}
+              onChange={(e) => setGDx(+e.target.value)} className="w-full" />
+          </label>
+          <label className="block text-xs text-amber-900">
+            Сдвиг Y: {gDy.toFixed(1)}
+            <input type="range" min={-40} max={40} step={0.5} value={gDy}
+              onChange={(e) => setGDy(+e.target.value)} className="w-full" />
+          </label>
+          <div className="flex gap-2">
+            <button onClick={applyTransform} disabled={!isTransforming}
+              className="flex-1 text-xs px-3 py-1.5 rounded-lg bg-amber-600 text-white font-semibold hover:bg-amber-700 disabled:opacity-50">
+              Применить
+            </button>
+            <button onClick={resetTransform} disabled={!isTransforming}
+              className="text-xs px-3 py-1.5 rounded-lg border border-amber-300 text-amber-800 hover:bg-amber-100 disabled:opacity-50">
+              Сброс
+            </button>
+          </div>
+          <p className="text-[11px] text-amber-700 leading-relaxed">
+            Подгоните все лоты ползунками, нажмите «Применить» — затем правьте отдельные лоты как обычно.
+          </p>
+        </div>
+
         <button
           onClick={save}
           disabled={saveState === 'saving'}
@@ -217,8 +281,8 @@ export default function LotMapEditor() {
         <img
           src={IMAGE}
           alt="Yangi O'zbekiston aerial"
-          width={1672}
-          height={941}
+          width={2316}
+          height={1289}
           className="block w-full h-auto pointer-events-none"
           draggable={false}
         />
@@ -230,8 +294,9 @@ export default function LotMapEditor() {
         >
           {YANGI_LOTS.map((l) => {
             const k = lotKey(l);
-            const pts = coords[k];
-            if (!pts?.length) return null;
+            const base = coords[k];
+            if (!base?.length) return null;
+            const pts = isTransforming ? base.map(tx) : base;
             const color = LOT_STATUS_COLOR[l.status];
             const isSel = k === selected;
             return (
@@ -243,8 +308,9 @@ export default function LotMapEditor() {
                 stroke={isSel ? '#ffffff' : color}
                 strokeWidth={isSel ? 0.5 : 0.3}
                 vectorEffect="non-scaling-stroke"
-                style={{ cursor: isSel ? 'move' : 'pointer' }}
+                style={{ cursor: isTransforming ? 'default' : isSel ? 'move' : 'pointer' }}
                 onPointerDown={(e) => {
+                  if (isTransforming) return;
                   if (!isSel) {
                     setSelected(k);
                     return;
@@ -254,10 +320,11 @@ export default function LotMapEditor() {
                     type: 'body',
                     key: k,
                     start: pct(e),
-                    startPts: pts.map((p) => [...p] as Pt),
+                    startPts: base.map((p) => [...p] as Pt),
                   };
                 }}
                 onDoubleClick={(e) => {
+                  if (isTransforming) return;
                   e.preventDefault();
                   addVertexNear(k, pct(e));
                 }}
@@ -265,8 +332,8 @@ export default function LotMapEditor() {
             );
           })}
 
-          {/* Vertex handles for the selected lot */}
-          {selectedPts.map((p, i) => (
+          {/* Vertex handles for the selected lot (hidden while transforming all) */}
+          {!isTransforming && selectedPts.map((p, i) => (
             <circle
               key={i}
               cx={p[0]}

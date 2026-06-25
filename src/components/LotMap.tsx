@@ -101,8 +101,8 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
         <img
           src={labels.image}
           alt={labels.imageAlt}
-          width={1672}
-          height={941}
+          width={2316}
+          height={1289}
           className="block w-full h-auto"
           draggable={false}
         />
