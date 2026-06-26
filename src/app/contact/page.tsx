@@ -87,9 +87,6 @@ export default function ContactPage() {
                     </svg>
                   </div>
                   <div>
-                    <div className="text-xs font-semibold text-[#4a9c4e] uppercase tracking-wider mb-1">
-                      {t.contact.director.title}
-                    </div>
                     <div className="font-bold text-[#1a2744] text-lg">{t.contact.director.name}</div>
                     <div className="text-gray-500 text-sm">{t.contact.director.role}</div>
                   </div>
