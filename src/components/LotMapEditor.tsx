@@ -270,7 +270,7 @@ export default function LotMapEditor() {
       {/* Canvas */}
       <div
         ref={boxRef}
-        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
+        className="relative w-full lg:self-start overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
         onPointerMove={onMove}
         onPointerUp={endDrag}
         onPointerLeave={endDrag}

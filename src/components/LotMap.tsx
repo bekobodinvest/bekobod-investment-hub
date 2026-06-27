@@ -2,6 +2,8 @@
 
 import { useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
+import { useLanguage } from '@/context/LanguageContext';
+import { localizeUse } from '@/i18n/lotUse';
 import {
   YANGI_LOTS,
   LOT_STATUS_COLOR,
@@ -22,6 +24,8 @@ export interface LotMapLabels {
   priceLabel: string; // "Starting price" / "Стартовая цена" / "Boshlang'ich narx"
   auctionButton: string; // "Bid on auction" / "На аукцион" / "Auksionga"
   hint: string; // hover hint under the map
+  /** Heading for the list of off-map lots (industrial / infrastructure) */
+  offMapTitle: string;
   statusLabels: Record<LotStatus, string>;
   /** Localized building-use captions, keyed by lot category */
   useLabels: Record<LotCategory, string>;
@@ -40,6 +44,7 @@ function anchor(points: [number, number][]) {
 }
 
 export default function LotMap({ labels }: { labels: LotMapLabels }) {
+  const { language } = useLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const [hovered, setHovered] = useState<Lot | null>(null);
   const [selected, setSelected] = useState<Lot | null>(null);
@@ -51,7 +56,11 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
     setPos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
   }, []);
 
-  const counts = YANGI_LOTS.reduce<Record<LotStatus, number>>(
+  // Lots drawn on the aerial vs. lots shown only in the list below (out of frame).
+  const mapLots = YANGI_LOTS.filter((l) => !l.offMap);
+  const listLots = YANGI_LOTS.filter((l) => l.offMap);
+
+  const counts = mapLots.reduce<Record<LotStatus, number>>(
     (acc, l) => ({ ...acc, [l.status]: acc[l.status] + 1 }),
     { pending: 0, available: 0, sold: 0 }
   );
@@ -87,33 +96,37 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
       {/* Map */}
       <div
         ref={containerRef}
-        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none"
+        className="relative w-full rounded-2xl shadow-2xl select-none"
         onMouseMove={handleMove}
         onMouseLeave={() => setHovered(null)}
         onClick={() => setSelected(null)}
       >
-        {/* The image itself defines the box (no crop, no object-cover): it is
-            laid out in flow at its natural aspect ratio, and the SVG overlay
-            fills exactly that same box via inset-0. This keeps the percentage
-            zones pixel-aligned on every screen size. The width/height attrs
-            reserve the correct aspect box before load to avoid layout shift. */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={labels.image}
-          alt={labels.imageAlt}
-          width={2316}
-          height={1289}
-          className="block w-full h-auto"
-          draggable={false}
-        />
+        {/* Inner wrapper clips the image to rounded corners; the popup/tooltip
+            live OUTSIDE it (direct children of the container) so they can extend
+            past the map edges without being cut off by overflow-hidden. */}
+        <div className="relative overflow-hidden rounded-2xl bg-[#1a2744]">
+          {/* The image itself defines the box (no crop, no object-cover): it is
+              laid out in flow at its natural aspect ratio, and the SVG overlay
+              fills exactly that same box via inset-0. This keeps the percentage
+              zones pixel-aligned on every screen size. The width/height attrs
+              reserve the correct aspect box before load to avoid layout shift. */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={labels.image}
+            alt={labels.imageAlt}
+            width={2316}
+            height={1289}
+            className="block w-full h-auto"
+            draggable={false}
+          />
 
-        {/* Overlay zones */}
-        <svg
-          className="absolute inset-0 w-full h-full"
-          viewBox="0 0 100 100"
-          preserveAspectRatio="none"
+          {/* Overlay zones */}
+          <svg
+            className="absolute inset-0 w-full h-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
         >
-          {YANGI_LOTS.map((lot) => {
+          {mapLots.map((lot) => {
             const color = LOT_STATUS_COLOR[lot.status];
             const isHot = hovered === lot || selected === lot;
             return (
@@ -121,13 +134,14 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
                 key={`${lot.category}-${lot.id}`}
                 points={pointsToSvg(lot.points)}
                 fill={color}
-                fillOpacity={isHot ? 0.55 : 0.28}
+                fillOpacity={isHot ? 0.4 : 0.15}
                 stroke={selected === lot ? '#ffffff' : color}
                 strokeWidth={isHot ? 0.6 : 0.35}
                 vectorEffect="non-scaling-stroke"
                 className="cursor-pointer"
                 style={{ transition: 'fill-opacity 0.15s ease' }}
                 onMouseEnter={() => setHovered(lot)}
+                onMouseLeave={() => setHovered((h) => (h === lot ? null : h))}
                 onClick={(e) => {
                   e.stopPropagation();
                   setSelected((prev) => (prev === lot ? null : lot));
@@ -135,7 +149,8 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
               />
             );
           })}
-        </svg>
+          </svg>
+        </div>
 
         {/* Hover tooltip — info only, no buttons */}
         {hovered && hovered !== selected && (
@@ -149,17 +164,17 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
             <div className="rounded-xl bg-white/95 backdrop-blur shadow-xl border border-gray-100 overflow-hidden">
               <div
                 className="px-3.5 py-2 flex items-center justify-between"
-                style={{ backgroundColor: LOT_STATUS_COLOR[hovered.status] }}
+                style={{ backgroundColor: '#1a2744' }}
               >
                 <span className="text-white font-bold text-sm">
                   {labels.lotLabel} № {hovered.id}
                 </span>
-                <span className="text-white/90 text-[11px] font-semibold uppercase tracking-wide">
+                <span className="text-white/80 text-[11px] font-semibold uppercase tracking-wide">
                   {labels.statusLabels[hovered.status]}
                 </span>
               </div>
               <div className="px-3.5 py-2.5 space-y-1.5">
-                <div className="text-xs text-gray-400">{labels.useLabels[hovered.category]}</div>
+                <div className="text-xs text-gray-400">{localizeUse(hovered.use, language) ?? labels.useLabels[hovered.category]}</div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">{labels.areaLabel}</span>
                   <span className="font-semibold text-[#1a2744]">{hovered.area}</span>
@@ -191,17 +206,17 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
             <div className="relative rounded-xl bg-white shadow-2xl border border-gray-100 overflow-hidden">
               <div
                 className="px-4 py-2.5 flex items-center justify-between"
-                style={{ backgroundColor: LOT_STATUS_COLOR[selected.status] }}
+                style={{ backgroundColor: '#1a2744' }}
               >
                 <span className="text-white font-bold text-sm">
                   {labels.lotLabel} № {selected.id}
                 </span>
-                <span className="text-white/90 text-[11px] font-semibold uppercase tracking-wide">
+                <span className="text-white/80 text-[11px] font-semibold uppercase tracking-wide">
                   {labels.statusLabels[selected.status]}
                 </span>
               </div>
               <div className="p-4 space-y-2">
-                <div className="text-xs text-gray-400">{labels.useLabels[selected.category]}</div>
+                <div className="text-xs text-gray-400">{localizeUse(selected.use, language) ?? labels.useLabels[selected.category]}</div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-500">{labels.areaLabel}</span>
                   <span className="font-semibold text-[#1a2744]">{selected.area}</span>
@@ -253,6 +268,33 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
       </div>
 
       <p className="text-center text-gray-400 text-sm mt-4">{labels.hint}</p>
+
+      {/* Off-map lots (industrial / infrastructure not in the aerial frame) */}
+      {listLots.length > 0 && (
+        <div className="mt-12">
+          <h3 className="text-lg font-bold text-[#1a2744] mb-5 text-center">{labels.offMapTitle}</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+            {listLots.map((lot) => (
+              <div
+                key={`${lot.category}-${lot.id}`}
+                className="rounded-xl border border-gray-100 bg-white shadow-sm px-4 py-3 flex flex-col"
+              >
+                <div className="flex items-center justify-between mb-1">
+                  <span className="font-bold text-[#1a2744] text-sm">
+                    {labels.lotLabel} № {lot.id}
+                  </span>
+                  <span
+                    className="inline-block w-2.5 h-2.5 rounded-sm flex-shrink-0"
+                    style={{ backgroundColor: LOT_STATUS_COLOR[lot.status] }}
+                  />
+                </div>
+                <span className="text-xs text-gray-500 leading-snug">{localizeUse(lot.use, language) ?? labels.useLabels[lot.category]}</span>
+                <span className="text-xs font-semibold text-[#1a2744] mt-1">{lot.area}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
