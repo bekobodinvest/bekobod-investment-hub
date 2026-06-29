@@ -3,6 +3,7 @@ import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ChatAssistant from '@/components/ChatAssistant';
 
 export const metadata: Metadata = {
   title: 'Bekobod Investment Hub | Official Investment Portal',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Header />
           <main>{children}</main>
           <Footer />
+          <ChatAssistant />
         </LanguageProvider>
       </body>
     </html>
