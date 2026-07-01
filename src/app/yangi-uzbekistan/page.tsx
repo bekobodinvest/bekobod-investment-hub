@@ -50,7 +50,7 @@ export default function YangiUzbekistanPage() {
               <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.yangi.subtitle}</p>
               <p className="text-gray-300 leading-relaxed text-lg">{t.yangi.overview.description}</p>
             </div>
-            <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden">
+            <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden bg-[#1a2744] [transform:translateZ(0)]">
               <Image
                 src="/Yangi_O_zbekiston.jpg"
                 alt="Yangi O'zbekiston Residential District"

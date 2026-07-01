@@ -10,6 +10,11 @@ type PosMap = Record<string, Pos>;
 
 const STORAGE_KEY = 'heroMapPositions_v1';
 
+// Reference width the labels were arranged at. The whole overlay is treated as
+// a fixed-size "stage" and uniformly scaled down (transform: scale) to fit
+// narrower screens, so labels shrink together instead of overlapping/clipping.
+const DESIGN_W = 2350;
+
 // Default positions (% of the hero section). Edit mode lets you drag and
 // override these; once you're happy, the values get baked in here.
 export const DEFAULT_POS: PosMap = {
@@ -36,6 +41,9 @@ const HREF: Record<string, string | undefined> = {
 export default function HeroMapOverlay({ m }: { m: HeroMap }) {
   const [editing, setEditing] = useState(false);
   const [pos, setPos] = useState<PosMap>(DEFAULT_POS);
+  const [scale, setScale] = useState(1);
+  const [stageH, setStageH] = useState(0);
+  const [ready, setReady] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const drag = useRef<{ id: string; startX: number; startY: number; startTop: number; startLeft: number } | null>(null);
 
@@ -50,6 +58,28 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
     } catch {
       /* ignore */
     }
+  }, []);
+
+  // Measure the hero box and scale the whole label stage to fit its width.
+  useEffect(() => {
+    const el = containerRef.current;
+    if (!el) return;
+    const measure = () => {
+      const r = el.getBoundingClientRect();
+      if (r.width === 0) return;
+      const s = r.width / DESIGN_W;
+      setScale(s);
+      setStageH(r.height / s);
+      setReady(true);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener('resize', measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', measure);
+    };
   }, []);
 
   const persist = useCallback((next: PosMap) => {
@@ -221,6 +251,18 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       onPointerUp={editing ? onPointerUp : undefined}
       style={{ pointerEvents: editing ? 'auto' : 'none' }}
     >
+      <div
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: DESIGN_W,
+          height: stageH || '100%',
+          transform: `scale(${scale})`,
+          transformOrigin: 'top left',
+          opacity: ready ? 1 : 0,
+        }}
+      >
       {ids.map((id) => {
         const p = pos[id] ?? DEFAULT_POS[id];
         const href = HREF[id];
@@ -272,6 +314,7 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
           </div>
         );
       })}
+      </div>
 
       {editing && (
         <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 bg-[#0b1830] border border-[#00d4ff]/50 rounded-xl px-4 py-3 shadow-2xl pointer-events-auto">
