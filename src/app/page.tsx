@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import AnimatedCounter from '@/components/AnimatedCounter';
+import HeroMapOverlay from '@/components/HeroMapOverlay';
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -124,6 +125,7 @@ export default function HomePage() {
   useScrollAnimation();
 
   const reasons = t.home.why.reasons;
+  const m = t.home.heroMap;
 
   return (
     <>
@@ -137,30 +139,33 @@ export default function HomePage() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/hero_video.mp4" type="video/mp4" />
+          <source src="/hero_bekobod.mp4" type="video/mp4" />
         </video>
-        {/* Clickable zone overlays — positioned over map labels */}
-        {/* BEKOBOD MAXSUS SANOAT ZONASI — bottom-left */}
+        {/* Clickable zone overlays — positioned over the new video zones */}
+        {/* BEKOBOD MAXSUS SANOAT ZONASI — left */}
         <Link
           href="/sez"
-          aria-label="Bekobod Maxsus Sanoat Zonasi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
-          style={{ left: '21%', bottom: '11%', width: '32%', height: '24%' }}
+          aria-label={m.sezName}
+          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
+          style={{ left: '4%', top: '50%', width: '28%', height: '38%' }}
         />
-        {/* YANGI O'ZBEKISTON MASSIVI — center-right */}
+        {/* YANGI O'ZBEKISTON MASSIVI — right */}
         <Link
           href="/yangi-uzbekistan"
-          aria-label="Yangi O'zbekiston Massivi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#00d4ff] hover:shadow-[0_0_16px_rgba(0,212,255,0.25),inset_0_0_12px_rgba(0,212,255,0.05)]"
-          style={{ left: '55%', top: '48%', width: '30%', height: '22%' }}
+          aria-label={m.yangiName}
+          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
+          style={{ left: '61%', top: '32%', width: '25%', height: '34%' }}
         />
         {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
         <Link
           href="/oybek-ftz"
-          aria-label="Oybek Erkin Savdo Markazi"
-          className="absolute z-10 rounded-xl border border-transparent cursor-pointer transition-all duration-300 hover:border-[#22c55e] hover:shadow-[0_0_16px_rgba(34,197,94,0.25),inset_0_0_12px_rgba(34,197,94,0.05)]"
-          style={{ left: '45%', top: '32%', width: '17%', height: '13%' }}
+          aria-label={m.oybekName}
+          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.28)_0%,rgba(34,197,94,0.08)_50%,transparent_72%)]"
+          style={{ left: '41%', top: '13%', width: '17%', height: '28%' }}
         />
+
+        {/* Translatable, draggable text labels overlaid on the map */}
+        <HeroMapOverlay m={m} />
       </section>
 
       {/* KEY STATS */}
@@ -238,7 +243,7 @@ export default function HomePage() {
             {reasons.map((reason, i) => (
               <div
                 key={i}
-                className="animate-on-scroll p-6 rounded-2xl border border-gray-100 hover:border-[#4a9c4e]/30 hover:shadow-lg transition-all duration-300"
+                className="animate-on-scroll p-6 rounded-[2rem] border border-gray-100 hover:border-[#4a9c4e]/30 hover:shadow-lg transition-all duration-300"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-[#e8f5e9] flex items-center justify-center mb-4">

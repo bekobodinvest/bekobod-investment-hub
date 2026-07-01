@@ -8,7 +8,7 @@ import ChatAssistant from '@/components/ChatAssistant';
 export const metadata: Metadata = {
   title: 'Bekobod Investment Hub | Official Investment Portal',
   description:
-    'Official investment portal for Bekobod district. Discover investment opportunities in Bekobod SEZ, Oybek Free Trade Zone, and Yangi O\'zbekiston residential district.',
+    'Official investment portal for Bekobod region. Discover investment opportunities in Bekobod SEZ, Oybek Free Trade Zone, and Yangi O\'zbekiston residential district.',
   keywords:
     'Bekobod, investment, SEZ, special economic zone, Uzbekistan, e-auction, tax incentives',
   openGraph: {

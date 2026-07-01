@@ -244,10 +244,10 @@ export default function SEZPage() {
               </button>
             ))}
           </div>
+        </div>
 
-          <div className="animate-on-scroll mt-12">
-            <SezZonesPublic hoveredZone={hoveredZone} onHover={setHoveredZone} />
-          </div>
+        <div className="mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8 animate-on-scroll mt-12">
+          <SezZonesPublic hoveredZone={hoveredZone} onHover={setHoveredZone} />
         </div>
       </section>
 

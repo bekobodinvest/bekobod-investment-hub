@@ -6,7 +6,7 @@ export const ASSISTANT_KNOWLEDGE = `
 # Bekobod Investment Hub — Knowledge Base
 
 ## Overview
-Bekobod Investment Hub is the official investment portal for the Bekobod district
+Bekobod Investment Hub is the official investment portal for the Bekobod region
 of Uzbekistan. It covers three flagship projects:
 1. Bekobod Special Economic Zone (SEZ)
 2. Oybek Free Trade Zone (Oybek FTZ)
