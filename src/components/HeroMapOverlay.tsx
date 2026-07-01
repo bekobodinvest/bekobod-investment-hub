@@ -121,7 +121,7 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
   // Each label's inner markup (positioning handled by the wrapper).
   const inner: Record<string, React.ReactNode> = {
     district: (
-      <div className="rounded-[1.5rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-3.5">
+      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-3.5">
         <div className="flex items-center gap-2">
           <svg className="w-6 h-6 text-[#1e9bff]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
           <span className="text-white font-extrabold tracking-wide text-xl xl:text-2xl">{m.district}</span>
@@ -142,7 +142,7 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       </div>
     ),
     oybek: (
-      <div className="rounded-[1.5rem] bg-[#0b1f12]/50 backdrop-blur-md border border-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.7),inset_0_0_12px_rgba(34,197,94,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#0b1f12]/50 backdrop-blur-md border border-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.7),inset_0_0_12px_rgba(34,197,94,0.18)] px-5 py-3 text-center">
         <div className="mx-auto text-white font-bold leading-tight text-lg xl:text-xl max-w-[240px]">{m.oybekName}</div>
         <div className="mt-1.5 inline-block rounded-full bg-[#22c55e] text-[#06210f] text-base xl:text-lg font-bold px-2.5 py-0.5">{m.oybekArea}</div>
       </div>
@@ -154,19 +154,19 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       </div>
     ),
     yangi: (
-      <div className="rounded-[1.5rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
         <div className="text-white font-bold leading-tight text-lg xl:text-xl max-w-[260px]">{m.yangiName}</div>
         <div className="mt-1.5 inline-block rounded-full bg-[#1e9bff] text-white text-base xl:text-lg font-bold px-2.5 py-0.5">{m.yangiArea}</div>
       </div>
     ),
     sez: (
-      <div className="rounded-[1.5rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
         <div className="text-white font-bold leading-tight text-lg xl:text-xl max-w-[240px]">{m.sezName}</div>
         <div className="mt-1.5 inline-block rounded-full bg-[#1e9bff] text-white text-base xl:text-lg font-bold px-2.5 py-0.5">{m.sezArea}</div>
       </div>
     ),
     total: (
-      <div className="rounded-[1.5rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-4 space-y-2.5 max-w-[350px]">
+      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-4 space-y-2.5 max-w-[350px]">
         <div className="flex items-start gap-2.5">
           <svg className="w-6 h-6 text-[#1e9bff] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg>
           <div>
@@ -185,7 +185,7 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       </div>
     ),
     routes: (
-      <div className="rounded-[1.5rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-4 min-w-[400px]">
+      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_14px_rgba(30,155,255,0.55),inset_0_0_10px_rgba(30,155,255,0.12)] px-5 py-4 min-w-[400px]">
         <div className="flex justify-between text-[#1e9bff] font-bold text-base xl:text-lg tracking-wider mb-2">
           <span>{m.routeHeader}</span><span>{m.distanceHeader}</span>
         </div>

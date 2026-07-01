@@ -140,7 +140,7 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
       {/* Aerial + zone overlay — image defines layout, SVG sits on top of identical pixels */}
       <div
         ref={mapRef}
-        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744]"
+        className="relative w-full overflow-hidden rounded-[2rem] shadow-2xl bg-[#1a2744]"
         onPointerMove={editMode ? onMapPointerMove : undefined}
         onPointerUp={editMode ? endDrag : undefined}
         onPointerLeave={editMode ? endDrag : undefined}

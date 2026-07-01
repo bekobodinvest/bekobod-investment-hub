@@ -41,7 +41,7 @@ export default function Gallery({ slides, interval = 5000, alt = 'Gallery' }: Ga
 
   return (
     <div
-      className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#111b30] aspect-[16/9]"
+      className="relative w-full overflow-hidden rounded-[2rem] shadow-2xl bg-[#111b30] aspect-[16/9]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       role="region"

@@ -25,7 +25,7 @@ export default function MapSection({
   )}&z=15&hl=en&output=embed`;
 
   return (
-    <div className="bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-2xl overflow-hidden shadow-2xl">
+    <div className="bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-[2rem] overflow-hidden shadow-2xl">
       <div className="grid md:grid-cols-2 gap-0">
         {/* Live Google Map embed */}
         <div className="relative h-72 md:h-auto md:min-h-[320px] bg-[#111b30]">

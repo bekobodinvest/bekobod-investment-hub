@@ -58,7 +58,7 @@ export default function OybekFTZPage() {
             {t.oybek.stats.map((stat, i) => (
               <div
                 key={i}
-                className="animate-on-scroll text-center p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                className="animate-on-scroll text-center p-5 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="text-[#4a9c4e] font-black text-xl">{stat.value}</div>
@@ -74,7 +74,7 @@ export default function OybekFTZPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="animate-on-scroll order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/Oybek_posti.png"
                   alt="Oybek Border Post"
@@ -101,7 +101,7 @@ export default function OybekFTZPage() {
               </p>
               <p className="text-gray-600 leading-relaxed">{t.oybek.location.description}</p>
 
-              <div className="mt-8 p-5 bg-[#e8f5e9] rounded-xl border border-[#4a9c4e]/20">
+              <div className="mt-8 p-5 bg-[#e8f5e9] rounded-[2rem] border border-[#4a9c4e]/20">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-[#4a9c4e] flex items-center justify-center flex-shrink-0 mt-0.5">
                     <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

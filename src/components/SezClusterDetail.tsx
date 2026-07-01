@@ -98,7 +98,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
 
       {/* Zoomed map */}
       <div
-        className="relative w-full overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none"
+        className="relative w-full overflow-hidden rounded-[2rem] shadow-2xl bg-[#1a2744] select-none"
         style={{ aspectRatio: `${IMG_ASPECT}` }}
         onClick={() => setSelected(null)}
       >

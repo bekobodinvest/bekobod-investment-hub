@@ -138,7 +138,7 @@ export default function IncentivesPage() {
           </div>
 
           {/* Property tax */}
-          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-2xl p-8 text-white">
+          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-[2rem] p-8 text-white">
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e]/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-7 h-7 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -154,7 +154,7 @@ export default function IncentivesPage() {
           </div>
 
           {/* Water resources tax */}
-          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-2xl p-8 text-white">
+          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-[2rem] p-8 text-white">
             <div className="flex items-start gap-5">
               <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e]/20 flex items-center justify-center flex-shrink-0">
                 <svg className="w-7 h-7 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">

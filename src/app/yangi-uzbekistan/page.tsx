@@ -12,9 +12,9 @@ const GALLERY_SLIDES = [
   { src: '/gallery/1.png' },
   { src: '/gallery/2.png' },
   { src: '/gallery/3.png' },
-  { src: '/gallery/4.png' },
-  { src: '/gallery/5.png' },
-  { src: '/gallery/6.png' },
+  { src: '/gallery/4b.png' },
+  { src: '/gallery/5b.png' },
+  { src: '/gallery/6b.png' },
   { src: '/gallery/7.png' },
   { src: '/gallery/8.png' },
   { src: '/gallery/9.png' },
@@ -104,7 +104,7 @@ export default function YangiUzbekistanPage() {
             {t.yangi.stats.map((stat, i) => (
               <div
                 key={i}
-                className="animate-on-scroll text-center p-5 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                className="animate-on-scroll text-center p-5 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="text-[#4a9c4e] font-black text-lg">{stat.value}</div>
@@ -127,14 +127,14 @@ export default function YangiUzbekistanPage() {
               <p className="text-gray-600 leading-relaxed text-lg mb-6">
                 {t.yangi.overview.description}
               </p>
-              <div className="p-6 bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-2xl">
+              <div className="p-6 bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-[2rem]">
                 <div className="text-[#4a9c4e] font-semibold text-sm mb-2">{t.yangi.minuteCityLabel}</div>
                 <p className="text-gray-300 text-sm leading-relaxed">{t.yangi.concept.description}</p>
               </div>
             </div>
 
             <div className="animate-on-scroll">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/Yangi_O_zbekiston.jpg"
                   alt="Yangi O'zbekiston"
@@ -198,7 +198,7 @@ export default function YangiUzbekistanPage() {
             {(['🏙️', '🎓', '🌳'] as const).map((icon, i) => (
               <div
                 key={i}
-                className="animate-on-scroll p-8 rounded-2xl bg-gradient-to-br from-[#e8f5e9] to-white border border-[#4a9c4e]/20"
+                className="animate-on-scroll p-8 rounded-[2rem] bg-gradient-to-br from-[#e8f5e9] to-white border border-[#4a9c4e]/20"
                 style={{ transitionDelay: `${i * 100}ms` }}
               >
                 <div className="text-5xl mb-5">{icon}</div>

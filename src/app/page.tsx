@@ -292,7 +292,7 @@ export default function HomePage() {
       {/* CTA */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="bg-gradient-to-br from-[#e8f5e9] to-white rounded-3xl p-10 md:p-16 text-center border border-[#4a9c4e]/20 animate-on-scroll">
+          <div className="bg-gradient-to-br from-[#e8f5e9] to-white rounded-[2rem] p-10 md:p-16 text-center border border-[#4a9c4e]/20 animate-on-scroll">
             <h2 className="text-3xl md:text-4xl font-black text-[#1a2744] mb-4">
               {t.home.cta.title}
             </h2>

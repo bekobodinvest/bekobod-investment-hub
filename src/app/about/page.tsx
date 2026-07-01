@@ -89,7 +89,7 @@ export default function AboutPage() {
             </div>
 
             <div className="animate-on-scroll">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/Bekobod_SEZ.png"
                   alt="Bekobod Investment Hub"
@@ -124,7 +124,7 @@ export default function AboutPage() {
           </div>
 
           <div className="max-w-4xl mx-auto animate-on-scroll">
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
+            <div className="bg-white rounded-[2rem] shadow-xl overflow-hidden">
               <div className="grid md:grid-cols-5">
                 {/* Director photo placeholder */}
                 <div className="md:col-span-2 bg-gradient-to-br from-[#1a2744] to-[#243660] flex flex-col items-center justify-center p-10 gap-5">
@@ -157,7 +157,7 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-8">
             {/* Mission */}
-            <div className="animate-on-scroll bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-2xl p-8 md:p-10">
+            <div className="animate-on-scroll bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-[2rem] p-8 md:p-10">
               <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e]/20 flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -168,7 +168,7 @@ export default function AboutPage() {
             </div>
 
             {/* Vision */}
-            <div className="animate-on-scroll bg-[#e8f5e9] rounded-2xl p-8 md:p-10 border border-[#4a9c4e]/20">
+            <div className="animate-on-scroll bg-[#e8f5e9] rounded-[2rem] p-8 md:p-10 border border-[#4a9c4e]/20">
               <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e] flex items-center justify-center mb-6">
                 <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
@@ -194,7 +194,7 @@ export default function AboutPage() {
             {t.about.permits.items.map((item, i) => (
               <div
                 key={i}
-                className="animate-on-scroll flex gap-4 p-6 rounded-2xl border border-gray-100 bg-gray-50 hover:border-[#4a9c4e]/40 hover:bg-[#e8f5e9]/40 transition-all duration-200"
+                className="animate-on-scroll flex gap-4 p-6 rounded-[2rem] border border-gray-100 bg-gray-50 hover:border-[#4a9c4e]/40 hover:bg-[#e8f5e9]/40 transition-all duration-200"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
                 <div className="w-11 h-11 rounded-xl bg-[#e8f5e9] flex items-center justify-center flex-shrink-0 text-[#4a9c4e]">
@@ -208,7 +208,7 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-2xl p-6 md:p-8 flex gap-5 items-start">
+          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-[2rem] p-6 md:p-8 flex gap-5 items-start">
             <div className="w-12 h-12 rounded-xl bg-[#4a9c4e]/20 flex items-center justify-center flex-shrink-0">
               <svg className="w-6 h-6 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

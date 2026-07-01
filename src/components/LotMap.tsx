@@ -96,7 +96,7 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
       {/* Map */}
       <div
         ref={containerRef}
-        className="relative w-full rounded-2xl shadow-2xl select-none"
+        className="relative w-full rounded-[2rem] shadow-2xl select-none"
         onMouseMove={handleMove}
         onMouseLeave={() => setHovered(null)}
         onClick={() => setSelected(null)}
@@ -104,7 +104,7 @@ export default function LotMap({ labels }: { labels: LotMapLabels }) {
         {/* Inner wrapper clips the image to rounded corners; the popup/tooltip
             live OUTSIDE it (direct children of the container) so they can extend
             past the map edges without being cut off by overflow-hidden. */}
-        <div className="relative overflow-hidden rounded-2xl bg-[#1a2744]">
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#1a2744]">
           {/* The image itself defines the box (no crop, no object-cover): it is
               laid out in flow at its natural aspect ratio, and the SVG overlay
               fills exactly that same box via inset-0. This keeps the percentage

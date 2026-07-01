@@ -127,7 +127,7 @@ export default function SEZPage() {
             {t.sez.stats.map((stat, i) => (
               <div
                 key={i}
-                className="animate-on-scroll text-center p-4 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                className="animate-on-scroll text-center p-4 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
                 style={{ transitionDelay: `${i * 50}ms` }}
               >
                 <div className="text-[#4a9c4e] font-black text-lg lg:text-xl">{stat.value}</div>
@@ -156,7 +156,7 @@ export default function SEZPage() {
 
               <div className="mt-8 grid grid-cols-2 gap-4">
                 {(['📍', '🏭', '💰', '👥'] as const).map((icon, i) => (
-                  <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 border border-gray-100">
+                  <div key={i} className="flex items-center gap-3 p-4 rounded-[2rem] bg-gray-50 border border-gray-100">
                     <span className="text-2xl">{icon}</span>
                     <div>
                       <div className="text-xs text-gray-400">{t.sez.overviewStats[i].label}</div>
@@ -168,7 +168,7 @@ export default function SEZPage() {
             </div>
 
             <div className="animate-on-scroll">
-              <div className="relative h-96 rounded-2xl overflow-hidden shadow-2xl bg-[#111b30]">
+              <div className="relative h-96 rounded-[2rem] overflow-hidden shadow-2xl bg-[#111b30]">
                 {overviewSlides.map((slide, i) => (
                   <Image
                     key={slide.src}
@@ -254,7 +254,7 @@ export default function SEZPage() {
       {/* Technopark */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="bg-gradient-to-br from-[#1a2744] via-[#243660] to-[#1a3a2a] rounded-3xl overflow-hidden">
+          <div className="bg-gradient-to-br from-[#1a2744] via-[#243660] to-[#1a3a2a] rounded-[2rem] overflow-hidden">
             <div className="grid lg:grid-cols-2 gap-0">
               <div className="p-10 md:p-14 flex flex-col justify-center">
                 <span className="inline-flex items-center gap-2 bg-[#4a9c4e]/20 border border-[#4a9c4e]/30 text-[#4a9c4e] text-sm font-semibold px-4 py-2 rounded-full mb-6 self-start">
