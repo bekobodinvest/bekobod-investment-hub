@@ -243,7 +243,7 @@ export default function HomePage() {
             {reasons.map((reason, i) => (
               <div
                 key={i}
-                className="animate-on-scroll p-6 rounded-[2rem] border border-gray-100 hover:border-[#4a9c4e]/30 hover:shadow-lg transition-all duration-300"
+                className="animate-on-scroll spotlight-card p-6 rounded-[2rem] border border-gray-100 hover:border-[#4a9c4e]/30 hover:shadow-lg transition-all duration-300"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-[#e8f5e9] flex items-center justify-center mb-4">

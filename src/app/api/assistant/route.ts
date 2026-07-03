@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 import { ASSISTANT_KNOWLEDGE } from '@/data/assistantKnowledge';
 
-// AI assistant for site visitors. Answers questions about Bekobod SEZ,
+// AI assistant for site visitors. Answers questions about Bekabad SEZ,
 // Oybek FTZ, Yangi O'zbekiston, tax incentives, and how to invest — using
 // only the curated knowledge base in src/data/assistantKnowledge.ts.
 export const runtime = 'nodejs';
@@ -15,16 +15,16 @@ const MAX_CHARS = 2000;
 
 type ChatMessage = { role: 'user' | 'assistant'; content: string };
 
-const SYSTEM_PROMPT = `You are the official virtual assistant for the Bekobod Investment Hub website.
+const SYSTEM_PROMPT = `You are the official virtual assistant for the Bekabad Investment Hub website.
 
-Your job: answer visitor questions about investing in Bekobod (the Special Economic Zone, Oybek Free Trade Zone, the Yangi O'zbekiston district, tax incentives, and the investment process).
+Your job: answer visitor questions about investing in Bekabad (the Special Economic Zone, Oybek Free Trade Zone, the Yangi O'zbekiston district, tax incentives, and the investment process).
 
 Rules:
 - Answer ONLY using the knowledge base below. If the answer is not in it, say you don't have that information and suggest the visitor use the Contact page. Never invent facts, figures, dates, or legal articles.
 - Reply in the SAME language the visitor used (Uzbek, Russian, English, or Chinese).
 - Be concise, friendly, and professional. Use short paragraphs or bullet points.
 - You are not a lawyer or financial advisor — for binding details, refer visitors to official channels / the Contact page.
-- Do not discuss anything unrelated to Bekobod investment. Politely redirect off-topic questions.
+- Do not discuss anything unrelated to Bekabad investment. Politely redirect off-topic questions.
 
 === KNOWLEDGE BASE ===
 ${ASSISTANT_KNOWLEDGE}

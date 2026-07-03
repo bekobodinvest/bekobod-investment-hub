@@ -36,7 +36,7 @@ const sectorIcons = [
   '⚙️', '💊', '🔧', '🏗️', '📦', '🌾', '⚡', '🧵',
 ];
 
-// Bekobod SEZ district gallery — industrial park renders
+// Bekabad SEZ district gallery — industrial park renders
 const GALLERY_SLIDES = [
   { src: '/gallery-sez/1.png' },
   { src: '/gallery-sez/2.jpg' },
@@ -46,7 +46,7 @@ const GALLERY_SLIDES = [
 
 // Overview image carousel: SEZ aerial render ↔ freight railway locomotive.
 const overviewSlides = [
-  { src: '/Bekobod_SEZ.png', alt: 'Bekobod SEZ Overview' },
+  { src: '/Bekobod_SEZ.png', alt: 'Bekabad SEZ Overview' },
   { src: '/railway-locomotive.jpg', alt: "O'zbekiston temir yo'llari freight locomotive" },
 ];
 
@@ -109,7 +109,7 @@ export default function SEZPage() {
             <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden">
               <Image
                 src="/Bekobod_SEZ.png"
-                alt="Bekobod SEZ"
+                alt="Bekabad SEZ"
                 fill
                 className="object-cover"
                 priority
@@ -294,7 +294,7 @@ export default function SEZPage() {
                   <Image
                     key={src}
                     src={src}
-                    alt={`Bekobod Technopark ${i + 1}`}
+                    alt={`Bekabad Technopark ${i + 1}`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority={i === 0}

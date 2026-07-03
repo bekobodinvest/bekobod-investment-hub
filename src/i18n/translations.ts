@@ -5,7 +5,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About',
-      sez: 'Bekobod SEZ',
+      sez: 'Bekabad SEZ',
       oybek: 'Oybek FTZ',
       yangi: "Yangi Uzbekistan",
       incentives: 'Incentives',
@@ -15,21 +15,21 @@ export const translations = {
     home: {
       hero: {
         badge: 'Official Investment Portal',
-        tagline: 'Invest in Bekobod',
+        tagline: 'Invest in Bekabad',
         subtitle: "Your Gateway to Central Asia's Most Dynamic Investment Zone",
         description:
-          'Bekobod Investment Hub offers world-class investment opportunities through transparent e-auction processes, comprehensive tax incentives, and a strategic location at the crossroads of Central Asia.',
+          'Bekabad Investment Hub offers world-class investment opportunities through transparent e-auction processes, comprehensive tax incentives, and a strategic location at the crossroads of Central Asia.',
         ctaButton: 'Participate in E-Auction',
         learnMore: 'Explore Opportunities',
       },
       heroMap: {
-        district: 'BEKOBOD REGION',
+        district: 'BEKABAD DISTRICT',
         districtSub: 'Tashkent Region, Uzbekistan',
         tashkent: 'Tashkent',
         tashkentDist: '133 km',
         railway: 'Railway line',
         highway: 'Highway',
-        sezName: 'Bekobod SEZ',
+        sezName: 'Bekabad SEZ',
         sezArea: '397 ha',
         oybekName: 'Oybek FTZ',
         oybekArea: '34 ha',
@@ -43,13 +43,13 @@ export const translations = {
         strategicSub: 'Gateway to Central Asia',
         routeHeader: 'ROUTE',
         distanceHeader: 'DISTANCE',
-        route1: 'Bekobod – Tashkent',
+        route1: 'Bekabad – Tashkent',
         route1Dist: '133 km',
-        route3: 'Bekobod – Dushanbe',
+        route3: 'Bekabad – Dushanbe',
         route3Dist: '220 km',
-        route4: 'Bekobod – Samarkand',
+        route4: 'Bekabad – Samarkand',
         route4Dist: '242 km',
-        route5: 'Bekobod – Nurafshon',
+        route5: 'Bekabad – Nurafshon',
         route5Dist: '83 km',
         countryUz: 'UZBEKISTAN',
         countryTj: 'TAJIKISTAN',
@@ -57,7 +57,7 @@ export const translations = {
         gulistonDist: '40 km',
       },
       stats: {
-        title: 'Bekobod by the Numbers',
+        title: 'Bekabad by the Numbers',
         investment: '$520M+',
         investmentLabel: 'Total Investment Potential',
         jobs: '5,800+',
@@ -71,13 +71,13 @@ export const translations = {
       },
       directions: {
         title: 'Three Strategic Investment Directions',
-        subtitle: "Choose your investment path in Bekobod's growing economy",
+        subtitle: "Choose your investment path in Bekabad's growing economy",
         learnMore: 'Learn More',
         sez: {
-          title: 'Bekobod SEZ',
+          title: 'Bekabad SEZ',
           subtitle: 'Special Economic Zone',
           description:
-            '397 hectares of prime industrial land with 120 investment lots across 8 strategic sectors. The cornerstone of Bekobod\'s economic transformation.',
+            '397 hectares of prime industrial land with 120 investment lots across 8 strategic sectors. The cornerstone of Bekabad\'s economic transformation.',
           stats: [
             { value: '$500M', label: 'Investment' },
             { value: '5000+', label: 'Jobs' },
@@ -108,7 +108,7 @@ export const translations = {
         },
       },
       why: {
-        title: 'Why Invest in Bekobod?',
+        title: 'Why Invest in Bekabad?',
         subtitle: 'Strategic advantages for forward-thinking investors',
         reasons: [
           {
@@ -144,44 +144,44 @@ export const translations = {
         ],
       },
       cta: {
-        title: 'Ready to Invest in Bekobod?',
+        title: 'Ready to Invest in Bekabad?',
         subtitle:
-          "Join investors from around the world building Bekobod's economic future",
+          "Join investors from around the world building Bekabad's economic future",
         button: 'Start Your Investment Journey',
         contact: 'Contact Our Team',
       },
     },
     about: {
-      title: 'About Bekobod Investment Hub',
+      title: 'About Bekabad Investment Hub',
       subtitle: "Building tomorrow's economic powerhouse today",
       hero: {
         badge: 'Official Authority',
         description:
-          'The official investment management company operating under Bekobod region hokimiyat, dedicated to attracting domestic and foreign capital.',
+          'The official investment management company operating under Bekabad district hokimiyat, dedicated to attracting domestic and foreign capital.',
       },
       company: {
         title: 'Our Company',
         name: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        authority: 'Under Bekobod Region Hokimiyat',
+        authority: 'Under Bekabad District Hokimiyat',
         description:
-          'We are the official investment promotion and management body for Bekobod region, operating under the direct authority of the local administration. Our mandate is to attract qualified investors through transparent processes, provide comprehensive support, and ensure every investment contributes to the sustainable development of our region.',
+          'We are the official investment promotion and management body for Bekabad district, operating under the direct authority of the local administration. Our mandate is to attract qualified investors through transparent processes, provide comprehensive support, and ensure every investment contributes to the sustainable development of our district.',
       },
       director: {
         title: 'Leadership',
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: 'Bekobod Region Governor',
+        role: 'Bekabad District Governor',
         message:
-          'We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success. Bekobod is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
+          'We invite investors from around the world to participate in Bekabad\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success. Bekabad is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
       },
       mission: {
         title: 'Our Mission',
         description:
-          'To attract qualified investors to participate in e-auctions and win land lease rights, creating a thriving economic ecosystem in Bekobod that benefits investors, local communities, and the national economy of Uzbekistan.',
+          'To attract qualified investors to participate in e-auctions and win land lease rights, creating a thriving economic ecosystem in Bekabad that benefits investors, local communities, and the national economy of Uzbekistan.',
       },
       vision: {
         title: 'Our Vision',
         description:
-          "To position Bekobod as Uzbekistan's premier investment destination by 2030, with a fully developed Special Economic Zone, Free Trade Zone, and modern residential infrastructure supporting thousands of jobs and billions in investment.",
+          "To position Bekabad as Uzbekistan's premier investment destination by 2030, with a fully developed Special Economic Zone, Free Trade Zone, and modern residential infrastructure supporting thousands of jobs and billions in investment.",
       },
       values: {
         title: 'Our Values',
@@ -222,16 +222,16 @@ export const translations = {
       },
     },
     sez: {
-      title: 'Bekobod Special Economic Zone',
+      title: 'Bekabad Special Economic Zone',
       subtitle: '397 Hectares of Industrial Opportunity',
       badge: 'Launch: October 2026',
       overview: {
         title: 'Zone Overview',
         description:
-          'The Bekobod SEZ represents one of Uzbekistan\'s most ambitious industrial development projects. Spanning 397 hectares, this world-class special economic zone offers 120 investment lots across 8 strategic sectors, with total investment potential of $500M and 5,000+ jobs.',
+          'The Bekabad SEZ represents one of Uzbekistan\'s most ambitious industrial development projects. Spanning 397 hectares, this world-class special economic zone offers 120 investment lots across 8 strategic sectors, with total investment potential of $500M and 5,000+ jobs.',
         railwayTitle: 'Railway logistics',
         railway:
-          'The Bekobod SEZ is integrated into the network of JSC "O\'zbekiston temir yo\'llari": via Bekobod station the zone is linked by mainline to the Tashkent transport hub (through Yangiyer and Xovos) and has an outlet toward the Fergana Valley. A dedicated freight railway branch runs to the industrial territory, so residents ship raw materials and finished goods directly by rail — without intermediate trucking — cutting logistics costs and speeding up exports. The line is electrified and freight is hauled by modern electric locomotives.',
+          'The Bekabad SEZ is integrated into the network of JSC "O\'zbekiston temir yo\'llari": via Bekabad station the zone is linked by mainline to the Tashkent transport hub (through Yangiyer and Xovos) and has an outlet toward the Fergana Valley. A dedicated freight railway branch runs to the industrial territory, so residents ship raw materials and finished goods directly by rail — without intermediate trucking — cutting logistics costs and speeding up exports. The line is electrified and freight is hauled by modern electric locomotives.',
       },
       stats: [
         { label: 'Total Area', value: '397 ha' },
@@ -291,7 +291,7 @@ export const translations = {
       clustersMap: {
         title: '8 strategic industrial clusters',
         description:
-          'The Bekobod SEZ is divided into 8 strategic industrial clusters, each with its own colour and number. Select a cluster below or a zone on the map to view its lots, area and full details.',
+          'The Bekabad SEZ is divided into 8 strategic industrial clusters, each with its own colour and number. Select a cluster below or a zone on the map to view its lots, area and full details.',
         totalLabel: 'Total',
         lotsLabel: 'lots',
         clickHint: 'Click a cluster to open its lots',
@@ -305,7 +305,7 @@ export const translations = {
       },
       gallery: {
         title: 'District Gallery',
-        subtitle: 'A visual tour of the Bekobod SEZ',
+        subtitle: 'A visual tour of the Bekabad SEZ',
       },
       clusterDetail: {
         back: 'All clusters',
@@ -321,10 +321,10 @@ export const translations = {
         hint: 'Hover a lot for its number, area and price. Click for details.',
       },
       technopark: {
-        title: 'Bekobod Technopark',
+        title: 'Bekabad Technopark',
         badge: 'Anchor Investor — Bashkir Company',
         description:
-          'The crown jewel within the SEZ, Bekobod Technopark is anchored by a major Bashkir company and represents the zone\'s flagship investment. This 100-hectare technology park will drive innovation and create premium employment opportunities.',
+          'The crown jewel within the SEZ, Bekabad Technopark is anchored by a major Bashkir company and represents the zone\'s flagship investment. This 100-hectare technology park will drive innovation and create premium employment opportunities.',
         descriptionSecond: {
           before:
             'Technopark residents enjoy 3–10 year tax and customs exemptions, ready-to-use engineering infrastructure, and direct access to international transit corridors via the Oybek border post on the Uzbekistan–Tajikistan border. Learn more about the technopark and available plots at ',
@@ -345,7 +345,7 @@ export const translations = {
       map: {
         title: 'SEZ Location',
         description:
-          'Strategically located in Bekobod region with excellent transport connectivity.',
+          'Strategically located in Bekabad district with excellent transport connectivity.',
         button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
     },
@@ -419,7 +419,7 @@ export const translations = {
       overview: {
         title: 'District Overview',
         description:
-          "Yangi Uzbekistan (New Uzbekistan) is an ambitious urban masterplan creating a fully self-contained modern city within Bekobod. Spanning 104 hectares, this transformational project features 7,800 apartments alongside comprehensive commercial, educational, healthcare, and recreational infrastructure.",
+          "Yangi Uzbekistan (New Uzbekistan) is an ambitious urban masterplan creating a fully self-contained modern city within Bekabad. Spanning 104 hectares, this transformational project features 7,800 apartments alongside comprehensive commercial, educational, healthcare, and recreational infrastructure.",
       },
       stats: [
         { label: 'Total Area', value: '104 ha' },
@@ -487,7 +487,7 @@ export const translations = {
       ],
       map: {
         title: 'District Location',
-        description: 'Located in the heart of Bekobod region.',
+        description: 'Located in the heart of Bekabad district.',
         button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
       lots: {
@@ -511,7 +511,7 @@ export const translations = {
       overview: {
         title: 'Why Our Incentives Matter',
         description:
-          "Bekobod SEZ offers one of Uzbekistan's most competitive tax incentive packages, designed to maximize investor returns and accelerate business growth. Combined with presidential decree protections and full administrative support, these benefits make Bekobod the optimal choice for serious investors.",
+          "Bekabad SEZ offers one of Uzbekistan's most competitive tax incentive packages, designed to maximize investor returns and accelerate business growth. Combined with presidential decree protections and full administrative support, these benefits make Bekabad the optimal choice for serious investors.",
       },
       corporate: {
         title: 'Profit Tax Exemption',
@@ -623,14 +623,14 @@ export const translations = {
       taxSchedulesTitle: 'Tax Exemption Schedules',
       cta: {
         title: 'Ready to Claim Your Tax Benefits?',
-        description: 'Participate in e-auction and start your tax-exempt journey in Bekobod SEZ today.',
+        description: 'Participate in e-auction and start your tax-exempt journey in Bekabad SEZ today.',
         button: 'Participate in E-Auction',
         contact: 'Contact Our Team',
       },
     },
     contact: {
       title: 'Contact Us',
-      subtitle: "We're here to help you invest in Bekobod's future",
+      subtitle: "We're here to help you invest in Bekabad's future",
       heroBadge: 'Get In Touch',
       messageSent: 'Message Sent!',
       exploreProjects: 'Explore Investment Projects',
@@ -642,20 +642,20 @@ export const translations = {
       director: {
         title: 'Investment Director',
         name: 'Umarov Umid Ahmadjanovich',
-        role: 'Director, Bekobod Investment Hub',
+        role: 'Director, Bekabad Investment Hub',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        message: '"We invite investors from around the world to participate in Bekobod\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success."',
+        message: '"We invite investors from around the world to participate in Bekabad\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success."',
       },
       office: {
         title: 'Our Office',
-        address: 'Bekobod Region Administration Building',
-        city: 'Bekobod, Tashkent Region',
+        address: 'Bekabad District Administration Building',
+        city: 'Bekabad, Tashkent Region',
         country: 'Republic of Uzbekistan',
       },
       eauction: {
         title: 'E-Auction Portal',
         description:
-          'Participate in our transparent electronic auction system to win land lease rights in Bekobod SEZ, Oybek FTZ, and Yangi O\'zbekiston district.',
+          'Participate in our transparent electronic auction system to win land lease rights in Bekabad SEZ, Oybek FTZ, and Yangi O\'zbekiston district.',
         button: 'Visit E-Auction Portal',
         website: 'e-auksion.uz',
       },
@@ -666,7 +666,7 @@ export const translations = {
         phone: 'Phone Number',
         country: 'Country of Origin',
         interest: 'Investment Interest',
-        interestOptions: ['Bekobod SEZ', 'Oybek FTZ', "Yangi Uzbekistan", 'General Inquiry'],
+        interestOptions: ['Bekabad SEZ', 'Oybek FTZ', "Yangi Uzbekistan", 'General Inquiry'],
         message: 'Your Message',
         submit: 'Send Message',
         success: 'Thank you! Your message has been sent. We will contact you within 24 hours.',
@@ -680,12 +680,12 @@ export const translations = {
     },
     footer: {
       description:
-        'Official investment management company under Bekobod region administration, attracting domestic and foreign capital for sustainable economic development.',
+        'Official investment management company under Bekabad district administration, attracting domestic and foreign capital for sustainable economic development.',
       quickLinks: 'Quick Links',
       projects: 'Investment Projects',
       legal: 'Legal Basis',
       rights: 'All rights reserved.',
-      authority: 'Bekobod Region Administration',
+      authority: 'Bekabad District Administration',
       legalBasis: 'Tax Code RUz, Ch.68 Art.473 | Presidential Decree UP-4853',
     },
   },
@@ -712,7 +712,7 @@ export const translations = {
         learnMore: "Imkoniyatlarni o'rganing",
       },
       heroMap: {
-        district: 'BEKOBOD VILOYATI',
+        district: 'BEKOBOD TUMANI',
         districtSub: "Toshkent viloyati, O'zbekiston",
         tashkent: 'Toshkent',
         tashkentDist: '133 km',
@@ -846,19 +846,19 @@ export const translations = {
       hero: {
         badge: 'Rasmiy organ',
         description:
-          "Bekobod viloyat hokimligi qoshida faoliyat yurituvchi rasmiy investitsiyalarni boshqarish kompaniyasi, mamlakat ichki va xorijiy kapitalini jalb etishga bag'ishlangan.",
+          "Bekobod tuman hokimligi qoshida faoliyat yurituvchi rasmiy investitsiyalarni boshqarish kompaniyasi, mamlakat ichki va xorijiy kapitalini jalb etishga bag'ishlangan.",
       },
       company: {
         title: 'Kompaniyamiz haqida',
         name: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        authority: "Bekobod viloyat hokimligi qoshida",
+        authority: "Bekobod tuman hokimligi qoshida",
         description:
-          "Biz Bekobod viloyati uchun rasmiy investitsiyalarni rag'batlantirish va boshqarish organimiz bo'lib, mahalliy ma'muriyat tomonidan bevosita boshqariladi. Bizning vazifamiz — malakali investorlarni shaffof jarayonlar orqali jalb etish, keng qamrovli ko'mak ko'rsatish va har bir investitsiyaning viloyatimiz, investorlar va milliy iqtisodiyot uchun maksimal foyda keltirishi.",
+          "Biz Bekobod tumani uchun rasmiy investitsiyalarni rag'batlantirish va boshqarish organimiz bo'lib, mahalliy ma'muriyat tomonidan bevosita boshqariladi. Bizning vazifamiz — malakali investorlarni shaffof jarayonlar orqali jalb etish, keng qamrovli ko'mak ko'rsatish va har bir investitsiyaning tumanimiz, investorlar va milliy iqtisodiyot uchun maksimal foyda keltirishi.",
       },
       director: {
         title: 'Rahbariyat',
         name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
-        role: "Bekobod viloyati hokimi",
+        role: "Bekobod tumani hokimi",
         message:
           "Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash uchun investitsiya paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini yaratishda ko‘maklashamiz.",
       },
@@ -1009,7 +1009,7 @@ export const translations = {
       imageTags: { lots: 'parsel', sectors: 'tarmoq' },
       map: {
         title: "MIZ joylashuvi",
-        description: "Bekobod viloyatida strategik jihatdan joylashgan, transport bilan yaxshi bog'langan.",
+        description: "Bekobod tumanida strategik jihatdan joylashgan, transport bilan yaxshi bog'langan.",
         button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
     },
@@ -1132,7 +1132,7 @@ export const translations = {
       ],
       map: {
         title: "Tuman joylashuvi",
-        description: "Bekobod viloyat markazida joylashgan.",
+        description: "Bekobod tuman markazida joylashgan.",
         button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
       },
       lots: {
@@ -1288,7 +1288,7 @@ export const translations = {
       },
       office: {
         title: "Bizning ofisimiz",
-        address: "Bekobod viloyat hokimligi binosi",
+        address: "Bekobod tuman hokimligi binosi",
         city: "Bekobod, Toshkent viloyati",
         country: "O'zbekiston Respublikasi",
       },
@@ -1320,12 +1320,12 @@ export const translations = {
     },
     footer: {
       description:
-        "Bekobod viloyat hokimligi qoshidagi rasmiy investitsiyalarni boshqarish kompaniyasi, barqaror iqtisodiy rivojlanish uchun ichki va xorijiy kapital jalb etadi.",
+        "Bekobod tuman hokimligi qoshidagi rasmiy investitsiyalarni boshqarish kompaniyasi, barqaror iqtisodiy rivojlanish uchun ichki va xorijiy kapital jalb etadi.",
       quickLinks: "Tezkor havolalar",
       projects: "Investitsiya loyihalari",
       legal: "Huquqiy asos",
       rights: "Barcha huquqlar himoyalangan.",
-      authority: 'Bekobod viloyati hokimligi',
+      authority: 'Bekobod tumani hokimligi',
       legalBasis: "O'zR SK, 68-bob 473-modda | Prezident Farmoni UP-4853",
     },
   },
@@ -1334,7 +1334,7 @@ export const translations = {
     nav: {
       home: 'Главная',
       about: 'О нас',
-      sez: 'СЭЗ Бекобод',
+      sez: 'СЭЗ Бекабад',
       oybek: 'СТЗ Ойбек',
       yangi: 'Янги Узбекистан',
       incentives: 'Льготы',
@@ -1344,21 +1344,21 @@ export const translations = {
     home: {
       hero: {
         badge: 'Официальный инвестиционный портал',
-        tagline: 'Инвестируйте в Бекобод',
+        tagline: 'Инвестируйте в Бекабад',
         subtitle: 'Ваши ворота в самую динамичную инвестиционную зону Центральной Азии',
         description:
-          'Инвестиционный хаб Бекобод предлагает инвестиционные возможности мирового класса через прозрачные электронные аукционы, комплексные налоговые льготы и стратегическое расположение на перекрёстке Центральной Азии.',
+          'Инвестиционный хаб Бекабад предлагает инвестиционные возможности мирового класса через прозрачные электронные аукционы, комплексные налоговые льготы и стратегическое расположение на перекрёстке Центральной Азии.',
         ctaButton: 'Участвовать в электронном аукционе',
         learnMore: 'Изучить возможности',
       },
       heroMap: {
-        district: 'БЕКОБОДСКИЙ РЕГИОН',
+        district: 'БЕКАБАДСКИЙ РАЙОН',
         districtSub: 'Ташкентская область, Узбекистан',
         tashkent: 'Ташкент',
         tashkentDist: '133 км',
         railway: 'Железнодорожная магистраль',
         highway: 'Автомагистраль',
-        sezName: 'СЭЗ Бекобод',
+        sezName: 'СЭЗ Бекабад',
         sezArea: '397 га',
         oybekName: 'СТЗ Ойбек',
         oybekArea: '34 га',
@@ -1372,13 +1372,13 @@ export const translations = {
         strategicSub: 'Ворота в Центральную Азию',
         routeHeader: 'МАРШРУТ',
         distanceHeader: 'РАССТОЯНИЕ',
-        route1: 'Бекобод – Ташкент',
+        route1: 'Бекабад – Ташкент',
         route1Dist: '133 км',
-        route3: 'Бекобод – Душанбе',
+        route3: 'Бекабад – Душанбе',
         route3Dist: '220 км',
-        route4: 'Бекобод – Самарканд',
+        route4: 'Бекабад – Самарканд',
         route4Dist: '242 км',
-        route5: 'Бекобод – Нурафшан',
+        route5: 'Бекабад – Нурафшан',
         route5Dist: '83 км',
         countryUz: 'УЗБЕКИСТАН',
         countryTj: 'ТАДЖИКИСТАН',
@@ -1386,7 +1386,7 @@ export const translations = {
         gulistonDist: '40 км',
       },
       stats: {
-        title: 'Бекобод в цифрах',
+        title: 'Бекабад в цифрах',
         investment: '$520M+',
         investmentLabel: 'Общий инвестиционный потенциал',
         jobs: '5 800+',
@@ -1400,13 +1400,13 @@ export const translations = {
       },
       directions: {
         title: 'Три стратегических инвестиционных направления',
-        subtitle: 'Выберите свой путь в растущей экономике Бекобода',
+        subtitle: 'Выберите свой путь в растущей экономике Бекабада',
         learnMore: 'Подробнее',
         sez: {
-          title: 'СЭЗ Бекобод',
+          title: 'СЭЗ Бекабад',
           subtitle: 'Специальная экономическая зона',
           description:
-            '397 гектаров первоклассных промышленных земель с 120 инвестиционными лотами по 8 стратегическим отраслям. Краеугольный камень экономической трансформации Бекобода.',
+            '397 гектаров первоклассных промышленных земель с 120 инвестиционными лотами по 8 стратегическим отраслям. Краеугольный камень экономической трансформации Бекабада.',
           stats: [
             { value: '$500M', label: 'Инвестиции' },
             { value: '5000+', label: 'Рабочих мест' },
@@ -1437,7 +1437,7 @@ export const translations = {
         },
       },
       why: {
-        title: 'Почему инвестировать в Бекобод?',
+        title: 'Почему инвестировать в Бекабад?',
         subtitle: 'Стратегические преимущества для дальновидных инвесторов',
         reasons: [
           {
@@ -1473,43 +1473,43 @@ export const translations = {
         ],
       },
       cta: {
-        title: 'Готовы инвестировать в Бекобод?',
-        subtitle: 'Присоединяйтесь к инвесторам со всего мира, строящим экономическое будущее Бекобода',
+        title: 'Готовы инвестировать в Бекабад?',
+        subtitle: 'Присоединяйтесь к инвесторам со всего мира, строящим экономическое будущее Бекабада',
         button: 'Начните инвестиционный путь',
         contact: 'Связаться с нашей командой',
       },
     },
     about: {
-      title: 'Инвестиционный хаб Бекобод',
+      title: 'Инвестиционный хаб Бекабад',
       subtitle: 'Строим экономическую мощь завтрашнего дня сегодня',
       hero: {
         badge: 'Официальный орган',
         description:
-          'Официальная компания по управлению инвестициями, действующая под хокимиятом Бекободского региона, посвящённая привлечению отечественного и иностранного капитала.',
+          'Официальная компания по управлению инвестициями, действующая под хокимиятом Бекабадского района, посвящённая привлечению отечественного и иностранного капитала.',
       },
       company: {
         title: 'О нашей компании',
-        name: 'Бекобод Инвестиция Бошкарув Компания',
-        authority: 'При хокимияте Бекободского региона',
+        name: 'Бекабад Инвестиция Бошкарув Компания',
+        authority: 'При хокимияте Бекабадского района',
         description:
-          'Мы являемся официальным органом по содействию инвестициям и управлению ими для Бекободского региона, действующим под непосредственным руководством местной администрации. Наш мандат — привлекать квалифицированных инвесторов через прозрачные процессы, оказывать всестороннюю поддержку и обеспечивать максимальную пользу каждой инвестиции.',
+          'Мы являемся официальным органом по содействию инвестициям и управлению ими для Бекабадского района, действующим под непосредственным руководством местной администрации. Наш мандат — привлекать квалифицированных инвесторов через прозрачные процессы, оказывать всестороннюю поддержку и обеспечивать максимальную пользу каждой инвестиции.',
       },
       director: {
         title: 'Руководство',
         name: 'Низомиддинов Зайнилобиддин Шахобиддинович',
-        role: 'Хоким региона Бекобод',
+        role: 'Хоким района Бекабад',
         message:
-          'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха.',
+          'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекабада. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха.',
       },
       mission: {
         title: 'Наша миссия',
         description:
-          'Привлекать квалифицированных инвесторов к участию в электронных аукционах и получению прав аренды земли, создавая процветающую экономическую экосистему в Бекободе, приносящую пользу инвесторам, местным сообществам и национальной экономике Узбекистана.',
+          'Привлекать квалифицированных инвесторов к участию в электронных аукционах и получению прав аренды земли, создавая процветающую экономическую экосистему в Бекабаде, приносящую пользу инвесторам, местным сообществам и национальной экономике Узбекистана.',
       },
       vision: {
         title: 'Наше видение',
         description:
-          'Позиционировать Бекобод как ведущее инвестиционное направление Узбекистана к 2030 году, с полностью развитой Специальной экономической зоной, Зоной свободной торговли и современной жилой инфраструктурой, поддерживающей тысячи рабочих мест и миллиарды инвестиций.',
+          'Позиционировать Бекабад как ведущее инвестиционное направление Узбекистана к 2030 году, с полностью развитой Специальной экономической зоной, Зоной свободной торговли и современной жилой инфраструктурой, поддерживающей тысячи рабочих мест и миллиарды инвестиций.',
       },
       values: {
         title: 'Наши ценности',
@@ -1550,16 +1550,16 @@ export const translations = {
       },
     },
     sez: {
-      title: 'Специальная экономическая зона Бекобод',
+      title: 'Специальная экономическая зона Бекабад',
       subtitle: '397 гектаров промышленных возможностей',
       badge: 'Запуск: октябрь 2026',
       overview: {
         title: 'Обзор зоны',
         description:
-          'СЭЗ Бекобод представляет один из самых амбициозных промышленных проектов развития Узбекистана. Охватывая 397 гектаров, эта СЭЗ мирового класса предлагает 120 инвестиционных лотов по 8 стратегическим отраслям с общим инвестиционным потенциалом $500M и 5 000+ рабочих мест.',
+          'СЭЗ Бекабад представляет один из самых амбициозных промышленных проектов развития Узбекистана. Охватывая 397 гектаров, эта СЭЗ мирового класса предлагает 120 инвестиционных лотов по 8 стратегическим отраслям с общим инвестиционным потенциалом $500M и 5 000+ рабочих мест.',
         railwayTitle: 'Железнодорожная логистика',
         railway:
-          'СЭЗ «Бекобод» интегрирована в сеть АО «O\'zbekiston temir yo\'llari»: через станцию Бекабад зона связана магистралью с Ташкентским транспортным узлом (через Янгиер и Хаваст) и имеет выход в сторону Ферганской долины. К промышленной территории подведена собственная грузовая железнодорожная ветка — резиденты отгружают сырьё и готовую продукцию напрямую по железной дороге, без промежуточной автоперевозки, что снижает логистические издержки и ускоряет экспорт. Линия электрифицирована, перевозки выполняются современными электровозами.',
+          'СЭЗ «Бекабад» интегрирована в сеть АО «O\'zbekiston temir yo\'llari»: через станцию Бекабад зона связана магистралью с Ташкентским транспортным узлом (через Янгиер и Хаваст) и имеет выход в сторону Ферганской долины. К промышленной территории подведена собственная грузовая железнодорожная ветка — резиденты отгружают сырьё и готовую продукцию напрямую по железной дороге, без промежуточной автоперевозки, что снижает логистические издержки и ускоряет экспорт. Линия электрифицирована, перевозки выполняются современными электровозами.',
       },
       stats: [
         { label: 'Общая площадь', value: '397 га' },
@@ -1595,7 +1595,7 @@ export const translations = {
       clustersMap: {
         title: '8 стратегических промышленных кластеров',
         description:
-          'Территория СЭЗ Бекобод разделена на 8 стратегических промышленных кластеров, у каждого свой цвет и номер. Чтобы увидеть количество лотов, площадь и подробную информацию, выберите кластер ниже или зону на карте.',
+          'Территория СЭЗ Бекабад разделена на 8 стратегических промышленных кластеров, у каждого свой цвет и номер. Чтобы увидеть количество лотов, площадь и подробную информацию, выберите кластер ниже или зону на карте.',
         totalLabel: 'Всего',
         lotsLabel: 'лот',
         clickHint: 'Нажмите на кластер, чтобы открыть его лоты',
@@ -1609,7 +1609,7 @@ export const translations = {
       },
       gallery: {
         title: 'Галерея района',
-        subtitle: 'Визуальный обзор СЭЗ Бекобод',
+        subtitle: 'Визуальный обзор СЭЗ Бекабад',
       },
       clusterDetail: {
         back: 'Ко всем кластерам',
@@ -1625,10 +1625,10 @@ export const translations = {
         hint: 'Наведите на лот — номер, площадь и цена. Нажмите — подробности.',
       },
       technopark: {
-        title: 'Технопарк Бекобод',
+        title: 'Технопарк Бекабад',
         badge: 'Якорный инвестор — Башкирская компания',
         description:
-          'Жемчужина в короне СЭЗ, Технопарк Бекобод является якорной инвестицией крупной башкирской компании и представляет флагманскую инвестицию зоны. Этот технопарк площадью 100 га будет стимулировать инновации и создавать качественные рабочие места.',
+          'Жемчужина в короне СЭЗ, Технопарк Бекабад является якорной инвестицией крупной башкирской компании и представляет флагманскую инвестицию зоны. Этот технопарк площадью 100 га будет стимулировать инновации и создавать качественные рабочие места.',
         descriptionSecond: {
           before:
             'Резиденты технопарка получают налоговые и таможенные льготы сроком от 3 до 10 лет, готовую инженерную инфраструктуру и прямой выход на международные транспортные коридоры через пограничный пост «Ойбек» на границе Узбекистана и Таджикистана. Подробнее о технопарке и доступных площадках — на сайте ',
@@ -1648,7 +1648,7 @@ export const translations = {
       imageTags: { lots: 'лотов', sectors: 'секторов' },
       map: {
         title: 'Расположение СЭЗ',
-        description: 'Стратегически расположена в Бекободском регионе с отличной транспортной связью.',
+        description: 'Стратегически расположена в Бекабадском районе с отличной транспортной связью.',
         button: 'Google Maps', yandexButton: 'Яндекс Карты',
       },
     },
@@ -1703,7 +1703,7 @@ export const translations = {
       overview: {
         title: 'Обзор района',
         description:
-          'Янги Узбекистан (Новый Узбекистан) — амбициозный градостроительный проект, создающий полностью самодостаточный современный город в Бекободе. На площади 104 га этот трансформационный проект предусматривает 7 800 квартир наряду с комплексной коммерческой, образовательной, медицинской и рекреационной инфраструктурой.',
+          'Янги Узбекистан (Новый Узбекистан) — амбициозный градостроительный проект, создающий полностью самодостаточный современный город в Бекабаде. На площади 104 га этот трансформационный проект предусматривает 7 800 квартир наряду с комплексной коммерческой, образовательной, медицинской и рекреационной инфраструктурой.',
       },
       stats: [
         { label: 'Общая площадь', value: '104 га' },
@@ -1771,7 +1771,7 @@ export const translations = {
       ],
       map: {
         title: 'Расположение района',
-        description: 'В центре Бекободского региона.',
+        description: 'В центре Бекабадского района.',
         button: 'Google Maps', yandexButton: 'Яндекс Карты',
       },
       lots: {
@@ -1795,7 +1795,7 @@ export const translations = {
       overview: {
         title: 'Почему наши льготы важны?',
         description:
-          'СЭЗ Бекобод предлагает один из самых конкурентоспособных пакетов налоговых льгот Узбекистана, призванных максимизировать доходность инвесторов и ускорить рост бизнеса.',
+          'СЭЗ Бекабад предлагает один из самых конкурентоспособных пакетов налоговых льгот Узбекистана, призванных максимизировать доходность инвесторов и ускорить рост бизнеса.',
       },
       corporate: {
         title: 'Освобождение от налога на прибыль',
@@ -1902,14 +1902,14 @@ export const translations = {
       taxSchedulesTitle: 'Графики налоговых льгот',
       cta: {
         title: 'Готовы воспользоваться налоговыми льготами?',
-        description: 'Участвуйте в электронном аукционе и начните налогово-льготный путь в СЭЗ Бекобод сегодня.',
+        description: 'Участвуйте в электронном аукционе и начните налогово-льготный путь в СЭЗ Бекабад сегодня.',
         button: 'Участвовать в электронном аукционе',
         contact: 'Связаться с нашей командой',
       },
     },
     contact: {
       title: 'Свяжитесь с нами',
-      subtitle: 'Мы здесь, чтобы помочь вам инвестировать в будущее Бекобода',
+      subtitle: 'Мы здесь, чтобы помочь вам инвестировать в будущее Бекабада',
       heroBadge: 'Свяжитесь с нами',
       messageSent: 'Сообщение отправлено!',
       exploreProjects: 'Изучить инвестиционные проекты',
@@ -1921,20 +1921,20 @@ export const translations = {
       director: {
         title: 'Инвестиционный директор',
         name: 'Умаров Умид Ахмаджанович',
-        role: 'Директор, Инвестиционный хаб Бекобод',
-        company: 'Бекобод Инвестиция Бошкарув Компания',
-        message: '"Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекобода. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха."',
+        role: 'Директор, Инвестиционный хаб Бекабад',
+        company: 'Бекабад Инвестиция Бошкарув Компания',
+        message: '"Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекабада. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха."',
       },
       office: {
         title: 'Наш офис',
-        address: 'Здание хокимията Бекободского региона',
-        city: 'Бекобод, Ташкентская область',
+        address: 'Здание хокимията Бекабадского района',
+        city: 'Бекабад, Ташкентская область',
         country: 'Республика Узбекистан',
       },
       eauction: {
         title: 'Портал электронного аукциона',
         description:
-          'Участвуйте в нашей прозрачной системе электронных аукционов для получения прав аренды земли в СЭЗ Бекобод, СТЗ Ойбек и районе Янги Узбекистан.',
+          'Участвуйте в нашей прозрачной системе электронных аукционов для получения прав аренды земли в СЭЗ Бекабад, СТЗ Ойбек и районе Янги Узбекистан.',
         button: 'Перейти на портал электронного аукциона',
         website: 'e-auksion.uz',
       },
@@ -1945,7 +1945,7 @@ export const translations = {
         phone: 'Номер телефона',
         country: 'Страна',
         interest: 'Инвестиционный интерес',
-        interestOptions: ['СЭЗ Бекобод', 'СТЗ Ойбек', 'Янги Узбекистан', 'Общий запрос'],
+        interestOptions: ['СЭЗ Бекабад', 'СТЗ Ойбек', 'Янги Узбекистан', 'Общий запрос'],
         message: 'Ваше сообщение',
         submit: 'Отправить сообщение',
         success: 'Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в течение 24 часов.',
@@ -1959,12 +1959,12 @@ export const translations = {
     },
     footer: {
       description:
-        'Официальная компания по управлению инвестициями при хокимияте Бекободского региона, привлекающая отечественный и иностранный капитал для устойчивого экономического развития.',
+        'Официальная компания по управлению инвестициями при хокимияте Бекабадского района, привлекающая отечественный и иностранный капитал для устойчивого экономического развития.',
       quickLinks: 'Быстрые ссылки',
       projects: 'Инвестиционные проекты',
       legal: 'Правовая база',
       rights: 'Все права защищены.',
-      authority: 'Хокимият Бекободского региона',
+      authority: 'Хокимият Бекабадского района',
       legalBasis: 'НК РУз, Гл.68 Ст.473 | Указ Президента УП-4853',
     },
   },
@@ -1973,7 +1973,7 @@ export const translations = {
     nav: {
       home: '首页',
       about: '关于我们',
-      sez: '别科博德经济特区',
+      sez: '别卡巴德经济特区',
       oybek: '奥伊贝克自贸区',
       yangi: '亚格新乌兹别克斯坦',
       incentives: '优惠',
@@ -1983,21 +1983,21 @@ export const translations = {
     home: {
       hero: {
         badge: '官方投资门户',
-        tagline: '投资别科博德',
+        tagline: '投资别卡巴德',
         subtitle: '您进入中亚最具活力投资区的门户',
         description:
-          '别科博德投资中心通过透明的电子拍卖流程、全面的税收优惠以及中亚十字路口的战略位置，提供世界一流的投资机会。',
+          '别卡巴德投资中心通过透明的电子拍卖流程、全面的税收优惠以及中亚十字路口的战略位置，提供世界一流的投资机会。',
         ctaButton: '参与电子拍卖',
         learnMore: '探索投资机会',
       },
       heroMap: {
-        district: '别科博德地区',
+        district: '别卡巴德区',
         districtSub: '塔什干州，乌兹别克斯坦',
         tashkent: '塔什干',
         tashkentDist: '133 公里',
         railway: '铁路干线',
         highway: '高速公路',
-        sezName: '别科博德经济特区',
+        sezName: '别卡巴德经济特区',
         sezArea: '397 公顷',
         oybekName: '奥伊贝克自贸区',
         oybekArea: '34 公顷',
@@ -2011,13 +2011,13 @@ export const translations = {
         strategicSub: '通往中亚的门户',
         routeHeader: '路线',
         distanceHeader: '距离',
-        route1: '别科博德 – 塔什干',
+        route1: '别卡巴德 – 塔什干',
         route1Dist: '133 公里',
-        route3: '别科博德 – 杜尚别',
+        route3: '别卡巴德 – 杜尚别',
         route3Dist: '220 公里',
-        route4: '别科博德 – 撒马尔罕',
+        route4: '别卡巴德 – 撒马尔罕',
         route4Dist: '242 公里',
-        route5: '别科博德 – 努拉夫雄',
+        route5: '别卡巴德 – 努拉夫雄',
         route5Dist: '83 公里',
         countryUz: '乌兹别克斯坦',
         countryTj: '塔吉克斯坦',
@@ -2025,7 +2025,7 @@ export const translations = {
         gulistonDist: '40 公里',
       },
       stats: {
-        title: '别科博德数据概览',
+        title: '别卡巴德数据概览',
         investment: '5.2亿美元+',
         investmentLabel: '总投资潜力',
         jobs: '5,800+',
@@ -2039,13 +2039,13 @@ export const translations = {
       },
       directions: {
         title: '三大战略投资方向',
-        subtitle: '在别科博德不断发展的经济中选择您的投资路径',
+        subtitle: '在别卡巴德不断发展的经济中选择您的投资路径',
         learnMore: '了解更多',
         sez: {
-          title: '别科博德经济特区',
+          title: '别卡巴德经济特区',
           subtitle: '特别经济区',
           description:
-            '397公顷优质工业用地，涵盖8大战略行业的120个投资地块，是别科博德经济转型的基石。',
+            '397公顷优质工业用地，涵盖8大战略行业的120个投资地块，是别卡巴德经济转型的基石。',
           stats: [
             { value: '5亿美元', label: '投资额' },
             { value: '5000+', label: '工作岗位' },
@@ -2076,7 +2076,7 @@ export const translations = {
         },
       },
       why: {
-        title: '为什么投资别科博德？',
+        title: '为什么投资别卡巴德？',
         subtitle: '面向具有前瞻视野的投资者的战略优势',
         reasons: [
           {
@@ -2112,43 +2112,43 @@ export const translations = {
         ],
       },
       cta: {
-        title: '准备好投资别科博德了吗？',
-        subtitle: '加入来自世界各地共同建设别科博德经济未来的投资者行列',
+        title: '准备好投资别卡巴德了吗？',
+        subtitle: '加入来自世界各地共同建设别卡巴德经济未来的投资者行列',
         button: '开启您的投资之旅',
         contact: '联系我们的团队',
       },
     },
     about: {
-      title: '别科博德投资中心',
+      title: '别卡巴德投资中心',
       subtitle: '今天建设明天的经济强国',
       hero: {
         badge: '官方机构',
         description:
-          '隶属于别科博德地区霍基米亚特的官方投资管理公司，致力于吸引国内外资本。',
+          '隶属于别卡巴德区霍基米亚特的官方投资管理公司，致力于吸引国内外资本。',
       },
       company: {
         title: '关于我们公司',
         name: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        authority: '隶属别科博德地区霍基米亚特',
+        authority: '隶属别卡巴德区霍基米亚特',
         description:
-          '我们是别科博德地区官方投资促进和管理机构，直接受当地行政机构领导。我们的使命是通过透明流程吸引合格投资者、提供全面支持，并确保每项投资为投资者、当地社区和乌兹别克斯坦国家经济带来最大效益。',
+          '我们是别卡巴德区官方投资促进和管理机构，直接受当地行政机构领导。我们的使命是通过透明流程吸引合格投资者、提供全面支持，并确保每项投资为投资者、当地社区和乌兹别克斯坦国家经济带来最大效益。',
       },
       director: {
         title: '领导层',
         name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
-        role: '别科博德地区长',
+        role: '别卡巴德区长',
         message:
-          '我们邀请全球投资者参与别科博德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。',
+          '我们邀请全球投资者参与别卡巴德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。',
       },
       mission: {
         title: '我们的使命',
         description:
-          '吸引合格投资者参与电子拍卖并获得土地租用权，在别科博德打造蓬勃发展的经济生态系统，造福投资者、当地社区和乌兹别克斯坦国家经济。',
+          '吸引合格投资者参与电子拍卖并获得土地租用权，在别卡巴德打造蓬勃发展的经济生态系统，造福投资者、当地社区和乌兹别克斯坦国家经济。',
       },
       vision: {
         title: '我们的愿景',
         description:
-          '到2030年将别科博德定位为乌兹别克斯坦首要投资目的地，建成完善的特别经济区、自由贸易区和现代住宅基础设施，支撑数千个工作岗位和数十亿美元投资。',
+          '到2030年将别卡巴德定位为乌兹别克斯坦首要投资目的地，建成完善的特别经济区、自由贸易区和现代住宅基础设施，支撑数千个工作岗位和数十亿美元投资。',
       },
       values: {
         title: '我们的价值观',
@@ -2177,16 +2177,16 @@ export const translations = {
       },
     },
     sez: {
-      title: '别科博德特别经济区',
+      title: '别卡巴德特别经济区',
       subtitle: '397公顷工业发展机遇',
       badge: '启动时间：2026年10月',
       overview: {
         title: '园区概况',
         description:
-          '别科博德经济特区代表乌兹别克斯坦最具雄心的工业发展项目之一。占地397公顷，这一世界级特别经济区在8大战略行业中提供120个投资地块，总投资潜力达5亿美元，将创造5,000+个工作岗位。',
+          '别卡巴德经济特区代表乌兹别克斯坦最具雄心的工业发展项目之一。占地397公顷，这一世界级特别经济区在8大战略行业中提供120个投资地块，总投资潜力达5亿美元，将创造5,000+个工作岗位。',
         railwayTitle: '铁路物流',
         railway:
-          '别科博德经济特区已接入乌兹别克斯坦铁路股份公司（O\'zbekiston temir yo\'llari）路网：经别科博德站，园区通过干线与塔什干交通枢纽相连（经扬吉耶尔和哈瓦斯特），并通向费尔干纳谷地。一条专用货运铁路支线直通工业区，入驻企业可直接通过铁路运输原料和成品，无需中转公路运输，从而降低物流成本、加快出口。线路已实现电气化，货运由现代电力机车牵引。',
+          '别卡巴德经济特区已接入乌兹别克斯坦铁路股份公司（O\'zbekiston temir yo\'llari）路网：经别卡巴德站，园区通过干线与塔什干交通枢纽相连（经扬吉耶尔和哈瓦斯特），并通向费尔干纳谷地。一条专用货运铁路支线直通工业区，入驻企业可直接通过铁路运输原料和成品，无需中转公路运输，从而降低物流成本、加快出口。线路已实现电气化，货运由现代电力机车牵引。',
       },
       stats: [
         { label: '总面积', value: '397公顷' },
@@ -2222,7 +2222,7 @@ export const translations = {
       clustersMap: {
         title: '8个战略工业集群',
         description:
-          '别科博德经济特区分为8个战略工业集群，每个集群都有独特的颜色和编号。选择下方的集群或地图上的区域，即可查看其地块数量、面积和详细信息。',
+          '别卡巴德经济特区分为8个战略工业集群，每个集群都有独特的颜色和编号。选择下方的集群或地图上的区域，即可查看其地块数量、面积和详细信息。',
         totalLabel: '总计',
         lotsLabel: '地块',
         clickHint: '点击集群以查看其地块',
@@ -2236,7 +2236,7 @@ export const translations = {
       },
       gallery: {
         title: '区域图库',
-        subtitle: '别科博德经济特区视觉导览',
+        subtitle: '别卡巴德经济特区视觉导览',
       },
       clusterDetail: {
         back: '所有集群',
@@ -2252,10 +2252,10 @@ export const translations = {
         hint: '将鼠标悬停在地块上查看编号、面积和价格。点击查看详情。',
       },
       technopark: {
-        title: '别科博德技术园',
+        title: '别卡巴德技术园',
         badge: '主力投资方——巴什科尔托斯坦企业',
         description:
-          '经济特区的明珠——别科博德技术园由一家重要的巴什科尔托斯坦企业作为主力投资方，代表着园区的旗舰投资项目。这个100公顷的技术园将推动创新并创造优质就业机会。',
+          '经济特区的明珠——别卡巴德技术园由一家重要的巴什科尔托斯坦企业作为主力投资方，代表着园区的旗舰投资项目。这个100公顷的技术园将推动创新并创造优质就业机会。',
         descriptionSecond: {
           before:
             '技术园入驻企业可享受3至10年的税收和海关优惠、即用型工程基础设施，并通过乌兹别克斯坦与塔吉克斯坦边境的"Oybek"口岸直接连接国际运输走廊。如需了解技术园及可用地块的更多信息，请访问 ',
@@ -2275,7 +2275,7 @@ export const translations = {
       imageTags: { lots: '地块', sectors: '行业' },
       map: {
         title: '经济特区位置',
-        description: '战略性地位于别科博德地区，交通便利。',
+        description: '战略性地位于别卡巴德区，交通便利。',
         button: 'Google Maps', yandexButton: 'Yandex 地图',
       },
     },
@@ -2330,7 +2330,7 @@ export const translations = {
       overview: {
         title: '街区概况',
         description:
-          '亚格新乌兹别克斯坦（新乌兹别克斯坦）是一项雄心勃勃的城市规划项目，在别科博德打造一座完全自给自足的现代化城市。这一104公顷的变革性项目除7,800套公寓外，还配备了完善的商业、教育、医疗和休闲基础设施。',
+          '亚格新乌兹别克斯坦（新乌兹别克斯坦）是一项雄心勃勃的城市规划项目，在别卡巴德打造一座完全自给自足的现代化城市。这一104公顷的变革性项目除7,800套公寓外，还配备了完善的商业、教育、医疗和休闲基础设施。',
       },
       stats: [
         { label: '总面积', value: '104公顷' },
@@ -2398,7 +2398,7 @@ export const translations = {
       ],
       map: {
         title: '街区位置',
-        description: '位于别科博德地区中心地带。',
+        description: '位于别卡巴德区中心地带。',
         button: 'Google Maps', yandexButton: 'Yandex 地图',
       },
       lots: {
@@ -2422,7 +2422,7 @@ export const translations = {
       overview: {
         title: '我们的优惠政策为何重要？',
         description:
-          '别科博德经济特区提供乌兹别克斯坦最具竞争力的税收优惠方案之一，旨在最大化投资者回报、加速企业增长。',
+          '别卡巴德经济特区提供乌兹别克斯坦最具竞争力的税收优惠方案之一，旨在最大化投资者回报、加速企业增长。',
       },
       corporate: {
         title: '利润税减免',
@@ -2529,14 +2529,14 @@ export const translations = {
       taxSchedulesTitle: '税收减免时间表',
       cta: {
         title: '准备好申请您的税收优惠了吗？',
-        description: '参与电子拍卖，立即在别科博德经济特区开启您的免税之旅。',
+        description: '参与电子拍卖，立即在别卡巴德经济特区开启您的免税之旅。',
         button: '参与电子拍卖',
         contact: '联系我们的团队',
       },
     },
     contact: {
       title: '联系我们',
-      subtitle: '我们随时准备帮助您投资别科博德的未来',
+      subtitle: '我们随时准备帮助您投资别卡巴德的未来',
       heroBadge: '联系我们',
       messageSent: '消息已发送！',
       exploreProjects: '探索投资项目',
@@ -2548,20 +2548,20 @@ export const translations = {
       director: {
         title: '投资总监',
         name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
-        role: '别科博德投资中心主任',
+        role: '别卡巴德投资中心主任',
         company: 'Bekobod Investitsiya Boshqaruv Kompaniyasi',
-        message: '"我们邀请全球投资者参与别科博德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。"',
+        message: '"我们邀请全球投资者参与别卡巴德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。"',
       },
       office: {
         title: '我们的办公室',
-        address: '别科博德地区霍基米亚特办公楼',
-        city: '别科博德，塔什干州',
+        address: '别卡巴德区霍基米亚特办公楼',
+        city: '别卡巴德，塔什干州',
         country: '乌兹别克斯坦共和国',
       },
       eauction: {
         title: '电子拍卖平台',
         description:
-          '参与我们的透明电子拍卖系统，获取别科博德经济特区、奥伊贝克自贸区和亚格新乌兹别克斯坦住宅区的土地租用权。',
+          '参与我们的透明电子拍卖系统，获取别卡巴德经济特区、奥伊贝克自贸区和亚格新乌兹别克斯坦住宅区的土地租用权。',
         button: '访问电子拍卖平台',
         website: 'e-auksion.uz',
       },
@@ -2572,7 +2572,7 @@ export const translations = {
         phone: '电话号码',
         country: '所在国家',
         interest: '投资意向',
-        interestOptions: ['别科博德经济特区', '奥伊贝克自贸区', '亚格新乌兹别克斯坦', '一般咨询'],
+        interestOptions: ['别卡巴德经济特区', '奥伊贝克自贸区', '亚格新乌兹别克斯坦', '一般咨询'],
         message: '您的留言',
         submit: '发送消息',
         success: '感谢您！您的消息已发送。我们将在24小时内与您联系。',
@@ -2586,12 +2586,12 @@ export const translations = {
     },
     footer: {
       description:
-        '隶属别科博德地区霍基米亚特的官方投资管理公司，吸引国内外资本推动可持续经济发展。',
+        '隶属别卡巴德区霍基米亚特的官方投资管理公司，吸引国内外资本推动可持续经济发展。',
       quickLinks: '快速链接',
       projects: '投资项目',
       legal: '法律依据',
       rights: '版权所有。',
-      authority: '别科博德地区霍基米亚特',
+      authority: '别卡巴德区霍基米亚特',
       legalBasis: '乌兹别克斯坦税法典第68章473条 | 总统令UP-4853',
     },
   },

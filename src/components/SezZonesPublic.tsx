@@ -148,7 +148,7 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGE}
-          alt="Bekobod SEZ aerial"
+          alt="Bekabad SEZ aerial"
           className="block w-full h-auto pointer-events-none"
           draggable={false}
         />

@@ -18,8 +18,8 @@ const UI: Record<Language, {
 }> = {
   en: {
     title: 'Investment Assistant',
-    subtitle: 'Ask about Bekobod investing',
-    greeting: 'Hello! I can answer questions about the Bekobod SEZ, Oybek Free Trade Zone, tax incentives, and how to invest. How can I help?',
+    subtitle: 'Ask about Bekabad investing',
+    greeting: 'Hello! I can answer questions about the Bekabad SEZ, Oybek Free Trade Zone, tax incentives, and how to invest. How can I help?',
     placeholder: 'Type your question…',
     send: 'Send',
     error: 'Sorry, something went wrong. Please try again or use the Contact page.',
@@ -45,8 +45,8 @@ const UI: Record<Language, {
   },
   zh: {
     title: '投资助手',
-    subtitle: '咨询别科博德投资事宜',
-    greeting: '您好！我可以解答关于别科博德经济特区、奥伊别克自由贸易区、税收优惠以及投资流程的问题。请问有什么可以帮您？',
+    subtitle: '咨询别卡巴德投资事宜',
+    greeting: '您好！我可以解答关于别卡巴德经济特区、奥伊别克自由贸易区、税收优惠以及投资流程的问题。请问有什么可以帮您？',
     placeholder: '请输入您的问题…',
     send: '发送',
     error: '抱歉，出现了错误。请重试或使用联系页面。',

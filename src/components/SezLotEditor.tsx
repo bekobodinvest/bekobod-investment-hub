@@ -328,7 +328,7 @@ export default function SezLotEditor() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGE}
-          alt="Bekobod SEZ"
+          alt="Bekabad SEZ"
           className="block w-full h-auto pointer-events-none"
           draggable={false}
         />

@@ -92,7 +92,7 @@ export default function AboutPage() {
               <div className="relative rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/Bekobod_SEZ.png"
-                  alt="Bekobod Investment Hub"
+                  alt="Bekabad Investment Hub"
                   width={600}
                   height={400}
                   className="w-full h-80 object-cover"

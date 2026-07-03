@@ -60,7 +60,7 @@ export default function Header() {
         <Link href="/" className="flex items-center flex-shrink-0 group">
           <Image
             src="/Logo_Bekobod.png"
-            alt="Bekobod Investment Hub"
+            alt="Bekabad Investment Hub"
             height={55}
             width={200}
             className="h-[55px] w-auto object-contain group-hover:opacity-90 transition-opacity duration-200"

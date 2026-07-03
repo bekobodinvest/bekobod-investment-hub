@@ -3,19 +3,19 @@
 // the assistant is instructed to answer ONLY from this content.
 
 export const ASSISTANT_KNOWLEDGE = `
-# Bekobod Investment Hub — Knowledge Base
+# Bekabad Investment Hub — Knowledge Base
 
 ## Overview
-Bekobod Investment Hub is the official investment portal for the Bekobod region
+Bekabad Investment Hub is the official investment portal for the Bekabad district
 of Uzbekistan. It covers three flagship projects:
-1. Bekobod Special Economic Zone (SEZ)
+1. Bekabad Special Economic Zone (SEZ)
 2. Oybek Free Trade Zone (Oybek FTZ)
 3. Yangi O'zbekiston modern residential district
 
 Goal: attract qualified investors to participate in transparent electronic
-auctions (e-auctions) and win land-lease rights in Bekobod.
+auctions (e-auctions) and win land-lease rights in Bekabad.
 
-## Bekobod Special Economic Zone (SEZ)
+## Bekabad Special Economic Zone (SEZ)
 - 397 hectares of prime industrial land.
 - 120 investment lots available.
 - 8 strategic sectors: metallurgy, pharmaceuticals, machinery, building
@@ -61,7 +61,7 @@ authorities, and a fully transparent e-auction process.
 - Strategically positioned to serve millions of annual border crossings.
 
 ## Yangi O'zbekiston district
-- A modern residential district being developed in Bekobod as part of the
+- A modern residential district being developed in Bekabad as part of the
   investment hub, providing housing and modern living infrastructure.
 
 ## How to invest

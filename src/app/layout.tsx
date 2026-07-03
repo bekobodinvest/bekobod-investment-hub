@@ -4,15 +4,16 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ChatAssistant from '@/components/ChatAssistant';
+import CursorGlow from '@/components/CursorGlow';
 
 export const metadata: Metadata = {
-  title: 'Bekobod Investment Hub | Official Investment Portal',
+  title: 'Bekabad Investment Hub | Official Investment Portal',
   description:
-    'Official investment portal for Bekobod region. Discover investment opportunities in Bekobod SEZ, Oybek Free Trade Zone, and Yangi O\'zbekiston residential district.',
+    'Official investment portal for Bekabad district. Discover investment opportunities in Bekabad SEZ, Oybek Free Trade Zone, and Yangi O\'zbekiston residential district.',
   keywords:
-    'Bekobod, investment, SEZ, special economic zone, Uzbekistan, e-auction, tax incentives',
+    'Bekabad, investment, SEZ, special economic zone, Uzbekistan, e-auction, tax incentives',
   openGraph: {
-    title: 'Bekobod Investment Hub',
+    title: 'Bekabad Investment Hub',
     description: 'Your Gateway to Central Asia\'s Most Dynamic Investment Zone',
     type: 'website',
   },
@@ -35,6 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main>{children}</main>
           <Footer />
           <ChatAssistant />
+          <CursorGlow />
         </LanguageProvider>
       </body>
     </html>

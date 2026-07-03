@@ -217,7 +217,7 @@ export default function SezZoneEditor() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={IMAGE}
-          alt="Bekobod SEZ"
+          alt="Bekabad SEZ"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none"
           draggable={false}
           onLoad={(e) => {

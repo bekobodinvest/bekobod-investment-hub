@@ -94,7 +94,7 @@ ${message}`;
     });
     try {
       await transporter.sendMail({
-        from: `"Bekobod Investment Hub" <${user}>`, // must be the authenticated mailbox
+        from: `"Bekabad Investment Hub" <${user}>`, // must be the authenticated mailbox
         to: RECIPIENT,
         replyTo: `"${name}" <${email}>`, // reply goes straight to the visitor
         subject: `New inquiry from ${name}${interest ? ` — ${interest}` : ''}`,
