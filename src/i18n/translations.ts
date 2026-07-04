@@ -836,7 +836,7 @@ export const translations = {
         title: "Bekobodga investitsiya qilishga tayyormisiz?",
         subtitle:
           "Bekobodning iqtisodiy kelajagini qurayotgan dunyoning turli burchaklaridan investorlar qatoriga qo'shiling",
-        button: "Investitsiya safari boshlang",
+        button: "Investitsiya safarini boshlang",
         contact: "Jamoamiz bilan bog'laning",
       },
     },
