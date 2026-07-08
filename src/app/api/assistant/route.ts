@@ -132,10 +132,10 @@ See the "Oybek FTZ" page for details.`,
   },
   {
     keys: [
-      'qanday investitsiya', 'qanday sarmoya', 'auksion', 'auktsion', 'ishtirok',
-      'yer ijara', 'yer olish', 'ariza', 'как инвестир', 'аукцион', 'участ',
-      'заявк', 'аренда земли', 'how to invest', 'auction', 'e-auction', 'apply',
-      'application', 'participate', 'lease', '如何投资', '拍卖', '申请', '参与',
+      'investitsiya', 'sarmoya', 'auksion', 'auktsion', 'ishtirok',
+      'yer ijara', 'yer olish', 'ariza', 'инвест', 'аукцион', 'участ',
+      'заявк', 'аренда земли', 'invest', 'auction', 'e-auction', 'apply',
+      'application', 'participate', 'lease', '如何投资', '投资', '拍卖', '申请', '参与',
     ],
     answer: {
       uz: `Investitsiya tartibi:
