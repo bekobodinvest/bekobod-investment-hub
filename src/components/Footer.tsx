@@ -131,7 +131,9 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 {/* Instagram */}
                 <a
-                  href="#"
+                  href="https://www.instagram.com/bekobodinvest"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="social-icon group"
                 >
