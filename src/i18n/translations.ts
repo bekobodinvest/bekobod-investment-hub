@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About',
+      bekabad: 'District',
       sez: 'Bekabad SEZ',
       oybek: 'Oybek FTZ',
       yangi: "Yangi Uzbekistan",
@@ -346,6 +347,86 @@ export const translations = {
         title: 'SEZ Location',
         description:
           'Strategically located in Bekabad district with excellent transport connectivity.',
+        button: 'Google Maps', yandexButton: 'Yandex Maps',
+      },
+    },
+    bekabadDistrict: {
+      title: 'Bekabad District',
+      subtitle: 'The industrial gateway of the Tashkent region',
+      badge: 'District Passport · Jan–Sep 2025',
+      overview: {
+        title: 'About the District',
+        description:
+          'Bekabad District lies in the south-east of the Tashkent region, on the border with Tajikistan and the Syrdarya region. Founded in 1926, it spans 749.69 km² and is home to 170,200 residents across 51 mahallas. A strong agricultural base — first in the region — together with growing industry and two industrial zones makes it a strategic destination for investment.',
+      },
+      stats: [
+        { label: 'Area' },
+        { label: 'Population' },
+        { label: 'Founded' },
+        { label: 'Mahallas' },
+        { label: 'Poverty rate' },
+        { label: 'Unemployment' },
+      ],
+      economy: {
+        title: 'Economy',
+        subtitle: 'Key sectors and output (Jan–Sep 2025)',
+        items: [
+          { name: 'Industry', note: 'Manufacturing output, +5.8% growth' },
+          { name: 'Agriculture', note: 'Leading sector — 1st in the region' },
+          { name: 'Services', note: 'Market services, +15.6% growth' },
+        ],
+        highlights: [
+          '3 large and 257 small industrial enterprises',
+          '2 industrial zones (SEZ + small industrial zone)',
+          '25,065 ha of agricultural land',
+        ],
+      },
+      labor: {
+        title: 'Labor & Employment',
+        subtitle: 'Human capital (as of 01.07.2025)',
+        items: [
+          { label: 'Labor resources' },
+          { label: 'Economically active' },
+          { label: 'Employed' },
+          { label: 'Formal-sector jobs' },
+          { label: 'Informal-sector jobs' },
+        ],
+      },
+      social: {
+        title: 'Social Infrastructure',
+        subtitle: 'Education, healthcare and culture',
+        items: [
+          { name: 'Schools' },
+          { name: 'Preschools' },
+          { name: 'Healthcare facilities' },
+          { name: 'Colleges' },
+          { name: 'Sports facilities' },
+          { name: 'Heritage sites' },
+        ],
+      },
+      infrastructure: {
+        title: 'Utilities & Communications',
+        subtitle: 'Networks and coverage',
+        items: [
+          { label: 'Gasification' },
+          { label: 'Water supply' },
+          { label: 'Roads' },
+          { label: 'Power grid' },
+          { label: 'Communications' },
+        ],
+      },
+      business: {
+        title: 'Small Business',
+        subtitle: 'Entrepreneurship activity',
+        items: [
+          { label: 'Active' },
+          { label: 'Newly created' },
+          { label: 'Registered' },
+        ],
+      },
+      map: {
+        title: 'District Location',
+        description: 'Bekabad District, south-east Tashkent region, Uzbekistan.',
         button: 'Google Maps', yandexButton: 'Yandex Maps',
       },
     },
@@ -694,6 +775,7 @@ export const translations = {
     nav: {
       home: 'Bosh sahifa',
       about: 'Biz haqimizda',
+      bekabad: 'Tuman',
       sez: 'Bekobod MIZ',
       oybek: 'Oybek ESZ',
       yangi: "Yangi O'zbekiston",
@@ -1011,6 +1093,86 @@ export const translations = {
         title: "MIZ joylashuvi",
         description: "Bekobod tumanida strategik jihatdan joylashgan, transport bilan yaxshi bog'langan.",
         button: 'Google Maps', yandexButton: 'Yandex Xaritalari',
+      },
+    },
+    bekabadDistrict: {
+      title: 'Bekobod tumani',
+      subtitle: "Toshkent viloyatining sanoat darvozasi",
+      badge: 'Tuman pasporti · Yanvar–Sentyabr 2025',
+      overview: {
+        title: 'Tuman haqida',
+        description:
+          "Bekobod tumani Toshkent viloyatining janubi-sharqida, Tojikiston va Sirdaryo viloyati bilan chegarada joylashgan. 1926-yilda tashkil etilgan tuman 749,69 km² maydonni egallaydi va 51 ta mahallada 170 200 aholi istiqomat qiladi. Viloyatda birinchi o'rindagi kuchli qishloq xo'jaligi, o'sib borayotgan sanoat va ikkita sanoat zonasi uni investitsiya uchun strategik hududga aylantiradi.",
+      },
+      stats: [
+        { label: 'Maydon' },
+        { label: 'Aholi' },
+        { label: 'Tashkil topgan' },
+        { label: 'Mahallalar' },
+        { label: "Kambag'allik darajasi" },
+        { label: 'Ishsizlik darajasi' },
+      ],
+      economy: {
+        title: 'Iqtisodiyot',
+        subtitle: 'Asosiy tarmoqlar va mahsulot (Yanvar–Sentyabr 2025)',
+        items: [
+          { name: 'Sanoat', note: "Sanoat mahsuloti, +5,8% o'sish" },
+          { name: "Qishloq xo'jaligi", note: "Yetakchi tarmoq — viloyatda 1-o'rin" },
+          { name: 'Xizmatlar', note: "Bozor xizmatlari, +15,6% o'sish" },
+        ],
+        highlights: [
+          '3 ta yirik va 257 ta kichik sanoat korxonasi',
+          '2 ta sanoat zonasi (MIZ + kichik sanoat zonasi)',
+          "25 065 gektar qishloq xo'jaligi yerlari",
+        ],
+      },
+      labor: {
+        title: 'Mehnat va bandlik',
+        subtitle: 'Inson kapitali (01.07.2025 holatiga)',
+        items: [
+          { label: 'Mehnat resurslari' },
+          { label: 'Iqtisodiy faol aholi' },
+          { label: 'Band aholi' },
+          { label: "Rasmiy sektor ish o'rinlari" },
+          { label: "Norasmiy sektor ish o'rinlari" },
+        ],
+      },
+      social: {
+        title: 'Ijtimoiy soha',
+        subtitle: "Ta'lim, sog'liqni saqlash va madaniyat",
+        items: [
+          { name: 'Maktablar' },
+          { name: "Maktabgacha ta'lim" },
+          { name: "Sog'liqni saqlash muassasalari" },
+          { name: 'Kollejlar' },
+          { name: 'Sport inshootlari' },
+          { name: 'Madaniy meros obidalari' },
+        ],
+      },
+      infrastructure: {
+        title: 'Kommunikatsiyalar',
+        subtitle: 'Tarmoqlar va qamrov',
+        items: [
+          { label: 'Gazlashtirish' },
+          { label: "Suv ta'minoti" },
+          { label: "Avtomobil yo'llari" },
+          { label: 'Elektr tarmoqlari' },
+          { label: 'Aloqa tarmoqlari' },
+        ],
+      },
+      business: {
+        title: 'Kichik biznes',
+        subtitle: 'Tadbirkorlik faoliyati',
+        items: [
+          { label: 'Faoliyat yuritayotgan' },
+          { label: 'Yangi tashkil etilgan' },
+          { label: "Ro'yxatdan o'tgan" },
+        ],
+      },
+      map: {
+        title: 'Tuman joylashuvi',
+        description: "Bekobod tumani, Toshkent viloyati janubi-sharqi, O'zbekiston.",
+        button: 'Google Xarita', yandexButton: 'Yandex Xarita',
       },
     },
     oybek: {
@@ -1334,6 +1496,7 @@ export const translations = {
     nav: {
       home: 'Главная',
       about: 'О нас',
+      bekabad: 'Район',
       sez: 'СЭЗ Бекабад',
       oybek: 'СТЗ Ойбек',
       yangi: 'Янги Узбекистан',
@@ -1650,6 +1813,86 @@ export const translations = {
         title: 'Расположение СЭЗ',
         description: 'Стратегически расположена в Бекабадском районе с отличной транспортной связью.',
         button: 'Google Maps', yandexButton: 'Яндекс Карты',
+      },
+    },
+    bekabadDistrict: {
+      title: 'Бекободский район',
+      subtitle: 'Промышленные ворота Ташкентской области',
+      badge: 'Паспорт района · Янв–Сен 2025',
+      overview: {
+        title: 'О районе',
+        description:
+          'Бекободский район расположен на юго-востоке Ташкентской области, на границе с Таджикистаном и Сырдарьинской областью. Основанный в 1926 году, он занимает 749,69 км² и объединяет 170 200 жителей в 51 махалле. Сильное сельское хозяйство — первое место в области — вместе с растущей промышленностью и двумя промзонами делает район стратегическим направлением для инвестиций.',
+      },
+      stats: [
+        { label: 'Площадь' },
+        { label: 'Население' },
+        { label: 'Основан' },
+        { label: 'Махаллей' },
+        { label: 'Уровень бедности' },
+        { label: 'Безработица' },
+      ],
+      economy: {
+        title: 'Экономика',
+        subtitle: 'Ключевые отрасли и объёмы (янв–сен 2025)',
+        items: [
+          { name: 'Промышленность', note: 'Объём промпродукции, рост +5,8%' },
+          { name: 'Сельское хозяйство', note: 'Ведущая отрасль — 1-е место в области' },
+          { name: 'Услуги', note: 'Рыночные услуги, рост +15,6%' },
+        ],
+        highlights: [
+          '3 крупных и 257 малых промышленных предприятий',
+          '2 промзоны (СЭЗ + малая промзона)',
+          '25 065 га сельхозугодий',
+        ],
+      },
+      labor: {
+        title: 'Труд и занятость',
+        subtitle: 'Трудовые ресурсы (на 01.07.2025)',
+        items: [
+          { label: 'Трудовые ресурсы' },
+          { label: 'Экономически активные' },
+          { label: 'Занятые' },
+          { label: 'Рабочие места (формальный сектор)' },
+          { label: 'Рабочие места (неформальный сектор)' },
+        ],
+      },
+      social: {
+        title: 'Социальная сфера',
+        subtitle: 'Образование, здравоохранение и культура',
+        items: [
+          { name: 'Школы' },
+          { name: 'Детские сады' },
+          { name: 'Учреждения здравоохранения' },
+          { name: 'Колледжи' },
+          { name: 'Спортивные сооружения' },
+          { name: 'Объекты культурного наследия' },
+        ],
+      },
+      infrastructure: {
+        title: 'Инфраструктура и коммуникации',
+        subtitle: 'Сети и охват',
+        items: [
+          { label: 'Газификация' },
+          { label: 'Водоснабжение' },
+          { label: 'Автодороги' },
+          { label: 'Электросети' },
+          { label: 'Сети связи' },
+        ],
+      },
+      business: {
+        title: 'Малый бизнес',
+        subtitle: 'Предпринимательская активность',
+        items: [
+          { label: 'Действующих' },
+          { label: 'Вновь созданных' },
+          { label: 'Зарегистрировано' },
+        ],
+      },
+      map: {
+        title: 'Расположение района',
+        description: 'Бекободский район, юго-восток Ташкентской области, Узбекистан.',
+        button: 'Google Карты', yandexButton: 'Яндекс Карты',
       },
     },
     oybek: {
@@ -1973,6 +2216,7 @@ export const translations = {
     nav: {
       home: '首页',
       about: '关于我们',
+      bekabad: '别卡巴德区',
       sez: '别卡巴德经济特区',
       oybek: '奥伊贝克自贸区',
       yangi: '亚格新乌兹别克斯坦',
@@ -2277,6 +2521,86 @@ export const translations = {
         title: '经济特区位置',
         description: '战略性地位于别卡巴德区，交通便利。',
         button: 'Google Maps', yandexButton: 'Yandex 地图',
+      },
+    },
+    bekabadDistrict: {
+      title: '别卡巴德区',
+      subtitle: '塔什干州的工业门户',
+      badge: '区域概况 · 2025年1–9月',
+      overview: {
+        title: '关于本区',
+        description:
+          '别卡巴德区位于塔什干州东南部，与塔吉克斯坦和锡尔河州接壤。该区始建于1926年，面积749.69平方公里，下辖51个街区，人口17.02万。农业实力居全州首位，加之不断增长的工业和两个工业区，使其成为具有战略意义的投资目的地。',
+      },
+      stats: [
+        { label: '面积' },
+        { label: '人口' },
+        { label: '成立年份' },
+        { label: '街区数' },
+        { label: '贫困率' },
+        { label: '失业率' },
+      ],
+      economy: {
+        title: '经济',
+        subtitle: '主要行业与产值（2025年1–9月）',
+        items: [
+          { name: '工业', note: '工业产值，增长 +5.8%' },
+          { name: '农业', note: '主导产业——全州第一' },
+          { name: '服务业', note: '市场服务，增长 +15.6%' },
+        ],
+        highlights: [
+          '3家大型和257家小型工业企业',
+          '2个工业区（经济特区 + 小型工业区）',
+          '2.5万公顷农业用地',
+        ],
+      },
+      labor: {
+        title: '劳动力与就业',
+        subtitle: '人力资源（截至2025年7月1日）',
+        items: [
+          { label: '劳动力资源' },
+          { label: '经济活动人口' },
+          { label: '就业人口' },
+          { label: '正规部门岗位' },
+          { label: '非正规部门岗位' },
+        ],
+      },
+      social: {
+        title: '社会基础设施',
+        subtitle: '教育、卫生与文化',
+        items: [
+          { name: '学校' },
+          { name: '幼儿园' },
+          { name: '医疗机构' },
+          { name: '学院' },
+          { name: '体育设施' },
+          { name: '文化遗产' },
+        ],
+      },
+      infrastructure: {
+        title: '公用设施与通信',
+        subtitle: '网络与覆盖',
+        items: [
+          { label: '天然气覆盖' },
+          { label: '供水覆盖' },
+          { label: '公路' },
+          { label: '电网' },
+          { label: '通信网络' },
+        ],
+      },
+      business: {
+        title: '小型企业',
+        subtitle: '创业活动',
+        items: [
+          { label: '运营中' },
+          { label: '新设立' },
+          { label: '已注册' },
+        ],
+      },
+      map: {
+        title: '区域位置',
+        description: '别卡巴德区，乌兹别克斯坦塔什干州东南部。',
+        button: '谷歌地图', yandexButton: 'Yandex 地图',
       },
     },
     oybek: {

@@ -37,6 +37,7 @@ export default function Header() {
   const navLinks = [
     { href: '/', label: t.nav.home },
     { href: '/about', label: t.nav.about },
+    { href: '/bekabad-district', label: t.nav.bekabad },
     { href: '/sez', label: t.nav.sez },
     { href: '/oybek-ftz', label: t.nav.oybek },
     { href: '/yangi-uzbekistan', label: t.nav.yangi },
