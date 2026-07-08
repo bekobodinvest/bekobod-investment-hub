@@ -300,7 +300,7 @@ export const translations = {
       },
       objects: {
         title: 'Infrastructure',
-        substation: { name: 'Electrical substation', capacity: '~2 MW' },
+        substation: { name: 'Electrical substation', capacity: '~80 MW' },
         reservoir: { name: 'Water reservoir', capacity: '~4,000 m³' },
       },
       gallery: {
@@ -965,7 +965,7 @@ export const translations = {
       },
       objects: {
         title: 'Infratuzilma',
-        substation: { name: 'Elektr podstansiyasi', capacity: '~2 MVt' },
+        substation: { name: 'Elektr podstansiyasi', capacity: '~80 MVt' },
         reservoir: { name: 'Suv ombori', capacity: '~4 000 m³' },
       },
       gallery: {
@@ -1257,8 +1257,8 @@ export const translations = {
       },
       keyNumbers: [
         { value: '10 yil', label: 'Maksimal soliq imtiyozi' },
-        { value: '3 tur', label: 'Soliq imtiyozlari (Foyda + Yer + Mol-mulk)' },
-        { value: '2 qonun', label: "Huquqiy asoslar" },
+        { value: '3 xil', label: 'Soliq imtiyozlari (Foyda + Yer + Mol-mulk)' },
+        { value: '2 ta', label: "Huquqiy asoslar" },
       ],
       taxSchedulesTitle: 'Soliq imtiyozi jadvallari',
       cta: {
@@ -1604,7 +1604,7 @@ export const translations = {
       },
       objects: {
         title: 'Инфраструктура',
-        substation: { name: 'Электроподстанция', capacity: '~2 МВт' },
+        substation: { name: 'Электроподстанция', capacity: '~80 МВт' },
         reservoir: { name: 'Водохранилище', capacity: '~4 000 м³' },
       },
       gallery: {
@@ -2231,7 +2231,7 @@ export const translations = {
       },
       objects: {
         title: '基础设施',
-        substation: { name: '变电站', capacity: '约2兆瓦' },
+        substation: { name: '变电站', capacity: '约80兆瓦' },
         reservoir: { name: '蓄水池', capacity: '约4000立方米' },
       },
       gallery: {

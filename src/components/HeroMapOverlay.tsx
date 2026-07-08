@@ -18,18 +18,18 @@ const DESIGN_W = 2350;
 // Default positions (% of the hero section). Edit mode lets you drag and
 // override these; once you're happy, the values get baked in here.
 export const DEFAULT_POS: PosMap = {
-  district: { top: 9.79, left: 5.22 },
-  tashkent: { top: 15.66, left: 58.11 },
-  railway: { top: 42.22, left: 29.69 },
-  oybek: { top: 29.05, left: 45.14 },
-  highway: { top: 75.72, left: 62.65 },
-  yangi: { top: 50.54, left: 73.72 },
-  sez: { top: 78.23, left: 14.55 },
-  total: { top: 17.2, left: 5.32 },
-  routes: { top: 73.94, left: 82.28 },
-  countryUz: { top: 13.85, left: 66.93 },
-  countryTj: { top: 13.65, left: 81.24 },
-  guliston: { top: 87.93, left: 66.12 },
+  district: { top: 11.04, left: 4.31 },
+  tashkent: { top: 14.27, left: 70.44 },
+  railway: { top: 20.97, left: 30.05 },
+  oybek: { top: 25.81, left: 50.03 },
+  highway: { top: 75.45, left: 62.7 },
+  yangi: { top: 48.78, left: 73.05 },
+  sez: { top: 55.75, left: 35.86 },
+  total: { top: 23.74, left: 4.34 },
+  routes: { top: 71.14, left: 78.56 },
+  countryUz: { top: 24.52, left: 70.88 },
+  countryTj: { top: 24.56, left: 85.95 },
+  guliston: { top: 84.88, left: 63.16 },
 };
 
 const HREF: Record<string, string | undefined> = {
@@ -172,9 +172,9 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       </div>
     ),
     oybek: (
-      <div className="rounded-[2rem] bg-[#0b1f12]/50 backdrop-blur-md border border-[#22c55e] shadow-[0_0_18px_rgba(34,197,94,0.7),inset_0_0_12px_rgba(34,197,94,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#1a0b0b]/50 backdrop-blur-md border border-[#ef4444] shadow-[0_0_18px_rgba(239,68,68,0.7),inset_0_0_12px_rgba(239,68,68,0.18)] px-5 py-3 text-center">
         <div className="mx-auto text-white font-bold leading-tight text-lg xl:text-xl max-w-[240px]">{m.oybekName}</div>
-        <div className="mt-1.5 inline-block rounded-full bg-[#22c55e] text-[#06210f] text-base xl:text-lg font-bold px-2.5 py-0.5">{m.oybekArea}</div>
+        <div className="mt-1.5 inline-block rounded-full bg-[#00d4ff] text-[#062a3a] text-base xl:text-lg font-bold px-2.5 py-0.5">{m.oybekArea}</div>
       </div>
     ),
     highway: (
@@ -184,15 +184,15 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
       </div>
     ),
     yangi: (
-      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#1a0b0b]/50 backdrop-blur-md border border-[#ef4444] shadow-[0_0_18px_rgba(239,68,68,0.7),inset_0_0_12px_rgba(239,68,68,0.18)] px-5 py-3 text-center">
         <div className="text-white font-bold leading-tight text-lg xl:text-xl max-w-[260px]">{m.yangiName}</div>
-        <div className="mt-1.5 inline-block rounded-full bg-[#1e9bff] text-white text-base xl:text-lg font-bold px-2.5 py-0.5">{m.yangiArea}</div>
+        <div className="mt-1.5 inline-block rounded-full bg-[#00d4ff] text-[#062a3a] text-base xl:text-lg font-bold px-2.5 py-0.5">{m.yangiArea}</div>
       </div>
     ),
     sez: (
-      <div className="rounded-[2rem] bg-[#0b1830]/50 backdrop-blur-md border border-[#1e9bff] shadow-[0_0_18px_rgba(30,155,255,0.7),inset_0_0_12px_rgba(30,155,255,0.18)] px-5 py-3 text-center">
+      <div className="rounded-[2rem] bg-[#1a0b0b]/50 backdrop-blur-md border border-[#ef4444] shadow-[0_0_18px_rgba(239,68,68,0.7),inset_0_0_12px_rgba(239,68,68,0.18)] px-5 py-3 text-center">
         <div className="text-white font-bold leading-tight text-lg xl:text-xl max-w-[240px]">{m.sezName}</div>
-        <div className="mt-1.5 inline-block rounded-full bg-[#1e9bff] text-white text-base xl:text-lg font-bold px-2.5 py-0.5">{m.sezArea}</div>
+        <div className="mt-1.5 inline-block rounded-full bg-[#00d4ff] text-[#062a3a] text-base xl:text-lg font-bold px-2.5 py-0.5">{m.sezArea}</div>
       </div>
     ),
     total: (
@@ -246,7 +246,7 @@ export default function HeroMapOverlay({ m }: { m: HeroMap }) {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 z-20 hidden lg:block select-none"
+      className="absolute inset-0 z-20 hidden landscape:lg:block select-none"
       onPointerMove={editing ? onPointerMove : undefined}
       onPointerUp={editing ? onPointerUp : undefined}
       style={{ pointerEvents: editing ? 'auto' : 'none' }}

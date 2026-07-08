@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import HeroMapOverlay from '@/components/HeroMapOverlay';
+import HeroMapMobile from '@/components/HeroMapMobile';
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -131,41 +132,59 @@ export default function HomePage() {
     <>
       {/* HERO */}
       <section className="relative min-h-screen overflow-hidden">
-        {/* Fullscreen video background */}
+        {/* Fullscreen video background — orientation-aware:
+            landscape (monitors) -> 16:9, portrait (phones) -> 9:16 */}
         <video
+          key="hero-landscape"
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="hidden landscape:block absolute inset-0 w-full h-full object-cover"
         >
-          <source src="/hero_bekobod.mp4" type="video/mp4" />
+          <source src="/hero_16_9.mp4" type="video/mp4" />
         </video>
-        {/* Clickable zone overlays — positioned over the new video zones */}
-        {/* BEKOBOD MAXSUS SANOAT ZONASI — left */}
-        <Link
-          href="/sez"
-          aria-label={m.sezName}
-          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
-          style={{ left: '4%', top: '50%', width: '28%', height: '38%' }}
-        />
-        {/* YANGI O'ZBEKISTON MASSIVI — right */}
-        <Link
-          href="/yangi-uzbekistan"
-          aria-label={m.yangiName}
-          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
-          style={{ left: '61%', top: '32%', width: '25%', height: '34%' }}
-        />
-        {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
-        <Link
-          href="/oybek-ftz"
-          aria-label={m.oybekName}
-          className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.28)_0%,rgba(34,197,94,0.08)_50%,transparent_72%)]"
-          style={{ left: '41%', top: '13%', width: '17%', height: '28%' }}
-        />
+        <video
+          key="hero-portrait"
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="block landscape:hidden absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero_9_16.mp4" type="video/mp4" />
+        </video>
 
-        {/* Translatable, draggable text labels overlaid on the map */}
+        {/* Clickable zone overlays for the LANDSCAPE (16:9) video */}
+        <div className="hidden landscape:block">
+          {/* BEKOBOD MAXSUS SANOAT ZONASI — left */}
+          <Link
+            href="/sez"
+            aria-label={m.sezName}
+            className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
+            style={{ left: '8%', top: '40%', width: '42%', height: '45%' }}
+          />
+          {/* YANGI O'ZBEKISTON MASSIVI — right */}
+          <Link
+            href="/yangi-uzbekistan"
+            aria-label={m.yangiName}
+            className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(0,212,255,0.28)_0%,rgba(0,212,255,0.08)_50%,transparent_72%)]"
+            style={{ left: '56%', top: '30%', width: '34%', height: '37%' }}
+          />
+          {/* OYBEK ERKIN SAVDO MARKAZI — top-center */}
+          <Link
+            href="/oybek-ftz"
+            aria-label={m.oybekName}
+            className="absolute z-10 rounded-[50%] cursor-pointer transition-all duration-500 hover:bg-[radial-gradient(ellipse_at_center,rgba(34,197,94,0.28)_0%,rgba(34,197,94,0.08)_50%,transparent_72%)]"
+            style={{ left: '50%', top: '9%', width: '22%', height: '20%' }}
+          />
+        </div>
+
+        {/* Full translatable, draggable label overlay (landscape monitors only) */}
         <HeroMapOverlay m={m} />
+
+        {/* Compact 3-zone labels for the PORTRAIT (9:16) phone video */}
+        <HeroMapMobile m={m} />
       </section>
 
       {/* KEY STATS */}
