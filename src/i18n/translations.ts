@@ -5,7 +5,7 @@ export const translations = {
     nav: {
       home: 'Home',
       about: 'About',
-      bekabad: 'District',
+      bekabad: 'About the District',
       sez: 'Bekabad SEZ',
       oybek: 'Oybek FTZ',
       yangi: "Yangi Uzbekistan",
@@ -819,7 +819,7 @@ export const translations = {
     nav: {
       home: 'Bosh sahifa',
       about: 'Biz haqimizda',
-      bekabad: 'Tuman',
+      bekabad: 'Tuman haqida',
       sez: 'Bekobod MIZ',
       oybek: 'Oybek ESZ',
       yangi: "Yangi O'zbekiston",
@@ -1584,7 +1584,7 @@ export const translations = {
     nav: {
       home: 'Главная',
       about: 'О нас',
-      bekabad: 'Район',
+      bekabad: 'О районе',
       sez: 'СЭЗ Бекабад',
       oybek: 'СТЗ Ойбек',
       yangi: 'Янги Узбекистан',
@@ -2348,7 +2348,7 @@ export const translations = {
     nav: {
       home: '首页',
       about: '关于我们',
-      bekabad: '别卡巴德区',
+      bekabad: '区概况',
       sez: '别卡巴德经济特区',
       oybek: '奥伊贝克自贸区',
       yangi: '亚格新乌兹别克斯坦',

@@ -70,7 +70,6 @@ export default function BekabadDistrictPage() {
         <div className="absolute inset-0 hero-pattern" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl">
-            <span className="green-badge mb-5">{d.badge}</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
               {d.title}
             </h1>
