@@ -119,7 +119,7 @@ export default function BekabadDistrictPage() {
                 </h3>
                 <div className="flex items-baseline gap-2 mb-2">
                   <span className="text-3xl font-black text-[#1a2744]">{economyValues[i].value}</span>
-                  <span className="text-gray-500 text-sm font-medium">{economyValues[i].unit}</span>
+                  <span className="text-gray-500 text-sm font-medium">{d.economy.unit}</span>
                   <span className="ml-auto text-[#4a9c4e] font-bold text-sm">{economyValues[i].growth}</span>
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.note}</p>

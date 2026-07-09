@@ -370,6 +370,7 @@ export const translations = {
       economy: {
         title: 'Economy',
         subtitle: 'Key sectors and output',
+        unit: 'bn UZS',
         items: [
           { name: 'Industry', note: 'Manufacturing output, +5.8% growth' },
           { name: 'Agriculture', note: 'Leading sector — 1st in the region' },
@@ -1159,6 +1160,7 @@ export const translations = {
       economy: {
         title: 'Iqtisodiyot',
         subtitle: 'Asosiy tarmoqlar va mahsulot',
+        unit: 'mlrd soʻm',
         items: [
           { name: 'Sanoat', note: "Sanoat mahsuloti, +5,8% o'sish" },
           { name: "Qishloq xo'jaligi", note: "Yetakchi tarmoq — viloyatda 1-o'rin" },
@@ -1923,6 +1925,7 @@ export const translations = {
       economy: {
         title: 'Экономика',
         subtitle: 'Ключевые отрасли и объёмы',
+        unit: 'млрд сум',
         items: [
           { name: 'Промышленность', note: 'Объём промпродукции, рост +5,8%' },
           { name: 'Сельское хозяйство', note: 'Ведущая отрасль — 1-е место в области' },
@@ -2675,6 +2678,7 @@ export const translations = {
       economy: {
         title: '经济',
         subtitle: '主要行业与产值',
+        unit: '十亿苏姆',
         items: [
           { name: '工业', note: '工业产值，增长 +5.8%' },
           { name: '农业', note: '主导产业——全州第一' },
