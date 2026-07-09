@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState, useRef, useMemo } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import MapSection from '@/components/MapSection';
 
@@ -13,6 +13,111 @@ function useScrollAnimation() {
     document.querySelectorAll('.animate-on-scroll').forEach((el) => observer.observe(el));
     return () => observer.disconnect();
   }, []);
+}
+
+// Fires once when the element first scrolls into view.
+function useInView<T extends HTMLElement>(threshold = 0.3) {
+  const ref = useRef<T>(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([e]) => {
+        if (e.isIntersecting) {
+          setInView(true);
+          obs.disconnect();
+        }
+      },
+      { threshold }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [threshold]);
+  return { ref, inView };
+}
+
+// Split a display string like "6,220.4", "+5.8%" or "749.69 km²" into an
+// animatable number plus its prefix/suffix, preserving grouping & decimals.
+function parseValue(value: string) {
+  const m = value.match(/^(\D*?)([+-]?[\d,]*\.?\d+)(.*)$/);
+  if (!m) return null;
+  const [, prefix, numStr, suffix] = m;
+  const grouped = numStr.includes(',');
+  const clean = numStr.replace(/,/g, '');
+  const dot = clean.indexOf('.');
+  const decimals = dot === -1 ? 0 : clean.length - dot - 1;
+  const target = parseFloat(clean);
+  if (Number.isNaN(target)) return null;
+  return { prefix, suffix, grouped, decimals, target };
+}
+
+function formatNumber(n: number, decimals: number, grouped: boolean) {
+  return n.toLocaleString('en-US', {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals,
+    useGrouping: grouped,
+  });
+}
+
+// Counts up from 0 to the numeric part of `value` when scrolled into view.
+function CountUp({
+  value,
+  duration = 1400,
+  className,
+}: {
+  value: string;
+  duration?: number;
+  className?: string;
+}) {
+  const { ref, inView } = useInView<HTMLSpanElement>();
+  const parsed = useMemo(() => parseValue(value), [value]);
+  const [display, setDisplay] = useState(() =>
+    parsed ? parsed.prefix + formatNumber(0, parsed.decimals, parsed.grouped) + parsed.suffix : value
+  );
+
+  useEffect(() => {
+    if (!inView || !parsed) return;
+    if (typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setDisplay(value);
+      return;
+    }
+    let raf = 0;
+    let startTs = 0;
+    const step = (ts: number) => {
+      if (!startTs) startTs = ts;
+      const p = Math.min((ts - startTs) / duration, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      setDisplay(parsed.prefix + formatNumber(parsed.target * eased, parsed.decimals, parsed.grouped) + parsed.suffix);
+      if (p < 1) raf = requestAnimationFrame(step);
+      else setDisplay(value);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+  }, [inView, parsed, value, duration]);
+
+  return (
+    <span ref={ref} className={className} style={{ fontVariantNumeric: 'tabular-nums' }}>
+      {display}
+    </span>
+  );
+}
+
+// Progress bar that fills from 0 to `bar`% when scrolled into view.
+function ProgressBar({ bar }: { bar: number }) {
+  const { ref, inView } = useInView<HTMLDivElement>();
+  return (
+    <div ref={ref} className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
+      <div
+        className="h-full rounded-full bg-gradient-to-r from-[#4a9c4e] to-[#3a7d3e]"
+        style={{
+          width: inView ? `${bar}%` : '0%',
+          minWidth: inView ? '10px' : '0px',
+          transition: 'width 1.2s cubic-bezier(0.22, 1, 0.36, 1)',
+        }}
+      />
+    </div>
+  );
 }
 
 // Values from the district passport (Jan–Sep 2025). Kept in the component as a
@@ -89,7 +194,7 @@ export default function BekabadDistrictPage() {
                 className="animate-on-scroll text-center p-5 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="text-[#4a9c4e] font-black text-xl md:text-2xl">{statValues[i]}</div>
+                <CountUp value={statValues[i]} className="block text-[#4a9c4e] font-black text-xl md:text-2xl" />
                 <div className="text-gray-400 text-xs mt-1 leading-tight">{stat.label}</div>
               </div>
             ))}
@@ -118,9 +223,9 @@ export default function BekabadDistrictPage() {
                   {item.name}
                 </h3>
                 <div className="flex items-baseline gap-2 mb-2">
-                  <span className="text-3xl font-black text-[#1a2744]">{economyValues[i].value}</span>
+                  <CountUp value={economyValues[i].value} className="text-3xl font-black text-[#1a2744]" />
                   <span className="text-gray-500 text-sm font-medium">{d.economy.unit}</span>
-                  <span className="ml-auto text-[#4a9c4e] font-bold text-sm">{economyValues[i].growth}</span>
+                  <CountUp value={economyValues[i].growth} className="ml-auto text-[#4a9c4e] font-bold text-sm" />
                 </div>
                 <p className="text-gray-500 text-sm leading-relaxed">{item.note}</p>
               </div>
@@ -167,23 +272,18 @@ export default function BekabadDistrictPage() {
                     <div className="flex items-baseline justify-between gap-3 mb-2 flex-wrap">
                       <span className="font-bold text-[#1a2744] text-sm md:text-base">{item.label}</span>
                       <span className="flex items-baseline gap-1">
-                        <span className="text-xl md:text-2xl font-black text-[#1a2744]">{financeData[i].value}</span>
+                        <CountUp value={financeData[i].value} className="text-xl md:text-2xl font-black text-[#1a2744]" />
                         <span className="text-gray-500 text-xs font-medium">{d.financeGrowth.unit}</span>
                       </span>
                     </div>
-                    <div className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#4a9c4e] to-[#3a7d3e]"
-                        style={{ width: `${financeData[i].bar}%`, minWidth: '10px' }}
-                      />
-                    </div>
+                    <ProgressBar bar={financeData[i].bar} />
                   </div>
                   <div className="flex flex-col items-center flex-shrink-0 w-20">
                     <span className="inline-flex items-center gap-1 text-[#4a9c4e] font-black text-base md:text-lg">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
-                      {financeData[i].growth}
+                      <CountUp value={financeData[i].growth} />
                     </span>
                     <span className="text-gray-400 text-[10px] mt-0.5 leading-tight text-center">{d.financeGrowth.growthCaption}</span>
                   </div>
@@ -217,7 +317,7 @@ export default function BekabadDistrictPage() {
                 <div className="text-3xl flex-shrink-0">{livestockIcons[i]}</div>
                 <div className="min-w-0">
                   <div className="flex items-baseline gap-1 flex-wrap">
-                    <span className="text-2xl font-black text-[#4a9c4e] leading-none">{livestockValues[i]}</span>
+                    <CountUp value={livestockValues[i]} className="text-2xl font-black text-[#4a9c4e] leading-none" />
                     <span className="text-gray-400 text-xs">{item.unit}</span>
                   </div>
                   <div className="text-gray-400 text-xs mt-1 leading-tight">{item.label}</div>
@@ -240,7 +340,7 @@ export default function BekabadDistrictPage() {
                 <div className="text-3xl flex-shrink-0">{landIcons[i]}</div>
                 <div className="min-w-0">
                   <div className="flex items-baseline gap-1 flex-wrap">
-                    <span className="text-2xl font-black text-[#4a9c4e] leading-none">{landValues[i]}</span>
+                    <CountUp value={landValues[i]} className="text-2xl font-black text-[#4a9c4e] leading-none" />
                     <span className="text-gray-400 text-xs">{item.unit}</span>
                   </div>
                   <div className="text-gray-400 text-xs mt-1 leading-tight">{item.label}</div>
@@ -272,23 +372,18 @@ export default function BekabadDistrictPage() {
                     <div className="flex items-baseline justify-between gap-3 mb-2 flex-wrap">
                       <span className="font-bold text-[#1a2744] text-sm md:text-base">{item.label}</span>
                       <span className="flex items-baseline gap-1">
-                        <span className="text-xl md:text-2xl font-black text-[#1a2744]">{productionData[i].value}</span>
+                        <CountUp value={productionData[i].value} className="text-xl md:text-2xl font-black text-[#1a2744]" />
                         <span className="text-gray-500 text-xs font-medium">{d.production.unit}</span>
                       </span>
                     </div>
-                    <div className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
-                      <div
-                        className="h-full rounded-full bg-gradient-to-r from-[#4a9c4e] to-[#3a7d3e]"
-                        style={{ width: `${productionData[i].bar}%`, minWidth: '10px' }}
-                      />
-                    </div>
+                    <ProgressBar bar={productionData[i].bar} />
                   </div>
                   <div className="flex flex-col items-center flex-shrink-0 w-20">
                     <span className="inline-flex items-center gap-1 text-[#4a9c4e] font-black text-base md:text-lg">
                       <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                       </svg>
-                      {productionData[i].growth}
+                      <CountUp value={productionData[i].growth} />
                     </span>
                     <span className="text-gray-400 text-[10px] mt-0.5 leading-tight text-center">{d.production.growthCaption}</span>
                   </div>
@@ -314,7 +409,7 @@ export default function BekabadDistrictPage() {
                 className="animate-on-scroll card p-6 text-center border border-gray-100"
                 style={{ transitionDelay: `${i * 80}ms` }}
               >
-                <div className="text-2xl md:text-3xl font-black text-[#1a2744]">{laborValues[i]}</div>
+                <CountUp value={laborValues[i]} className="block text-2xl md:text-3xl font-black text-[#1a2744]" />
                 <div className="text-gray-500 text-xs mt-2 leading-tight">{item.label}</div>
               </div>
             ))}
@@ -339,7 +434,7 @@ export default function BekabadDistrictPage() {
                 style={{ transitionDelay: `${i * 70}ms` }}
               >
                 <div className="text-3xl mb-3">{socialIcons[i]}</div>
-                <div className="text-2xl font-black text-[#4a9c4e]">{socialValues[i]}</div>
+                <CountUp value={socialValues[i]} className="block text-2xl font-black text-[#4a9c4e]" />
                 <div className="text-gray-500 text-xs mt-1 leading-tight">{item.name}</div>
               </div>
             ))}
@@ -357,7 +452,7 @@ export default function BekabadDistrictPage() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
             {d.business.items.map((item, i) => (
               <div key={i} className="animate-on-scroll" style={{ transitionDelay: `${i * 100}ms` }}>
-                <div className="text-5xl font-black text-white mb-2">{businessValues[i]}</div>
+                <CountUp value={businessValues[i]} className="block text-5xl font-black text-white mb-2" />
                 <div className="text-white/90 font-semibold">{item.label}</div>
               </div>
             ))}
