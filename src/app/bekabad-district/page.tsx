@@ -17,7 +17,7 @@ function useScrollAnimation() {
 
 // Values from the district passport (Jan–Sep 2025). Kept in the component as a
 // single source of truth; labels come from translations.
-const statValues = ['749.69 km²', '170,200', '1926', '51', '7.4%', '5.5%'];
+const statValues = ['749.69 km²', '173,000', '1926', '51', '7.4%', '5.5%'];
 
 const economyIcons = ['🏭', '🌾', '🛒'];
 const economyValues = [
@@ -26,13 +26,35 @@ const economyValues = [
   { value: '1,103.6', unit: 'bn UZS', growth: '+15.6%' },
 ];
 
-const laborValues = ['83,600', '66,300', '62,600', '32,400', '23,900'];
+const laborValues = ['86,500', '66,300', '62,600', '32,400', '23,900'];
+
+// Financial growth by sector (2025). bar = value / max value, as % width.
+const financeIcons = ['🌾', '🛒', '🏭', '💰'];
+const financeData = [
+  { value: '6,220.4', bar: 100, growth: '104.4%' },
+  { value: '1,519.5', bar: 24, growth: '117.2%' },
+  { value: '569.8', bar: 9, growth: '110.7%' },
+  { value: '101.7', bar: 2, growth: '117.7%' },
+];
+
+// Production volume 2025 (tonnes). bar = value / max value, as % width.
+const productionIcons = ['🥩', '🥛', '🥚', '🐟'];
+const productionData = [
+  { value: '20,501', bar: 21, growth: '102%' },
+  { value: '95,572', bar: 100, growth: '105%' },
+  { value: '50,222', bar: 53, growth: '100%' },
+  { value: '2,304', bar: 2, growth: '118%' },
+];
+
+const livestockIcons = ['🐂', '🐄', '🐑', '🐎', '🐔'];
+const livestockValues = ['92,885', '38,541', '47,532', '4,211', '433'];
+
+const landIcons = ['🗺️', '🌿', '🌾', '🌷', '🚜'];
+const landValues = ['39,297', '29,500', '2,991', '1,680', '4,308'];
 
 const socialIcons = ['🏫', '🧸', '🏥', '🎓', '🏟️', '🏛️'];
-const socialValues = ['61', '260', '21', '2', '8', '32'];
+const socialValues = ['63', '245', '21', '2', '8', '32'];
 
-const infraIcons = ['🔥', '💧', '🛣️', '⚡', '📡'];
-const infraValues = ['93.8%', '79.4%', '1,035 km', '1,673 km', '549 km'];
 
 const businessValues = ['1,117', '254', '1,821'];
 
@@ -125,6 +147,159 @@ export default function BekabadDistrictPage() {
         </div>
       </section>
 
+      {/* Financial growth rates */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-14 animate-on-scroll">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="section-heading">{d.financeGrowth.title}</h2>
+            <p className="section-subheading mx-auto">{d.financeGrowth.subtitle}</p>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {d.financeGrowth.items.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card p-5 md:p-6 border border-gray-100"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-3xl flex-shrink-0">{financeIcons[i]}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-baseline justify-between gap-3 mb-2 flex-wrap">
+                      <span className="font-bold text-[#1a2744] text-sm md:text-base">{item.label}</span>
+                      <span className="flex items-baseline gap-1">
+                        <span className="text-xl md:text-2xl font-black text-[#1a2744]">{financeData[i].value}</span>
+                        <span className="text-gray-500 text-xs font-medium">{d.financeGrowth.unit}</span>
+                      </span>
+                    </div>
+                    <div className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-[#4a9c4e] to-[#3a7d3e]"
+                        style={{ width: `${financeData[i].bar}%`, minWidth: '10px' }}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center flex-shrink-0 w-20">
+                    <span className="inline-flex items-center gap-1 text-[#4a9c4e] font-black text-base md:text-lg">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                      {financeData[i].growth}
+                    </span>
+                    <span className="text-gray-400 text-[10px] mt-0.5 leading-tight text-center">{d.financeGrowth.growthCaption}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Livestock & Farmland */}
+      <section className="section-padding bg-[#1a2744]">
+        <div className="container-custom">
+          <div className="text-center mb-12 animate-on-scroll">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">{d.agriculture.title}</h2>
+            <p className="text-gray-400">{d.agriculture.subtitle}</p>
+          </div>
+
+          {/* Livestock */}
+          <h3 className="text-[#4a9c4e] font-bold uppercase tracking-wide text-sm mb-4 animate-on-scroll">
+            {d.agriculture.livestockTitle}
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+            {d.agriculture.livestock.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll flex items-center gap-4 p-5 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="text-3xl flex-shrink-0">{livestockIcons[i]}</div>
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-1 flex-wrap">
+                    <span className="text-2xl font-black text-[#4a9c4e] leading-none">{livestockValues[i]}</span>
+                    <span className="text-gray-400 text-xs">{item.unit}</span>
+                  </div>
+                  <div className="text-gray-400 text-xs mt-1 leading-tight">{item.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Agricultural land */}
+          <h3 className="text-[#4a9c4e] font-bold uppercase tracking-wide text-sm mb-4 animate-on-scroll">
+            {d.agriculture.landTitle}
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {d.agriculture.land.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll flex items-center gap-4 p-5 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-colors"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="text-3xl flex-shrink-0">{landIcons[i]}</div>
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-1 flex-wrap">
+                    <span className="text-2xl font-black text-[#4a9c4e] leading-none">{landValues[i]}</span>
+                    <span className="text-gray-400 text-xs">{item.unit}</span>
+                  </div>
+                  <div className="text-gray-400 text-xs mt-1 leading-tight">{item.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Production volume 2025 */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-14 animate-on-scroll">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="section-heading">{d.production.title}</h2>
+            <p className="section-subheading mx-auto">{d.production.subtitle}</p>
+          </div>
+          <div className="max-w-4xl mx-auto space-y-4">
+            {d.production.items.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card p-5 md:p-6 border border-gray-100"
+                style={{ transitionDelay: `${i * 80}ms` }}
+              >
+                <div className="flex items-center gap-4">
+                  <div className="text-3xl flex-shrink-0">{productionIcons[i]}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-baseline justify-between gap-3 mb-2 flex-wrap">
+                      <span className="font-bold text-[#1a2744] text-sm md:text-base">{item.label}</span>
+                      <span className="flex items-baseline gap-1">
+                        <span className="text-xl md:text-2xl font-black text-[#1a2744]">{productionData[i].value}</span>
+                        <span className="text-gray-500 text-xs font-medium">{d.production.unit}</span>
+                      </span>
+                    </div>
+                    <div className="h-2.5 rounded-full bg-gray-100 overflow-hidden">
+                      <div
+                        className="h-full rounded-full bg-gradient-to-r from-[#4a9c4e] to-[#3a7d3e]"
+                        style={{ width: `${productionData[i].bar}%`, minWidth: '10px' }}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center flex-shrink-0 w-20">
+                    <span className="inline-flex items-center gap-1 text-[#4a9c4e] font-black text-base md:text-lg">
+                      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                      </svg>
+                      {productionData[i].growth}
+                    </span>
+                    <span className="text-gray-400 text-[10px] mt-0.5 leading-tight text-center">{d.production.growthCaption}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Labor & Employment */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
@@ -167,30 +342,6 @@ export default function BekabadDistrictPage() {
                 <div className="text-3xl mb-3">{socialIcons[i]}</div>
                 <div className="text-2xl font-black text-[#4a9c4e]">{socialValues[i]}</div>
                 <div className="text-gray-500 text-xs mt-1 leading-tight">{item.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Utilities & Communications */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-14 animate-on-scroll">
-            <h2 className="section-heading">{d.infrastructure.title}</h2>
-            <p className="section-subheading mx-auto">{d.infrastructure.subtitle}</p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-5 gap-4">
-            {d.infrastructure.items.map((item, i) => (
-              <div
-                key={i}
-                className="animate-on-scroll card p-6 text-center border border-gray-100"
-                style={{ transitionDelay: `${i * 80}ms` }}
-              >
-                <div className="text-3xl mb-3">{infraIcons[i]}</div>
-                <div className="text-xl md:text-2xl font-black text-[#1a2744]">{infraValues[i]}</div>
-                <div className="text-gray-500 text-xs mt-2 leading-tight">{item.label}</div>
               </div>
             ))}
           </div>

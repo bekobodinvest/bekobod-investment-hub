@@ -169,7 +169,7 @@ export const translations = {
       },
       director: {
         title: 'Leadership',
-        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
+        name: 'Nizomiddinov Zaynilobiddin Shakhobbidinovich',
         role: 'Bekabad District Governor',
         message:
           'We invite investors from around the world to participate in Bekabad\'s transformation. Through our transparent e-auction system and investment packages for comprehensive support, we help every investor build the strongest possible foundation for success. Bekabad is open for business — and we are here to make your investment journey smooth, transparent, and rewarding.',
@@ -357,7 +357,7 @@ export const translations = {
       overview: {
         title: 'About the District',
         description:
-          'Bekabad District lies in the south-east of the Tashkent region, on the border with Tajikistan and the Syrdarya region. Founded in 1926, it spans 749.69 km² and is home to 170,200 residents across 51 mahallas. A strong agricultural base — first in the region — together with growing industry and two industrial zones makes it a strategic destination for investment.',
+          'Bekabad District lies in the south-east of the Tashkent region, on the border with Tajikistan and the Syrdarya region. Founded in 1926, it spans 749.69 km² and is home to 173,000 residents across 51 mahallas. A strong agricultural base — first in the region — together with growing industry and two industrial zones makes it a strategic destination for investment.',
       },
       stats: [
         { label: 'Area' },
@@ -402,6 +402,50 @@ export const translations = {
           { name: 'Colleges' },
           { name: 'Sports facilities' },
           { name: 'Heritage sites' },
+        ],
+      },
+      financeGrowth: {
+        title: 'Financial Growth Rates',
+        subtitle: 'Output and growth rate by sector (2025)',
+        growthCaption: 'Growth rate',
+        unit: 'bn UZS',
+        items: [
+          { label: 'Agriculture' },
+          { label: 'Market services' },
+          { label: 'Industry' },
+          { label: 'Local budget revenue' },
+        ],
+      },
+      production: {
+        title: 'Production Volume (2025)',
+        subtitle: 'Key agricultural output and growth rate',
+        growthCaption: 'Growth rate',
+        unit: 'tonnes',
+        items: [
+          { label: 'Meat' },
+          { label: 'Milk' },
+          { label: 'Eggs' },
+          { label: 'Fish' },
+        ],
+      },
+      agriculture: {
+        title: 'Livestock & Farmland',
+        subtitle: 'Total livestock headcount and agricultural land',
+        livestockTitle: 'Total livestock headcount',
+        landTitle: 'Agricultural land',
+        livestock: [
+          { label: 'Cattle', unit: 'head' },
+          { label: 'Cows', unit: 'head' },
+          { label: 'Sheep & goats', unit: 'head' },
+          { label: 'Horses', unit: 'head' },
+          { label: 'Poultry', unit: 'k head' },
+        ],
+        land: [
+          { label: 'Total area', unit: 'ha' },
+          { label: 'Cotton', unit: 'ha' },
+          { label: 'Rice', unit: 'ha' },
+          { label: 'Horticulture', unit: 'ha' },
+          { label: 'Dehkan farms & other', unit: 'ha' },
         ],
       },
       infrastructure: {
@@ -939,7 +983,7 @@ export const translations = {
       },
       director: {
         title: 'Rahbariyat',
-        name: 'Nizomiddinov Zaynilobiddin Shahobiddinovich',
+        name: 'Nizomiddinov Zaynilobiddin Shahobbidinovich',
         role: "Bekobod tumani hokimi",
         message:
           "Biz dunyo bo‘ylab investorlarni Bekobod transformatsiyasida ishtirok etishga taklif qilamiz. Shaffof elektron auksion tizimimiz va keng qo‘llab-quvvatlash uchun investitsiya paketlarimiz orqali har bir investor uchun eng mustahkam muvaffaqiyat poydevorini yaratishda ko‘maklashamiz.",
@@ -1102,7 +1146,7 @@ export const translations = {
       overview: {
         title: 'Tuman haqida',
         description:
-          "Bekobod tumani Toshkent viloyatining janubi-sharqida, Tojikiston va Sirdaryo viloyati bilan chegarada joylashgan. 1926-yilda tashkil etilgan tuman 749,69 km² maydonni egallaydi va 51 ta mahallada 170 200 aholi istiqomat qiladi. Viloyatda birinchi o'rindagi kuchli qishloq xo'jaligi, o'sib borayotgan sanoat va ikkita sanoat zonasi uni investitsiya uchun strategik hududga aylantiradi.",
+          "Bekobod tumani Toshkent viloyatining janubi-sharqida, Tojikiston va Sirdaryo viloyati bilan chegarada joylashgan. 1926-yilda tashkil etilgan tuman 749,69 km² maydonni egallaydi va 51 ta mahallada 173 000 aholi istiqomat qiladi. Viloyatda birinchi o'rindagi kuchli qishloq xo'jaligi, o'sib borayotgan sanoat va ikkita sanoat zonasi uni investitsiya uchun strategik hududga aylantiradi.",
       },
       stats: [
         { label: 'Maydon' },
@@ -1147,6 +1191,50 @@ export const translations = {
           { name: 'Kollejlar' },
           { name: 'Sport inshootlari' },
           { name: 'Madaniy meros obidalari' },
+        ],
+      },
+      financeGrowth: {
+        title: 'Moliyaviy oʻsish surʼatlari',
+        subtitle: 'Sektorlar boʻyicha hajm va oʻsish surʼati (2025)',
+        growthCaption: 'Oʻsish surʼati',
+        unit: 'mlrd soʻm',
+        items: [
+          { label: 'Qishloq xoʻjaligi' },
+          { label: 'Bozor xizmatlari' },
+          { label: 'Sanoat' },
+          { label: 'Mahalliy budjet daromadlari' },
+        ],
+      },
+      production: {
+        title: 'Ishlab chiqarish hajmi (2025)',
+        subtitle: 'Asosiy qishloq xoʻjaligi mahsuloti va oʻsish surʼati',
+        growthCaption: 'Oʻsish surʼati',
+        unit: 'tonna',
+        items: [
+          { label: 'Goʻsht' },
+          { label: 'Sut' },
+          { label: 'Tuxum' },
+          { label: 'Baliq' },
+        ],
+      },
+      agriculture: {
+        title: 'Chorva mollari va qishloq xoʻjaligi yerlari',
+        subtitle: 'Umumiy chorva mollari soni va qishloq xoʻjaligi yerlari',
+        livestockTitle: 'Umumiy chorva mollari soni',
+        landTitle: 'Qishloq xoʻjaligi yerlari',
+        livestock: [
+          { label: 'Yirik shoxli qoramol', unit: 'bosh' },
+          { label: 'Sigirlar', unit: 'bosh' },
+          { label: 'Qoʻy va echkilar', unit: 'bosh' },
+          { label: 'Otlar', unit: 'bosh' },
+          { label: 'Parranda', unit: 'ming bosh' },
+        ],
+        land: [
+          { label: 'Umumiy maydon', unit: 'gektar' },
+          { label: 'Paxta', unit: 'gektar' },
+          { label: 'Sholi', unit: 'gektar' },
+          { label: 'Bogʻdorchilik', unit: 'gektar' },
+          { label: 'Dehqon xoʻjaliklari va boshqalar', unit: 'gektar' },
         ],
       },
       infrastructure: {
@@ -1659,7 +1747,7 @@ export const translations = {
       },
       director: {
         title: 'Руководство',
-        name: 'Низомиддинов Зайнилобиддин Шахобиддинович',
+        name: 'Низомиддинов Зайнилобиддин Шахоббидинович',
         role: 'Хоким района Бекабад',
         message:
           'Мы приглашаем инвесторов со всего мира принять участие в преобразовании Бекабада. Благодаря нашей прозрачной системе электронных аукционов и инвестиционным пакетам для всесторонней поддержки, мы помогаем каждому инвестору создать максимально прочную основу для успеха.',
@@ -1822,7 +1910,7 @@ export const translations = {
       overview: {
         title: 'О районе',
         description:
-          'Бекободский район расположен на юго-востоке Ташкентской области, на границе с Таджикистаном и Сырдарьинской областью. Основанный в 1926 году, он занимает 749,69 км² и объединяет 170 200 жителей в 51 махалле. Сильное сельское хозяйство — первое место в области — вместе с растущей промышленностью и двумя промзонами делает район стратегическим направлением для инвестиций.',
+          'Бекободский район расположен на юго-востоке Ташкентской области, на границе с Таджикистаном и Сырдарьинской областью. Основанный в 1926 году, он занимает 749,69 км² и объединяет 173 000 жителей в 51 махалле. Сильное сельское хозяйство — первое место в области — вместе с растущей промышленностью и двумя промзонами делает район стратегическим направлением для инвестиций.',
       },
       stats: [
         { label: 'Площадь' },
@@ -1867,6 +1955,50 @@ export const translations = {
           { name: 'Колледжи' },
           { name: 'Спортивные сооружения' },
           { name: 'Объекты культурного наследия' },
+        ],
+      },
+      financeGrowth: {
+        title: 'Темпы финансового роста',
+        subtitle: 'Объём и темп роста по секторам (2025)',
+        growthCaption: 'Темп роста',
+        unit: 'млрд сум',
+        items: [
+          { label: 'Сельское хозяйство' },
+          { label: 'Рыночные услуги' },
+          { label: 'Промышленность' },
+          { label: 'Доходы местного бюджета' },
+        ],
+      },
+      production: {
+        title: 'Объём производства (2025)',
+        subtitle: 'Основная сельхозпродукция и темп роста',
+        growthCaption: 'Темп роста',
+        unit: 'тонн',
+        items: [
+          { label: 'Мясо' },
+          { label: 'Молоко' },
+          { label: 'Яйца' },
+          { label: 'Рыба' },
+        ],
+      },
+      agriculture: {
+        title: 'Поголовье скота и сельхозземли',
+        subtitle: 'Общее поголовье скота и сельскохозяйственные земли',
+        livestockTitle: 'Общее поголовье скота',
+        landTitle: 'Сельскохозяйственные земли',
+        livestock: [
+          { label: 'Крупный рогатый скот', unit: 'голов' },
+          { label: 'Коровы', unit: 'голов' },
+          { label: 'Овцы и козы', unit: 'голов' },
+          { label: 'Лошади', unit: 'голов' },
+          { label: 'Птица', unit: 'тыс. голов' },
+        ],
+        land: [
+          { label: 'Общая площадь', unit: 'гектар' },
+          { label: 'Хлопок', unit: 'гектар' },
+          { label: 'Рис', unit: 'гектар' },
+          { label: 'Садоводство', unit: 'гектар' },
+          { label: 'Дехканские хозяйства и прочее', unit: 'гектар' },
         ],
       },
       infrastructure: {
@@ -2379,7 +2511,7 @@ export const translations = {
       },
       director: {
         title: '领导层',
-        name: '乌马罗夫·乌米德·艾哈迈德扬诺维奇',
+        name: '尼佐米丁诺夫·扎伊尼洛比丁·沙霍比丁诺维奇',
         role: '别卡巴德区长',
         message:
           '我们邀请全球投资者参与别卡巴德的转型。通过我们透明的电子拍卖系统和全面的支持方案，我们确保每位投资者获得最坚实的成功基础。',
@@ -2530,7 +2662,7 @@ export const translations = {
       overview: {
         title: '关于本区',
         description:
-          '别卡巴德区位于塔什干州东南部，与塔吉克斯坦和锡尔河州接壤。该区始建于1926年，面积749.69平方公里，下辖51个街区，人口17.02万。农业实力居全州首位，加之不断增长的工业和两个工业区，使其成为具有战略意义的投资目的地。',
+          '别卡巴德区位于塔什干州东南部，与塔吉克斯坦和锡尔河州接壤。该区始建于1926年，面积749.69平方公里，下辖51个街区，人口17.3万。农业实力居全州首位，加之不断增长的工业和两个工业区，使其成为具有战略意义的投资目的地。',
       },
       stats: [
         { label: '面积' },
@@ -2575,6 +2707,50 @@ export const translations = {
           { name: '学院' },
           { name: '体育设施' },
           { name: '文化遗产' },
+        ],
+      },
+      financeGrowth: {
+        title: '财政增长速度',
+        subtitle: '各行业产值与增长率（2025年）',
+        growthCaption: '增长率',
+        unit: '十亿苏姆',
+        items: [
+          { label: '农业' },
+          { label: '市场服务' },
+          { label: '工业' },
+          { label: '地方财政收入' },
+        ],
+      },
+      production: {
+        title: '产量（2025年）',
+        subtitle: '主要农产品产量与增长率',
+        growthCaption: '增长率',
+        unit: '吨',
+        items: [
+          { label: '肉类' },
+          { label: '牛奶' },
+          { label: '鸡蛋' },
+          { label: '鱼类' },
+        ],
+      },
+      agriculture: {
+        title: '牲畜存栏与农用地',
+        subtitle: '牲畜存栏总数与农业用地',
+        livestockTitle: '牲畜存栏总数',
+        landTitle: '农业用地',
+        livestock: [
+          { label: '牛（大牲畜）', unit: '头' },
+          { label: '奶牛', unit: '头' },
+          { label: '绵羊与山羊', unit: '头' },
+          { label: '马', unit: '头' },
+          { label: '家禽', unit: '千头' },
+        ],
+        land: [
+          { label: '总面积', unit: '公顷' },
+          { label: '棉花', unit: '公顷' },
+          { label: '水稻', unit: '公顷' },
+          { label: '园艺', unit: '公顷' },
+          { label: '农户经营及其他', unit: '公顷' },
         ],
       },
       infrastructure: {
