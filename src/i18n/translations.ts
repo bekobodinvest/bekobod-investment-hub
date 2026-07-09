@@ -369,7 +369,7 @@ export const translations = {
       ],
       economy: {
         title: 'Economy',
-        subtitle: 'Key sectors and output (Jan–Sep 2025)',
+        subtitle: 'Key sectors and output',
         items: [
           { name: 'Industry', note: 'Manufacturing output, +5.8% growth' },
           { name: 'Agriculture', note: 'Leading sector — 1st in the region' },
@@ -383,7 +383,7 @@ export const translations = {
       },
       labor: {
         title: 'Labor & Employment',
-        subtitle: 'Human capital (as of 01.07.2025)',
+        subtitle: 'Human capital',
         items: [
           { label: 'Labor resources' },
           { label: 'Economically active' },
@@ -1158,7 +1158,7 @@ export const translations = {
       ],
       economy: {
         title: 'Iqtisodiyot',
-        subtitle: 'Asosiy tarmoqlar va mahsulot (Yanvar–Sentyabr 2025)',
+        subtitle: 'Asosiy tarmoqlar va mahsulot',
         items: [
           { name: 'Sanoat', note: "Sanoat mahsuloti, +5,8% o'sish" },
           { name: "Qishloq xo'jaligi", note: "Yetakchi tarmoq — viloyatda 1-o'rin" },
@@ -1172,7 +1172,7 @@ export const translations = {
       },
       labor: {
         title: 'Mehnat va bandlik',
-        subtitle: 'Inson kapitali (01.07.2025 holatiga)',
+        subtitle: 'Inson kapitali',
         items: [
           { label: 'Mehnat resurslari' },
           { label: 'Iqtisodiy faol aholi' },
@@ -1922,7 +1922,7 @@ export const translations = {
       ],
       economy: {
         title: 'Экономика',
-        subtitle: 'Ключевые отрасли и объёмы (янв–сен 2025)',
+        subtitle: 'Ключевые отрасли и объёмы',
         items: [
           { name: 'Промышленность', note: 'Объём промпродукции, рост +5,8%' },
           { name: 'Сельское хозяйство', note: 'Ведущая отрасль — 1-е место в области' },
@@ -1936,7 +1936,7 @@ export const translations = {
       },
       labor: {
         title: 'Труд и занятость',
-        subtitle: 'Трудовые ресурсы (на 01.07.2025)',
+        subtitle: 'Трудовые ресурсы',
         items: [
           { label: 'Трудовые ресурсы' },
           { label: 'Экономически активные' },
@@ -2674,7 +2674,7 @@ export const translations = {
       ],
       economy: {
         title: '经济',
-        subtitle: '主要行业与产值（2025年1–9月）',
+        subtitle: '主要行业与产值',
         items: [
           { name: '工业', note: '工业产值，增长 +5.8%' },
           { name: '农业', note: '主导产业——全州第一' },
@@ -2688,7 +2688,7 @@ export const translations = {
       },
       labor: {
         title: '劳动力与就业',
-        subtitle: '人力资源（截至2025年7月1日）',
+        subtitle: '人力资源',
         items: [
           { label: '劳动力资源' },
           { label: '经济活动人口' },
