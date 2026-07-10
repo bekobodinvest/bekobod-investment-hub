@@ -353,11 +353,11 @@ export const translations = {
     bekabadDistrict: {
       title: 'Bekabad District',
       subtitle: 'The industrial gateway of the Tashkent region',
-      badge: 'District Passport · Jan–Sep 2025',
+      badge: 'District Passport · Jan–Apr 2026',
       overview: {
         title: 'About the District',
         description:
-          'Bekabad District lies in the south-east of the Tashkent region, on the border with Tajikistan and the Syrdarya region. Founded in 1926, it spans 749.69 km² and is home to 173,000 residents across 51 mahallas. A strong agricultural base — first in the region — together with growing industry and two industrial zones makes it a strategic destination for investment.',
+          'Bekabad District lies in the south-east of the Tashkent region, sharing 82.6 km of border with Tajikistan and 72.3 km with the Syrdarya region. Founded in September 1926, it spans 749.69 km² and is home to 171,300 residents across 51 mahallas. A strong agricultural base — 6.9% of the region’s farm output — together with growing industry and two industrial zones makes it a strategic destination for investment.',
       },
       stats: [
         { label: 'Area' },
@@ -369,15 +369,15 @@ export const translations = {
       ],
       economy: {
         title: 'Economy',
-        subtitle: 'Key sectors and output',
+        subtitle: 'Key sectors and output (Jan–Apr 2026)',
         unit: 'bn UZS',
         items: [
-          { name: 'Industry', note: 'Manufacturing output, +5.8% growth' },
-          { name: 'Agriculture', note: 'Leading sector — 1st in the region' },
-          { name: 'Services', note: 'Market services, +15.6% growth' },
+          { name: 'Industry', note: 'Manufacturing output, +9.4% growth' },
+          { name: 'Agriculture', note: 'Leading sector — 6.9% of the region’s farm output' },
+          { name: 'Services', note: 'Market services, +16.1% growth' },
         ],
         highlights: [
-          '3 large and 257 small industrial enterprises',
+          '4 large and 261 small industrial enterprises',
           '2 industrial zones (SEZ + small industrial zone)',
           '25,065 ha of agricultural land',
         ],
@@ -442,11 +442,43 @@ export const translations = {
           { label: 'Poultry', unit: 'k head' },
         ],
         land: [
-          { label: 'Total area', unit: 'ha' },
+          { label: 'Total crop area', unit: 'ha' },
           { label: 'Cotton', unit: 'ha' },
+          { label: 'Grain', unit: 'ha' },
           { label: 'Rice', unit: 'ha' },
-          { label: 'Horticulture', unit: 'ha' },
-          { label: 'Dehkan farms & other', unit: 'ha' },
+          { label: 'Vegetables', unit: 'ha' },
+        ],
+      },
+      landStructure: {
+        title: 'Land Structure',
+        subtitle: 'How the district’s 74,969 hectares are used',
+        items: [
+          { label: 'Total land area', unit: 'ha' },
+          { label: 'Crop land', unit: 'ha' },
+          { label: 'Forest fund', unit: 'ha' },
+          { label: 'Water fund', unit: 'ha' },
+          { label: 'Reserve land', unit: 'ha' },
+          { label: 'Industry, transport & communications', unit: 'ha' },
+        ],
+      },
+      irrigationEcology: {
+        title: 'Irrigation & Ecology',
+        subtitle: '2025 results',
+        irrigationTitle: 'Irrigation & melioration',
+        ecologyTitle: 'Ecology & green cover',
+        irrigation: [
+          { label: 'Collector-drainage network', unit: 'km' },
+          { label: 'Concreted irrigation canals', unit: 'km' },
+          { label: 'Irrigation wells', unit: 'wells' },
+          { label: 'Water-saving technologies', unit: 'ha' },
+          { label: 'Water used in season', unit: 'mln m³' },
+        ],
+        ecology: [
+          { label: 'Green cover', unit: '%' },
+          { label: 'Saplings planted', unit: 'mln' },
+          { label: 'Natural lakes', unit: 'lakes' },
+          { label: 'Artificial lakes', unit: 'lakes' },
+          { label: 'Forest area', unit: 'ha' },
         ],
       },
       infrastructure: {
@@ -1143,11 +1175,11 @@ export const translations = {
     bekabadDistrict: {
       title: 'Bekobod tumani',
       subtitle: "Toshkent viloyatining sanoat darvozasi",
-      badge: 'Tuman pasporti · Yanvar–Sentyabr 2025',
+      badge: 'Tuman pasporti · Yanvar–Aprel 2026',
       overview: {
         title: 'Tuman haqida',
         description:
-          "Bekobod tumani Toshkent viloyatining janubi-sharqida, Tojikiston va Sirdaryo viloyati bilan chegarada joylashgan. 1926-yilda tashkil etilgan tuman 749,69 km² maydonni egallaydi va 51 ta mahallada 173 000 aholi istiqomat qiladi. Viloyatda birinchi o'rindagi kuchli qishloq xo'jaligi, o'sib borayotgan sanoat va ikkita sanoat zonasi uni investitsiya uchun strategik hududga aylantiradi.",
+          "Bekobod tumani Toshkent viloyatining janubi-sharqida joylashgan boʻlib, Tojikiston bilan 82,6 km, Sirdaryo viloyati bilan 72,3 km chegaradosh. 1926-yil sentyabrida tashkil etilgan tuman 749,69 km² maydonni egallaydi va 51 ta mahallada 171 300 aholi istiqomat qiladi. Viloyat qishloq xoʻjaligi mahsulotining 6,9 foizini beradigan kuchli agrar tarmoq, oʻsib borayotgan sanoat va ikkita sanoat zonasi uni investitsiya uchun strategik hududga aylantiradi.",
       },
       stats: [
         { label: 'Maydon' },
@@ -1159,15 +1191,15 @@ export const translations = {
       ],
       economy: {
         title: 'Iqtisodiyot',
-        subtitle: 'Asosiy tarmoqlar va mahsulot',
+        subtitle: 'Asosiy tarmoqlar va mahsulot (Yanvar–Aprel 2026)',
         unit: 'mlrd soʻm',
         items: [
-          { name: 'Sanoat', note: "Sanoat mahsuloti, +5,8% o'sish" },
-          { name: "Qishloq xo'jaligi", note: "Yetakchi tarmoq — viloyatda 1-o'rin" },
-          { name: 'Xizmatlar', note: "Bozor xizmatlari, +15,6% o'sish" },
+          { name: 'Sanoat', note: "Sanoat mahsuloti, +9,4% o'sish" },
+          { name: "Qishloq xo'jaligi", note: "Yetakchi tarmoq — viloyat hosilining 6,9 foizi" },
+          { name: 'Xizmatlar', note: "Bozor xizmatlari, +16,1% o'sish" },
         ],
         highlights: [
-          '3 ta yirik va 257 ta kichik sanoat korxonasi',
+          '4 ta yirik va 261 ta kichik sanoat korxonasi',
           '2 ta sanoat zonasi (MIZ + kichik sanoat zonasi)',
           "25 065 gektar qishloq xo'jaligi yerlari",
         ],
@@ -1232,11 +1264,43 @@ export const translations = {
           { label: 'Parranda', unit: 'ming bosh' },
         ],
         land: [
-          { label: 'Umumiy maydon', unit: 'gektar' },
+          { label: 'Jami ekin maydoni', unit: 'gektar' },
           { label: 'Paxta', unit: 'gektar' },
+          { label: 'Gʻalla', unit: 'gektar' },
           { label: 'Sholi', unit: 'gektar' },
-          { label: 'Bogʻdorchilik', unit: 'gektar' },
-          { label: 'Dehqon xoʻjaliklari va boshqalar', unit: 'gektar' },
+          { label: 'Sabzavot', unit: 'gektar' },
+        ],
+      },
+      landStructure: {
+        title: 'Yer tuzilmasi',
+        subtitle: 'Tumanning 74 969 gektar yeri qanday taqsimlangan',
+        items: [
+          { label: 'Umumiy yer maydoni', unit: 'gektar' },
+          { label: 'Ekin yerlari', unit: 'gektar' },
+          { label: 'Oʻrmon fondi', unit: 'gektar' },
+          { label: 'Suv fondi', unit: 'gektar' },
+          { label: 'Zaxira yerlar', unit: 'gektar' },
+          { label: 'Sanoat, transport va aloqa', unit: 'gektar' },
+        ],
+      },
+      irrigationEcology: {
+        title: 'Irrigatsiya va ekologiya',
+        subtitle: '2025-yil yakunlari',
+        irrigationTitle: 'Irrigatsiya va melioratsiya',
+        ecologyTitle: 'Ekologiya va yashillik',
+        irrigation: [
+          { label: 'Kollektor-drenaj tarmoqlari', unit: 'km' },
+          { label: 'Betonlashtirilgan suvchiqarish tarmoqlari', unit: 'km' },
+          { label: 'Sugʻorish quduqlari', unit: 'ta' },
+          { label: 'Suv tejovchi texnologiyalar', unit: 'gektar' },
+          { label: 'Mavsumda foydalanilgan suv', unit: 'mln m³' },
+        ],
+        ecology: [
+          { label: 'Yashillik darajasi', unit: '%' },
+          { label: 'Ekilgan koʻchatlar', unit: 'mln tup' },
+          { label: 'Tabiiy koʻllar', unit: 'ta' },
+          { label: 'Sunʼiy koʻllar', unit: 'ta' },
+          { label: 'Oʻrmon maydoni', unit: 'gektar' },
         ],
       },
       infrastructure: {
@@ -1908,11 +1972,11 @@ export const translations = {
     bekabadDistrict: {
       title: 'Бекободский район',
       subtitle: 'Промышленные ворота Ташкентской области',
-      badge: 'Паспорт района · Янв–Сен 2025',
+      badge: 'Паспорт района · Янв–Апр 2026',
       overview: {
         title: 'О районе',
         description:
-          'Бекободский район расположен на юго-востоке Ташкентской области, на границе с Таджикистаном и Сырдарьинской областью. Основанный в 1926 году, он занимает 749,69 км² и объединяет 173 000 жителей в 51 махалле. Сильное сельское хозяйство — первое место в области — вместе с растущей промышленностью и двумя промзонами делает район стратегическим направлением для инвестиций.',
+          'Бекободский район расположен на юго-востоке Ташкентской области: 82,6 км границы с Таджикистаном и 72,3 км с Сырдарьинской областью. Основанный в сентябре 1926 года, он занимает 749,69 км² и объединяет 171 300 жителей в 51 махалле. Сильное сельское хозяйство — 6,9% аграрной продукции области — вместе с растущей промышленностью и двумя промзонами делает район стратегическим направлением для инвестиций.',
       },
       stats: [
         { label: 'Площадь' },
@@ -1924,15 +1988,15 @@ export const translations = {
       ],
       economy: {
         title: 'Экономика',
-        subtitle: 'Ключевые отрасли и объёмы',
+        subtitle: 'Ключевые отрасли и объёмы (янв–апр 2026)',
         unit: 'млрд сум',
         items: [
-          { name: 'Промышленность', note: 'Объём промпродукции, рост +5,8%' },
-          { name: 'Сельское хозяйство', note: 'Ведущая отрасль — 1-е место в области' },
-          { name: 'Услуги', note: 'Рыночные услуги, рост +15,6%' },
+          { name: 'Промышленность', note: 'Объём промпродукции, рост +9,4%' },
+          { name: 'Сельское хозяйство', note: 'Ведущая отрасль — 6,9% аграрной продукции области' },
+          { name: 'Услуги', note: 'Рыночные услуги, рост +16,1%' },
         ],
         highlights: [
-          '3 крупных и 257 малых промышленных предприятий',
+          '4 крупных и 261 малое промышленное предприятие',
           '2 промзоны (СЭЗ + малая промзона)',
           '25 065 га сельхозугодий',
         ],
@@ -1997,11 +2061,43 @@ export const translations = {
           { label: 'Птица', unit: 'тыс. голов' },
         ],
         land: [
-          { label: 'Общая площадь', unit: 'гектар' },
+          { label: 'Общая посевная площадь', unit: 'гектар' },
           { label: 'Хлопок', unit: 'гектар' },
+          { label: 'Зерновые', unit: 'гектар' },
           { label: 'Рис', unit: 'гектар' },
-          { label: 'Садоводство', unit: 'гектар' },
-          { label: 'Дехканские хозяйства и прочее', unit: 'гектар' },
+          { label: 'Овощи', unit: 'гектар' },
+        ],
+      },
+      landStructure: {
+        title: 'Структура земель',
+        subtitle: 'Как распределены 74 969 гектаров района',
+        items: [
+          { label: 'Общая площадь земель', unit: 'гектар' },
+          { label: 'Посевные земли', unit: 'гектар' },
+          { label: 'Лесной фонд', unit: 'гектар' },
+          { label: 'Водный фонд', unit: 'гектар' },
+          { label: 'Резервные земли', unit: 'гектар' },
+          { label: 'Промышленность, транспорт и связь', unit: 'гектар' },
+        ],
+      },
+      irrigationEcology: {
+        title: 'Ирригация и экология',
+        subtitle: 'Итоги 2025 года',
+        irrigationTitle: 'Ирригация и мелиорация',
+        ecologyTitle: 'Экология и озеленение',
+        irrigation: [
+          { label: 'Коллекторно-дренажные сети', unit: 'км' },
+          { label: 'Забетонированные оросительные сети', unit: 'км' },
+          { label: 'Оросительные скважины', unit: 'шт.' },
+          { label: 'Водосберегающие технологии', unit: 'гектар' },
+          { label: 'Использовано воды за сезон', unit: 'млн м³' },
+        ],
+        ecology: [
+          { label: 'Уровень озеленения', unit: '%' },
+          { label: 'Высажено саженцев', unit: 'млн шт.' },
+          { label: 'Природные озёра', unit: 'шт.' },
+          { label: 'Искусственные озёра', unit: 'шт.' },
+          { label: 'Площадь лесов', unit: 'гектар' },
         ],
       },
       infrastructure: {
@@ -2661,11 +2757,11 @@ export const translations = {
     bekabadDistrict: {
       title: '别卡巴德区',
       subtitle: '塔什干州的工业门户',
-      badge: '区域概况 · 2025年1–9月',
+      badge: '区域概况 · 2026年1–4月',
       overview: {
         title: '关于本区',
         description:
-          '别卡巴德区位于塔什干州东南部，与塔吉克斯坦和锡尔河州接壤。该区始建于1926年，面积749.69平方公里，下辖51个街区，人口17.3万。农业实力居全州首位，加之不断增长的工业和两个工业区，使其成为具有战略意义的投资目的地。',
+          '别卡巴德区位于塔什干州东南部，与塔吉克斯坦接壤82.6公里，与锡尔河州接壤72.3公里。该区始建于1926年9月，面积749.69平方公里，下辖51个街区，人口17.13万。农业实力雄厚，占全州农产品产值的6.9%，加之不断增长的工业和两个工业区，使其成为具有战略意义的投资目的地。',
       },
       stats: [
         { label: '面积' },
@@ -2677,15 +2773,15 @@ export const translations = {
       ],
       economy: {
         title: '经济',
-        subtitle: '主要行业与产值',
+        subtitle: '主要行业与产值（2026年1–4月）',
         unit: '十亿苏姆',
         items: [
-          { name: '工业', note: '工业产值，增长 +5.8%' },
-          { name: '农业', note: '主导产业——全州第一' },
-          { name: '服务业', note: '市场服务，增长 +15.6%' },
+          { name: '工业', note: '工业产值，增长 +9.4%' },
+          { name: '农业', note: '主导产业——占全州农产品产值的6.9%' },
+          { name: '服务业', note: '市场服务，增长 +16.1%' },
         ],
         highlights: [
-          '3家大型和257家小型工业企业',
+          '4家大型和261家小型工业企业',
           '2个工业区（经济特区 + 小型工业区）',
           '2.5万公顷农业用地',
         ],
@@ -2750,11 +2846,43 @@ export const translations = {
           { label: '家禽', unit: '千头' },
         ],
         land: [
-          { label: '总面积', unit: '公顷' },
+          { label: '播种总面积', unit: '公顷' },
           { label: '棉花', unit: '公顷' },
+          { label: '谷物', unit: '公顷' },
           { label: '水稻', unit: '公顷' },
-          { label: '园艺', unit: '公顷' },
-          { label: '农户经营及其他', unit: '公顷' },
+          { label: '蔬菜', unit: '公顷' },
+        ],
+      },
+      landStructure: {
+        title: '土地结构',
+        subtitle: '全区74,969公顷土地的用途分布',
+        items: [
+          { label: '土地总面积', unit: '公顷' },
+          { label: '耕地', unit: '公顷' },
+          { label: '林业用地', unit: '公顷' },
+          { label: '水域用地', unit: '公顷' },
+          { label: '储备用地', unit: '公顷' },
+          { label: '工业、交通与通信用地', unit: '公顷' },
+        ],
+      },
+      irrigationEcology: {
+        title: '灌溉与生态',
+        subtitle: '2025年成果',
+        irrigationTitle: '灌溉与土壤改良',
+        ecologyTitle: '生态与绿化',
+        irrigation: [
+          { label: '排水集水管网', unit: '公里' },
+          { label: '混凝土衬砌灌渠', unit: '公里' },
+          { label: '灌溉机井', unit: '口' },
+          { label: '节水技术覆盖面积', unit: '公顷' },
+          { label: '灌溉季用水量', unit: '百万立方米' },
+        ],
+        ecology: [
+          { label: '绿化率', unit: '%' },
+          { label: '植树造林', unit: '百万株' },
+          { label: '天然湖泊', unit: '个' },
+          { label: '人工湖泊', unit: '个' },
+          { label: '森林面积', unit: '公顷' },
         ],
       },
       infrastructure: {

@@ -42,9 +42,12 @@ function useInView<T extends HTMLElement>(threshold = 0.3) {
 function parseValue(value: string) {
   const m = value.match(/^(\D*?)([+-]?[\d,]*\.?\d+)(.*)$/);
   if (!m) return null;
-  const [, prefix, numStr, suffix] = m;
+  const [, rawPrefix, numStr, suffix] = m;
   const grouped = numStr.includes(',');
-  const clean = numStr.replace(/,/g, '');
+  // A leading "+" is captured by the number group but dropped by parseFloat,
+  // so carry it over into the prefix.
+  const prefix = numStr.startsWith('+') ? `${rawPrefix}+` : rawPrefix;
+  const clean = numStr.replace(/[,+]/g, '');
   const dot = clean.indexOf('.');
   const decimals = dot === -1 ? 0 : clean.length - dot - 1;
   const target = parseFloat(clean);
@@ -120,18 +123,18 @@ function ProgressBar({ bar }: { bar: number }) {
   );
 }
 
-// Values from the district passport (Jan–Sep 2025). Kept in the component as a
+// Values from the district passport (Jan–Apr 2026). Kept in the component as a
 // single source of truth; labels come from translations.
-const statValues = ['749.69 km²', '173,000', '1926', '51', '7.4%', '5.5%'];
+const statValues = ['749.69 km²', '171,300', '1926', '51', '5.7%', '4.1%'];
 
 const economyIcons = ['🏭', '🌾', '🛒'];
 const economyValues = [
-  { value: '389.8', unit: 'bn UZS', growth: '+5.8%' },
-  { value: '4,031.7', unit: 'bn UZS', growth: '+4.0%' },
-  { value: '1,103.6', unit: 'bn UZS', growth: '+15.6%' },
+  { value: '209.2', unit: 'bn UZS', growth: '+9.4%' },
+  { value: '508.4', unit: 'bn UZS', growth: '+4.9%' },
+  { value: '513.7', unit: 'bn UZS', growth: '+16.1%' },
 ];
 
-const laborValues = ['86,500', '66,300', '62,600', '32,400', '23,900'];
+const laborValues = ['88,800', '72,500', '69,500', '31,700', '32,100'];
 
 // Financial growth by sector (2025). bar = value / max value, as % width.
 const financeIcons = ['🌾', '🛒', '🏭', '💰'];
@@ -151,17 +154,29 @@ const productionData = [
   { value: '2,304', bar: 2, growth: '118%' },
 ];
 
+// Livestock across all categories of holdings, as of 1 Jan 2026.
 const livestockIcons = ['🐂', '🐄', '🐑', '🐎', '🐔'];
 const livestockValues = ['92,885', '38,541', '47,532', '4,211', '433'];
 
-const landIcons = ['🗺️', '🌿', '🌾', '🌷', '🚜'];
-const landValues = ['39,297', '29,500', '2,991', '1,680', '4,308'];
+const landIcons = ['🗺️', '🌿', '🌾', '🍚', '🥬'];
+const landValues = ['39,869', '10,000', '12,000', '2,384', '4,500'];
+
+// Land-fund breakdown of the district's 74,969 ha.
+const landStructureIcons = ['🗺️', '🌾', '🌲', '💧', '📦', '🏭'];
+const landStructureValues = ['74,969', '39,869', '6,571', '680', '2,697', '2,450'];
+
+// 2025 results for irrigation networks and green cover.
+const irrigationIcons = ['💧', '🧱', '⛲', '🌱', '🌊'];
+const irrigationValues = ['1,300', '134.9', '38', '2,600', '495.3'];
+
+const ecologyIcons = ['🌿', '🌱', '🏞️', '💦', '🌲'];
+const ecologyValues = ['19', '1.3', '9', '93', '1,371'];
 
 const socialIcons = ['🏫', '🧸', '🏥', '🎓', '🏟️', '🏛️'];
-const socialValues = ['63', '245', '21', '2', '8', '32'];
+const socialValues = ['61', '260', '21', '2', '8', '32'];
 
 
-const businessValues = ['1,117', '254', '1,821'];
+const businessValues = ['1,552', '142', '2,263'];
 
 export default function BekabadDistrictPage() {
   const { t } = useLanguage();
@@ -175,6 +190,9 @@ export default function BekabadDistrictPage() {
         <div className="absolute inset-0 hero-pattern" />
         <div className="container-custom relative z-10">
           <div className="max-w-3xl">
+            <span className="inline-block mb-5 px-4 py-1.5 rounded-full bg-white/10 border border-white/15 text-[#4a9c4e] text-xs font-semibold tracking-wide uppercase">
+              {d.badge}
+            </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
               {d.title}
             </h1>
@@ -344,6 +362,87 @@ export default function BekabadDistrictPage() {
                     <span className="text-gray-400 text-xs">{item.unit}</span>
                   </div>
                   <div className="text-gray-400 text-xs mt-1 leading-tight">{item.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Land structure */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-14 animate-on-scroll">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="section-heading">{d.landStructure.title}</h2>
+            <p className="section-subheading mx-auto">{d.landStructure.subtitle}</p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {d.landStructure.items.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card p-6 text-center border border-gray-100 group hover:border-[#4a9c4e]/30"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="text-3xl mb-3">{landStructureIcons[i]}</div>
+                <CountUp value={landStructureValues[i]} className="block text-2xl font-black text-[#1a2744]" />
+                <div className="text-gray-400 text-[11px] mt-0.5">{item.unit}</div>
+                <div className="text-gray-500 text-xs mt-1 leading-tight">{item.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Irrigation & ecology */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-12 animate-on-scroll">
+            <div className="accent-line mx-auto mb-6" />
+            <h2 className="section-heading">{d.irrigationEcology.title}</h2>
+            <p className="section-subheading mx-auto">{d.irrigationEcology.subtitle}</p>
+          </div>
+
+          <h3 className="text-[#4a9c4e] font-bold uppercase tracking-wide text-sm mb-4 animate-on-scroll">
+            {d.irrigationEcology.irrigationTitle}
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+            {d.irrigationEcology.irrigation.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card flex items-center gap-4 p-5 border border-gray-100"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="text-3xl flex-shrink-0">{irrigationIcons[i]}</div>
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-1 flex-wrap">
+                    <CountUp value={irrigationValues[i]} className="text-2xl font-black text-[#1a2744] leading-none" />
+                    <span className="text-gray-400 text-xs">{item.unit}</span>
+                  </div>
+                  <div className="text-gray-500 text-xs mt-1 leading-tight">{item.label}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-[#4a9c4e] font-bold uppercase tracking-wide text-sm mb-4 animate-on-scroll">
+            {d.irrigationEcology.ecologyTitle}
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {d.irrigationEcology.ecology.map((item, i) => (
+              <div
+                key={i}
+                className="animate-on-scroll card flex items-center gap-4 p-5 border border-gray-100"
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="text-3xl flex-shrink-0">{ecologyIcons[i]}</div>
+                <div className="min-w-0">
+                  <div className="flex items-baseline gap-1 flex-wrap">
+                    <CountUp value={ecologyValues[i]} className="text-2xl font-black text-[#1a2744] leading-none" />
+                    <span className="text-gray-400 text-xs">{item.unit}</span>
+                  </div>
+                  <div className="text-gray-500 text-xs mt-1 leading-tight">{item.label}</div>
                 </div>
               </div>
             ))}
