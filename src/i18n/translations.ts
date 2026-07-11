@@ -144,6 +144,10 @@ export const translations = {
           },
         ],
       },
+      partners: {
+        title: 'Our Partners',
+        subtitle: 'Trusted institutions and companies working with Bekabad',
+      },
       cta: {
         title: 'Ready to Invest in Bekabad?',
         subtitle:
@@ -991,6 +995,10 @@ export const translations = {
           },
         ],
       },
+      partners: {
+        title: 'Hamkorlarimiz',
+        subtitle: "Bekobod bilan ishlayotgan ishonchli tashkilot va kompaniyalar",
+      },
       cta: {
         title: "Bekobodga investitsiya qilishga tayyormisiz?",
         subtitle:
@@ -1789,6 +1797,10 @@ export const translations = {
           },
         ],
       },
+      partners: {
+        title: 'Наши партнёры',
+        subtitle: 'Надёжные организации и компании, работающие с Бекабадом',
+      },
       cta: {
         title: 'Готовы инвестировать в Бекабад?',
         subtitle: 'Присоединяйтесь к инвесторам со всего мира, строящим экономическое будущее Бекабада',
@@ -2585,6 +2597,10 @@ export const translations = {
               '依据乌兹别克斯坦税法典第68章第473条提供符合国际标准的长期法律保障。',
           },
         ],
+      },
+      partners: {
+        title: '我们的合作伙伴',
+        subtitle: '与别卡巴德合作的可信机构和企业',
       },
       cta: {
         title: '准备好投资别卡巴德了吗？',

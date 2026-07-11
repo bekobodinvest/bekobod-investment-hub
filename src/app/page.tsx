@@ -7,6 +7,19 @@ import { useLanguage } from '@/context/LanguageContext';
 import AnimatedCounter from '@/components/AnimatedCounter';
 import HeroMapOverlay from '@/components/HeroMapOverlay';
 import HeroMapMobile from '@/components/HeroMapMobile';
+import { type Partner } from '@/components/PartnersOrbit';
+import PartnersMarquee from '@/components/PartnersMarquee';
+
+// Partners shown in the rotating ring next to the SEZ Bekabad section.
+// To add the 6th partner: drop its logo in /public/partners and add a line here.
+const PARTNERS: Partner[] = [
+  { name: 'Turon Bank', href: 'https://turonbank.uz/uz/', logo: '/partners/turonbank.svg' },
+  { name: 'China Tobacco International (HK)', href: 'https://www.ctihk.com.hk/en/', logo: '/partners/ctihk.svg' },
+  { name: 'Региональный фонд', href: 'https://regfondrb.ru', logo: '/partners/regfond.svg' },
+  { name: 'ПромЦентр', href: 'https://promcenterufa.ru', logo: '/partners/promcenter.jpg' },
+  { name: 'Буринтех', href: 'https://burintekh.ru', logo: '/partners/burintekh.png' },
+  { name: 'Технопарк «Бекабад»', href: 'https://tp-bekobod.uz/', logo: '/partners/tp-bekobod.svg' },
+];
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -183,6 +196,7 @@ export default function HomePage() {
         {/* Full translatable, draggable label overlay (landscape monitors only) */}
         <HeroMapOverlay m={m} />
 
+
         {/* Compact 3-zone labels for the PORTRAIT (9:16) phone video */}
         <HeroMapMobile m={m} />
       </section>
@@ -333,6 +347,17 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* PARTNERS — right→left ticker under the CTA card */}
+      <section className="pb-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8 animate-on-scroll">
+            <h2 className="text-2xl font-bold text-[#1a2744]">{t.home.partners.title}</h2>
+            <div className="accent-line mx-auto mt-3" />
+          </div>
+        </div>
+        <PartnersMarquee partners={PARTNERS} />
       </section>
     </>
   );
