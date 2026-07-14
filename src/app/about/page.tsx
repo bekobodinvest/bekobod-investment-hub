@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -18,6 +18,22 @@ function useScrollAnimation() {
 export default function AboutPage() {
   const { t } = useLanguage();
   useScrollAnimation();
+
+  const newsImages = [
+    '/news/wanyang-1.jpg',
+    '/news/wanyang-2.jpg',
+    '/news/wanyang-3.jpg',
+    '/news/wanyang-4.jpg',
+  ];
+
+  // News photo carousel: one slide at a time, auto-advances every 5s.
+  const [newsIndex, setNewsIndex] = useState(0);
+  const newsCount = newsImages.length;
+  const goNews = (dir: number) => setNewsIndex((i) => (i + dir + newsCount) % newsCount);
+  useEffect(() => {
+    const id = setInterval(() => setNewsIndex((i) => (i + 1) % newsCount), 5000);
+    return () => clearInterval(id);
+  }, [newsIndex, newsCount]);
 
   const permitIcons = [
     // Legal entity registration
@@ -110,6 +126,92 @@ export default function AboutPage() {
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-10 animate-on-scroll">
+            <h2 className="section-heading">{t.about.news.title}</h2>
+            <div className="accent-line mx-auto mt-4" />
+            <p className="text-gray-500 mt-6 max-w-2xl mx-auto">{t.about.news.subtitle}</p>
+          </div>
+        </div>
+
+        {/* Photo carousel — one large slide, side buttons, auto-advance every 5s */}
+        <div className="container-custom">
+          <div className="relative max-w-4xl mx-auto mb-12">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg bg-gray-100">
+              {newsImages.map((src, i) => (
+                <Image
+                  key={i}
+                  src={src}
+                  alt={`${t.about.news.post.title} — ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  priority={i === 0}
+                  className={`object-cover transition-opacity duration-700 ${
+                    i === newsIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+
+              {/* Prev / Next */}
+              <button
+                type="button"
+                onClick={() => goNews(-1)}
+                aria-label="Oldingi"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-[#1a2744] shadow-md transition-colors hover:bg-white"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => goNews(1)}
+                aria-label="Keyingi"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-[#1a2744] shadow-md transition-colors hover:bg-white"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div className="mt-5 flex justify-center gap-2">
+              {newsImages.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setNewsIndex(i)}
+                  aria-label={`Slayd ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === newsIndex ? 'w-7 bg-[#4a9c4e]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Article text */}
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto animate-on-scroll">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#e8f5e9] text-[#4a9c4e] text-xs font-semibold mb-4">
+              {t.about.news.post.date}
+            </span>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-5 leading-snug">
+              {t.about.news.post.title}
+            </h3>
+            <div className="space-y-4">
+              {t.about.news.post.body.map((p, i) => (
+                <p key={i} className="text-gray-600 leading-relaxed">{p}</p>
+              ))}
             </div>
           </div>
         </div>

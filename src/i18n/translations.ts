@@ -225,6 +225,20 @@ export const translations = {
         ],
         note: '"Bekobod Investitsiya Boshqaruv Kompaniyasi" provides investors with administrative support and liaison with authorised state bodies to accelerate project implementation and streamline approval procedures.',
       },
+      news: {
+        title: 'News',
+        subtitle: 'Latest updates from Bekabad Investment Hub',
+        post: {
+          date: 'July 2026',
+          title: 'New investment opportunities discussed in Bekabad district',
+          body: [
+            'To attract promising and high-impact projects to the "Bekabad" Special Economic Zone, international partnership ties are being steadily developed.',
+            'In this context, negotiations were held with representatives of Wanyang Group Industrial Parks — one of China\'s largest industrial-infrastructure operators. During the meeting, a number of promising projects were discussed, aimed at establishing modern production capacities, creating new jobs, and increasing the region\'s export potential.',
+            'The parties reviewed the industrial and logistics potential of Bekabad district, its existing infrastructure, and the favourable conditions created for investors. Preliminary agreements were also reached on establishing mutually beneficial cooperation to implement joint projects in the future.',
+            'These negotiations serve as an important step in attracting foreign direct investment, developing industry, and ensuring the region\'s economic growth.',
+          ],
+        },
+      },
     },
     sez: {
       title: 'Bekabad Special Economic Zone',
@@ -1076,6 +1090,20 @@ export const translations = {
         ],
         note: '"Bekobod Investitsiya Boshqaruv Kompaniyasi" investorlarga vakolatli davlat organlari bilan muloqotda ma\'muriy ko\'mak ko\'rsatadi va loyihalarni tezroq amalga oshirish uchun kelishuv tartiblarini soddalashtiradi.',
       },
+      news: {
+        title: 'Yangiliklar',
+        subtitle: 'Bekobod Investment Hub soʻnggi yangiliklari',
+        post: {
+          date: '2026-yil iyul',
+          title: 'Bekobod tumanida yangi investitsiya imkoniyatlari muhokama qilinmoqda',
+          body: [
+            '"Bekobod" maxsus iqtisodiy zonasiga istiqbolli va yuqori samaradorlikka ega loyihalarni jalb etish maqsadida xalqaro hamkorlik aloqalari izchil rivojlantirilmoqda.',
+            'Shu doirada, Xitoyning yirik sanoat infratuzilmasi operatorlaridan biri — Wanyang Group Industrial Parks kompaniyasi vakillari bilan muzokaralar oʻtkazildi. Uchrashuv davomida hududda zamonaviy ishlab chiqarish quvvatlarini tashkil etish, yangi ish oʻrinlari yaratish hamda eksport salohiyatini oshirishga qaratilgan qator istiqbolli loyihalar muhokama qilindi.',
+            'Tomonlar Bekobod tumani hududining sanoat va logistika imkoniyatlari, mavjud infratuzilma hamda investorlar uchun yaratilgan qulay shart-sharoitlar bilan tanishdi. Shuningdek, kelgusida qoʻshma loyihalarni amalga oshirish yuzasidan oʻzaro manfaatli hamkorlikni yoʻlga qoʻyish boʻyicha dastlabki kelishuvlarga erishildi.',
+            'Ushbu muzokaralar hududga toʻgʻridan-toʻgʻri xorijiy investitsiyalarni jalb qilish, sanoatni rivojlantirish va iqtisodiy oʻsishni taʼminlashda muhim qadam boʻlib xizmat qiladi.',
+          ],
+        },
+      },
     },
     sez: {
       title: 'Bekobod Maxsus Iqtisodiy Zonasi',
@@ -1877,6 +1905,20 @@ export const translations = {
         ],
         note: '«Bekobod Investitsiya Boshqaruv Kompaniyasi» оказывает инвесторам административное сопровождение и содействие во взаимодействии с уполномоченными государственными органами в целях ускорения реализации проектов и оптимизации процедур согласования.',
       },
+      news: {
+        title: 'Новости',
+        subtitle: 'Последние новости Bekabad Investment Hub',
+        post: {
+          date: 'Июль 2026',
+          title: 'В Бекабадском районе обсуждаются новые инвестиционные возможности',
+          body: [
+            'В целях привлечения перспективных и высокоэффективных проектов в специальную экономическую зону «Бекабад» последовательно развиваются международные партнёрские связи.',
+            'В этом контексте были проведены переговоры с представителями компании Wanyang Group Industrial Parks — одного из крупнейших операторов промышленной инфраструктуры Китая. В ходе встречи обсуждён ряд перспективных проектов, направленных на создание современных производственных мощностей, новых рабочих мест и повышение экспортного потенциала региона.',
+            'Стороны ознакомились с промышленными и логистическими возможностями Бекабадского района, существующей инфраструктурой и благоприятными условиями, созданными для инвесторов. Также были достигнуты предварительные договорённости о налаживании взаимовыгодного сотрудничества по реализации совместных проектов в будущем.',
+            'Данные переговоры служат важным шагом в привлечении прямых иностранных инвестиций, развитии промышленности и обеспечении экономического роста региона.',
+          ],
+        },
+      },
     },
     sez: {
       title: 'Специальная экономическая зона Бекабад',
@@ -2665,6 +2707,20 @@ export const translations = {
           { title: '签证及工作许可支持', description: '为外籍专家办理工作许可证及移民文件（如需）' },
         ],
         note: '"Bekobod Investitsiya Boshqaruv Kompaniyasi"为投资者提供行政协助，并协调与授权国家机构的沟通，以加快项目实施并优化审批程序。',
+      },
+      news: {
+        title: '新闻',
+        subtitle: '别卡巴德投资中心最新动态',
+        post: {
+          date: '2026年7月',
+          title: '别卡巴德区商讨新的投资机遇',
+          body: [
+            '为吸引具有前景和高效益的项目入驻"别卡巴德"经济特区，国际合作关系正在稳步发展。',
+            '在此背景下，与中国大型工业基础设施运营商之一——万洋集团工业园（Wanyang Group Industrial Parks）的代表举行了会谈。会晤期间，双方讨论了一系列旨在建设现代化生产能力、创造新就业岗位以及提升地区出口潜力的前景项目。',
+            '双方了解了别卡巴德区的工业和物流潜力、现有基础设施以及为投资者创造的有利条件。此外，双方还就未来实施合作项目、建立互利合作达成了初步共识。',
+            '此次会谈是吸引外国直接投资、发展工业和保障地区经济增长的重要一步。',
+          ],
+        },
       },
     },
     sez: {
