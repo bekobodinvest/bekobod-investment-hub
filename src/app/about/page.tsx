@@ -210,7 +210,7 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-4">
               {t.about.news.post.body.map((p, i) => (
-                <p key={i} className="text-gray-600 leading-relaxed">{p}</p>
+                <p key={i} className="text-gray-600 leading-relaxed text-justify">{p}</p>
               ))}
             </div>
           </div>
