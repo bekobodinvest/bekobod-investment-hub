@@ -41,7 +41,7 @@ export default function Footer() {
                 <div className="text-[#4a9c4e] font-semibold text-sm">INVESTMENT HUB</div>
               </div>
             </Link>
-            <p className="text-sm text-gray-400 leading-relaxed mb-5 text-justify">{t.footer.description}</p>
+            <p className="text-sm text-gray-400 leading-relaxed mb-5 text-justify indent-8">{t.footer.description}</p>
             <a
               href="https://t.me/Bekobodtumanihokimligi"
               target="_blank"
@@ -101,7 +101,7 @@ export default function Footer() {
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-5">
               {t.footer.legal}
             </h4>
-            <p className="text-xs text-gray-500 leading-relaxed mb-5 text-justify">{t.footer.legalBasis}</p>
+            <p className="text-xs text-gray-500 leading-relaxed mb-5 text-justify indent-8">{t.footer.legalBasis}</p>
             <a
               href="https://e-auksion.uz/lots?group=6&index=1&page=1&address=&lt=0&at=0&order=0&q=&hashtag=&region=2&area=19"
               target="_blank"

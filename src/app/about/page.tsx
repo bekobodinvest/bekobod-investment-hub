@@ -76,7 +76,7 @@ export default function AboutPage() {
               {t.about.title}
             </h1>
             <p className="text-xl text-[#4a9c4e] font-medium mb-4">{t.about.subtitle}</p>
-            <p className="text-gray-300 text-lg leading-relaxed text-justify">{t.about.hero.description}</p>
+            <p className="text-gray-300 text-lg leading-relaxed text-justify indent-8">{t.about.hero.description}</p>
           </div>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <div className="text-[#4a9c4e] text-xs font-medium">{t.about.company.authority}</div>
                 </div>
               </div>
-              <p className="text-gray-600 leading-relaxed text-lg text-justify">{t.about.company.description}</p>
+              <p className="text-gray-600 leading-relaxed text-lg text-justify indent-8">{t.about.company.description}</p>
             </div>
 
             <div className="animate-on-scroll">
@@ -210,7 +210,7 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-4">
               {t.about.news.post.body.map((p, i) => (
-                <p key={i} className="text-gray-600 leading-relaxed text-justify">{p}</p>
+                <p key={i} className="text-gray-600 leading-relaxed text-justify indent-8">{p}</p>
               ))}
             </div>
           </div>
@@ -246,7 +246,7 @@ export default function AboutPage() {
                   <svg className="w-10 h-10 text-[#4a9c4e]/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-gray-600 leading-relaxed text-lg italic text-justify">{t.about.director.message}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg italic text-justify indent-8">{t.about.director.message}</p>
                 </div>
               </div>
             </div>
@@ -266,7 +266,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">{t.about.mission.title}</h3>
-              <p className="text-gray-300 leading-relaxed text-justify">{t.about.mission.description}</p>
+              <p className="text-gray-300 leading-relaxed text-justify indent-8">{t.about.mission.description}</p>
             </div>
 
             {/* Vision */}
@@ -277,7 +277,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-[#1a2744] mb-4">{t.about.vision.title}</h3>
-              <p className="text-gray-600 leading-relaxed text-justify">{t.about.vision.description}</p>
+              <p className="text-gray-600 leading-relaxed text-justify indent-8">{t.about.vision.description}</p>
             </div>
           </div>
         </div>
@@ -304,7 +304,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1a2744] mb-1 text-sm leading-snug">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed text-justify">{item.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed text-justify indent-8">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -316,7 +316,7 @@ export default function AboutPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <p className="text-gray-300 leading-relaxed text-sm md:text-base text-justify">{t.about.permits.note}</p>
+            <p className="text-gray-300 leading-relaxed text-sm md:text-base text-justify indent-8">{t.about.permits.note}</p>
           </div>
         </div>
       </section>
