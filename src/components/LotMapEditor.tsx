@@ -194,7 +194,7 @@ export default function LotMapEditor() {
               Copy points
             </button>
           </div>
-          <p className="text-[11px] text-gray-400 mt-3 leading-relaxed">
+          <p className="text-[11px] text-gray-400 mt-3 leading-relaxed text-justify">
             Double-click a lot to add a point on the nearest edge. Shift-click (or
             right-click) a point to delete it.
           </p>
@@ -228,7 +228,7 @@ export default function LotMapEditor() {
               Сброс
             </button>
           </div>
-          <p className="text-[11px] text-amber-700 leading-relaxed">
+          <p className="text-[11px] text-amber-700 leading-relaxed text-justify">
             Подгоните все лоты ползунками, нажмите «Применить» — затем правьте отдельные лоты как обычно.
           </p>
         </div>

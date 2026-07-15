@@ -35,7 +35,7 @@ export default function OybekFTZPage() {
                 {t.oybek.title}
               </h1>
               <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.oybek.subtitle}</p>
-              <p className="text-gray-300 leading-relaxed text-lg">{t.oybek.overview.description}</p>
+              <p className="text-gray-300 leading-relaxed text-lg text-justify">{t.oybek.overview.description}</p>
             </div>
             <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden">
               <Image
@@ -96,10 +96,10 @@ export default function OybekFTZPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a2744] mb-6">
                 {t.oybek.overview.title}
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              <p className="text-gray-600 leading-relaxed text-lg mb-6 text-justify">
                 {t.oybek.overview.description}
               </p>
-              <p className="text-gray-600 leading-relaxed">{t.oybek.location.description}</p>
+              <p className="text-gray-600 leading-relaxed text-justify">{t.oybek.location.description}</p>
 
               <div className="mt-8 p-5 bg-[#e8f5e9] rounded-[2rem] border border-[#4a9c4e]/20">
                 <div className="flex items-start gap-3">
@@ -138,7 +138,7 @@ export default function OybekFTZPage() {
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2 group-hover:text-[#4a9c4e] transition-colors">
                   {facility.name}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{facility.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{facility.description}</p>
               </div>
             ))}
           </div>

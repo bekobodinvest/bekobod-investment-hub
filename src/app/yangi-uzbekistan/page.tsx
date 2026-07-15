@@ -48,7 +48,7 @@ export default function YangiUzbekistanPage() {
                 {t.yangi.title}
               </h1>
               <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.yangi.subtitle}</p>
-              <p className="text-gray-300 leading-relaxed text-lg">{t.yangi.overview.description}</p>
+              <p className="text-gray-300 leading-relaxed text-lg text-justify">{t.yangi.overview.description}</p>
             </div>
             <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden bg-[#1a2744] [transform:translateZ(0)]">
               <Image
@@ -124,12 +124,12 @@ export default function YangiUzbekistanPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a2744] mb-6">
                 {t.yangi.overview.title}
               </h2>
-              <p className="text-gray-600 leading-relaxed text-lg mb-6">
+              <p className="text-gray-600 leading-relaxed text-lg mb-6 text-justify">
                 {t.yangi.overview.description}
               </p>
               <div className="p-6 bg-gradient-to-br from-[#1a2744] to-[#243660] rounded-[2rem]">
                 <div className="text-[#4a9c4e] font-semibold text-sm mb-2">{t.yangi.minuteCityLabel}</div>
-                <p className="text-gray-300 text-sm leading-relaxed">{t.yangi.concept.description}</p>
+                <p className="text-gray-300 text-sm leading-relaxed text-justify">{t.yangi.concept.description}</p>
               </div>
             </div>
 
@@ -203,7 +203,7 @@ export default function YangiUzbekistanPage() {
               >
                 <div className="text-5xl mb-5">{icon}</div>
                 <h3 className="font-bold text-[#1a2744] text-xl mb-3">{t.yangi.highlights[i].title}</h3>
-                <p className="text-gray-500 leading-relaxed">{t.yangi.highlights[i].description}</p>
+                <p className="text-gray-500 leading-relaxed text-justify">{t.yangi.highlights[i].description}</p>
               </div>
             ))}
           </div>

@@ -111,7 +111,7 @@ function ProjectCard({
           {subtitle}
         </div>
         <h3 className="text-xl font-bold text-[#1a2744] mb-3">{title}</h3>
-        <p className="text-gray-500 text-sm leading-relaxed mb-5">{description}</p>
+        <p className="text-gray-500 text-sm leading-relaxed mb-5 text-justify">{description}</p>
 
         {/* Mini stats */}
         <div className="grid grid-cols-3 gap-3 mb-5 py-4 border-t border-b border-gray-100">
@@ -290,7 +290,7 @@ export default function HomePage() {
                   ][i]}
                 </div>
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2">{reason.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{reason.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{reason.description}</p>
               </div>
             ))}
           </div>

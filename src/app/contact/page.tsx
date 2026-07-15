@@ -120,7 +120,7 @@ export default function ContactPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-white text-lg mb-2">{t.contact.eauction.title}</h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-5">
+                <p className="text-gray-300 text-sm leading-relaxed mb-5 text-justify">
                   {t.contact.eauction.description}
                 </p>
                 <a

@@ -197,7 +197,7 @@ export default function BekabadDistrictPage() {
               {d.title}
             </h1>
             <p className="text-xl text-[#4a9c4e] font-medium mb-6">{d.subtitle}</p>
-            <p className="text-gray-300 leading-relaxed text-lg">{d.overview.description}</p>
+            <p className="text-gray-300 leading-relaxed text-lg text-justify">{d.overview.description}</p>
           </div>
         </div>
       </section>
@@ -245,7 +245,7 @@ export default function BekabadDistrictPage() {
                   <span className="text-gray-500 text-sm font-medium">{d.economy.unit}</span>
                   <CountUp value={economyValues[i].growth} className="ml-auto text-[#4a9c4e] font-bold text-sm" />
                 </div>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.note}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{item.note}</p>
               </div>
             ))}
           </div>

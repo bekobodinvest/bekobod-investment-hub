@@ -104,7 +104,7 @@ export default function SEZPage() {
                 {t.sez.title}
               </h1>
               <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.sez.subtitle}</p>
-              <p className="text-gray-300 leading-relaxed text-lg">{t.sez.overview.description}</p>
+              <p className="text-gray-300 leading-relaxed text-lg text-justify">{t.sez.overview.description}</p>
             </div>
             <div className="relative h-72 lg:h-96 rounded-t-2xl overflow-hidden">
               <Image
@@ -235,7 +235,7 @@ export default function SEZPage() {
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2 group-hover:text-[#4a9c4e] transition-colors">
                   {sector.name}
                 </h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{sector.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{sector.description}</p>
                 {sectorStats[i] && (
                   <p className="mt-3 text-xs font-medium text-gray-400">
                     {sectorStats[i].count} {t.sez.clustersMap.lotsLabel} · {sectorStats[i].ga.toFixed(1)} {t.sez.clustersMap.areaUnit}
@@ -263,10 +263,10 @@ export default function SEZPage() {
                 <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
                   {t.sez.technopark.title}
                 </h2>
-                <p className="text-gray-300 leading-relaxed text-lg mb-4">
+                <p className="text-gray-300 leading-relaxed text-lg mb-4 text-justify">
                   {t.sez.technopark.description}
                 </p>
-                <p className="text-gray-300 leading-relaxed text-lg mb-8">
+                <p className="text-gray-300 leading-relaxed text-lg mb-8 text-justify">
                   {t.sez.technopark.descriptionSecond.before}
                   <a
                     href="https://tp-bekobod.uz"

@@ -95,7 +95,7 @@ export default function IncentivesPage() {
               {t.incentives.title}
             </h1>
             <p className="text-xl text-[#4a9c4e] font-medium mb-6">{t.incentives.subtitle}</p>
-            <p className="text-gray-300 leading-relaxed text-lg">{t.incentives.overview.description}</p>
+            <p className="text-gray-300 leading-relaxed text-lg text-justify">{t.incentives.overview.description}</p>
           </div>
         </div>
       </section>
@@ -148,7 +148,7 @@ export default function IncentivesPage() {
               <div>
                 <h3 className="text-xl font-bold mb-1">{t.incentives.property.title}</h3>
                 <p className="text-[#4a9c4e] text-sm font-medium mb-2">{t.incentives.property.subtitle}</p>
-                <p className="text-gray-300 leading-relaxed">{t.incentives.property.note}</p>
+                <p className="text-gray-300 leading-relaxed text-justify">{t.incentives.property.note}</p>
               </div>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function IncentivesPage() {
               <div>
                 <h3 className="text-xl font-bold mb-1">{t.incentives.water.title}</h3>
                 <p className="text-[#4a9c4e] text-sm font-medium mb-2">{t.incentives.water.subtitle}</p>
-                <p className="text-gray-300 leading-relaxed">{t.incentives.water.note}</p>
+                <p className="text-gray-300 leading-relaxed text-justify">{t.incentives.water.note}</p>
               </div>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function IncentivesPage() {
                   </svg>
                 </div>
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{item.description}</p>
               </div>
             ))}
           </div>
@@ -223,7 +223,7 @@ export default function IncentivesPage() {
                   <div>
                     <h3 className="font-bold text-[#1a2744] text-lg mb-1">{item.title}</h3>
                     <div className="text-[#4a9c4e] text-sm font-semibold mb-3">{item.detail}</div>
-                    <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-gray-500 text-sm leading-relaxed text-justify">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -251,7 +251,7 @@ export default function IncentivesPage() {
                   {additionalIcons[i]}
                 </div>
                 <h3 className="font-bold text-[#1a2744] text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed text-justify">{item.description}</p>
               </div>
             ))}
           </div>

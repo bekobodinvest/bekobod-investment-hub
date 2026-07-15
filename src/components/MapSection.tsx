@@ -47,7 +47,7 @@ export default function MapSection({
             </svg>
             <h3 className="text-white font-bold text-xl">{title}</h3>
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed mb-8">{description}</p>
+          <p className="text-gray-400 text-sm leading-relaxed mb-8 text-justify">{description}</p>
 
           <div className="flex flex-wrap gap-3">
             <a

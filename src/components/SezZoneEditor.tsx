@@ -163,7 +163,7 @@ export default function SezZoneEditor() {
               Reset all
             </button>
           </div>
-          <p className="text-[11px] text-gray-400 mt-3 leading-relaxed">
+          <p className="text-[11px] text-gray-400 mt-3 leading-relaxed text-justify">
             Double-click a zone to add a vertex on the nearest edge. Shift-click
             (or right-click) a vertex to delete it. Drag the zone body to move
             it as a whole.
