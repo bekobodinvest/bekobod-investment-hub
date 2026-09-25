@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -18,6 +18,22 @@ function useScrollAnimation() {
 export default function AboutPage() {
   const { t } = useLanguage();
   useScrollAnimation();
+
+  const newsImages = [
+    '/news/wanyang-1.jpg',
+    '/news/wanyang-2.jpg',
+    '/news/wanyang-3.jpg',
+    '/news/wanyang-4.jpg',
+  ];
+
+  // News photo carousel: one slide at a time, auto-advances every 5s.
+  const [newsIndex, setNewsIndex] = useState(0);
+  const newsCount = newsImages.length;
+  const goNews = (dir: number) => setNewsIndex((i) => (i + dir + newsCount) % newsCount);
+  useEffect(() => {
+    const id = setInterval(() => setNewsIndex((i) => (i + 1) % newsCount), 5000);
+    return () => clearInterval(id);
+  }, [newsIndex, newsCount]);
 
   const permitIcons = [
     // Legal entity registration
@@ -60,7 +76,7 @@ export default function AboutPage() {
               {t.about.title}
             </h1>
             <p className="text-xl text-[#4a9c4e] font-medium mb-4">{t.about.subtitle}</p>
-            <p className="text-gray-300 text-lg leading-relaxed">{t.about.hero.description}</p>
+            <p className="text-gray-300 text-lg leading-relaxed text-justify indent-8">{t.about.hero.description}</p>
           </div>
         </div>
       </section>
@@ -85,7 +101,7 @@ export default function AboutPage() {
                   <div className="text-[#4a9c4e] text-xs font-medium">{t.about.company.authority}</div>
                 </div>
               </div>
-              <p className="text-gray-600 leading-relaxed text-lg">{t.about.company.description}</p>
+              <p className="text-gray-600 leading-relaxed text-lg text-justify indent-8">{t.about.company.description}</p>
             </div>
 
             <div className="animate-on-scroll">
@@ -111,6 +127,117 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* News */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-10 animate-on-scroll">
+            <h2 className="section-heading">{t.about.news.title}</h2>
+            <div className="accent-line mx-auto mt-4" />
+            <p className="text-gray-500 mt-6 max-w-2xl mx-auto">{t.about.news.subtitle}</p>
+          </div>
+        </div>
+
+        {/* Photo carousel — one large slide, side buttons, auto-advance every 5s */}
+        <div className="container-custom">
+          <div className="relative max-w-4xl mx-auto mb-12">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-2xl shadow-lg bg-gray-100">
+              {newsImages.map((src, i) => (
+                <Image
+                  key={i}
+                  src={src}
+                  alt={`${t.about.news.post.title} — ${i + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 900px"
+                  priority={i === 0}
+                  className={`object-cover transition-opacity duration-700 ${
+                    i === newsIndex ? 'opacity-100' : 'opacity-0'
+                  }`}
+                />
+              ))}
+
+              {/* Prev / Next */}
+              <button
+                type="button"
+                onClick={() => goNews(-1)}
+                aria-label="Oldingi"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-[#1a2744] shadow-md transition-colors hover:bg-white"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => goNews(1)}
+                aria-label="Keyingi"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-10 flex h-11 w-11 items-center justify-center rounded-full bg-white/85 text-[#1a2744] shadow-md transition-colors hover:bg-white"
+              >
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
+
+            {/* Dots */}
+            <div className="mt-5 flex justify-center gap-2">
+              {newsImages.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setNewsIndex(i)}
+                  aria-label={`Slayd ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${
+                    i === newsIndex ? 'w-7 bg-[#4a9c4e]' : 'w-2 bg-gray-300 hover:bg-gray-400'
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Article text */}
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto animate-on-scroll">
+            <span className="inline-block px-3 py-1 rounded-full bg-[#e8f5e9] text-[#4a9c4e] text-xs font-semibold mb-4">
+              {t.about.news.post.date}
+            </span>
+            <h3 className="text-2xl md:text-3xl font-bold text-[#1a2744] mb-5 leading-snug">
+              {t.about.news.post.title}
+            </h3>
+            <div className="space-y-4">
+              {t.about.news.post.body.map((p, i) => (
+                <p key={i} className="text-gray-600 leading-relaxed text-justify indent-8">{p}</p>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-2xl border-l-4 border-[#4a9c4e] bg-[#f4f9f4] p-6 md:p-8">
+              <h4 className="text-lg md:text-xl font-bold text-[#c0392b] mb-4 uppercase tracking-wide">
+                {t.about.news.post.pdf.title}
+              </h4>
+              <p className="text-[#1a2744] font-semibold leading-relaxed mb-3">
+                {t.about.news.post.pdf.project}
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-3 text-justify">
+                {t.about.news.post.pdf.desc}
+              </p>
+              <p className="text-gray-600 leading-relaxed text-justify">
+                {t.about.news.post.pdf.req}
+              </p>
+            </div>
+
+            <a
+              href={t.about.news.post.pdf.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-8 px-6 py-3 rounded-full bg-[#4a9c4e] text-white font-semibold hover:bg-[#3d8341] transition-colors"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              {t.about.news.post.pdf.label}
+            </a>
           </div>
         </div>
       </section>
@@ -144,7 +271,7 @@ export default function AboutPage() {
                   <svg className="w-10 h-10 text-[#4a9c4e]/30 mb-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
-                  <p className="text-gray-600 leading-relaxed text-lg italic">{t.about.director.message}</p>
+                  <p className="text-gray-600 leading-relaxed text-lg italic text-justify indent-8">{t.about.director.message}</p>
                 </div>
               </div>
             </div>
@@ -164,7 +291,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">{t.about.mission.title}</h3>
-              <p className="text-gray-300 leading-relaxed">{t.about.mission.description}</p>
+              <p className="text-gray-300 leading-relaxed text-justify indent-8">{t.about.mission.description}</p>
             </div>
 
             {/* Vision */}
@@ -175,7 +302,7 @@ export default function AboutPage() {
                 </svg>
               </div>
               <h3 className="text-2xl font-bold text-[#1a2744] mb-4">{t.about.vision.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{t.about.vision.description}</p>
+              <p className="text-gray-600 leading-relaxed text-justify indent-8">{t.about.vision.description}</p>
             </div>
           </div>
         </div>
@@ -202,7 +329,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[#1a2744] mb-1 text-sm leading-snug">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.description}</p>
+                  <p className="text-gray-500 text-sm leading-relaxed text-justify indent-8">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -214,7 +341,7 @@ export default function AboutPage() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
             </div>
-            <p className="text-gray-300 leading-relaxed text-sm md:text-base">{t.about.permits.note}</p>
+            <p className="text-gray-300 leading-relaxed text-sm md:text-base text-justify indent-8">{t.about.permits.note}</p>
           </div>
         </div>
       </section>
