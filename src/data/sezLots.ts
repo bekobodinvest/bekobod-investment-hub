@@ -13,7 +13,10 @@ export interface SezLot {
   points: [number, number][];
 }
 
-// LOT1..LOT120 areas in GA — straight from the LOTLAR TASNIFI table.
+// LOT1..LOT135 areas in GA.
+// LOT1..LOT110 — other clusters, straight from the LOTLAR TASNIFI table.
+// LOT111..LOT135 — Metallurgy general plan (25 lots, reference master plan):
+//   LOT111 = recreational zone; LOT112..LOT135 = production lots. Total 85.2 GA.
 const AREAS: number[] = [
   1.52, 1.51, 1.66, 1.71, 2.23, 1.18, 1.3,  1.36, 1.33, 1.3,
   1.48, 1.21, 1.22, 0.58, 0.77, 1.71, 1.72, 1.64, 1.71, 1.72,
@@ -26,7 +29,9 @@ const AREAS: number[] = [
   1.46, 1.68, 0.57, 2.57, 1.78, 1.43, 1,    1.75, 1.08, 2.29,
   1.86, 1.25, 1.51, 1.2,  1.56, 2,    1.19, 1.33, 1.93, 1.24,
   1.24, 1.25, 1.15, 1.9,  1.33, 1.32, 1.5,  1.41, 1.12, 50,
-  0.5,  0.49, 0.47, 0.46, 0.42, 0.38, 0.44, 0.38, 0.32, 100,
+  5.0,  1.4,  3.6,  3.8,  3.8,  3.8,  3.8,  1.7,  3.3,  2.5,
+  3.3,  3.3,  3.3,  3.3,  2.4,  3.3,  8.4,  2.4,  3.4,  2.4,
+  3.6,  3.5,  3.5,  3.4,  3.0,
 ];
 
 type LotEntry = { zone: SezZoneId; points: [number, number][] };
@@ -50,8 +55,8 @@ export const SEZ_LOTS_TOTAL_GA = AREAS.reduce((s, v) => s + v, 0);
 
 // Pricing (USD per hectare), 10-year installment terms.
 // Land itself + agricultural-land conversion compensation ("yer nobudgarchiligi").
-export const SEZ_LAND_USD_PER_GA = 7000;
-export const SEZ_LOSS_USD_PER_GA = 76000;
+export const SEZ_LAND_USD_PER_GA = 7742;
+export const SEZ_LOSS_USD_PER_GA = 152884;
 export const SEZ_INSTALLMENT_YEARS = 10;
 
 export function lotPrice(areaGa: number) {

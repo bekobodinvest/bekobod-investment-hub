@@ -17,7 +17,7 @@ auctions (e-auctions) and win land-lease rights in Bekabad.
 
 ## Bekabad Special Economic Zone (SEZ)
 - 397 hectares of prime industrial land.
-- 120 investment lots available.
+- 135 investment lots available.
 - 8 strategic sectors: metallurgy, pharmaceuticals, machinery, building
   materials, logistics & warehousing, food industry, energy, textiles.
 - Land-lease rights are allocated through a fully transparent electronic

@@ -126,8 +126,9 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
                 points={l.points.map((p) => p.join(',')).join(' ')}
                 fill={zone.color}
                 fillOpacity={active ? 0.75 : 0.4}
-                stroke={isSel ? '#ffffff' : zone.color}
-                strokeWidth={active ? 0.6 : 0.3}
+                stroke="#ffffff"
+                strokeOpacity={isSel ? 1 : active ? 0.9 : 0.6}
+                strokeWidth={active ? 0.6 : 0.35}
                 vectorEffect="non-scaling-stroke"
                 style={{ cursor: 'pointer' }}
                 onPointerEnter={() => setHover(l.id)}

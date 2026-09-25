@@ -14,6 +14,8 @@ const clamp = (n: number) => Math.max(0, Math.min(100, n));
 
 export default function SezLotEditor() {
   const boxRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [zoom, setZoom] = useState(1);
 
   const initial = useMemo<Data>(() => {
     const d: Data = {};
@@ -75,6 +77,30 @@ export default function SezLotEditor() {
   const endDrag = useCallback(() => {
     drag.current = null;
   }, []);
+
+  // Center the scroll viewport on a lot's centroid at the current zoom.
+  const centerOnLot = useCallback((key: string) => {
+    const wrap = scrollRef.current;
+    const box = boxRef.current;
+    const pts = data[key]?.points;
+    if (!wrap || !box || !pts || !pts.length) return;
+    const cx = pts.reduce((s, p) => s + p[0], 0) / pts.length;
+    const cy = pts.reduce((s, p) => s + p[1], 0) / pts.length;
+    requestAnimationFrame(() => {
+      const bw = box.clientWidth;
+      const bh = box.clientHeight;
+      wrap.scrollTo({
+        left: (cx / 100) * bw - wrap.clientWidth / 2,
+        top: (cy / 100) * bh - wrap.clientHeight / 2,
+        behavior: 'smooth',
+      });
+    });
+  }, [data]);
+
+  const fitSelected = useCallback(() => {
+    setZoom(3.5);
+    requestAnimationFrame(() => centerOnLot(selected));
+  }, [selected, centerOnLot]);
 
   const addVertexNear = useCallback((key: string, p: Pt) => {
     setData((prev) => {
@@ -233,7 +259,7 @@ export default function SezLotEditor() {
             ? '✓ Saqlandi'
             : saveState === 'err'
             ? '✕ Хатолик'
-            : '120 лотни сақлаш'}
+            : `${SEZ_LOTS.length} лотни сақлаш`}
         </button>
 
         {/* Toggle: big cluster overlays */}
@@ -318,20 +344,59 @@ export default function SezLotEditor() {
       </aside>
 
       {/* Canvas */}
-      <div
-        ref={boxRef}
-        className="relative w-full lg:self-start overflow-hidden rounded-2xl shadow-2xl bg-[#1a2744] select-none touch-none"
-        onPointerMove={onMove}
-        onPointerUp={endDrag}
-        onPointerLeave={endDrag}
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={IMAGE}
-          alt="Bekabad SEZ"
-          className="block w-full h-auto pointer-events-none"
-          draggable={false}
-        />
+      <div className="w-full lg:self-start">
+        {/* Zoom controls */}
+        <div className="flex items-center gap-2 mb-2">
+          <button
+            onClick={() => setZoom((z) => Math.max(1, Math.round((z - 0.5) * 10) / 10))}
+            className="w-9 h-9 rounded-lg border border-gray-200 bg-white text-lg leading-none hover:bg-gray-50"
+            aria-label="Zoom out"
+          >
+            −
+          </button>
+          <span className="text-xs text-gray-500 w-12 text-center tabular-nums">
+            {Math.round(zoom * 100)}%
+          </span>
+          <button
+            onClick={() => setZoom((z) => Math.min(8, Math.round((z + 0.5) * 10) / 10))}
+            className="w-9 h-9 rounded-lg border border-gray-200 bg-white text-lg leading-none hover:bg-gray-50"
+            aria-label="Zoom in"
+          >
+            +
+          </button>
+          <button
+            onClick={() => setZoom(1)}
+            className="text-xs px-3 h-9 rounded-lg border border-gray-200 bg-white hover:bg-gray-50"
+          >
+            100%
+          </button>
+          <button
+            onClick={fitSelected}
+            className="text-xs px-3 h-9 rounded-lg border border-gray-200 bg-white hover:bg-gray-50 ml-auto"
+          >
+            ⤢ {selected} га
+          </button>
+        </div>
+
+        <div
+          ref={scrollRef}
+          className="relative w-full overflow-auto rounded-2xl shadow-2xl bg-[#1a2744] max-h-[78vh]"
+        >
+          <div
+            ref={boxRef}
+            className="relative select-none touch-none"
+            style={{ width: `${zoom * 100}%` }}
+            onPointerMove={onMove}
+            onPointerUp={endDrag}
+            onPointerLeave={endDrag}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={IMAGE}
+              alt="Bekabad SEZ"
+              className="block w-full h-auto pointer-events-none"
+              draggable={false}
+            />
 
         <svg
           className="absolute inset-0 w-full h-full"
@@ -430,6 +495,8 @@ export default function SezLotEditor() {
             />
           ))}
         </svg>
+          </div>
+        </div>
       </div>
     </div>
   );
