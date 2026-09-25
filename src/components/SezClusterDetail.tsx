@@ -120,12 +120,13 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
             const isHov = hover === l.id;
             const isSel = selected === l.id;
             const active = isHov || isSel;
+            const sold = l.status === 'sold';
             return (
               <polygon
                 key={l.id}
                 points={l.points.map((p) => p.join(',')).join(' ')}
-                fill={zone.color}
-                fillOpacity={active ? 0.75 : 0.4}
+                fill={sold ? '#374151' : zone.color}
+                fillOpacity={sold ? (active ? 0.82 : 0.68) : active ? 0.75 : 0.4}
                 stroke="#ffffff"
                 strokeOpacity={isSel ? 1 : active ? 0.9 : 0.6}
                 strokeWidth={active ? 0.6 : 0.35}
@@ -142,6 +143,20 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
           })}
         </svg>
 
+        {/* Persistent "sold" badges */}
+        {lots.filter((l) => l.status === 'sold').map((l) => {
+          const [cx, cy] = centroid(l.points);
+          return (
+            <div
+              key={l.id}
+              className="absolute z-[5] -translate-x-1/2 -translate-y-1/2 pointer-events-none whitespace-nowrap rounded-md bg-[#374151]/90 text-white text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 shadow"
+              style={{ left: `${posX(cx)}%`, top: `${posY(cy)}%` }}
+            >
+              {td.sold}
+            </div>
+          );
+        })}
+
         {/* Hover tooltip */}
         {hover && hover !== selected && (() => {
           const l = lots.find((x) => x.id === hover)!;
@@ -154,7 +169,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
             >
               <div className="text-sm font-bold">{td.lot} {l.id.replace('LOT', '№')}</div>
               <div className="text-[11px] text-gray-300">
-                {l.areaGa} {areaUnit} · {usd(total)}
+                {l.areaGa} {areaUnit} · {l.status === 'sold' ? td.sold : usd(total)}
               </div>
             </div>
           );
@@ -175,7 +190,7 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="px-4 py-3 flex items-center gap-2" style={{ background: zone.color }}>
+              <div className="px-4 py-3 flex items-center gap-2" style={{ background: selLot.status === 'sold' ? '#374151' : zone.color }}>
                 <span className="text-white font-bold text-sm">
                   {td.lot} {selLot.id.replace('LOT', '№')}
                 </span>
@@ -190,32 +205,40 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
               </div>
               <div className="p-4 space-y-2 text-sm">
                 <Row label={td.area} value={`${selLot.areaGa} ${areaUnit}`} />
-                <PriceRow
-                  label={td.landCost}
-                  rate={`$${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
-                  value={usd(price.land)}
-                />
-                <div>
-                  <PriceRow
-                    label={td.lossFee}
-                    rate={`$${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
-                    value={usd(price.loss)}
-                  />
-                  <div className="text-[11px] text-gray-400 text-right mt-0.5">
-                    {usd(Math.round(price.loss / SEZ_INSTALLMENT_YEARS))} {td.perYear} × {SEZ_INSTALLMENT_YEARS}
+                {selLot.status === 'sold' ? (
+                  <div className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-gray-100 text-gray-600 font-semibold py-2 uppercase tracking-wide text-xs">
+                    <span aria-hidden>●</span> {td.sold}
                   </div>
-                </div>
-                <div className="border-t border-gray-100 pt-2 flex items-center justify-between">
-                  <span className="font-semibold text-[#1a2744]">{td.total}</span>
-                  <span className="font-bold text-[#1a2744]">{usd(price.total)}</span>
-                </div>
-                <div className="text-[11px] text-gray-400">{td.installment}</div>
-                <a
-                  href="#"
-                  className="mt-2 block text-center rounded-lg bg-[#4a9c4e] hover:bg-[#3d8540] text-white font-semibold py-2 transition-colors"
-                >
-                  {td.auction}
-                </a>
+                ) : (
+                  <>
+                    <PriceRow
+                      label={td.landCost}
+                      rate={`$${SEZ_LAND_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
+                      value={usd(price.land)}
+                    />
+                    <div>
+                      <PriceRow
+                        label={td.lossFee}
+                        rate={`$${SEZ_LOSS_USD_PER_GA.toLocaleString('en-US')}/${areaUnit}`}
+                        value={usd(price.loss)}
+                      />
+                      <div className="text-[11px] text-gray-400 text-right mt-0.5">
+                        {usd(Math.round(price.loss / SEZ_INSTALLMENT_YEARS))} {td.perYear} × {SEZ_INSTALLMENT_YEARS}
+                      </div>
+                    </div>
+                    <div className="border-t border-gray-100 pt-2 flex items-center justify-between">
+                      <span className="font-semibold text-[#1a2744]">{td.total}</span>
+                      <span className="font-bold text-[#1a2744]">{usd(price.total)}</span>
+                    </div>
+                    <div className="text-[11px] text-gray-400">{td.installment}</div>
+                    <a
+                      href="#"
+                      className="mt-2 block text-center rounded-lg bg-[#4a9c4e] hover:bg-[#3d8540] text-white font-semibold py-2 transition-colors"
+                    >
+                      {td.auction}
+                    </a>
+                  </>
+                )}
               </div>
             </div>
           );

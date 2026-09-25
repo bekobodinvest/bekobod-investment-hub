@@ -345,6 +345,7 @@ export const translations = {
         installment: 'Up to 10-year installments',
         perYear: 'per year',
         auction: 'To auction',
+        sold: 'Sold',
         hint: 'Hover a lot for its number, area and price. Click for details.',
       },
       technopark: {
@@ -1194,6 +1195,7 @@ export const translations = {
         installment: '10 yilgacha bo‘lib to‘lash',
         perYear: 'yiliga',
         auction: 'Auksionga',
+        sold: 'Sotilgan',
         hint: 'Lot ustiga olib boring — raqami, maydoni va narxi. Batafsil uchun bosing.',
       },
       technopark: {
@@ -2017,6 +2019,7 @@ export const translations = {
         installment: 'Рассрочка до 10 лет',
         perYear: 'в год',
         auction: 'На аукцион',
+        sold: 'Продан',
         hint: 'Наведите на лот — номер, площадь и цена. Нажмите — подробности.',
       },
       technopark: {
@@ -2828,6 +2831,7 @@ export const translations = {
         installment: '最长10年分期付款',
         perYear: '每年',
         auction: '前往拍卖',
+        sold: '已售',
         hint: '将鼠标悬停在地块上查看编号、面积和价格。点击查看详情。',
       },
       technopark: {

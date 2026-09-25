@@ -37,6 +37,9 @@ const AREAS: number[] = [
 type LotEntry = { zone: SezZoneId; points: [number, number][] };
 const data = dataJson as unknown as Record<string, LotEntry>;
 
+// Lots already sold (taken off auction). Keyed by lot id.
+export const SEZ_SOLD_LOTS = new Set<string>(['LOT127']);
+
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
   const id = `LOT${i + 1}`;
   const entry = data[id] ?? { zone: 'metallurgy' as SezZoneId, points: [] };
@@ -46,7 +49,7 @@ export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
     areaGa,
     area: `${areaGa} GA`,
     zone: entry.zone,
-    status: 'pending',
+    status: SEZ_SOLD_LOTS.has(id) ? 'sold' : 'pending',
     points: entry.points,
   };
 });
