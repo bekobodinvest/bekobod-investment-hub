@@ -10,6 +10,7 @@ import {
   SEZ_LAND_USD_PER_GA,
   SEZ_LOSS_USD_PER_GA,
   SEZ_INSTALLMENT_YEARS,
+  SEZ_AUCTION_URLS,
   type SezLot,
 } from '@/data/sezLots';
 import { SEZ_ZONES, type SezZoneId } from '@/data/sezZones';
@@ -232,7 +233,8 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
                     </div>
                     <div className="text-[11px] text-gray-400">{td.installment}</div>
                     <a
-                      href="#"
+                      href={SEZ_AUCTION_URLS[selLot.id] ?? '#'}
+                      {...(SEZ_AUCTION_URLS[selLot.id] ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                       className="mt-2 block text-center rounded-lg bg-[#4a9c4e] hover:bg-[#3d8540] text-white font-semibold py-2 transition-colors"
                     >
                       {td.auction}

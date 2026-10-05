@@ -18,11 +18,11 @@ export interface SezLot {
 // LOT111..LOT135 — Metallurgy general plan (25 lots, reference master plan):
 //   LOT111 = recreational zone; LOT112..LOT135 = production lots. Total 85.2 GA.
 const AREAS: number[] = [
-  1.52, 1.51, 1.66, 1.71, 2.23, 1.18, 1.3,  1.36, 1.33, 1.3,
-  1.48, 1.21, 1.22, 0.58, 0.77, 1.71, 1.72, 1.64, 1.71, 1.72,
-  1.72, 1.58, 1.2,  0.84, 1.43, 1.37, 1.44, 1.98, 1.2,  1.2,
-  1.77, 1.76, 1.37, 1.53, 1.54, 1.37, 1.7,  1.35, 1.65, 1.65,
-  1.66, 1.62, 0.74, 1.58, 1.8,  1.57, 1.58, 1.58, 1.58, 1.78,
+  1.5,  1.78, 1.78, 1.86, 2.64, 1.5,  1.61, 1.62, 1.59, 1.56,
+  1.78, 1.42, 1.22, 0.58, 0.79, 1.71, 1.72, 1.82, 1.71, 1.72,
+  1.9,  1.58, 1.2,  0.9,  1.58, 1.28, 1.23, 1.57, 1.2,  1.2,
+  1.94, 1.93, 1.37, 1.53, 1.54, 1.37, 1.86, 1.35, 1.65, 1.65,
+  1.66, 1.65, 0.74, 1.58, 1.8,  1.57, 1.58, 1.58, 1.58, 1.78,
   2.21, 1.58, 1.58, 1.57, 1.54, 2.33, 1.31, 1.54, 1.18, 0.74,
   1.55, 2.3,  1.63, 2.25, 1.2,  2,    1.86, 1.53, 1.53, 2.29,
   1.53, 1.53, 3.16, 1.98, 2.51, 2.23, 1.42, 1.23, 0.99, 0.67,
@@ -39,6 +39,11 @@ const data = dataJson as unknown as Record<string, LotEntry>;
 
 // Lots already sold (taken off auction). Keyed by lot id.
 export const SEZ_SOLD_LOTS = new Set<string>(['LOT127']);
+
+// Per-lot e-auksion.uz listing. Lots not listed here have no auction page yet.
+export const SEZ_AUCTION_URLS: Record<string, string> = {
+  LOT6: 'https://e-auksion.uz/lot-view?lot_id=25838554',
+};
 
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
   const id = `LOT${i + 1}`;
