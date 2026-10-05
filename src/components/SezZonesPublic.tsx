@@ -117,6 +117,12 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
   const endDrag = () => { dragId.current = null; };
   const railPoints = railPts.map((p) => p.join(',')).join(' ');
 
+  // Clusters with at least one lot on auction get a pulsing outline.
+  const auctionZones = useMemo(
+    () => new Set(SEZ_LOTS.filter((l) => l.status === 'available').map((l) => l.zone)),
+    []
+  );
+
   const perZone = useMemo(() => {
     const m: Record<string, { count: number; ga: number }> = {};
     for (const z of SEZ_ZONES) m[z.id] = { count: 0, ga: 0 };
@@ -157,13 +163,18 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
           viewBox="0 0 100 100"
           preserveAspectRatio="none"
         >
+          <defs>
+            <filter id="sez-auction-glow" x="-20%" y="-20%" width="140%" height="140%">
+              <feGaussianBlur stdDeviation={0.4} />
+            </filter>
+          </defs>
           {SEZ_ZONES.map((z) => {
             if (!z.points.length) return null;
             const isHov = hovered === z.id;
             const dim = hovered && !isHov;
             return (
+              <g key={z.id}>
               <polygon
-                key={z.id}
                 points={z.points.map((p) => p.join(',')).join(' ')}
                 fill={z.color}
                 fillOpacity={isHov ? 0.7 : dim ? 0.2 : 0.45}
@@ -175,6 +186,32 @@ export default function SezZonesPublic({ hoveredZone, onHover }: SezZonesPublicP
                 onPointerLeave={() => setHovered(null)}
                 onClick={() => open(z.id)}
               />
+              {/* Cluster with a lot on auction: pulsing gold outline + soft glow */}
+              {auctionZones.has(z.id) && (
+                <g pointerEvents="none">
+                  <polygon
+                    points={z.points.map((p) => p.join(',')).join(' ')}
+                    fill="none"
+                    stroke="#facc15"
+                    strokeWidth={0.9}
+                    strokeLinejoin="round"
+                    filter="url(#sez-auction-glow)"
+                  >
+                    <animate attributeName="stroke-opacity" values="0.2;1;0.2" dur="1.8s" repeatCount="indefinite" />
+                  </polygon>
+                  <polygon
+                    points={z.points.map((p) => p.join(',')).join(' ')}
+                    fill="none"
+                    stroke="#fde047"
+                    strokeWidth={2.5}
+                    strokeLinejoin="round"
+                    vectorEffect="non-scaling-stroke"
+                  >
+                    <animate attributeName="stroke-opacity" values="0.35;1;0.35" dur="1.8s" repeatCount="indefinite" />
+                  </polygon>
+                </g>
+              )}
+              </g>
             );
           })}
 

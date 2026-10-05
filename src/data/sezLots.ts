@@ -38,11 +38,12 @@ type LotEntry = { zone: SezZoneId; points: [number, number][] };
 const data = dataJson as unknown as Record<string, LotEntry>;
 
 // Lots already sold (taken off auction). Keyed by lot id.
-export const SEZ_SOLD_LOTS = new Set<string>(['LOT127']);
+export const SEZ_SOLD_LOTS = new Set<string>([]);
 
 // Per-lot e-auksion.uz listing. Lots not listed here have no auction page yet.
 export const SEZ_AUCTION_URLS: Record<string, string> = {
   LOT6: 'https://e-auksion.uz/lot-view?lot_id=25838554',
+  LOT127: 'https://e-auksion.uz/lot-view?lot_id=25746753',
 };
 
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
@@ -54,7 +55,7 @@ export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
     areaGa,
     area: `${areaGa} GA`,
     zone: entry.zone,
-    status: SEZ_SOLD_LOTS.has(id) ? 'sold' : 'pending',
+    status: SEZ_SOLD_LOTS.has(id) ? 'sold' : SEZ_AUCTION_URLS[id] ? 'available' : 'pending',
     points: entry.points,
   };
 });

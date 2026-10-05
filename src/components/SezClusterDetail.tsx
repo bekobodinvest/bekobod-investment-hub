@@ -117,20 +117,40 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
             height={100}
             preserveAspectRatio="none"
           />
+          <defs>
+            <filter id="auction-glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation={side * 0.012} />
+            </filter>
+          </defs>
+          {/* Pulsing gold halo under lots that are currently on auction */}
+          {lots.filter((l) => l.status === 'available').map((l) => (
+            <polygon
+              key={`glow-${l.id}`}
+              points={l.points.map((p) => p.join(',')).join(' ')}
+              fill="#facc15"
+              stroke="#facc15"
+              strokeWidth={side * 0.012}
+              filter="url(#auction-glow)"
+              pointerEvents="none"
+            >
+              <animate attributeName="opacity" values="0.35;1;0.35" dur="1.8s" repeatCount="indefinite" />
+            </polygon>
+          ))}
           {lots.map((l) => {
             const isHov = hover === l.id;
             const isSel = selected === l.id;
             const active = isHov || isSel;
             const sold = l.status === 'sold';
+            const onAuction = l.status === 'available';
             return (
               <polygon
                 key={l.id}
                 points={l.points.map((p) => p.join(',')).join(' ')}
                 fill={sold ? '#374151' : zone.color}
-                fillOpacity={sold ? (active ? 0.82 : 0.68) : active ? 0.75 : 0.4}
-                stroke="#ffffff"
-                strokeOpacity={isSel ? 1 : active ? 0.9 : 0.6}
-                strokeWidth={active ? 0.6 : 0.35}
+                fillOpacity={sold ? (active ? 0.82 : 0.68) : active || onAuction ? 0.75 : 0.4}
+                stroke={onAuction ? '#fde047' : '#ffffff'}
+                strokeOpacity={isSel || onAuction ? 1 : active ? 0.9 : 0.6}
+                strokeWidth={onAuction ? 1.2 : active ? 0.6 : 0.35}
                 vectorEffect="non-scaling-stroke"
                 style={{ cursor: 'pointer' }}
                 onPointerEnter={() => setHover(l.id)}
