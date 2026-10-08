@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
-import { SEZ_LOTS, SEZ_AUCTION_RESULTS, SEZ_AUCTION_URLS } from '@/data/sezLots';
+import { SEZ_LOTS, SEZ_AUCTION_RESULTS, SEZ_AUCTION_URLS, SEZ_AUCTION_DETAILS } from '@/data/sezLots';
 import { SEZ_ZONES } from '@/data/sezZones';
 
 const uzs = (n: number) => `${n.toLocaleString('en-US').replace(/,/g, ' ')} UZS`;
@@ -20,7 +20,7 @@ function useScrollAnimation() {
 }
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   useScrollAnimation();
 
   const newsImages = [
@@ -208,7 +208,35 @@ export default function AboutPage() {
                         </div>
                       </>
                     ) : (
-                      <p className="text-gray-600 leading-relaxed">{ta.openText}</p>
+                      (() => {
+                        const d = SEZ_AUCTION_DETAILS[id];
+                        if (!d) return null;
+                        const rows: [string, string][] = [
+                          [ta.deposit, uzs(d.depositUzs)],
+                          [ta.deadline, d.deadline],
+                          [ta.auctionStart, d.auctionStart],
+                          [ta.investment, `$${d.investmentUsd.toLocaleString('en-US')}`],
+                          [ta.jobs, String(d.jobs)],
+                        ];
+                        return (
+                          <>
+                            <div className="rounded-xl bg-[#fefce8] border border-[#facc15]/40 p-4">
+                              <div className="text-xs uppercase tracking-wide text-[#a16207] font-semibold mb-1">{ta.purpose}</div>
+                              <div className="font-bold text-[#1a2744] leading-snug">{d.purpose[language]}</div>
+                            </div>
+                            <div className="flex justify-between gap-4">
+                              <span className="text-gray-500">{ta.startPrice}</span>
+                              <span className="font-bold text-[#1a2744]">{uzs(d.startPriceUzs)}</span>
+                            </div>
+                            {rows.map(([label, value]) => (
+                              <div key={label} className="flex justify-between gap-4">
+                                <span className="text-gray-500">{label}</span>
+                                <span className="font-semibold text-[#1a2744] text-right">{value}</span>
+                              </div>
+                            ))}
+                          </>
+                        );
+                      })()
                     )}
                   </div>
 

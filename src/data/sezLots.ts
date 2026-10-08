@@ -62,6 +62,33 @@ export const SEZ_AUCTION_URLS: Record<string, string> = {
   LOT6: 'https://e-auksion.uz/lot-view?lot_id=25838554',
 };
 
+// Listing details copied from e-auksion.uz for lots currently on auction (About page news).
+export interface SezAuctionDetails {
+  startPriceUzs: number;
+  depositUzs: number;
+  deadline: string; // applications close, DD.MM.YYYY HH:MM
+  auctionStart: string; // bidding starts, DD.MM.YYYY HH:MM
+  investmentUsd: number;
+  jobs: number;
+  purpose: { en: string; uz: string; ru: string; zh: string };
+}
+export const SEZ_AUCTION_DETAILS: Record<string, SezAuctionDetails> = {
+  LOT6: {
+    startPriceUzs: 137_025_000,
+    depositUzs: 13_702_500,
+    deadline: '14.10.2026 09:00',
+    auctionStart: '14.10.2026 10:00',
+    investmentUsd: 16_000_000,
+    jobs: 74,
+    purpose: {
+      en: 'Integrated resin and coatings plant',
+      uz: 'Integratsiyalashgan qatron va qoplamalar ishlab chiqarish zavodi',
+      ru: 'Интегрированный завод по производству смол и покрытий',
+      zh: '树脂与涂料一体化生产厂',
+    },
+  },
+};
+
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {
   const id = `LOT${i + 1}`;
   const entry = data[id] ?? { zone: 'metallurgy' as SezZoneId, points: [] };
