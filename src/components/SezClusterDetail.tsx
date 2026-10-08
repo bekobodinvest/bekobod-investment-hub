@@ -152,12 +152,13 @@ export default function SezClusterDetail({ zoneId }: { zoneId: SezZoneId }) {
                 strokeOpacity={isSel || onAuction ? 1 : active ? 0.9 : 0.6}
                 strokeWidth={onAuction ? 1.2 : active ? 0.6 : 0.35}
                 vectorEffect="non-scaling-stroke"
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: sold ? 'default' : 'pointer' }}
                 onPointerEnter={() => setHover(l.id)}
                 onPointerLeave={() => setHover((h) => (h === l.id ? null : h))}
                 onClick={(e) => {
                   e.stopPropagation();
-                  setSelected(l.id);
+                  // Sold lots are closed: no popup, no auction link.
+                  setSelected(sold ? null : l.id);
                 }}
               />
             );

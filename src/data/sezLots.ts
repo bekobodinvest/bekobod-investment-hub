@@ -37,13 +37,29 @@ const AREAS: number[] = [
 type LotEntry = { zone: SezZoneId; points: [number, number][] };
 const data = dataJson as unknown as Record<string, LotEntry>;
 
-// Lots already sold (taken off auction). Keyed by lot id.
-export const SEZ_SOLD_LOTS = new Set<string>([]);
+// Finished e-auksion.uz auctions (lot is sold, no longer clickable on the map).
+// Also feeds the auction news block on the About page.
+export interface SezAuctionResult {
+  winner: string;
+  priceUzs: number;
+  date: string; // DD.MM.YYYY
+  url: string;
+}
+export const SEZ_AUCTION_RESULTS: Record<string, SezAuctionResult> = {
+  LOT127: {
+    winner: '"BASHKIR INVESTITSION BOSHQARUVCHI KOMPANIYASI" MAS\'ULIYATI CHEKLANGAN JAMIYAT XORIJIY KORXONA',
+    priceUzs: 730_800_000,
+    date: '08.10.2026',
+    url: 'https://e-auksion.uz/lot-view?lot_id=25746753',
+  },
+};
 
-// Per-lot e-auksion.uz listing. Lots not listed here have no auction page yet.
+// Lots already sold (taken off auction). Keyed by lot id.
+export const SEZ_SOLD_LOTS = new Set<string>(Object.keys(SEZ_AUCTION_RESULTS));
+
+// Per-lot e-auksion.uz listing for lots currently on auction.
 export const SEZ_AUCTION_URLS: Record<string, string> = {
   LOT6: 'https://e-auksion.uz/lot-view?lot_id=25838554',
-  LOT127: 'https://e-auksion.uz/lot-view?lot_id=25746753',
 };
 
 export const SEZ_LOTS: SezLot[] = AREAS.map((areaGa, i) => {

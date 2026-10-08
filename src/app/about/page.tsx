@@ -3,6 +3,10 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/context/LanguageContext';
+import { SEZ_LOTS, SEZ_AUCTION_RESULTS, SEZ_AUCTION_URLS } from '@/data/sezLots';
+import { SEZ_ZONES } from '@/data/sezZones';
+
+const uzs = (n: number) => `${n.toLocaleString('en-US').replace(/,/g, ' ')} UZS`;
 
 function useScrollAnimation() {
   useEffect(() => {
@@ -34,6 +38,19 @@ export default function AboutPage() {
     const id = setInterval(() => setNewsIndex((i) => (i + 1) % newsCount), 5000);
     return () => clearInterval(id);
   }, [newsIndex, newsCount]);
+
+  // Auction news — driven by sezLots.ts: completed auctions first, then open ones.
+  const ta = t.about.auctions;
+  const areaUnit = t.sez.clustersMap.areaUnit;
+  const lotInfo = (id: string) => {
+    const lot = SEZ_LOTS.find((l) => l.id === id)!;
+    const zi = SEZ_ZONES.findIndex((z) => z.id === lot.zone);
+    return { lot, cluster: t.sez.sectors.items[zi]?.name ?? SEZ_ZONES[zi]?.name };
+  };
+  const auctionNews = [
+    ...Object.entries(SEZ_AUCTION_RESULTS).map(([id, result]) => ({ id, result, url: result.url })),
+    ...Object.entries(SEZ_AUCTION_URLS).map(([id, url]) => ({ id, result: undefined, url })),
+  ];
 
   const permitIcons = [
     // Legal entity registration
@@ -127,6 +144,91 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Auction news */}
+      <section className="section-padding bg-[#f4f9f4]">
+        <div className="container-custom">
+          <div className="text-center mb-12 animate-on-scroll">
+            <h2 className="section-heading">{ta.title}</h2>
+            <div className="accent-line mx-auto mt-4" />
+            <p className="text-gray-500 mt-6 max-w-2xl mx-auto">{ta.subtitle}</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {auctionNews.map(({ id, result, url }) => {
+              const { lot, cluster } = lotInfo(id);
+              return (
+                <article
+                  key={id}
+                  className="animate-on-scroll flex flex-col rounded-[2rem] border border-gray-100 bg-white shadow-lg overflow-hidden"
+                >
+                  <div className="px-6 py-4 bg-gradient-to-r from-[#1a2744] to-[#243660] flex items-center gap-3">
+                    <span className="text-white font-bold text-lg">
+                      {ta.lot} №{lot.number}
+                    </span>
+                    {result ? (
+                      <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-[#4a9c4e] px-3 py-1 text-xs font-semibold text-white">
+                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19 5h-2V3H7v2H5a2 2 0 00-2 2v1a5 5 0 004.39 4.96A5.01 5.01 0 0011 15.9V19H7v2h10v-2h-4v-3.1a5.01 5.01 0 003.61-2.94A5 5 0 0021 8V7a2 2 0 00-2-2zM5 8V7h2v3.82A3 3 0 015 8zm14 0a3 3 0 01-2 2.82V7h2v1z" /></svg>
+                        {ta.completed}
+                      </span>
+                    ) : (
+                      <span className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-[#facc15] px-3 py-1 text-xs font-semibold text-[#1a2744]">
+                        <span className="relative flex h-2 w-2">
+                          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#1a2744] opacity-60" />
+                          <span className="relative inline-flex h-2 w-2 rounded-full bg-[#1a2744]" />
+                        </span>
+                        {ta.onAuction}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="flex-1 p-6 space-y-3 text-sm">
+                    <div className="flex justify-between gap-4">
+                      <span className="text-gray-500">{cluster}</span>
+                      <span className="font-semibold text-[#1a2744]">
+                        {ta.area}: {lot.areaGa} {areaUnit}
+                      </span>
+                    </div>
+                    {result ? (
+                      <>
+                        <div className="rounded-xl bg-[#f4f9f4] border border-[#4a9c4e]/20 p-4">
+                          <div className="text-xs uppercase tracking-wide text-[#4a9c4e] font-semibold mb-1">{ta.winner}</div>
+                          <div className="font-bold text-[#1a2744] leading-snug">{result.winner}</div>
+                        </div>
+                        <div className="flex justify-between gap-4">
+                          <span className="text-gray-500">{ta.finalPrice}</span>
+                          <span className="font-bold text-[#1a2744]">{uzs(result.priceUzs)}</span>
+                        </div>
+                        <div className="flex justify-between gap-4">
+                          <span className="text-gray-500">{ta.date}</span>
+                          <span className="font-semibold text-[#1a2744]">{result.date}</span>
+                        </div>
+                      </>
+                    ) : (
+                      <p className="text-gray-600 leading-relaxed">{ta.openText}</p>
+                    )}
+                  </div>
+
+                  <div className="px-6 pb-6">
+                    <a
+                      href={url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`block text-center rounded-full py-3 font-semibold transition-colors ${
+                        result
+                          ? 'border border-[#1a2744]/20 text-[#1a2744] hover:bg-gray-50'
+                          : 'bg-[#4a9c4e] text-white hover:bg-[#3d8341]'
+                      }`}
+                    >
+                      {result ? ta.viewResult : ta.goAuction}
+                    </a>
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
