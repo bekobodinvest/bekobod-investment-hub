@@ -69,7 +69,6 @@ export interface SezAuctionDetails {
   deadline: string; // applications close, DD.MM.YYYY HH:MM
   auctionStart: string; // bidding starts, DD.MM.YYYY HH:MM
   investmentUsd: number;
-  jobs: number;
   purpose: { en: string; uz: string; ru: string; zh: string };
 }
 export const SEZ_AUCTION_DETAILS: Record<string, SezAuctionDetails> = {
@@ -79,7 +78,6 @@ export const SEZ_AUCTION_DETAILS: Record<string, SezAuctionDetails> = {
     deadline: '14.10.2026 09:00',
     auctionStart: '14.10.2026 10:00',
     investmentUsd: 16_000_000,
-    jobs: 74,
     purpose: {
       en: 'Integrated resin and coatings plant',
       uz: 'Integratsiyalashgan qatron va qoplamalar ishlab chiqarish zavodi',

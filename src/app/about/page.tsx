@@ -216,7 +216,6 @@ export default function AboutPage() {
                           [ta.deadline, d.deadline],
                           [ta.auctionStart, d.auctionStart],
                           [ta.investment, `$${d.investmentUsd.toLocaleString('en-US')}`],
-                          [ta.jobs, String(d.jobs)],
                         ];
                         return (
                           <>
