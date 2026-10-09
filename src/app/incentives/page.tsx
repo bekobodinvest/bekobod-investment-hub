@@ -152,22 +152,6 @@ export default function IncentivesPage() {
               </div>
             </div>
           </div>
-
-          {/* Water resources tax */}
-          <div className="animate-on-scroll bg-gradient-to-r from-[#1a2744] to-[#243660] rounded-[2rem] p-8 text-white">
-            <div className="flex items-start gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-[#4a9c4e]/20 flex items-center justify-center flex-shrink-0">
-                <svg className="w-7 h-7 text-[#4a9c4e]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-                </svg>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-1">{t.incentives.water.title}</h3>
-                <p className="text-[#4a9c4e] text-sm font-medium mb-2">{t.incentives.water.subtitle}</p>
-                <p className="text-gray-300 leading-relaxed text-justify indent-8">{t.incentives.water.note}</p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

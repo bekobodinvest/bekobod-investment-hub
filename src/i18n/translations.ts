@@ -743,11 +743,6 @@ export const translations = {
         subtitle: 'Same schedule as Land Tax — full property tax exemption',
         note: 'Property tax exemption follows the exact same investment-based schedule as land tax exemption above.',
       },
-      water: {
-        title: 'Water Resources Tax Exemption',
-        subtitle: 'Full exemption from water resources tax',
-        note: 'Water resources tax exemption is provided for sustainable resource management in SEZ operations.',
-      },
       customs: {
         title: 'Customs Benefits',
         subtitle: 'Comprehensive customs advantages for SEZ residents',
@@ -1592,11 +1587,6 @@ export const translations = {
         subtitle: "Yer solig'i bilan bir xil jadval — mol-mulk solig'idan to'liq ozod etish",
         note: "Mol-mulk solig'i imtiyozi yuqoridagi yer solig'i imtiyozi bilan bir xil jadval bo'yicha taqdim etiladi.",
       },
-      water: {
-        title: "Suv resurslari solig'i imtiyozi",
-        subtitle: "Suv resurslari solig'idan to'liq ozod etish",
-        note: "Suv resurslari solig'i imtiyozi MIZ operatsiyasida barqaror resurslardan foydalanish uchun taqdim etiladi.",
-      },
       customs: {
         title: "Bojxona imtiyozlari",
         subtitle: "MIZ rezidentlari uchun keng qamrovli bojxona afzalliklari",
@@ -2435,11 +2425,6 @@ export const translations = {
         subtitle: 'Тот же график, что и земельный налог — полное освобождение',
         note: 'Льгота по налогу на имущество предоставляется по той же шкале в зависимости от объёма инвестиций, что и льгота по земельному налогу.',
       },
-      water: {
-        title: 'Льгота по налогу на водные ресурсы',
-        subtitle: 'Полное освобождение от налога на водные ресурсы',
-        note: 'Льгота по налогу на водные ресурсы предоставляется для обеспечения устойчивого использования ресурсов в операциях СЭЗ.',
-      },
       customs: {
         title: 'Таможенные льготы',
         subtitle: 'Комплексные таможенные преимущества для резидентов СЭЗ',
@@ -3265,11 +3250,6 @@ export const translations = {
         title: '财产税减免',
         subtitle: '与土地税相同的减免方案——全额免征财产税',
         note: '财产税减免依照与上述土地税减免完全相同的投资金额梯度执行。',
-      },
-      water: {
-        title: '水资源税减免',
-        subtitle: '全额免征水资源税',
-        note: '水资源税减免为特区运营中的可持续资源利用提供税收优惠。',
       },
       customs: {
         title: '关税优惠',

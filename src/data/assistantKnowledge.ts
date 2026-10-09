@@ -41,7 +41,6 @@ Land tax — full exemption:
 - Over $10,000,000 → 10 years
 
 Property tax — full exemption on the SAME investment-based schedule as land tax.
-Water resources tax — full exemption.
 
 Customs benefits:
 - Duty-free import of technological equipment and construction materials under

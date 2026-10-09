@@ -42,7 +42,6 @@ const TOPICS: Topic[] = [
 • Foyda solig'i — to'liq ozod: $3–5 mln → 3 yil; $5–15 mln → 5 yil; $15 mln dan yuqori → 10 yil.
 • Yer solig'i — to'liq ozod: $0,3–3 mln → 3 yil; $3–5 mln → 5 yil; $5–10 mln → 7 yil; $10 mln dan yuqori → 10 yil.
 • Mol-mulk solig'i — yer solig'i bilan bir xil muddatlarda ozod.
-• Suv resurslari solig'i — to'liq ozod.
 • Bojxona: texnologik uskuna va qurilish materiallarini bojsiz import qilish, soddalashtirilgan rasmiylashtiruv.
 
 Batafsil "Imtiyozlar" sahifasida.`,
@@ -51,7 +50,6 @@ Batafsil "Imtiyozlar" sahifasida.`,
 • Налог на прибыль — полное освобождение: $3–5 млн → 3 года; $5–15 млн → 5 лет; свыше $15 млн → 10 лет.
 • Земельный налог — полное освобождение: $0,3–3 млн → 3 года; $3–5 млн → 5 лет; $5–10 млн → 7 лет; свыше $10 млн → 10 лет.
 • Налог на имущество — освобождение по той же шкале, что и земельный.
-• Налог за водные ресурсы — полное освобождение.
 • Таможня: беспошлинный ввоз оборудования и стройматериалов, упрощённое оформление.
 
 Подробнее — на странице «Льготы».`,
@@ -60,7 +58,6 @@ Batafsil "Imtiyozlar" sahifasida.`,
 • Profit tax — full exemption: $3–5M → 3 years; $5–15M → 5 years; over $15M → 10 years.
 • Land tax — full exemption: $0.3–3M → 3 years; $3–5M → 5 years; $5–10M → 7 years; over $10M → 10 years.
 • Property tax — exempt on the same schedule as land tax.
-• Water resources tax — full exemption.
 • Customs: duty-free import of equipment and construction materials, simplified clearance.
 
 See the "Incentives" page for details.`,
@@ -69,7 +66,6 @@ See the "Incentives" page for details.`,
 • 企业所得税——全额免除：300–500万美元 → 3年；500–1500万美元 → 5年；1500万美元以上 → 10年。
 • 土地税——全额免除：30–300万美元 → 3年；300–500万美元 → 5年；500–1000万美元 → 7年；1000万美元以上 → 10年。
 • 财产税——按土地税相同期限免除。
-• 水资源税——全额免除。
 • 海关：设备和建筑材料免税进口，简化通关。
 
 详情请见"优惠"页面。`,
